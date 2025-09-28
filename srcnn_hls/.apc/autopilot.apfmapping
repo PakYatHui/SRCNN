@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="conv1.cpp" path="C:\Xilinx\golden\src\conv1.cpp"/>
+    <originFiles name="conv2.cpp" path="C:\Xilinx\golden\src\conv2.cpp"/>
+    <originFiles name="conv3.cpp" path="C:\Xilinx\golden\src\conv3.cpp"/>
+    <originFiles name="srcnn.cpp" path="C:\Xilinx\golden\src\srcnn.cpp"/>
+    <originFiles name="srcnn.h" path="C:\Xilinx\golden\src\srcnn.h"/>
+  </source>
+  <testbench>
+    <originFiles name="set14" path="C:\Xilinx\golden\test\set14"/>
+    <originFiles name="set5" path="C:\Xilinx\golden\test\set5"/>
+    <originFiles name="weights" path="C:\Xilinx\golden\src\weights"/>
+    <originFiles name="util.cpp" path="C:\Xilinx\golden\test\util.cpp"/>
+    <originFiles name="util.h" path="C:\Xilinx\golden\test\util.h"/>
+    <originFiles name="tb_set14.cpp" path="C:\Xilinx\golden\test\tb_set14.cpp"/>
+    <originFiles name="tb_conv1.cpp" path="C:\Xilinx\golden\test\tb_conv1.cpp"/>
+    <originFiles name="tb_srcnn.cpp" path="C:\Xilinx\golden\test\tb_srcnn.cpp"/>
+    <originFiles name="csim.cpp" path="C:\Xilinx\golden\test\csim.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

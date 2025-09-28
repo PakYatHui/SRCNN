@@ -1,0 +1,714 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?fileVersion 4.0.0?><cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
+    	
+    <storageModule moduleId="org.eclipse.cdt.core.settings">
+        		
+        <cconfiguration id="cdt.managedbuild.config.gnu.exe.debug.695000085">
+            			
+            <storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.config.gnu.exe.debug.695000085" moduleId="org.eclipse.cdt.core.settings" name="Debug">
+                				
+                <externalSettings/>
+                				
+                <extensions>
+                    					
+                    <extension id="org.eclipse.cdt.core.GNU_ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+                    					
+                    <extension id="org.eclipse.cdt.core.PE" point="org.eclipse.cdt.core.BinaryParser"/>
+                    					
+                    <extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+                    					
+                    <extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+                    					
+                    <extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+                    					
+                    <extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
+                    					
+                    <extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+                    				
+                </extensions>
+                			
+            </storageModule>
+            			
+            <storageModule moduleId="cdtBuildSystem" version="4.0.0">
+                				
+                <configuration artifactName="a.exe" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug" cleanCommand="rm -rf" description="" id="cdt.managedbuild.config.gnu.exe.debug.695000085" name="Debug" parent="cdt.managedbuild.config.gnu.exe.debug">
+                    					
+                    <folderInfo id="cdt.managedbuild.config.gnu.exe.debug.695000085." name="/" resourcePath="">
+                        						
+                        <toolChain id="cdt.managedbuild.toolchain.gnu.exe.debug.1217173246" name="Linux GCC" superClass="cdt.managedbuild.toolchain.gnu.exe.debug">
+                            							
+                            <targetPlatform binaryParser="org.eclipse.cdt.core.PE;org.eclipse.cdt.core.GNU_ELF" id="cdt.managedbuild.target.gnu.platform.exe.debug.452789410" name="Debug Platform" superClass="cdt.managedbuild.target.gnu.platform.exe.debug"/>
+                            							
+                            <builder buildPath="${workspace_loc:/srcnn_hls}/Debug" id="cdt.managedbuild.target.gnu.builder.exe.debug.183849023" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="Gnu Make Builder" superClass="cdt.managedbuild.target.gnu.builder.exe.debug"/>
+                            							
+                            <tool id="cdt.managedbuild.tool.gnu.archiver.base.1876301939" name="GCC Archiver" superClass="cdt.managedbuild.tool.gnu.archiver.base"/>
+                            							
+                            <tool id="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.1040659429" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug">
+                                								
+                                <option id="gnu.cpp.compiler.exe.debug.option.optimization.level.2053418439" name="Optimization Level" superClass="gnu.cpp.compiler.exe.debug.option.optimization.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.optimization.level.none" valueType="enumerated"/>
+                                								
+                                <option defaultValue="gnu.cpp.compiler.debugging.level.max" id="gnu.cpp.compiler.exe.debug.option.debugging.level.2092979063" name="Debug Level" superClass="gnu.cpp.compiler.exe.debug.option.debugging.level" useByScannerDiscovery="false" valueType="enumerated"/>
+                                								
+                                <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.cpp.compiler.option.include.paths.248188715" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
+                                    									
+                                    <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/include/ap_sysc"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/include/etc"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/win64/tools/auto_cc/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/win64/tools/systemc/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="C:/Xilinx/golden/src"/>
+                                    								
+                                </option>
+                                								
+                                <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.cpp.compiler.option.preprocessor.def.846251843" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def" useByScannerDiscovery="false" valueType="definedSymbols">
+                                    									
+                                    <listOptionValue builtIn="false" value="AESL_TB"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="__llvm__"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="__llvm__"/>
+                                    								
+                                </option>
+                                								
+                                <inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1618779165" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
+                                							
+                            </tool>
+                            							
+                            <tool id="cdt.managedbuild.tool.gnu.c.compiler.exe.debug.1562015325" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.exe.debug">
+                                								
+                                <option defaultValue="gnu.c.optimization.level.none" id="gnu.c.compiler.exe.debug.option.optimization.level.1317167100" name="Optimization Level" superClass="gnu.c.compiler.exe.debug.option.optimization.level" useByScannerDiscovery="false" valueType="enumerated"/>
+                                								
+                                <option defaultValue="gnu.c.debugging.level.max" id="gnu.c.compiler.exe.debug.option.debugging.level.1058384768" name="Debug Level" superClass="gnu.c.compiler.exe.debug.option.debugging.level" useByScannerDiscovery="false" valueType="enumerated"/>
+                                								
+                                <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.c.compiler.option.include.paths.892115987" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
+                                    									
+                                    <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/include/ap_sysc"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/include/etc"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/win64/tools/auto_cc/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/win64/tools/systemc/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="C:/Xilinx/golden/src"/>
+                                    								
+                                </option>
+                                								
+                                <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.c.compiler.option.preprocessor.def.symbols.1932839848" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" useByScannerDiscovery="false" valueType="definedSymbols">
+                                    									
+                                    <listOptionValue builtIn="false" value="AESL_TB"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="__llvm__"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="__llvm__"/>
+                                    								
+                                </option>
+                                								
+                                <inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.1247802317" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
+                                							
+                            </tool>
+                            							
+                            <tool id="cdt.managedbuild.tool.gnu.c.linker.exe.debug.299872937" name="GCC C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.exe.debug">
+                                								
+                                <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.c.link.option.paths.68581292" name="Library search path (-L)" superClass="gnu.c.link.option.paths" valueType="libPaths">
+                                    									
+                                    <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/win64/tools/systemc/lib"/>
+                                    								
+                                </option>
+                                								
+                                <option id="gnu.c.link.option.libs.484211302" name="Libraries (-l)" superClass="gnu.c.link.option.libs"/>
+                                								
+                                <option id="gnu.c.link.option.ldflags.1823470042" name="Linker flags" superClass="gnu.c.link.option.ldflags"/>
+                                							
+                            </tool>
+                            							
+                            <tool id="cdt.managedbuild.tool.gnu.cpp.linker.exe.debug.209581892" name="GCC C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.exe.debug">
+                                								
+                                <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.cpp.link.option.paths.738094333" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" valueType="libPaths">
+                                    									
+                                    <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/win64/tools/systemc/lib"/>
+                                    								
+                                </option>
+                                								
+                                <option id="gnu.cpp.link.option.libs.883774879" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs"/>
+                                								
+                                <option id="gnu.cpp.link.option.flags.1633773897" name="Linker flags" superClass="gnu.cpp.link.option.flags"/>
+                                								
+                                <inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.1124183846" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
+                                    									
+                                    <additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+                                    									
+                                    <additionalInput kind="additionalinput" paths="$(LIBS)"/>
+                                    								
+                                </inputType>
+                                							
+                            </tool>
+                            							
+                            <tool id="cdt.managedbuild.tool.gnu.assembler.exe.debug.1685007780" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler.exe.debug">
+                                								
+                                <inputType id="cdt.managedbuild.tool.gnu.assembler.input.67336660" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
+                                							
+                            </tool>
+                            						
+                        </toolChain>
+                        					
+                    </folderInfo>
+                    					
+                    <fileInfo id="cdt.managedbuild.config.gnu.exe.debug.695000085.1042240216" name="tb_conv1.cpp" rcbsApplicability="disable" resourcePath="testbench/tb_conv1.cpp" toolsToInvoke="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.1040659429.1718814471">
+                        						
+                        <tool id="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.1040659429.1718814471" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.1040659429">
+                            							
+                            <option id="gnu.cpp.compiler.option.preprocessor.def.563369257" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def"/>
+                            							
+                            <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.cpp.compiler.option.include.paths.2049167572" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
+                                								
+                                <listOptionValue builtIn="false" value="../../src"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/golden"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/include/ap_sysc"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/include/etc"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/win64/tools/auto_cc/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/win64/tools/systemc/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/golden/src"/>
+                                							
+                            </option>
+                            							
+                            <option id="gnu.cpp.compiler.option.other.other.640650088" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-Wno-unknown-pragmas -c -fmessage-length=0" valueType="string"/>
+                            							
+                            <inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1556743515" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
+                            						
+                        </tool>
+                        					
+                    </fileInfo>
+                    					
+                    <fileInfo id="cdt.managedbuild.config.gnu.exe.debug.695000085.579097550" name="util.h" rcbsApplicability="disable" resourcePath="testbench/util.h" toolsToInvoke=""/>
+                    					
+                    <fileInfo id="cdt.managedbuild.config.gnu.exe.debug.695000085.1288491408" name="util.cpp" rcbsApplicability="disable" resourcePath="testbench/util.cpp" toolsToInvoke="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.1040659429.190699544">
+                        						
+                        <tool id="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.1040659429.190699544" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.1040659429">
+                            							
+                            <option id="gnu.cpp.compiler.option.preprocessor.def.507987606" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def"/>
+                            							
+                            <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.cpp.compiler.option.include.paths.254798148" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
+                                								
+                                <listOptionValue builtIn="false" value="../../src"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/golden"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/include/ap_sysc"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/include/etc"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/win64/tools/auto_cc/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/win64/tools/systemc/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/golden/src"/>
+                                							
+                            </option>
+                            							
+                            <option id="gnu.cpp.compiler.option.other.other.878980066" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-Wno-unknown-pragmas -c -fmessage-length=0" valueType="string"/>
+                            							
+                            <inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1572320152" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
+                            						
+                        </tool>
+                        					
+                    </fileInfo>
+                    					
+                    <fileInfo id="cdt.managedbuild.config.gnu.exe.debug.695000085.1364362488" name="tb_srcnn.cpp" rcbsApplicability="disable" resourcePath="testbench/tb_srcnn.cpp" toolsToInvoke="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.1040659429.1620118588">
+                        						
+                        <tool id="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.1040659429.1620118588" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.1040659429">
+                            							
+                            <option id="gnu.cpp.compiler.option.preprocessor.def.367763569" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def"/>
+                            							
+                            <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.cpp.compiler.option.include.paths.865050145" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
+                                								
+                                <listOptionValue builtIn="false" value="../../src"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/golden"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/include/ap_sysc"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/include/etc"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/win64/tools/auto_cc/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/win64/tools/systemc/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/golden/src"/>
+                                							
+                            </option>
+                            							
+                            <option id="gnu.cpp.compiler.option.other.other.925256411" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-Wno-unknown-pragmas -c -fmessage-length=0" valueType="string"/>
+                            							
+                            <inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1672189903" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
+                            						
+                        </tool>
+                        					
+                    </fileInfo>
+                    					
+                    <fileInfo id="cdt.managedbuild.config.gnu.exe.debug.695000085.1108262207" name="tb_set14.cpp" rcbsApplicability="disable" resourcePath="testbench/tb_set14.cpp" toolsToInvoke="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.1040659429.1474690172">
+                        						
+                        <tool id="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.1040659429.1474690172" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.1040659429">
+                            							
+                            <option id="gnu.cpp.compiler.option.preprocessor.def.2137108074" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def"/>
+                            							
+                            <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.cpp.compiler.option.include.paths.961440207" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
+                                								
+                                <listOptionValue builtIn="false" value="../../src"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/golden"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/include/ap_sysc"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/include/etc"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/win64/tools/auto_cc/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/win64/tools/systemc/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/golden/src"/>
+                                							
+                            </option>
+                            							
+                            <option id="gnu.cpp.compiler.option.other.other.831737562" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-Wno-unknown-pragmas -c -fmessage-length=0" valueType="string"/>
+                            							
+                            <inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.920210613" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
+                            						
+                        </tool>
+                        					
+                    </fileInfo>
+                    					
+                    <fileInfo id="cdt.managedbuild.config.gnu.exe.debug.695000085.140815972" name="csim.cpp" rcbsApplicability="disable" resourcePath="testbench/csim.cpp" toolsToInvoke="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.1040659429.23294360">
+                        						
+                        <tool id="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.1040659429.23294360" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.1040659429">
+                            							
+                            <option id="gnu.cpp.compiler.option.preprocessor.def.982385983" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def"/>
+                            							
+                            <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.cpp.compiler.option.include.paths.302404121" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
+                                								
+                                <listOptionValue builtIn="false" value="../../src"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/golden"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/include/ap_sysc"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/include/etc"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/win64/tools/auto_cc/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/win64/tools/systemc/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/golden/src"/>
+                                							
+                            </option>
+                            							
+                            <option id="gnu.cpp.compiler.option.other.other.891966451" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-Wno-unknown-pragmas -c -fmessage-length=0" valueType="string"/>
+                            							
+                            <inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1039916419" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
+                            						
+                        </tool>
+                        					
+                    </fileInfo>
+                    					
+                    <sourceEntries>
+                        						
+                        <entry excluding=".apc|.settings|solution1|*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+                        					
+                    </sourceEntries>
+                    				
+                </configuration>
+                			
+            </storageModule>
+            			
+            <storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+            		
+        </cconfiguration>
+        		
+        <cconfiguration id="cdt.managedbuild.config.gnu.exe.release.378876848">
+            			
+            <storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.config.gnu.exe.release.378876848" moduleId="org.eclipse.cdt.core.settings" name="Release">
+                				
+                <externalSettings/>
+                				
+                <extensions>
+                    					
+                    <extension id="org.eclipse.cdt.core.GNU_ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+                    					
+                    <extension id="org.eclipse.cdt.core.PE" point="org.eclipse.cdt.core.BinaryParser"/>
+                    					
+                    <extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+                    					
+                    <extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+                    					
+                    <extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+                    					
+                    <extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
+                    					
+                    <extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+                    				
+                </extensions>
+                			
+            </storageModule>
+            			
+            <storageModule moduleId="cdtBuildSystem" version="4.0.0">
+                				
+                <configuration artifactName="a.exe" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.release" cleanCommand="rm -rf" description="" id="cdt.managedbuild.config.gnu.exe.release.378876848" name="Release" parent="cdt.managedbuild.config.gnu.exe.release">
+                    					
+                    <folderInfo id="cdt.managedbuild.config.gnu.exe.release.378876848." name="/" resourcePath="">
+                        						
+                        <toolChain id="cdt.managedbuild.toolchain.gnu.exe.release.645954980" name="Linux GCC" superClass="cdt.managedbuild.toolchain.gnu.exe.release">
+                            							
+                            <targetPlatform binaryParser="org.eclipse.cdt.core.PE;org.eclipse.cdt.core.GNU_ELF" id="cdt.managedbuild.target.gnu.platform.exe.release.1040240230" name="Debug Platform" superClass="cdt.managedbuild.target.gnu.platform.exe.release"/>
+                            							
+                            <builder buildPath="${workspace_loc:/srcnn_hls}/Release" id="cdt.managedbuild.target.gnu.builder.exe.release.688594999" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="Gnu Make Builder" superClass="cdt.managedbuild.target.gnu.builder.exe.release"/>
+                            							
+                            <tool id="cdt.managedbuild.tool.gnu.archiver.base.1960545157" name="GCC Archiver" superClass="cdt.managedbuild.tool.gnu.archiver.base"/>
+                            							
+                            <tool id="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.329546011" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release">
+                                								
+                                <option id="gnu.cpp.compiler.exe.release.option.optimization.level.1434833043" name="Optimization Level" superClass="gnu.cpp.compiler.exe.release.option.optimization.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.optimization.level.most" valueType="enumerated"/>
+                                								
+                                <option defaultValue="gnu.cpp.compiler.debugging.level.none" id="gnu.cpp.compiler.exe.release.option.debugging.level.1811159028" name="Debug Level" superClass="gnu.cpp.compiler.exe.release.option.debugging.level" useByScannerDiscovery="false" valueType="enumerated"/>
+                                								
+                                <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.cpp.compiler.option.include.paths.563355379" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
+                                    									
+                                    <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/include/ap_sysc"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/include/etc"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/win64/tools/auto_cc/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/win64/tools/systemc/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="C:/Xilinx/golden/src"/>
+                                    								
+                                </option>
+                                								
+                                <inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.592066219" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
+                                							
+                            </tool>
+                            							
+                            <tool id="cdt.managedbuild.tool.gnu.c.compiler.exe.release.1247093508" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.exe.release">
+                                								
+                                <option defaultValue="gnu.c.optimization.level.most" id="gnu.c.compiler.exe.release.option.optimization.level.1910651248" name="Optimization Level" superClass="gnu.c.compiler.exe.release.option.optimization.level" useByScannerDiscovery="false" valueType="enumerated"/>
+                                								
+                                <option defaultValue="gnu.c.debugging.level.none" id="gnu.c.compiler.exe.release.option.debugging.level.1764978375" name="Debug Level" superClass="gnu.c.compiler.exe.release.option.debugging.level" useByScannerDiscovery="false" valueType="enumerated"/>
+                                								
+                                <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.c.compiler.option.include.paths.573992739" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
+                                    									
+                                    <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/include/ap_sysc"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/include/etc"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/win64/tools/auto_cc/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/win64/tools/systemc/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="C:/Xilinx/golden/src"/>
+                                    								
+                                </option>
+                                								
+                                <inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.1200125186" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
+                                							
+                            </tool>
+                            							
+                            <tool id="cdt.managedbuild.tool.gnu.c.linker.exe.release.1294323980" name="GCC C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.exe.release">
+                                								
+                                <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.c.link.option.paths.432416882" name="Library search path (-L)" superClass="gnu.c.link.option.paths" valueType="libPaths">
+                                    									
+                                    <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/win64/tools/systemc/lib"/>
+                                    								
+                                </option>
+                                								
+                                <option id="gnu.c.link.option.libs.1284399845" name="Libraries (-l)" superClass="gnu.c.link.option.libs"/>
+                                								
+                                <option id="gnu.c.link.option.ldflags.201992372" name="Linker flags" superClass="gnu.c.link.option.ldflags"/>
+                                							
+                            </tool>
+                            							
+                            <tool id="cdt.managedbuild.tool.gnu.cpp.linker.exe.release.1419156163" name="GCC C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.exe.release">
+                                								
+                                <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.cpp.link.option.paths.1351183404" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" valueType="libPaths">
+                                    									
+                                    <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/win64/tools/systemc/lib"/>
+                                    								
+                                </option>
+                                								
+                                <option id="gnu.cpp.link.option.libs.536945176" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs"/>
+                                								
+                                <option id="gnu.cpp.link.option.flags.1612159162" name="Linker flags" superClass="gnu.cpp.link.option.flags"/>
+                                								
+                                <inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.1769716413" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
+                                    									
+                                    <additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+                                    									
+                                    <additionalInput kind="additionalinput" paths="$(LIBS)"/>
+                                    								
+                                </inputType>
+                                							
+                            </tool>
+                            							
+                            <tool id="cdt.managedbuild.tool.gnu.assembler.exe.release.272948396" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler.exe.release">
+                                								
+                                <inputType id="cdt.managedbuild.tool.gnu.assembler.input.1155890692" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
+                                							
+                            </tool>
+                            						
+                        </toolChain>
+                        					
+                    </folderInfo>
+                    					
+                    <fileInfo id="cdt.managedbuild.config.gnu.exe.release.378876848.678767693" name="tb_conv1.cpp" rcbsApplicability="disable" resourcePath="testbench/tb_conv1.cpp" toolsToInvoke="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.329546011.533895710">
+                        						
+                        <tool id="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.329546011.533895710" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.329546011">
+                            							
+                            <option id="gnu.cpp.compiler.option.preprocessor.def.941276131" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def"/>
+                            							
+                            <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.cpp.compiler.option.include.paths.235397401" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
+                                								
+                                <listOptionValue builtIn="false" value="../../src"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/golden"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/include/ap_sysc"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/include/etc"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/win64/tools/auto_cc/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/win64/tools/systemc/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/golden/src"/>
+                                							
+                            </option>
+                            							
+                            <option id="gnu.cpp.compiler.option.other.other.848157615" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-Wno-unknown-pragmas -c -fmessage-length=0" valueType="string"/>
+                            							
+                            <inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.108548715" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
+                            						
+                        </tool>
+                        					
+                    </fileInfo>
+                    					
+                    <fileInfo id="cdt.managedbuild.config.gnu.exe.release.378876848.1050654610" name="util.h" rcbsApplicability="disable" resourcePath="testbench/util.h" toolsToInvoke=""/>
+                    					
+                    <fileInfo id="cdt.managedbuild.config.gnu.exe.release.378876848.1791905064" name="util.cpp" rcbsApplicability="disable" resourcePath="testbench/util.cpp" toolsToInvoke="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.329546011.430479893">
+                        						
+                        <tool id="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.329546011.430479893" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.329546011">
+                            							
+                            <option id="gnu.cpp.compiler.option.preprocessor.def.2020329887" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def"/>
+                            							
+                            <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.cpp.compiler.option.include.paths.1618752358" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
+                                								
+                                <listOptionValue builtIn="false" value="../../src"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/golden"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/include/ap_sysc"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/include/etc"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/win64/tools/auto_cc/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/win64/tools/systemc/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/golden/src"/>
+                                							
+                            </option>
+                            							
+                            <option id="gnu.cpp.compiler.option.other.other.1066929098" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-Wno-unknown-pragmas -c -fmessage-length=0" valueType="string"/>
+                            							
+                            <inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.778101235" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
+                            						
+                        </tool>
+                        					
+                    </fileInfo>
+                    					
+                    <fileInfo id="cdt.managedbuild.config.gnu.exe.release.378876848.1034468331" name="tb_srcnn.cpp" rcbsApplicability="disable" resourcePath="testbench/tb_srcnn.cpp" toolsToInvoke="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.329546011.1732000226">
+                        						
+                        <tool id="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.329546011.1732000226" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.329546011">
+                            							
+                            <option id="gnu.cpp.compiler.option.preprocessor.def.1920388387" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def"/>
+                            							
+                            <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.cpp.compiler.option.include.paths.1677308758" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
+                                								
+                                <listOptionValue builtIn="false" value="../../src"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/golden"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/include/ap_sysc"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/include/etc"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/win64/tools/auto_cc/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/win64/tools/systemc/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/golden/src"/>
+                                							
+                            </option>
+                            							
+                            <option id="gnu.cpp.compiler.option.other.other.1711542716" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-Wno-unknown-pragmas -c -fmessage-length=0" valueType="string"/>
+                            							
+                            <inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.2029058636" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
+                            						
+                        </tool>
+                        					
+                    </fileInfo>
+                    					
+                    <fileInfo id="cdt.managedbuild.config.gnu.exe.release.378876848.998943995" name="tb_set14.cpp" rcbsApplicability="disable" resourcePath="testbench/tb_set14.cpp" toolsToInvoke="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.329546011.1649845216">
+                        						
+                        <tool id="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.329546011.1649845216" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.329546011">
+                            							
+                            <option id="gnu.cpp.compiler.option.preprocessor.def.240011338" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def"/>
+                            							
+                            <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.cpp.compiler.option.include.paths.1428901833" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
+                                								
+                                <listOptionValue builtIn="false" value="../../src"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/golden"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/include/ap_sysc"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/include/etc"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/win64/tools/auto_cc/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/win64/tools/systemc/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/golden/src"/>
+                                							
+                            </option>
+                            							
+                            <option id="gnu.cpp.compiler.option.other.other.1026907701" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-Wno-unknown-pragmas -c -fmessage-length=0" valueType="string"/>
+                            							
+                            <inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1220661783" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
+                            						
+                        </tool>
+                        					
+                    </fileInfo>
+                    					
+                    <fileInfo id="cdt.managedbuild.config.gnu.exe.release.378876848.1624916959" name="csim.cpp" rcbsApplicability="disable" resourcePath="testbench/csim.cpp" toolsToInvoke="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.329546011.1946284924">
+                        						
+                        <tool id="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.329546011.1946284924" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.329546011">
+                            							
+                            <option id="gnu.cpp.compiler.option.preprocessor.def.347279377" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def"/>
+                            							
+                            <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.cpp.compiler.option.include.paths.524563402" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
+                                								
+                                <listOptionValue builtIn="false" value="../../src"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/golden"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/include/ap_sysc"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/include/etc"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/win64/tools/auto_cc/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/win64/tools/systemc/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/Vitis_HLS/2023.1/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/golden/src"/>
+                                							
+                            </option>
+                            							
+                            <option id="gnu.cpp.compiler.option.other.other.142784882" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-Wno-unknown-pragmas -c -fmessage-length=0" valueType="string"/>
+                            							
+                            <inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.115404596" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
+                            						
+                        </tool>
+                        					
+                    </fileInfo>
+                    					
+                    <sourceEntries>
+                        						
+                        <entry excluding=".apc|.settings|solution1|*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+                        					
+                    </sourceEntries>
+                    				
+                </configuration>
+                			
+            </storageModule>
+            			
+            <storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+            		
+        </cconfiguration>
+        	
+    </storageModule>
+    	
+    <storageModule moduleId="cdtBuildSystem" version="4.0.0">
+        		
+        <project id="srcnn_hls.cdt.managedbuild.target.gnu.exe.2041755796" name="Executable" projectType="cdt.managedbuild.target.gnu.exe"/>
+        	
+    </storageModule>
+    	
+    <storageModule moduleId="scannerConfiguration">
+        		
+        <autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+        		
+        <scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.exe.debug.695000085;cdt.managedbuild.config.gnu.exe.debug.695000085.;cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.1040659429;cdt.managedbuild.tool.gnu.cpp.compiler.input.1618779165">
+            			
+            <autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+            		
+        </scannerConfigBuildInfo>
+        		
+        <scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.exe.debug.695000085;cdt.managedbuild.config.gnu.exe.debug.695000085.;cdt.managedbuild.tool.gnu.c.compiler.exe.debug.1562015325;cdt.managedbuild.tool.gnu.c.compiler.input.1247802317">
+            			
+            <autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+            		
+        </scannerConfigBuildInfo>
+        		
+        <scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.exe.release.378876848;cdt.managedbuild.config.gnu.exe.release.378876848.;cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.329546011;cdt.managedbuild.tool.gnu.cpp.compiler.input.592066219">
+            			
+            <autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+            		
+        </scannerConfigBuildInfo>
+        		
+        <scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.exe.release.378876848;cdt.managedbuild.config.gnu.exe.release.378876848.;cdt.managedbuild.tool.gnu.c.compiler.exe.release.1247093508;cdt.managedbuild.tool.gnu.c.compiler.input.1200125186">
+            			
+            <autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+            		
+        </scannerConfigBuildInfo>
+        	
+    </storageModule>
+    	
+    <storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
+    
+</cproject>

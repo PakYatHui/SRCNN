@@ -1,0 +1,30 @@
+C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:210:6: warning: Added loop label VITIS_LOOP_18_1:   [xilinx-label-all-loops]
+     for (int c = 0; c < 64; c++) {
+     ^~~
+     VITIS_LOOP_18_1: 
+C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:210:6: note: FIX-IT applied suggested code changes
+C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:211:10: warning: Added loop label VITIS_LOOP_19_2:   [xilinx-label-all-loops]
+         for (int y = 0; y < 255; y++) {
+         ^~~
+         VITIS_LOOP_19_2: 
+C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:211:10: note: FIX-IT applied suggested code changes
+C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:212:14: warning: Added loop label VITIS_LOOP_20_3:   [xilinx-label-all-loops]
+             for (int x = 0; x < 255; x++) {
+             ^~~
+             VITIS_LOOP_20_3: 
+C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:212:14: note: FIX-IT applied suggested code changes
+C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:222:6: warning: Added loop label VITIS_LOOP_30_4:   [xilinx-label-all-loops]
+     for (int c = 0; c < 32; c++) {
+     ^~~
+     VITIS_LOOP_30_4: 
+C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:222:6: note: FIX-IT applied suggested code changes
+C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:223:10: warning: Added loop label VITIS_LOOP_31_5:   [xilinx-label-all-loops]
+         for (int y = 0; y < 255; y++) {
+         ^~~
+         VITIS_LOOP_31_5: 
+C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:223:10: note: FIX-IT applied suggested code changes
+C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:224:14: warning: Added loop label VITIS_LOOP_32_6:   [xilinx-label-all-loops]
+             for (int x = 0; x < 255; x++) {
+             ^~~
+             VITIS_LOOP_32_6: 
+C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:224:14: note: FIX-IT applied suggested code changes

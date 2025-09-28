@@ -1,0 +1,70 @@
+
+Host Name:                     BERNIE
+OS Name:                       Microsoft Windows 11 Home
+OS Version:                    10.0.26100 N/A Build 26100
+OS Manufacturer:               Microsoft Corporation
+OS Configuration:              Standalone Workstation
+OS Build Type:                 Multiprocessor Free
+Registered Owner:              1669626441@QQ.COM
+Registered Organization:       N/A
+Product ID:                    00356-06265-29233-AAOEM
+Original Install Date:         27/02/2025, 11:33:39 PM
+System Boot Time:              18/09/2025, 12:06:51 AM
+System Manufacturer:           Microsoft Corporation
+System Model:                  Surface Pro 8
+System Type:                   x64-based PC
+Processor(s):                  1 Processor(s) Installed.
+                               [01]: Intel64 Family 6 Model 140 Stepping 1 GenuineIntel ~2419 Mhz
+BIOS Version:                  Microsoft Corporation 31.103.143, 21/07/2025
+Windows Directory:             C:\WINDOWS
+System Directory:              C:\WINDOWS\system32
+Boot Device:                   \Device\HarddiskVolume1
+System Locale:                 zh-cn;Chinese (China)
+Input Locale:                  zh-cn;Chinese (China)
+Time Zone:                     (UTC+10:00) Canberra, Melbourne, Sydney
+Total Physical Memory:         8,026 MB
+Available Physical Memory:     1,028 MB
+Virtual Memory: Max Size:      22,875 MB
+Virtual Memory: Available:     12,911 MB
+Virtual Memory: In Use:        9,964 MB
+Page File Location(s):         C:\pagefile.sys
+Domain:                        WORKGROUP
+Logon Server:                  \\BERNIE
+Hotfix(s):                     3 Hotfix(s) Installed.
+                               [01]: KB5064401
+                               [02]: KB5065426
+                               [03]: KB5064531
+Network Card(s):               3 NIC(s) Installed.
+                               [01]: Intel(R) Wi-Fi 6 AX201 160MHz
+                                     Connection Name: WLAN
+                                     DHCP Enabled:    Yes
+                                     DHCP Server:     192.168.0.1
+                                     IP address(es)
+                                     [01]: 192.168.0.79
+                                     [02]: fe80::b02:ea8:7017:1174
+                               [02]: Bluetooth Device (Personal Area Network)
+                                     Connection Name: À¶ÑÀÍøÂçÁ¬½Ó
+                                     Status:          Media disconnected
+                               [03]: ASIX USB to Gigabit Ethernet Family Adapter
+                                     Connection Name: ÒÔÌ«Íø 9
+                                     Status:          Media disconnected
+Virtualization-based security: Status: Running
+                               Required Security Properties:
+                                     Base Virtualization Support
+                               Available Security Properties:
+                                     Base Virtualization Support
+                                     Secure Boot
+                                     DMA Protection
+                                     UEFI Code Readonly
+                                     SMM Security Mitigations 1.0
+                                     Mode Based Execution Control
+                                     APIC Virtualization
+                               Services Configured:
+                                     Hypervisor enforced Code Integrity
+                                     Secure Launch
+                               Services Running:
+                                     Hypervisor enforced Code Integrity
+                               App Control for Business policy: Enforced
+                               App Control for Business user mode policy: Off
+                               Security Features Enabled:
+Hyper-V Requirements:          A hypervisor has been detected. Features required for Hyper-V will not be displayed.

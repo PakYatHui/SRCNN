@@ -1,0 +1,30 @@
+C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:199:5: warning: Added loop label VITIS_LOOP_11_1:   [xilinx-label-all-loops]
+    for (int oc = 0; oc < 64; oc++) {
+    ^~~
+    VITIS_LOOP_11_1: 
+C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:199:5: note: FIX-IT applied suggested code changes
+C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:200:8: warning: Added loop label VITIS_LOOP_12_2:   [xilinx-label-all-loops]
+       for (int y = 0; y < 255; y++) {
+       ^~~
+       VITIS_LOOP_12_2: 
+C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:200:8: note: FIX-IT applied suggested code changes
+C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:201:14: warning: Added loop label VITIS_LOOP_13_3:   [xilinx-label-all-loops]
+             for (int x = 0; x < 255; x++) {
+             ^~~
+             VITIS_LOOP_13_3: 
+C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:201:14: note: FIX-IT applied suggested code changes
+C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:205:18: warning: Added loop label VITIS_LOOP_17_4:   [xilinx-label-all-loops]
+                 for (int ic = 0; ic < 1; ic++) {
+                 ^~~
+                 VITIS_LOOP_17_4: 
+C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:205:18: note: FIX-IT applied suggested code changes
+C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:206:22: warning: Added loop label VITIS_LOOP_18_5:   [xilinx-label-all-loops]
+                     for (int ky = 0; ky < 9; ky++) {
+                     ^~~
+                     VITIS_LOOP_18_5: 
+C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:206:22: note: FIX-IT applied suggested code changes
+C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:217:26: warning: Added loop label VITIS_LOOP_29_6:   [xilinx-label-all-loops]
+                         for (int kx = 0; kx < 9; kx++) {
+                         ^~~
+                         VITIS_LOOP_29_6: 
+C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:217:26: note: FIX-IT applied suggested code changes

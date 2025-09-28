@@ -1,0 +1,51 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'srcnn'" level="0">
+<item name = "Date">Sun Sep 28 13:51:33 2025
+</item>
+<item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
+<item name = "Project">srcnn_hls</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xck26-sfvc784-2LV-c</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.016 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">4831846568, 4831846568, 48.318 sec, 48.318 sec, 4831846569, 4831846569, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- VITIS_LOOP_18_1">12517568, 12517568, 195587, -, -, 64, no</column>
+<column name=" + VITIS_LOOP_19_2">195585, 195585, 767, -, -, 255, no</column>
+<column name="  ++ VITIS_LOOP_20_3">765, 765, 3, -, -, 255, no</column>
+<column name="- VITIS_LOOP_30_4">6258784, 6258784, 195587, -, -, 32, no</column>
+<column name=" + VITIS_LOOP_31_5">195585, 195585, 767, -, -, 255, no</column>
+<column name="  ++ VITIS_LOOP_32_6">765, 765, 3, -, -, 255, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>
