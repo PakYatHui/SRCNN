@@ -1,4 +1,7 @@
+#include "ap_fixed.h"
 #include "srcnn.h"
+
+
 
 // implements conv1 layer of SRCNN
 void conv1(ftmap_t input_ftmap[N0][H][W],
@@ -6,13 +9,23 @@ void conv1(ftmap_t input_ftmap[N0][H][W],
            param_t conv1_biases[N1],
            ftmap_t output_ftmap[N1][H][W])
 {
+	ap_fixed<12, 1, AP_RND, AP_SAT> in;
+	ap_fixed<8,  1, AP_RND, AP_SAT> wt;
+	ap_fixed<26, 8, AP_RND, AP_SAT> acc;
+	ap_fixed<12, 2, AP_RND, AP_SAT> out;
+
+	//float in;
+	//float wt;
+	//float acc;
+	//float out;
+
 #pragma HLS PIPELINE off
 	int R = F1 / 2; // use R to make sure the kernel is at the center of the pixel
     for (int oc = 0; oc < N1; oc++) {
 	      for (int y = 0; y < H; y++) {
 	            for (int x = 0; x < W; x++) {
 
-	                float acc = conv1_biases[oc]; // Let ACC initialized with bias
+	            	acc = conv1_biases[oc]; // Let ACC initialized with bias
 
 	                for (int ic = 0; ic < N0; ic++) {
 	                    for (int ky = 0; ky < F1; ky++) { // enter into kernel row loop
@@ -37,13 +50,15 @@ void conv1(ftmap_t input_ftmap[N0][H][W],
 	                                ix = ix_raw;
 	                            }
 
-	                            acc += input_ftmap[ic][iy][ix] * conv1_weights[oc][ic][ky][kx];
+	                            in = input_ftmap[ic][iy][ix];
+	                            wt = conv1_weights[oc][ic][ky][kx];
+	                            acc += (in * wt);
 	                            //input pixel * Weights
 	                        }
 	                    }
 	                }
-
-	                output_ftmap[oc][y][x] = acc; // output writing, no ReLU
+	                out = acc;
+	                output_ftmap[oc][y][x] = out; // output writing, no ReLU
 	            }
 	        }
 	    }

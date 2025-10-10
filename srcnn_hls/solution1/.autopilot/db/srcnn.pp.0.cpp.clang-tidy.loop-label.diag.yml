@@ -7,7 +7,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\golden\src\srcnn.cpp'
     Replacements:    
       - FilePath:        'C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp'
-        Offset:          11270
+        Offset:          11390
         Length:          0
         ReplacementText: 'VITIS_LOOP_18_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -16,7 +16,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\golden\src\srcnn.cpp'
     Replacements:    
       - FilePath:        'C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp'
-        Offset:          11310
+        Offset:          11430
         Length:          0
         ReplacementText: 'VITIS_LOOP_19_2: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -25,7 +25,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\golden\src\srcnn.cpp'
     Replacements:    
       - FilePath:        'C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp'
-        Offset:          11355
+        Offset:          11475
         Length:          0
         ReplacementText: 'VITIS_LOOP_20_3: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -34,7 +34,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\golden\src\srcnn.cpp'
     Replacements:    
       - FilePath:        'C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp'
-        Offset:          11591
+        Offset:          11711
         Length:          0
         ReplacementText: 'VITIS_LOOP_30_4: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -43,7 +43,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\golden\src\srcnn.cpp'
     Replacements:    
       - FilePath:        'C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp'
-        Offset:          11631
+        Offset:          11751
         Length:          0
         ReplacementText: 'VITIS_LOOP_31_5: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -52,7 +52,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\golden\src\srcnn.cpp'
     Replacements:    
       - FilePath:        'C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp'
-        Offset:          11676
+        Offset:          11796
         Length:          0
         ReplacementText: 'VITIS_LOOP_32_6: '
 ...

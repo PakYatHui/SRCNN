@@ -4,6 +4,10 @@
 #include "srcnn.h"
 #include "util.h"
 
+#include <algorithm>
+#include <cmath>
+#include <cstddef>
+
 using namespace std;
 
 ftmap_t input_ftmap[N0][H][W];    // low resolution input image
@@ -38,6 +42,26 @@ int tb_conv1()
           weights,
           biases,
           output_ftmap);
+    // resulut for it: [conv1] |W|_max=0.599402 |B|_max=0.382091 |A|_max=1.60559
+    /*auto max_abs = [](const float* p, std::size_t n){
+        double m = 0.0;
+        for (std::size_t i = 0; i < n; ++i) {
+            double v = std::fabs(p[i]);
+            if (v > m) m = v;
+        }
+        return m;
+    };
+
+    double T_w = max_abs(reinterpret_cast<const float*>(&weights[0][0][0][0]),
+                         static_cast<std::size_t>(N1)*N0*F1*F1);
+    double T_b = max_abs(reinterpret_cast<const float*>(&biases[0]),
+                         static_cast<std::size_t>(N1));
+    double T_a = max_abs(reinterpret_cast<const float*>(&output_ftmap[0][0][0]),
+                         static_cast<std::size_t>(N1)*H*W);
+
+    std::cout << "[conv1] |W|_max=" << T_w
+              << " |B|_max=" << T_b
+              << " |A|_max=" << T_a << std::endl;*/
 
     // load golden reference
     load_ftmap(fname_GR, &golden_ftmap[0][0][0], N1*H*W);

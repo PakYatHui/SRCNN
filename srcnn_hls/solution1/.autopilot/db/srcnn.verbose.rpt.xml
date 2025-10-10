@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'srcnn'" level="0">
-<item name = "Date">Sun Sep 28 13:51:37 2025
+<item name = "Date">Wed Oct  8 01:11:12 2025
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -24,14 +24,14 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">4831846568, 4831846568, 48.318 sec, 48.318 sec, 4831846569, 4831846569, no</column>
+<column name="">3487649896, 3487649896, 34.876 sec, 34.876 sec, 3487649897, 3487649897, no</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_conv1_fu_194">conv1, 3117071233, 3117071233, 31.171 sec, 31.171 sec, 3117071233, 3117071233, no</column>
+<column name="grp_conv1_fu_194">conv1, 1772874561, 1772874561, 17.729 sec, 17.729 sec, 1772874561, 1772874561, no</column>
 <column name="grp_conv2_fu_206">conv2, 1202718817, 1202718817, 12.027 sec, 12.027 sec, 1202718817, 1202718817, no</column>
 <column name="grp_conv3_fu_218">conv3, 493280161, 493280161, 4.933 sec, 4.933 sec, 493280161, 493280161, no</column>
 </table>
@@ -58,24 +58,24 @@
 <column name="DSP">-, -, -, -, -</column>
 <column name="Expression">-, -, 0, 480, -</column>
 <column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">-, 5, 1418, 2022, -</column>
+<column name="Instance">-, 6, 1670, 7491, -</column>
 <column name="Memory">11064, -, 0, 0, 0</column>
-<column name="Multiplexer">-, -, -, 401, -</column>
+<column name="Multiplexer">-, -, -, 365, -</column>
 <column name="Register">-, -, 262, -, -</column>
 <specialColumn name="Available">288, 1248, 234240, 117120, 64</specialColumn>
-<specialColumn name="Utilization (%)">3841, ~0, ~0, 2, 0</specialColumn>
+<specialColumn name="Utilization (%)">3841, ~0, ~0, 7, 0</specialColumn>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="grp_conv1_fu_194">conv1, 0, 0, 386, 632, 0</column>
+<column name="grp_conv1_fu_194">conv1, 0, 1, 638, 6101, 0</column>
 <column name="grp_conv2_fu_206">conv2, 0, 0, 311, 436, 0</column>
 <column name="grp_conv3_fu_218">conv3, 0, 0, 366, 605, 0</column>
-<column name="fadd_32ns_32ns_32_4_full_dsp_1_U20">fadd_32ns_32ns_32_4_full_dsp_1, 0, 2, 227, 214, 0</column>
-<column name="fcmp_32ns_32ns_1_2_no_dsp_1_U19">fcmp_32ns_32ns_1_2_no_dsp_1, 0, 0, 0, 0, 0</column>
-<column name="fmul_32ns_32ns_32_3_max_dsp_1_U21">fmul_32ns_32ns_32_3_max_dsp_1, 0, 3, 128, 135, 0</column>
+<column name="fadd_32ns_32ns_32_4_full_dsp_1_U23">fadd_32ns_32ns_32_4_full_dsp_1, 0, 2, 227, 214, 0</column>
+<column name="fcmp_32ns_32ns_1_2_no_dsp_1_U22">fcmp_32ns_32ns_1_2_no_dsp_1, 0, 0, 0, 0, 0</column>
+<column name="fmul_32ns_32ns_32_3_max_dsp_1_U24">fmul_32ns_32ns_32_3_max_dsp_1, 0, 3, 128, 135, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -138,12 +138,12 @@
 <column name="feat2_d0">14, 3, 32, 96</column>
 <column name="feat2_we0">14, 3, 1, 3</column>
 <column name="grp_fu_229_p0">14, 3, 32, 96</column>
-<column name="grp_fu_692_ce">20, 4, 1, 4</column>
-<column name="grp_fu_692_p0">20, 4, 32, 128</column>
-<column name="grp_fu_692_p1">20, 4, 32, 128</column>
-<column name="grp_fu_696_ce">20, 4, 1, 4</column>
-<column name="grp_fu_696_p0">20, 4, 32, 128</column>
-<column name="grp_fu_696_p1">20, 4, 32, 128</column>
+<column name="grp_fu_692_ce">14, 3, 1, 3</column>
+<column name="grp_fu_692_p0">14, 3, 32, 96</column>
+<column name="grp_fu_692_p1">14, 3, 32, 96</column>
+<column name="grp_fu_696_ce">14, 3, 1, 3</column>
+<column name="grp_fu_696_p0">14, 3, 32, 96</column>
+<column name="grp_fu_696_p1">14, 3, 32, 96</column>
 <column name="x_1_reg_183">9, 2, 8, 16</column>
 <column name="x_reg_161">9, 2, 8, 16</column>
 <column name="y_1_reg_172">9, 2, 8, 16</column>
