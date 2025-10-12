@@ -1,4 +1,5 @@
 #include "srcnn.h"
+<<<<<<< HEAD
 
 // implements conv1 layer of SRCNN
 void conv1(ftmap_t input_ftmap[N0][H][W],
@@ -47,4 +48,40 @@ void conv1(ftmap_t input_ftmap[N0][H][W],
 	            }
 	        }
 	    }
+=======
+#include <algorithm>
+using namespace std;
+
+// implements conv1 layer of SRCNN
+void conv1(ftmap_t input_ftmap[N0][H][W],
+		param_t conv1_weights[N1][N0][F1][F1],
+		param_t conv1_biases[N1],
+		ftmap_t output_ftmap[N1][H][W])
+{
+//#pragma HLS pipeline off
+    int R = F1 / 2;
+    for (int oc = 0; oc < N1; oc++) { // N1 == 64
+        for (int y = 0; y < H; y++) {
+            for (int x = 0; x < W; x++) {
+            	float acc = conv1_biases[oc];
+
+                for (int ic = 0; ic < N0; ic++) {
+                    for (int ky = 0; ky < F1; ky++) {
+                        int iy_raw = y + ky - R;
+                        int iy = max(0, std::min(iy_raw, H - 1));
+                        for (int kx = 0; kx < F1; kx++) {
+#pragma HLS pipeline II=3
+                            int ix_raw = x + kx - R;
+                            int ix = max(0, std::min(ix_raw, W - 1));
+
+                            acc += input_ftmap[ic][iy][ix] * conv1_weights[oc][ic][ky][kx];
+                        }
+                    }
+                }
+
+                output_ftmap[oc][y][x] = acc; // last layer no activation
+            }
+        }
+    }
+>>>>>>> b41ed44 (Initial commit)
 }

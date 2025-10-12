@@ -15,12 +15,22 @@ const Port_Property HLS_Design_Meta::port_props[]={
 	Port_Property("conv1_biases_address0", 6, hls_out, 2, "ap_memory", "mem_address", 1),
 	Port_Property("conv1_biases_ce0", 1, hls_out, 2, "ap_memory", "mem_ce", 1),
 	Port_Property("conv1_biases_q0", 32, hls_in, 2, "ap_memory", "mem_dout", 1),
+<<<<<<< HEAD
+=======
+	Port_Property("conv1_biases_address1", 6, hls_out, 2, "ap_memory", "MemPortADDR2", 1),
+	Port_Property("conv1_biases_ce1", 1, hls_out, 2, "ap_memory", "MemPortCE2", 1),
+	Port_Property("conv1_biases_q1", 32, hls_in, 2, "ap_memory", "MemPortDOUT2", 1),
+>>>>>>> b41ed44 (Initial commit)
 	Port_Property("conv2_weights_address0", 11, hls_out, 3, "ap_memory", "mem_address", 1),
 	Port_Property("conv2_weights_ce0", 1, hls_out, 3, "ap_memory", "mem_ce", 1),
 	Port_Property("conv2_weights_q0", 32, hls_in, 3, "ap_memory", "mem_dout", 1),
 	Port_Property("conv2_biases_address0", 5, hls_out, 4, "ap_memory", "mem_address", 1),
 	Port_Property("conv2_biases_ce0", 1, hls_out, 4, "ap_memory", "mem_ce", 1),
+<<<<<<< HEAD
 	Port_Property("conv2_biases_q0", 32, hls_in, 4, "ap_memory", "mem_dout", 1),
+=======
+	Port_Property("conv2_biases_q0", 32, hls_in, 4, "ap_memory", "in_data", 1),
+>>>>>>> b41ed44 (Initial commit)
 	Port_Property("conv3_weights_address0", 10, hls_out, 5, "ap_memory", "mem_address", 1),
 	Port_Property("conv3_weights_ce0", 1, hls_out, 5, "ap_memory", "mem_ce", 1),
 	Port_Property("conv3_weights_q0", 32, hls_in, 5, "ap_memory", "mem_dout", 1),

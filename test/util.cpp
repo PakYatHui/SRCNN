@@ -1,6 +1,10 @@
 #include <fstream>
 #include <cmath>
+<<<<<<< HEAD
 
+=======
+#include "ap_fixed.h"
+>>>>>>> b41ed44 (Initial commit)
 #include "util.h"
 
 
@@ -68,10 +72,17 @@ double calculate_mse(ftmap_t *img1,
                      ftmap_t *img2,
                      int      count)
 {
+<<<<<<< HEAD
     double mse = 0.0;
     
     for (int i = 0; i < count; i++) {
         mse += std::pow(img1[i] - (float)img2[i], 2);
+=======
+	double mse = 0.0;
+    
+    for (int i = 0; i < count; i++) {
+        mse += (img1[i] - img2[i])*(img1[i] - img2[i]);
+>>>>>>> b41ed44 (Initial commit)
     }
     mse = mse / count;
 
@@ -111,4 +122,8 @@ void write_bin(std::string    fname,
         throw std::runtime_error("Error writing to output bin file");
     }
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> b41ed44 (Initial commit)

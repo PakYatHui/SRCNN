@@ -1,7 +1,11 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'srcnn'" level="0">
+<<<<<<< HEAD
 <item name = "Date">Sun Sep 28 13:51:33 2025
+=======
+<item name = "Date">Sun Oct 12 22:06:27 2025
+>>>>>>> b41ed44 (Initial commit)
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -15,7 +19,11 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<<<<<<< HEAD
 <column name="ap_clk">10.00 ns, 7.016 ns, 2.70 ns</column>
+=======
+<column name="ap_clk">10.00 ns, 7.183 ns, 2.70 ns</column>
+>>>>>>> b41ed44 (Initial commit)
 </table>
 </item>
 </section>
@@ -24,26 +32,43 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
+<<<<<<< HEAD
 <column name="">4831846568, 4831846568, 48.318 sec, 48.318 sec, 4831846569, 4831846569, no</column>
+=======
+<column name="">1627901240, 1627901240, 16.279 sec, 16.279 sec, 1627901241, 1627901241, no</column>
+>>>>>>> b41ed44 (Initial commit)
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<<<<<<< HEAD
 <column name="grp_conv1_fu_194">conv1, 3117071233, 3117071233, 31.171 sec, 31.171 sec, 3117071233, 3117071233, no</column>
 <column name="grp_conv2_fu_206">conv2, 1202718817, 1202718817, 12.027 sec, 12.027 sec, 1202718817, 1202718817, no</column>
 <column name="grp_conv3_fu_218">conv3, 493280161, 493280161, 4.933 sec, 4.933 sec, 493280161, 493280161, no</column>
+=======
+<column name="grp_conv1_fu_146">conv1, 1065369601, 1065369601, 10.654 sec, 10.654 sec, 1065369601, 1065369601, no</column>
+<column name="grp_srcnn_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_20_2_VITIS_LOOP_21_3_fu_158">srcnn_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_20_2_VITIS_LOOP_21_3, 4161603, 4161603, 41.616 ms, 41.616 ms, 4161603, 4161603, no</column>
+<column name="grp_srcnn_Pipeline_VITIS_LOOP_30_4_VITIS_LOOP_31_5_VITIS_LOOP_32_6_fu_164">srcnn_Pipeline_VITIS_LOOP_30_4_VITIS_LOOP_31_5_VITIS_LOOP_32_6, 2080803, 2080803, 20.808 ms, 20.808 ms, 2080803, 2080803, no</column>
+<column name="grp_srcnn_Pipeline_VITIS_LOOP_11_2_VITIS_LOOP_12_3_VITIS_LOOP_15_4_fu_170">srcnn_Pipeline_VITIS_LOOP_11_2_VITIS_LOOP_12_3_VITIS_LOOP_15_4, 12484808, 12484808, 0.125 sec, 0.125 sec, 12484808, 12484808, no</column>
+<column name="grp_srcnn_Pipeline_VITIS_LOOP_19_4_VITIS_LOOP_20_5_VITIS_LOOP_23_6_fu_183">srcnn_Pipeline_VITIS_LOOP_19_4_VITIS_LOOP_20_5_VITIS_LOOP_23_6, 2407, 2407, 24.070 us, 24.070 us, 2407, 2407, no</column>
+>>>>>>> b41ed44 (Initial commit)
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<<<<<<< HEAD
 <column name="- VITIS_LOOP_18_1">12517568, 12517568, 195587, -, -, 64, no</column>
 <column name=" + VITIS_LOOP_19_2">195585, 195585, 767, -, -, 255, no</column>
 <column name="  ++ VITIS_LOOP_20_3">765, 765, 3, -, -, 255, no</column>
 <column name="- VITIS_LOOP_30_4">6258784, 6258784, 195587, -, -, 32, no</column>
 <column name=" + VITIS_LOOP_31_5">195585, 195585, 767, -, -, 255, no</column>
 <column name="  ++ VITIS_LOOP_32_6">765, 765, 3, -, -, 255, no</column>
+=======
+<column name="- VITIS_LOOP_10_1">399513952, 399513952, 12484811, -, -, 32, no</column>
+<column name="- VITIS_LOOP_14_2_VITIS_LOOP_15_3">156775275, 156775275, 2411, -, -, 65025, no</column>
+>>>>>>> b41ed44 (Initial commit)
 </table>
 </item>
 </section>

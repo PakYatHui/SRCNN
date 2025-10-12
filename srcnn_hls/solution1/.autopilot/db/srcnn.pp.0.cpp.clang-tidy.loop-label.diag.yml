@@ -1,4 +1,5 @@
 ---
+<<<<<<< HEAD
 MainSourceFile:  'C:/Xilinx/golden/srcnn_hls/solution1/.autopilot/db/srcnn.pp.0.cpp'
 Diagnostics:     
   - DiagnosticName:  xilinx-label-all-loops
@@ -35,24 +36,121 @@ Diagnostics:
     Replacements:    
       - FilePath:        'C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp'
         Offset:          11591
+=======
+MainSourceFile:  'D:/unimelb_files/96/SRCNN_2/srcnn_hls/solution1/.autopilot/db/srcnn.pp.0.cpp'
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1213_1:  '
+    FileOffset:      1213
+    FilePath:        'D:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\ap_int_base.h'
+    Replacements:    
+      - FilePath:        'D:\unimelb_files\96\SRCNN_2\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp'
+        Offset:          55524
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1213_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_676_1:  '
+    FileOffset:      676
+    FilePath:        'D:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\ap_int_ref.h'
+    Replacements:    
+      - FilePath:        'D:\unimelb_files\96\SRCNN_2\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp'
+        Offset:          282848
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_676_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_690_1:  '
+    FileOffset:      690
+    FilePath:        'D:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\ap_int_ref.h'
+    Replacements:    
+      - FilePath:        'D:\unimelb_files\96\SRCNN_2\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp'
+        Offset:          283312
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_690_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_704_1:  '
+    FileOffset:      704
+    FilePath:        'D:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\ap_int_ref.h'
+    Replacements:    
+      - FilePath:        'D:\unimelb_files\96\SRCNN_2\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp'
+        Offset:          283777
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_704_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1247_1:  '
+    FileOffset:      1247
+    FilePath:        'D:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\ap_fixed_base.h'
+    Replacements:    
+      - FilePath:        'D:\unimelb_files\96\SRCNN_2\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp'
+        Offset:          566058
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1247_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_19_1:  '
+    FileOffset:      19
+    FilePath:        'D:\unimelb_files\96\SRCNN_2\src\srcnn.cpp'
+    Replacements:    
+      - FilePath:        'D:\unimelb_files\96\SRCNN_2\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp'
+        Offset:          1398723
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_19_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_20_2:  '
+    FileOffset:      20
+    FilePath:        'D:\unimelb_files\96\SRCNN_2\src\srcnn.cpp'
+    Replacements:    
+      - FilePath:        'D:\unimelb_files\96\SRCNN_2\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp'
+        Offset:          1398763
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_20_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_21_3:  '
+    FileOffset:      21
+    FilePath:        'D:\unimelb_files\96\SRCNN_2\src\srcnn.cpp'
+    Replacements:    
+      - FilePath:        'D:\unimelb_files\96\SRCNN_2\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp'
+        Offset:          1398808
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_21_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_30_4:  '
+    FileOffset:      30
+    FilePath:        'D:\unimelb_files\96\SRCNN_2\src\srcnn.cpp'
+    Replacements:    
+      - FilePath:        'D:\unimelb_files\96\SRCNN_2\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp'
+        Offset:          1399006
+>>>>>>> b41ed44 (Initial commit)
         Length:          0
         ReplacementText: 'VITIS_LOOP_30_4: '
   - DiagnosticName:  xilinx-label-all-loops
     Message:         'Added loop label VITIS_LOOP_31_5:  '
     FileOffset:      31
+<<<<<<< HEAD
     FilePath:        'C:\Xilinx\golden\src\srcnn.cpp'
     Replacements:    
       - FilePath:        'C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp'
         Offset:          11631
+=======
+    FilePath:        'D:\unimelb_files\96\SRCNN_2\src\srcnn.cpp'
+    Replacements:    
+      - FilePath:        'D:\unimelb_files\96\SRCNN_2\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp'
+        Offset:          1399046
+>>>>>>> b41ed44 (Initial commit)
         Length:          0
         ReplacementText: 'VITIS_LOOP_31_5: '
   - DiagnosticName:  xilinx-label-all-loops
     Message:         'Added loop label VITIS_LOOP_32_6:  '
     FileOffset:      32
+<<<<<<< HEAD
     FilePath:        'C:\Xilinx\golden\src\srcnn.cpp'
     Replacements:    
       - FilePath:        'C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp'
         Offset:          11676
+=======
+    FilePath:        'D:\unimelb_files\96\SRCNN_2\src\srcnn.cpp'
+    Replacements:    
+      - FilePath:        'D:\unimelb_files\96\SRCNN_2\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp'
+        Offset:          1399091
+>>>>>>> b41ed44 (Initial commit)
         Length:          0
         ReplacementText: 'VITIS_LOOP_32_6: '
 ...

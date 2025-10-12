@@ -1,5 +1,6 @@
 {
   "0": {
+<<<<<<< HEAD
     "basicblocks": 17,
     "calls": "2 3 1",
     "file": "srcnn.cpp",
@@ -37,6 +38,30 @@
     "file": "conv1.cpp",
     "fileloc": 4,
     "instructions": 54,
+=======
+    "basicblocks": 31,
+    "calls": "1",
+    "file": "srcnn.cpp",
+    "fileloc": 5,
+    "instructions": 127,
+    "loads": {
+      "G": 4,
+      "T": 4
+    },
+    "name": "srcnn",
+    "stores": {
+      "G": 3,
+      "T": 1
+    },
+    "total_instructions": 201
+  },
+  "1": {
+    "basicblocks": 17,
+    "calls": "",
+    "file": "conv1.cpp",
+    "fileloc": 6,
+    "instructions": 74,
+>>>>>>> b41ed44 (Initial commit)
     "loads": {
       "L": 3
     },
@@ -44,6 +69,7 @@
     "stores": {
       "G": 1
     },
+<<<<<<< HEAD
     "total_instructions": 54
   },
   "3": {
@@ -61,5 +87,8 @@
       "G": 1
     },
     "total_instructions": 32
+=======
+    "total_instructions": 74
+>>>>>>> b41ed44 (Initial commit)
   }
 }

@@ -29,102 +29,182 @@
 		<link>
 			<name>source</name>
 			<type>2</type>
+<<<<<<< HEAD
 			<location>C:/Xilinx/golden/srcnn_hls/.apc/.src</location>
+=======
+			<location>D:/unimelb_files/96/SRCNN_2/srcnn_hls/.apc/.src</location>
+>>>>>>> b41ed44 (Initial commit)
 		</link>
 		<link>
 			<name>testbench</name>
 			<type>2</type>
+<<<<<<< HEAD
 			<location>C:/Xilinx/golden/srcnn_hls/.apc/.tb</location>
+=======
+			<location>D:/unimelb_files/96/SRCNN_2/srcnn_hls/.apc/.tb</location>
+>>>>>>> b41ed44 (Initial commit)
 		</link>
 		<link>
 			<name>solution1/constraints</name>
 			<type>2</type>
+<<<<<<< HEAD
 			<location>C:/Xilinx/golden/srcnn_hls/solution1/.tcls</location>
+=======
+			<location>D:/unimelb_files/96/SRCNN_2/srcnn_hls/solution1/.tcls</location>
+>>>>>>> b41ed44 (Initial commit)
 		</link>
 		<link>
 			<name>source/conv1.cpp</name>
 			<type>1</type>
+<<<<<<< HEAD
 			<location>C:/Xilinx/golden/src/conv1.cpp</location>
+=======
+			<location>D:/unimelb_files/96/SRCNN_2/src/conv1.cpp</location>
+>>>>>>> b41ed44 (Initial commit)
 		</link>
 		<link>
 			<name>source/conv2.cpp</name>
 			<type>1</type>
+<<<<<<< HEAD
 			<location>C:/Xilinx/golden/src/conv2.cpp</location>
+=======
+			<location>D:/unimelb_files/96/SRCNN_2/src/conv2.cpp</location>
+>>>>>>> b41ed44 (Initial commit)
 		</link>
 		<link>
 			<name>source/conv3.cpp</name>
 			<type>1</type>
+<<<<<<< HEAD
 			<location>C:/Xilinx/golden/src/conv3.cpp</location>
+=======
+			<location>D:/unimelb_files/96/SRCNN_2/src/conv3.cpp</location>
+>>>>>>> b41ed44 (Initial commit)
 		</link>
 		<link>
 			<name>source/srcnn.cpp</name>
 			<type>1</type>
+<<<<<<< HEAD
 			<location>C:/Xilinx/golden/src/srcnn.cpp</location>
+=======
+			<location>D:/unimelb_files/96/SRCNN_2/src/srcnn.cpp</location>
+>>>>>>> b41ed44 (Initial commit)
 		</link>
 		<link>
 			<name>source/srcnn.h</name>
 			<type>1</type>
+<<<<<<< HEAD
 			<location>C:/Xilinx/golden/src/srcnn.h</location>
+=======
+			<location>D:/unimelb_files/96/SRCNN_2/src/srcnn.h</location>
+>>>>>>> b41ed44 (Initial commit)
 		</link>
 		<link>
 			<name>testbench/csim.cpp</name>
 			<type>1</type>
+<<<<<<< HEAD
 			<location>C:/Xilinx/golden/test/csim.cpp</location>
+=======
+			<location>D:/unimelb_files/96/SRCNN_2/test/csim.cpp</location>
+>>>>>>> b41ed44 (Initial commit)
 		</link>
 		<link>
 			<name>testbench/set14</name>
 			<type>2</type>
+<<<<<<< HEAD
 			<location>C:/Xilinx/golden/test/set14</location>
+=======
+			<location>D:/unimelb_files/96/SRCNN_2/test/set14</location>
+>>>>>>> b41ed44 (Initial commit)
 		</link>
 		<link>
 			<name>testbench/set5</name>
 			<type>2</type>
+<<<<<<< HEAD
 			<location>C:/Xilinx/golden/test/set5</location>
+=======
+			<location>D:/unimelb_files/96/SRCNN_2/test/set5</location>
+>>>>>>> b41ed44 (Initial commit)
 		</link>
 		<link>
 			<name>testbench/tb_conv1.cpp</name>
 			<type>1</type>
+<<<<<<< HEAD
 			<location>C:/Xilinx/golden/test/tb_conv1.cpp</location>
+=======
+			<location>D:/unimelb_files/96/SRCNN_2/test/tb_conv1.cpp</location>
+>>>>>>> b41ed44 (Initial commit)
 		</link>
 		<link>
 			<name>testbench/tb_set14.cpp</name>
 			<type>1</type>
+<<<<<<< HEAD
 			<location>C:/Xilinx/golden/test/tb_set14.cpp</location>
+=======
+			<location>D:/unimelb_files/96/SRCNN_2/test/tb_set14.cpp</location>
+>>>>>>> b41ed44 (Initial commit)
 		</link>
 		<link>
 			<name>testbench/tb_srcnn.cpp</name>
 			<type>1</type>
+<<<<<<< HEAD
 			<location>C:/Xilinx/golden/test/tb_srcnn.cpp</location>
+=======
+			<location>D:/unimelb_files/96/SRCNN_2/test/tb_srcnn.cpp</location>
+>>>>>>> b41ed44 (Initial commit)
 		</link>
 		<link>
 			<name>testbench/util.cpp</name>
 			<type>1</type>
+<<<<<<< HEAD
 			<location>C:/Xilinx/golden/test/util.cpp</location>
+=======
+			<location>D:/unimelb_files/96/SRCNN_2/test/util.cpp</location>
+>>>>>>> b41ed44 (Initial commit)
 		</link>
 		<link>
 			<name>testbench/util.h</name>
 			<type>1</type>
+<<<<<<< HEAD
 			<location>C:/Xilinx/golden/test/util.h</location>
+=======
+			<location>D:/unimelb_files/96/SRCNN_2/test/util.h</location>
+>>>>>>> b41ed44 (Initial commit)
 		</link>
 		<link>
 			<name>testbench/weights</name>
 			<type>2</type>
+<<<<<<< HEAD
 			<location>C:/Xilinx/golden/src/weights</location>
+=======
+			<location>D:/unimelb_files/96/SRCNN_2/src/weights</location>
+>>>>>>> b41ed44 (Initial commit)
 		</link>
 		<link>
 			<name>solution1/constraints/.xml.directive</name>
 			<type>1</type>
+<<<<<<< HEAD
 			<location>C:/Xilinx/golden/srcnn_hls/solution1/solution1.directive</location>
+=======
+			<location>D:/unimelb_files/96/SRCNN_2/srcnn_hls/solution1/solution1.directive</location>
+>>>>>>> b41ed44 (Initial commit)
 		</link>
 		<link>
 			<name>solution1/constraints/directives.tcl</name>
 			<type>1</type>
+<<<<<<< HEAD
 			<location>C:/Xilinx/golden/srcnn_hls/solution1/directives.tcl</location>
+=======
+			<location>D:/unimelb_files/96/SRCNN_2/srcnn_hls/solution1/directives.tcl</location>
+>>>>>>> b41ed44 (Initial commit)
 		</link>
 		<link>
 			<name>solution1/constraints/script.tcl</name>
 			<type>1</type>
+<<<<<<< HEAD
 			<location>C:/Xilinx/golden/srcnn_hls/solution1/script.tcl</location>
+=======
+			<location>D:/unimelb_files/96/SRCNN_2/srcnn_hls/solution1/script.tcl</location>
+>>>>>>> b41ed44 (Initial commit)
 		</link>
 	</linkedResources>
 </projectDescription>

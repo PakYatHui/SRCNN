@@ -11,7 +11,11 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+<<<<<<< HEAD
     id 3 \
+=======
+    id 13 \
+>>>>>>> b41ed44 (Initial commit)
     name input_ftmap \
     reset_level 1 \
     sync_rst true \
@@ -30,7 +34,11 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+<<<<<<< HEAD
     id 4 \
+=======
+    id 14 \
+>>>>>>> b41ed44 (Initial commit)
     name conv1_weights \
     reset_level 1 \
     sync_rst true \
@@ -49,14 +57,22 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+<<<<<<< HEAD
     id 5 \
+=======
+    id 15 \
+>>>>>>> b41ed44 (Initial commit)
     name conv1_biases \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename conv1_biases \
     op interface \
+<<<<<<< HEAD
     ports { conv1_biases_address0 { O 6 vector } conv1_biases_ce0 { O 1 bit } conv1_biases_q0 { I 32 vector } } \
+=======
+    ports { conv1_biases_address0 { O 6 vector } conv1_biases_ce0 { O 1 bit } conv1_biases_q0 { I 32 vector } conv1_biases_address1 { O 6 vector } conv1_biases_ce1 { O 1 bit } conv1_biases_q1 { I 32 vector } } \
+>>>>>>> b41ed44 (Initial commit)
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'conv1_biases'"
@@ -68,7 +84,11 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+<<<<<<< HEAD
     id 6 \
+=======
+    id 16 \
+>>>>>>> b41ed44 (Initial commit)
     name feat1 \
     reset_level 1 \
     sync_rst true \

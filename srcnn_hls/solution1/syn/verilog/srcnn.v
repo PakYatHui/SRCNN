@@ -6,7 +6,11 @@
 
 `timescale 1 ns / 1 ps 
 
+<<<<<<< HEAD
 (* CORE_GENERATION_INFO="srcnn_srcnn,hls_ip_2023_1,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xck26-sfvc784-2LV-c,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=7.016000,HLS_SYN_LAT=536879272,HLS_SYN_TPT=none,HLS_SYN_MEM=11064,HLS_SYN_DSP=0,HLS_SYN_FF=1680,HLS_SYN_LUT=2903,HLS_VERSION=2023_1}" *)
+=======
+(* CORE_GENERATION_INFO="srcnn_srcnn,hls_ip_2023_1,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xck26-sfvc784-2LV-c,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=7.183250,HLS_SYN_LAT=1627901240,HLS_SYN_TPT=none,HLS_SYN_MEM=11064,HLS_SYN_DSP=0,HLS_SYN_FF=1843,HLS_SYN_LUT=4890,HLS_VERSION=2023_1}" *)
+>>>>>>> b41ed44 (Initial commit)
 
 module srcnn (
         ap_clk,
@@ -24,6 +28,12 @@ module srcnn (
         conv1_biases_address0,
         conv1_biases_ce0,
         conv1_biases_q0,
+<<<<<<< HEAD
+=======
+        conv1_biases_address1,
+        conv1_biases_ce1,
+        conv1_biases_q1,
+>>>>>>> b41ed44 (Initial commit)
         conv2_weights_address0,
         conv2_weights_ce0,
         conv2_weights_q0,
@@ -40,6 +50,7 @@ module srcnn (
         output_ftmap_d0
 );
 
+<<<<<<< HEAD
 parameter    ap_ST_fsm_state1 = 14'd1;
 parameter    ap_ST_fsm_state2 = 14'd2;
 parameter    ap_ST_fsm_state3 = 14'd4;
@@ -54,6 +65,20 @@ parameter    ap_ST_fsm_state11 = 14'd1024;
 parameter    ap_ST_fsm_state12 = 14'd2048;
 parameter    ap_ST_fsm_state13 = 14'd4096;
 parameter    ap_ST_fsm_state14 = 14'd8192;
+=======
+parameter    ap_ST_fsm_state1 = 12'd1;
+parameter    ap_ST_fsm_state2 = 12'd2;
+parameter    ap_ST_fsm_state3 = 12'd4;
+parameter    ap_ST_fsm_state4 = 12'd8;
+parameter    ap_ST_fsm_state5 = 12'd16;
+parameter    ap_ST_fsm_state6 = 12'd32;
+parameter    ap_ST_fsm_state7 = 12'd64;
+parameter    ap_ST_fsm_state8 = 12'd128;
+parameter    ap_ST_fsm_state9 = 12'd256;
+parameter    ap_ST_fsm_state10 = 12'd512;
+parameter    ap_ST_fsm_state11 = 12'd1024;
+parameter    ap_ST_fsm_state12 = 12'd2048;
+>>>>>>> b41ed44 (Initial commit)
 
 input   ap_clk;
 input   ap_rst;
@@ -70,6 +95,12 @@ input  [31:0] conv1_weights_q0;
 output  [5:0] conv1_biases_address0;
 output   conv1_biases_ce0;
 input  [31:0] conv1_biases_q0;
+<<<<<<< HEAD
+=======
+output  [5:0] conv1_biases_address1;
+output   conv1_biases_ce1;
+input  [31:0] conv1_biases_q1;
+>>>>>>> b41ed44 (Initial commit)
 output  [10:0] conv2_weights_address0;
 output   conv2_weights_ce0;
 input  [31:0] conv2_weights_q0;
@@ -88,19 +119,33 @@ output  [31:0] output_ftmap_d0;
 reg ap_done;
 reg ap_idle;
 reg ap_ready;
+<<<<<<< HEAD
 
 (* fsm_encoding = "none" *) reg   [13:0] ap_CS_fsm;
+=======
+reg conv2_biases_ce0;
+reg output_ftmap_ce0;
+reg output_ftmap_we0;
+
+(* fsm_encoding = "none" *) reg   [11:0] ap_CS_fsm;
+>>>>>>> b41ed44 (Initial commit)
 wire    ap_CS_fsm_state1;
 reg   [21:0] feat1_address0;
 reg    feat1_ce0;
 reg    feat1_we0;
 reg   [31:0] feat1_d0;
 wire   [31:0] feat1_q0;
+<<<<<<< HEAD
+=======
+reg    feat1_ce1;
+wire   [31:0] feat1_q1;
+>>>>>>> b41ed44 (Initial commit)
 reg   [20:0] feat2_address0;
 reg    feat2_ce0;
 reg    feat2_we0;
 reg   [31:0] feat2_d0;
 wire   [31:0] feat2_q0;
+<<<<<<< HEAD
 wire  signed [16:0] sext_ln18_fu_266_p1;
 reg  signed [16:0] sext_ln18_reg_566;
 wire    ap_CS_fsm_state3;
@@ -281,14 +326,192 @@ wire    ap_ST_fsm_state11_blk;
 wire    ap_ST_fsm_state12_blk;
 wire    ap_ST_fsm_state13_blk;
 reg    ap_ST_fsm_state14_blk;
+=======
+reg    feat2_ce1;
+wire   [31:0] feat2_q1;
+reg   [5:0] oc_1_reg_403;
+wire    ap_CS_fsm_state5;
+wire   [4:0] trunc_ln10_fu_203_p1;
+reg   [4:0] trunc_ln10_reg_409;
+wire   [0:0] icmp_ln10_fu_207_p2;
+wire   [14:0] sub_ln21_fu_258_p2;
+reg   [14:0] sub_ln21_reg_443;
+wire    ap_CS_fsm_state6;
+wire   [10:0] tmp_7_fu_265_p3;
+reg   [10:0] tmp_7_reg_448;
+wire   [31:0] acc_fu_273_p1;
+reg   [31:0] acc_reg_453;
+wire   [31:0] acc_1_fu_278_p1;
+reg   [31:0] acc_1_reg_458;
+wire    ap_CS_fsm_state8;
+wire   [7:0] select_ln14_fu_315_p3;
+reg   [7:0] select_ln14_reg_466;
+wire    ap_CS_fsm_state9;
+wire   [0:0] icmp_ln14_fu_285_p2;
+wire   [7:0] select_ln14_1_fu_323_p3;
+reg   [7:0] select_ln14_1_reg_472;
+wire    grp_conv1_fu_146_ap_start;
+wire    grp_conv1_fu_146_ap_done;
+wire    grp_conv1_fu_146_ap_idle;
+wire    grp_conv1_fu_146_ap_ready;
+wire   [15:0] grp_conv1_fu_146_input_ftmap_address0;
+wire    grp_conv1_fu_146_input_ftmap_ce0;
+wire   [12:0] grp_conv1_fu_146_conv1_weights_address0;
+wire    grp_conv1_fu_146_conv1_weights_ce0;
+wire   [5:0] grp_conv1_fu_146_conv1_biases_address0;
+wire    grp_conv1_fu_146_conv1_biases_ce0;
+wire   [5:0] grp_conv1_fu_146_conv1_biases_address1;
+wire    grp_conv1_fu_146_conv1_biases_ce1;
+wire   [21:0] grp_conv1_fu_146_feat1_address0;
+wire    grp_conv1_fu_146_feat1_ce0;
+wire    grp_conv1_fu_146_feat1_we0;
+wire   [31:0] grp_conv1_fu_146_feat1_d0;
+wire   [31:0] grp_conv1_fu_146_grp_fu_479_p_din0;
+wire   [31:0] grp_conv1_fu_146_grp_fu_479_p_din1;
+wire   [1:0] grp_conv1_fu_146_grp_fu_479_p_opcode;
+wire    grp_conv1_fu_146_grp_fu_479_p_ce;
+wire   [31:0] grp_conv1_fu_146_grp_fu_483_p_din0;
+wire   [31:0] grp_conv1_fu_146_grp_fu_483_p_din1;
+wire    grp_conv1_fu_146_grp_fu_483_p_ce;
+wire    grp_srcnn_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_20_2_VITIS_LOOP_21_3_fu_158_ap_start;
+wire    grp_srcnn_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_20_2_VITIS_LOOP_21_3_fu_158_ap_done;
+wire    grp_srcnn_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_20_2_VITIS_LOOP_21_3_fu_158_ap_idle;
+wire    grp_srcnn_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_20_2_VITIS_LOOP_21_3_fu_158_ap_ready;
+wire   [21:0] grp_srcnn_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_20_2_VITIS_LOOP_21_3_fu_158_feat1_address0;
+wire    grp_srcnn_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_20_2_VITIS_LOOP_21_3_fu_158_feat1_ce0;
+wire    grp_srcnn_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_20_2_VITIS_LOOP_21_3_fu_158_feat1_we0;
+wire   [31:0] grp_srcnn_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_20_2_VITIS_LOOP_21_3_fu_158_feat1_d0;
+wire   [21:0] grp_srcnn_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_20_2_VITIS_LOOP_21_3_fu_158_feat1_address1;
+wire    grp_srcnn_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_20_2_VITIS_LOOP_21_3_fu_158_feat1_ce1;
+wire   [31:0] grp_srcnn_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_20_2_VITIS_LOOP_21_3_fu_158_grp_fu_487_p_din0;
+wire   [31:0] grp_srcnn_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_20_2_VITIS_LOOP_21_3_fu_158_grp_fu_487_p_din1;
+wire   [4:0] grp_srcnn_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_20_2_VITIS_LOOP_21_3_fu_158_grp_fu_487_p_opcode;
+wire    grp_srcnn_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_20_2_VITIS_LOOP_21_3_fu_158_grp_fu_487_p_ce;
+wire    grp_srcnn_Pipeline_VITIS_LOOP_30_4_VITIS_LOOP_31_5_VITIS_LOOP_32_6_fu_164_ap_start;
+wire    grp_srcnn_Pipeline_VITIS_LOOP_30_4_VITIS_LOOP_31_5_VITIS_LOOP_32_6_fu_164_ap_done;
+wire    grp_srcnn_Pipeline_VITIS_LOOP_30_4_VITIS_LOOP_31_5_VITIS_LOOP_32_6_fu_164_ap_idle;
+wire    grp_srcnn_Pipeline_VITIS_LOOP_30_4_VITIS_LOOP_31_5_VITIS_LOOP_32_6_fu_164_ap_ready;
+wire   [20:0] grp_srcnn_Pipeline_VITIS_LOOP_30_4_VITIS_LOOP_31_5_VITIS_LOOP_32_6_fu_164_feat2_address0;
+wire    grp_srcnn_Pipeline_VITIS_LOOP_30_4_VITIS_LOOP_31_5_VITIS_LOOP_32_6_fu_164_feat2_ce0;
+wire    grp_srcnn_Pipeline_VITIS_LOOP_30_4_VITIS_LOOP_31_5_VITIS_LOOP_32_6_fu_164_feat2_we0;
+wire   [31:0] grp_srcnn_Pipeline_VITIS_LOOP_30_4_VITIS_LOOP_31_5_VITIS_LOOP_32_6_fu_164_feat2_d0;
+wire   [20:0] grp_srcnn_Pipeline_VITIS_LOOP_30_4_VITIS_LOOP_31_5_VITIS_LOOP_32_6_fu_164_feat2_address1;
+wire    grp_srcnn_Pipeline_VITIS_LOOP_30_4_VITIS_LOOP_31_5_VITIS_LOOP_32_6_fu_164_feat2_ce1;
+wire   [31:0] grp_srcnn_Pipeline_VITIS_LOOP_30_4_VITIS_LOOP_31_5_VITIS_LOOP_32_6_fu_164_grp_fu_487_p_din0;
+wire   [31:0] grp_srcnn_Pipeline_VITIS_LOOP_30_4_VITIS_LOOP_31_5_VITIS_LOOP_32_6_fu_164_grp_fu_487_p_din1;
+wire   [4:0] grp_srcnn_Pipeline_VITIS_LOOP_30_4_VITIS_LOOP_31_5_VITIS_LOOP_32_6_fu_164_grp_fu_487_p_opcode;
+wire    grp_srcnn_Pipeline_VITIS_LOOP_30_4_VITIS_LOOP_31_5_VITIS_LOOP_32_6_fu_164_grp_fu_487_p_ce;
+wire    grp_srcnn_Pipeline_VITIS_LOOP_11_2_VITIS_LOOP_12_3_VITIS_LOOP_15_4_fu_170_ap_start;
+wire    grp_srcnn_Pipeline_VITIS_LOOP_11_2_VITIS_LOOP_12_3_VITIS_LOOP_15_4_fu_170_ap_done;
+wire    grp_srcnn_Pipeline_VITIS_LOOP_11_2_VITIS_LOOP_12_3_VITIS_LOOP_15_4_fu_170_ap_idle;
+wire    grp_srcnn_Pipeline_VITIS_LOOP_11_2_VITIS_LOOP_12_3_VITIS_LOOP_15_4_fu_170_ap_ready;
+wire   [10:0] grp_srcnn_Pipeline_VITIS_LOOP_11_2_VITIS_LOOP_12_3_VITIS_LOOP_15_4_fu_170_conv2_weights_address0;
+wire    grp_srcnn_Pipeline_VITIS_LOOP_11_2_VITIS_LOOP_12_3_VITIS_LOOP_15_4_fu_170_conv2_weights_ce0;
+wire   [21:0] grp_srcnn_Pipeline_VITIS_LOOP_11_2_VITIS_LOOP_12_3_VITIS_LOOP_15_4_fu_170_feat1_address0;
+wire    grp_srcnn_Pipeline_VITIS_LOOP_11_2_VITIS_LOOP_12_3_VITIS_LOOP_15_4_fu_170_feat1_ce0;
+wire   [20:0] grp_srcnn_Pipeline_VITIS_LOOP_11_2_VITIS_LOOP_12_3_VITIS_LOOP_15_4_fu_170_feat2_address0;
+wire    grp_srcnn_Pipeline_VITIS_LOOP_11_2_VITIS_LOOP_12_3_VITIS_LOOP_15_4_fu_170_feat2_ce0;
+wire    grp_srcnn_Pipeline_VITIS_LOOP_11_2_VITIS_LOOP_12_3_VITIS_LOOP_15_4_fu_170_feat2_we0;
+wire   [31:0] grp_srcnn_Pipeline_VITIS_LOOP_11_2_VITIS_LOOP_12_3_VITIS_LOOP_15_4_fu_170_feat2_d0;
+wire   [31:0] grp_srcnn_Pipeline_VITIS_LOOP_11_2_VITIS_LOOP_12_3_VITIS_LOOP_15_4_fu_170_grp_fu_479_p_din0;
+wire   [31:0] grp_srcnn_Pipeline_VITIS_LOOP_11_2_VITIS_LOOP_12_3_VITIS_LOOP_15_4_fu_170_grp_fu_479_p_din1;
+wire   [1:0] grp_srcnn_Pipeline_VITIS_LOOP_11_2_VITIS_LOOP_12_3_VITIS_LOOP_15_4_fu_170_grp_fu_479_p_opcode;
+wire    grp_srcnn_Pipeline_VITIS_LOOP_11_2_VITIS_LOOP_12_3_VITIS_LOOP_15_4_fu_170_grp_fu_479_p_ce;
+wire   [31:0] grp_srcnn_Pipeline_VITIS_LOOP_11_2_VITIS_LOOP_12_3_VITIS_LOOP_15_4_fu_170_grp_fu_483_p_din0;
+wire   [31:0] grp_srcnn_Pipeline_VITIS_LOOP_11_2_VITIS_LOOP_12_3_VITIS_LOOP_15_4_fu_170_grp_fu_483_p_din1;
+wire    grp_srcnn_Pipeline_VITIS_LOOP_11_2_VITIS_LOOP_12_3_VITIS_LOOP_15_4_fu_170_grp_fu_483_p_ce;
+wire    grp_srcnn_Pipeline_VITIS_LOOP_19_4_VITIS_LOOP_20_5_VITIS_LOOP_23_6_fu_183_ap_start;
+wire    grp_srcnn_Pipeline_VITIS_LOOP_19_4_VITIS_LOOP_20_5_VITIS_LOOP_23_6_fu_183_ap_done;
+wire    grp_srcnn_Pipeline_VITIS_LOOP_19_4_VITIS_LOOP_20_5_VITIS_LOOP_23_6_fu_183_ap_idle;
+wire    grp_srcnn_Pipeline_VITIS_LOOP_19_4_VITIS_LOOP_20_5_VITIS_LOOP_23_6_fu_183_ap_ready;
+wire   [9:0] grp_srcnn_Pipeline_VITIS_LOOP_19_4_VITIS_LOOP_20_5_VITIS_LOOP_23_6_fu_183_conv3_weights_address0;
+wire    grp_srcnn_Pipeline_VITIS_LOOP_19_4_VITIS_LOOP_20_5_VITIS_LOOP_23_6_fu_183_conv3_weights_ce0;
+wire   [31:0] grp_srcnn_Pipeline_VITIS_LOOP_19_4_VITIS_LOOP_20_5_VITIS_LOOP_23_6_fu_183_acc_5_out;
+wire    grp_srcnn_Pipeline_VITIS_LOOP_19_4_VITIS_LOOP_20_5_VITIS_LOOP_23_6_fu_183_acc_5_out_ap_vld;
+wire   [20:0] grp_srcnn_Pipeline_VITIS_LOOP_19_4_VITIS_LOOP_20_5_VITIS_LOOP_23_6_fu_183_feat2_address0;
+wire    grp_srcnn_Pipeline_VITIS_LOOP_19_4_VITIS_LOOP_20_5_VITIS_LOOP_23_6_fu_183_feat2_ce0;
+wire   [31:0] grp_srcnn_Pipeline_VITIS_LOOP_19_4_VITIS_LOOP_20_5_VITIS_LOOP_23_6_fu_183_grp_fu_479_p_din0;
+wire   [31:0] grp_srcnn_Pipeline_VITIS_LOOP_19_4_VITIS_LOOP_20_5_VITIS_LOOP_23_6_fu_183_grp_fu_479_p_din1;
+wire   [1:0] grp_srcnn_Pipeline_VITIS_LOOP_19_4_VITIS_LOOP_20_5_VITIS_LOOP_23_6_fu_183_grp_fu_479_p_opcode;
+wire    grp_srcnn_Pipeline_VITIS_LOOP_19_4_VITIS_LOOP_20_5_VITIS_LOOP_23_6_fu_183_grp_fu_479_p_ce;
+wire   [31:0] grp_srcnn_Pipeline_VITIS_LOOP_19_4_VITIS_LOOP_20_5_VITIS_LOOP_23_6_fu_183_grp_fu_483_p_din0;
+wire   [31:0] grp_srcnn_Pipeline_VITIS_LOOP_19_4_VITIS_LOOP_20_5_VITIS_LOOP_23_6_fu_183_grp_fu_483_p_din1;
+wire    grp_srcnn_Pipeline_VITIS_LOOP_19_4_VITIS_LOOP_20_5_VITIS_LOOP_23_6_fu_183_grp_fu_483_p_ce;
+reg    grp_conv1_fu_146_ap_start_reg;
+wire    ap_CS_fsm_state2;
+reg    grp_srcnn_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_20_2_VITIS_LOOP_21_3_fu_158_ap_start_reg;
+reg   [11:0] ap_NS_fsm;
+wire    ap_NS_fsm_state3;
+wire    ap_CS_fsm_state4;
+reg    grp_srcnn_Pipeline_VITIS_LOOP_30_4_VITIS_LOOP_31_5_VITIS_LOOP_32_6_fu_164_ap_start_reg;
+reg    grp_srcnn_Pipeline_VITIS_LOOP_11_2_VITIS_LOOP_12_3_VITIS_LOOP_15_4_fu_170_ap_start_reg;
+wire    ap_CS_fsm_state7;
+reg    grp_srcnn_Pipeline_VITIS_LOOP_19_4_VITIS_LOOP_20_5_VITIS_LOOP_23_6_fu_183_ap_start_reg;
+wire    ap_CS_fsm_state10;
+wire    ap_CS_fsm_state11;
+wire   [63:0] zext_ln10_fu_219_p1;
+wire   [63:0] zext_ln33_2_fu_377_p1;
+wire    ap_CS_fsm_state12;
+reg   [5:0] oc_fu_94;
+wire   [5:0] add_ln10_fu_213_p2;
+reg   [7:0] x_fu_102;
+wire   [7:0] add_ln15_fu_331_p2;
+reg   [7:0] y_fu_106;
+reg   [15:0] indvar_flatten106_fu_110;
+wire   [15:0] add_ln14_1_fu_291_p2;
+wire   [13:0] tmp_6_fu_247_p3;
+wire   [14:0] zext_ln21_5_fu_254_p1;
+wire   [14:0] zext_ln21_fu_244_p1;
+wire   [0:0] icmp_ln15_fu_309_p2;
+wire   [7:0] add_ln14_fu_303_p2;
+wire   [15:0] tmp_s_fu_355_p3;
+wire   [15:0] zext_ln33_fu_352_p1;
+wire   [15:0] sub_ln33_fu_362_p2;
+wire   [15:0] zext_ln33_1_fu_368_p1;
+wire   [15:0] add_ln33_fu_371_p2;
+wire   [31:0] grp_fu_479_p2;
+reg   [31:0] grp_fu_479_p0;
+reg   [31:0] grp_fu_479_p1;
+reg    grp_fu_479_ce;
+wire   [31:0] grp_fu_483_p2;
+reg   [31:0] grp_fu_483_p0;
+reg   [31:0] grp_fu_483_p1;
+reg    grp_fu_483_ce;
+wire   [0:0] grp_fu_487_p2;
+reg   [31:0] grp_fu_487_p0;
+reg   [31:0] grp_fu_487_p1;
+reg    grp_fu_487_ce;
+reg   [4:0] grp_fu_487_opcode;
+reg    ap_ST_fsm_state1_blk;
+reg    ap_ST_fsm_state2_blk;
+wire    ap_ST_fsm_state3_blk;
+reg    ap_ST_fsm_state4_blk;
+wire    ap_ST_fsm_state5_blk;
+wire    ap_ST_fsm_state6_blk;
+reg    ap_ST_fsm_state7_blk;
+reg    ap_ST_fsm_state8_blk;
+wire    ap_ST_fsm_state9_blk;
+wire    ap_ST_fsm_state10_blk;
+reg    ap_ST_fsm_state11_blk;
+wire    ap_ST_fsm_state12_blk;
+>>>>>>> b41ed44 (Initial commit)
 wire    ap_ce_reg;
 
 // power-on initialization
 initial begin
+<<<<<<< HEAD
 #0 ap_CS_fsm = 14'd1;
 #0 grp_conv1_fu_194_ap_start_reg = 1'b0;
 #0 grp_conv2_fu_206_ap_start_reg = 1'b0;
 #0 grp_conv3_fu_218_ap_start_reg = 1'b0;
+=======
+#0 ap_CS_fsm = 12'd1;
+#0 grp_conv1_fu_146_ap_start_reg = 1'b0;
+#0 grp_srcnn_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_20_2_VITIS_LOOP_21_3_fu_158_ap_start_reg = 1'b0;
+#0 grp_srcnn_Pipeline_VITIS_LOOP_30_4_VITIS_LOOP_31_5_VITIS_LOOP_32_6_fu_164_ap_start_reg = 1'b0;
+#0 grp_srcnn_Pipeline_VITIS_LOOP_11_2_VITIS_LOOP_12_3_VITIS_LOOP_15_4_fu_170_ap_start_reg = 1'b0;
+#0 grp_srcnn_Pipeline_VITIS_LOOP_19_4_VITIS_LOOP_20_5_VITIS_LOOP_23_6_fu_183_ap_start_reg = 1'b0;
+>>>>>>> b41ed44 (Initial commit)
 end
 
 srcnn_feat1_RAM_AUTO_1R1W #(
@@ -302,7 +525,14 @@ feat1_U(
     .ce0(feat1_ce0),
     .we0(feat1_we0),
     .d0(feat1_d0),
+<<<<<<< HEAD
     .q0(feat1_q0)
+=======
+    .q0(feat1_q0),
+    .address1(grp_srcnn_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_20_2_VITIS_LOOP_21_3_fu_158_feat1_address1),
+    .ce1(feat1_ce1),
+    .q1(feat1_q1)
+>>>>>>> b41ed44 (Initial commit)
 );
 
 srcnn_feat2_RAM_AUTO_1R1W #(
@@ -316,6 +546,7 @@ feat2_U(
     .ce0(feat2_ce0),
     .we0(feat2_we0),
     .d0(feat2_d0),
+<<<<<<< HEAD
     .q0(feat2_q0)
 );
 
@@ -424,6 +655,148 @@ fcmp_32ns_32ns_1_2_no_dsp_1_U19(
     .ce(1'b1),
     .opcode(5'd4),
     .dout(grp_fu_229_p2)
+=======
+    .q0(feat2_q0),
+    .address1(grp_srcnn_Pipeline_VITIS_LOOP_30_4_VITIS_LOOP_31_5_VITIS_LOOP_32_6_fu_164_feat2_address1),
+    .ce1(feat2_ce1),
+    .q1(feat2_q1)
+);
+
+srcnn_conv1 grp_conv1_fu_146(
+    .ap_clk(ap_clk),
+    .ap_rst(ap_rst),
+    .ap_start(grp_conv1_fu_146_ap_start),
+    .ap_done(grp_conv1_fu_146_ap_done),
+    .ap_idle(grp_conv1_fu_146_ap_idle),
+    .ap_ready(grp_conv1_fu_146_ap_ready),
+    .input_ftmap_address0(grp_conv1_fu_146_input_ftmap_address0),
+    .input_ftmap_ce0(grp_conv1_fu_146_input_ftmap_ce0),
+    .input_ftmap_q0(input_ftmap_q0),
+    .conv1_weights_address0(grp_conv1_fu_146_conv1_weights_address0),
+    .conv1_weights_ce0(grp_conv1_fu_146_conv1_weights_ce0),
+    .conv1_weights_q0(conv1_weights_q0),
+    .conv1_biases_address0(grp_conv1_fu_146_conv1_biases_address0),
+    .conv1_biases_ce0(grp_conv1_fu_146_conv1_biases_ce0),
+    .conv1_biases_q0(conv1_biases_q0),
+    .conv1_biases_address1(grp_conv1_fu_146_conv1_biases_address1),
+    .conv1_biases_ce1(grp_conv1_fu_146_conv1_biases_ce1),
+    .conv1_biases_q1(conv1_biases_q1),
+    .feat1_address0(grp_conv1_fu_146_feat1_address0),
+    .feat1_ce0(grp_conv1_fu_146_feat1_ce0),
+    .feat1_we0(grp_conv1_fu_146_feat1_we0),
+    .feat1_d0(grp_conv1_fu_146_feat1_d0),
+    .grp_fu_479_p_din0(grp_conv1_fu_146_grp_fu_479_p_din0),
+    .grp_fu_479_p_din1(grp_conv1_fu_146_grp_fu_479_p_din1),
+    .grp_fu_479_p_opcode(grp_conv1_fu_146_grp_fu_479_p_opcode),
+    .grp_fu_479_p_dout0(grp_fu_479_p2),
+    .grp_fu_479_p_ce(grp_conv1_fu_146_grp_fu_479_p_ce),
+    .grp_fu_483_p_din0(grp_conv1_fu_146_grp_fu_483_p_din0),
+    .grp_fu_483_p_din1(grp_conv1_fu_146_grp_fu_483_p_din1),
+    .grp_fu_483_p_dout0(grp_fu_483_p2),
+    .grp_fu_483_p_ce(grp_conv1_fu_146_grp_fu_483_p_ce)
+);
+
+srcnn_srcnn_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_20_2_VITIS_LOOP_21_3 grp_srcnn_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_20_2_VITIS_LOOP_21_3_fu_158(
+    .ap_clk(ap_clk),
+    .ap_rst(ap_rst),
+    .ap_start(grp_srcnn_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_20_2_VITIS_LOOP_21_3_fu_158_ap_start),
+    .ap_done(grp_srcnn_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_20_2_VITIS_LOOP_21_3_fu_158_ap_done),
+    .ap_idle(grp_srcnn_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_20_2_VITIS_LOOP_21_3_fu_158_ap_idle),
+    .ap_ready(grp_srcnn_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_20_2_VITIS_LOOP_21_3_fu_158_ap_ready),
+    .feat1_address0(grp_srcnn_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_20_2_VITIS_LOOP_21_3_fu_158_feat1_address0),
+    .feat1_ce0(grp_srcnn_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_20_2_VITIS_LOOP_21_3_fu_158_feat1_ce0),
+    .feat1_we0(grp_srcnn_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_20_2_VITIS_LOOP_21_3_fu_158_feat1_we0),
+    .feat1_d0(grp_srcnn_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_20_2_VITIS_LOOP_21_3_fu_158_feat1_d0),
+    .feat1_address1(grp_srcnn_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_20_2_VITIS_LOOP_21_3_fu_158_feat1_address1),
+    .feat1_ce1(grp_srcnn_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_20_2_VITIS_LOOP_21_3_fu_158_feat1_ce1),
+    .feat1_q1(feat1_q1),
+    .grp_fu_487_p_din0(grp_srcnn_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_20_2_VITIS_LOOP_21_3_fu_158_grp_fu_487_p_din0),
+    .grp_fu_487_p_din1(grp_srcnn_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_20_2_VITIS_LOOP_21_3_fu_158_grp_fu_487_p_din1),
+    .grp_fu_487_p_opcode(grp_srcnn_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_20_2_VITIS_LOOP_21_3_fu_158_grp_fu_487_p_opcode),
+    .grp_fu_487_p_dout0(grp_fu_487_p2),
+    .grp_fu_487_p_ce(grp_srcnn_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_20_2_VITIS_LOOP_21_3_fu_158_grp_fu_487_p_ce)
+);
+
+srcnn_srcnn_Pipeline_VITIS_LOOP_30_4_VITIS_LOOP_31_5_VITIS_LOOP_32_6 grp_srcnn_Pipeline_VITIS_LOOP_30_4_VITIS_LOOP_31_5_VITIS_LOOP_32_6_fu_164(
+    .ap_clk(ap_clk),
+    .ap_rst(ap_rst),
+    .ap_start(grp_srcnn_Pipeline_VITIS_LOOP_30_4_VITIS_LOOP_31_5_VITIS_LOOP_32_6_fu_164_ap_start),
+    .ap_done(grp_srcnn_Pipeline_VITIS_LOOP_30_4_VITIS_LOOP_31_5_VITIS_LOOP_32_6_fu_164_ap_done),
+    .ap_idle(grp_srcnn_Pipeline_VITIS_LOOP_30_4_VITIS_LOOP_31_5_VITIS_LOOP_32_6_fu_164_ap_idle),
+    .ap_ready(grp_srcnn_Pipeline_VITIS_LOOP_30_4_VITIS_LOOP_31_5_VITIS_LOOP_32_6_fu_164_ap_ready),
+    .feat2_address0(grp_srcnn_Pipeline_VITIS_LOOP_30_4_VITIS_LOOP_31_5_VITIS_LOOP_32_6_fu_164_feat2_address0),
+    .feat2_ce0(grp_srcnn_Pipeline_VITIS_LOOP_30_4_VITIS_LOOP_31_5_VITIS_LOOP_32_6_fu_164_feat2_ce0),
+    .feat2_we0(grp_srcnn_Pipeline_VITIS_LOOP_30_4_VITIS_LOOP_31_5_VITIS_LOOP_32_6_fu_164_feat2_we0),
+    .feat2_d0(grp_srcnn_Pipeline_VITIS_LOOP_30_4_VITIS_LOOP_31_5_VITIS_LOOP_32_6_fu_164_feat2_d0),
+    .feat2_address1(grp_srcnn_Pipeline_VITIS_LOOP_30_4_VITIS_LOOP_31_5_VITIS_LOOP_32_6_fu_164_feat2_address1),
+    .feat2_ce1(grp_srcnn_Pipeline_VITIS_LOOP_30_4_VITIS_LOOP_31_5_VITIS_LOOP_32_6_fu_164_feat2_ce1),
+    .feat2_q1(feat2_q1),
+    .grp_fu_487_p_din0(grp_srcnn_Pipeline_VITIS_LOOP_30_4_VITIS_LOOP_31_5_VITIS_LOOP_32_6_fu_164_grp_fu_487_p_din0),
+    .grp_fu_487_p_din1(grp_srcnn_Pipeline_VITIS_LOOP_30_4_VITIS_LOOP_31_5_VITIS_LOOP_32_6_fu_164_grp_fu_487_p_din1),
+    .grp_fu_487_p_opcode(grp_srcnn_Pipeline_VITIS_LOOP_30_4_VITIS_LOOP_31_5_VITIS_LOOP_32_6_fu_164_grp_fu_487_p_opcode),
+    .grp_fu_487_p_dout0(grp_fu_487_p2),
+    .grp_fu_487_p_ce(grp_srcnn_Pipeline_VITIS_LOOP_30_4_VITIS_LOOP_31_5_VITIS_LOOP_32_6_fu_164_grp_fu_487_p_ce)
+);
+
+srcnn_srcnn_Pipeline_VITIS_LOOP_11_2_VITIS_LOOP_12_3_VITIS_LOOP_15_4 grp_srcnn_Pipeline_VITIS_LOOP_11_2_VITIS_LOOP_12_3_VITIS_LOOP_15_4_fu_170(
+    .ap_clk(ap_clk),
+    .ap_rst(ap_rst),
+    .ap_start(grp_srcnn_Pipeline_VITIS_LOOP_11_2_VITIS_LOOP_12_3_VITIS_LOOP_15_4_fu_170_ap_start),
+    .ap_done(grp_srcnn_Pipeline_VITIS_LOOP_11_2_VITIS_LOOP_12_3_VITIS_LOOP_15_4_fu_170_ap_done),
+    .ap_idle(grp_srcnn_Pipeline_VITIS_LOOP_11_2_VITIS_LOOP_12_3_VITIS_LOOP_15_4_fu_170_ap_idle),
+    .ap_ready(grp_srcnn_Pipeline_VITIS_LOOP_11_2_VITIS_LOOP_12_3_VITIS_LOOP_15_4_fu_170_ap_ready),
+    .acc(acc_reg_453),
+    .sub_ln21(sub_ln21_reg_443),
+    .zext_ln18(tmp_7_reg_448),
+    .conv2_weights_address0(grp_srcnn_Pipeline_VITIS_LOOP_11_2_VITIS_LOOP_12_3_VITIS_LOOP_15_4_fu_170_conv2_weights_address0),
+    .conv2_weights_ce0(grp_srcnn_Pipeline_VITIS_LOOP_11_2_VITIS_LOOP_12_3_VITIS_LOOP_15_4_fu_170_conv2_weights_ce0),
+    .conv2_weights_q0(conv2_weights_q0),
+    .feat1_address0(grp_srcnn_Pipeline_VITIS_LOOP_11_2_VITIS_LOOP_12_3_VITIS_LOOP_15_4_fu_170_feat1_address0),
+    .feat1_ce0(grp_srcnn_Pipeline_VITIS_LOOP_11_2_VITIS_LOOP_12_3_VITIS_LOOP_15_4_fu_170_feat1_ce0),
+    .feat1_q0(feat1_q0),
+    .feat2_address0(grp_srcnn_Pipeline_VITIS_LOOP_11_2_VITIS_LOOP_12_3_VITIS_LOOP_15_4_fu_170_feat2_address0),
+    .feat2_ce0(grp_srcnn_Pipeline_VITIS_LOOP_11_2_VITIS_LOOP_12_3_VITIS_LOOP_15_4_fu_170_feat2_ce0),
+    .feat2_we0(grp_srcnn_Pipeline_VITIS_LOOP_11_2_VITIS_LOOP_12_3_VITIS_LOOP_15_4_fu_170_feat2_we0),
+    .feat2_d0(grp_srcnn_Pipeline_VITIS_LOOP_11_2_VITIS_LOOP_12_3_VITIS_LOOP_15_4_fu_170_feat2_d0),
+    .grp_fu_479_p_din0(grp_srcnn_Pipeline_VITIS_LOOP_11_2_VITIS_LOOP_12_3_VITIS_LOOP_15_4_fu_170_grp_fu_479_p_din0),
+    .grp_fu_479_p_din1(grp_srcnn_Pipeline_VITIS_LOOP_11_2_VITIS_LOOP_12_3_VITIS_LOOP_15_4_fu_170_grp_fu_479_p_din1),
+    .grp_fu_479_p_opcode(grp_srcnn_Pipeline_VITIS_LOOP_11_2_VITIS_LOOP_12_3_VITIS_LOOP_15_4_fu_170_grp_fu_479_p_opcode),
+    .grp_fu_479_p_dout0(grp_fu_479_p2),
+    .grp_fu_479_p_ce(grp_srcnn_Pipeline_VITIS_LOOP_11_2_VITIS_LOOP_12_3_VITIS_LOOP_15_4_fu_170_grp_fu_479_p_ce),
+    .grp_fu_483_p_din0(grp_srcnn_Pipeline_VITIS_LOOP_11_2_VITIS_LOOP_12_3_VITIS_LOOP_15_4_fu_170_grp_fu_483_p_din0),
+    .grp_fu_483_p_din1(grp_srcnn_Pipeline_VITIS_LOOP_11_2_VITIS_LOOP_12_3_VITIS_LOOP_15_4_fu_170_grp_fu_483_p_din1),
+    .grp_fu_483_p_dout0(grp_fu_483_p2),
+    .grp_fu_483_p_ce(grp_srcnn_Pipeline_VITIS_LOOP_11_2_VITIS_LOOP_12_3_VITIS_LOOP_15_4_fu_170_grp_fu_483_p_ce)
+);
+
+srcnn_srcnn_Pipeline_VITIS_LOOP_19_4_VITIS_LOOP_20_5_VITIS_LOOP_23_6 grp_srcnn_Pipeline_VITIS_LOOP_19_4_VITIS_LOOP_20_5_VITIS_LOOP_23_6_fu_183(
+    .ap_clk(ap_clk),
+    .ap_rst(ap_rst),
+    .ap_start(grp_srcnn_Pipeline_VITIS_LOOP_19_4_VITIS_LOOP_20_5_VITIS_LOOP_23_6_fu_183_ap_start),
+    .ap_done(grp_srcnn_Pipeline_VITIS_LOOP_19_4_VITIS_LOOP_20_5_VITIS_LOOP_23_6_fu_183_ap_done),
+    .ap_idle(grp_srcnn_Pipeline_VITIS_LOOP_19_4_VITIS_LOOP_20_5_VITIS_LOOP_23_6_fu_183_ap_idle),
+    .ap_ready(grp_srcnn_Pipeline_VITIS_LOOP_19_4_VITIS_LOOP_20_5_VITIS_LOOP_23_6_fu_183_ap_ready),
+    .acc_1(acc_1_reg_458),
+    .zext_ln14_1(select_ln14_1_reg_472),
+    .conv3_weights_address0(grp_srcnn_Pipeline_VITIS_LOOP_19_4_VITIS_LOOP_20_5_VITIS_LOOP_23_6_fu_183_conv3_weights_address0),
+    .conv3_weights_ce0(grp_srcnn_Pipeline_VITIS_LOOP_19_4_VITIS_LOOP_20_5_VITIS_LOOP_23_6_fu_183_conv3_weights_ce0),
+    .conv3_weights_q0(conv3_weights_q0),
+    .zext_ln15_2(select_ln14_reg_466),
+    .acc_5_out(grp_srcnn_Pipeline_VITIS_LOOP_19_4_VITIS_LOOP_20_5_VITIS_LOOP_23_6_fu_183_acc_5_out),
+    .acc_5_out_ap_vld(grp_srcnn_Pipeline_VITIS_LOOP_19_4_VITIS_LOOP_20_5_VITIS_LOOP_23_6_fu_183_acc_5_out_ap_vld),
+    .feat2_address0(grp_srcnn_Pipeline_VITIS_LOOP_19_4_VITIS_LOOP_20_5_VITIS_LOOP_23_6_fu_183_feat2_address0),
+    .feat2_ce0(grp_srcnn_Pipeline_VITIS_LOOP_19_4_VITIS_LOOP_20_5_VITIS_LOOP_23_6_fu_183_feat2_ce0),
+    .feat2_q0(feat2_q0),
+    .grp_fu_479_p_din0(grp_srcnn_Pipeline_VITIS_LOOP_19_4_VITIS_LOOP_20_5_VITIS_LOOP_23_6_fu_183_grp_fu_479_p_din0),
+    .grp_fu_479_p_din1(grp_srcnn_Pipeline_VITIS_LOOP_19_4_VITIS_LOOP_20_5_VITIS_LOOP_23_6_fu_183_grp_fu_479_p_din1),
+    .grp_fu_479_p_opcode(grp_srcnn_Pipeline_VITIS_LOOP_19_4_VITIS_LOOP_20_5_VITIS_LOOP_23_6_fu_183_grp_fu_479_p_opcode),
+    .grp_fu_479_p_dout0(grp_fu_479_p2),
+    .grp_fu_479_p_ce(grp_srcnn_Pipeline_VITIS_LOOP_19_4_VITIS_LOOP_20_5_VITIS_LOOP_23_6_fu_183_grp_fu_479_p_ce),
+    .grp_fu_483_p_din0(grp_srcnn_Pipeline_VITIS_LOOP_19_4_VITIS_LOOP_20_5_VITIS_LOOP_23_6_fu_183_grp_fu_483_p_din0),
+    .grp_fu_483_p_din1(grp_srcnn_Pipeline_VITIS_LOOP_19_4_VITIS_LOOP_20_5_VITIS_LOOP_23_6_fu_183_grp_fu_483_p_din1),
+    .grp_fu_483_p_dout0(grp_fu_483_p2),
+    .grp_fu_483_p_ce(grp_srcnn_Pipeline_VITIS_LOOP_19_4_VITIS_LOOP_20_5_VITIS_LOOP_23_6_fu_183_grp_fu_483_p_ce)
+>>>>>>> b41ed44 (Initial commit)
 );
 
 srcnn_fadd_32ns_32ns_32_4_full_dsp_1 #(
@@ -432,6 +805,7 @@ srcnn_fadd_32ns_32ns_32_4_full_dsp_1 #(
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
+<<<<<<< HEAD
 fadd_32ns_32ns_32_4_full_dsp_1_U20(
     .clk(ap_clk),
     .reset(ap_rst),
@@ -439,6 +813,15 @@ fadd_32ns_32ns_32_4_full_dsp_1_U20(
     .din1(grp_fu_692_p1),
     .ce(grp_fu_692_ce),
     .dout(grp_fu_692_p2)
+=======
+fadd_32ns_32ns_32_4_full_dsp_1_U37(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .din0(grp_fu_479_p0),
+    .din1(grp_fu_479_p1),
+    .ce(grp_fu_479_ce),
+    .dout(grp_fu_479_p2)
+>>>>>>> b41ed44 (Initial commit)
 );
 
 srcnn_fmul_32ns_32ns_32_3_max_dsp_1 #(
@@ -447,6 +830,7 @@ srcnn_fmul_32ns_32ns_32_3_max_dsp_1 #(
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
+<<<<<<< HEAD
 fmul_32ns_32ns_32_3_max_dsp_1_U21(
     .clk(ap_clk),
     .reset(ap_rst),
@@ -454,6 +838,31 @@ fmul_32ns_32ns_32_3_max_dsp_1_U21(
     .din1(grp_fu_696_p1),
     .ce(grp_fu_696_ce),
     .dout(grp_fu_696_p2)
+=======
+fmul_32ns_32ns_32_3_max_dsp_1_U38(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .din0(grp_fu_483_p0),
+    .din1(grp_fu_483_p1),
+    .ce(grp_fu_483_ce),
+    .dout(grp_fu_483_p2)
+);
+
+srcnn_fcmp_32ns_32ns_1_2_no_dsp_1 #(
+    .ID( 1 ),
+    .NUM_STAGE( 2 ),
+    .din0_WIDTH( 32 ),
+    .din1_WIDTH( 32 ),
+    .dout_WIDTH( 1 ))
+fcmp_32ns_32ns_1_2_no_dsp_1_U39(
+    .clk(ap_clk),
+    .reset(ap_rst),
+    .din0(grp_fu_487_p0),
+    .din1(grp_fu_487_p1),
+    .ce(grp_fu_487_ce),
+    .opcode(grp_fu_487_opcode),
+    .dout(grp_fu_487_p2)
+>>>>>>> b41ed44 (Initial commit)
 );
 
 always @ (posedge ap_clk) begin
@@ -466,73 +875,152 @@ end
 
 always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
+<<<<<<< HEAD
         grp_conv1_fu_194_ap_start_reg <= 1'b0;
     end else begin
         if (((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b1))) begin
             grp_conv1_fu_194_ap_start_reg <= 1'b1;
         end else if ((grp_conv1_fu_194_ap_ready == 1'b1)) begin
             grp_conv1_fu_194_ap_start_reg <= 1'b0;
+=======
+        grp_conv1_fu_146_ap_start_reg <= 1'b0;
+    end else begin
+        if (((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b1))) begin
+            grp_conv1_fu_146_ap_start_reg <= 1'b1;
+        end else if ((grp_conv1_fu_146_ap_ready == 1'b1)) begin
+            grp_conv1_fu_146_ap_start_reg <= 1'b0;
+>>>>>>> b41ed44 (Initial commit)
         end
     end
 end
 
 always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
+<<<<<<< HEAD
         grp_conv2_fu_206_ap_start_reg <= 1'b0;
     end else begin
         if (((icmp_ln18_fu_270_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state3))) begin
             grp_conv2_fu_206_ap_start_reg <= 1'b1;
         end else if ((grp_conv2_fu_206_ap_ready == 1'b1)) begin
             grp_conv2_fu_206_ap_start_reg <= 1'b0;
+=======
+        grp_srcnn_Pipeline_VITIS_LOOP_11_2_VITIS_LOOP_12_3_VITIS_LOOP_15_4_fu_170_ap_start_reg <= 1'b0;
+    end else begin
+        if ((1'b1 == ap_CS_fsm_state6)) begin
+            grp_srcnn_Pipeline_VITIS_LOOP_11_2_VITIS_LOOP_12_3_VITIS_LOOP_15_4_fu_170_ap_start_reg <= 1'b1;
+        end else if ((grp_srcnn_Pipeline_VITIS_LOOP_11_2_VITIS_LOOP_12_3_VITIS_LOOP_15_4_fu_170_ap_ready == 1'b1)) begin
+            grp_srcnn_Pipeline_VITIS_LOOP_11_2_VITIS_LOOP_12_3_VITIS_LOOP_15_4_fu_170_ap_start_reg <= 1'b0;
+>>>>>>> b41ed44 (Initial commit)
         end
     end
 end
 
 always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
+<<<<<<< HEAD
         grp_conv3_fu_218_ap_start_reg <= 1'b0;
     end else begin
         if (((1'b1 == ap_CS_fsm_state9) & (icmp_ln30_fu_429_p2 == 1'd1))) begin
             grp_conv3_fu_218_ap_start_reg <= 1'b1;
         end else if ((grp_conv3_fu_218_ap_ready == 1'b1)) begin
             grp_conv3_fu_218_ap_start_reg <= 1'b0;
+=======
+        grp_srcnn_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_20_2_VITIS_LOOP_21_3_fu_158_ap_start_reg <= 1'b0;
+    end else begin
+        if (((1'b1 == ap_NS_fsm_state3) & (1'b1 == ap_CS_fsm_state2))) begin
+            grp_srcnn_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_20_2_VITIS_LOOP_21_3_fu_158_ap_start_reg <= 1'b1;
+        end else if ((grp_srcnn_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_20_2_VITIS_LOOP_21_3_fu_158_ap_ready == 1'b1)) begin
+            grp_srcnn_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_20_2_VITIS_LOOP_21_3_fu_158_ap_start_reg <= 1'b0;
+>>>>>>> b41ed44 (Initial commit)
         end
     end
 end
 
 always @ (posedge ap_clk) begin
+<<<<<<< HEAD
     if (((icmp_ln18_fu_270_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state3))) begin
         c_1_fu_112 <= 6'd0;
     end else if (((icmp_ln31_fu_477_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10))) begin
         c_1_fu_112 <= add_ln30_reg_638;
+=======
+    if (ap_rst == 1'b1) begin
+        grp_srcnn_Pipeline_VITIS_LOOP_19_4_VITIS_LOOP_20_5_VITIS_LOOP_23_6_fu_183_ap_start_reg <= 1'b0;
+    end else begin
+        if ((1'b1 == ap_CS_fsm_state10)) begin
+            grp_srcnn_Pipeline_VITIS_LOOP_19_4_VITIS_LOOP_20_5_VITIS_LOOP_23_6_fu_183_ap_start_reg <= 1'b1;
+        end else if ((grp_srcnn_Pipeline_VITIS_LOOP_19_4_VITIS_LOOP_20_5_VITIS_LOOP_23_6_fu_183_ap_ready == 1'b1)) begin
+            grp_srcnn_Pipeline_VITIS_LOOP_19_4_VITIS_LOOP_20_5_VITIS_LOOP_23_6_fu_183_ap_start_reg <= 1'b0;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst == 1'b1) begin
+        grp_srcnn_Pipeline_VITIS_LOOP_30_4_VITIS_LOOP_31_5_VITIS_LOOP_32_6_fu_164_ap_start_reg <= 1'b0;
+    end else begin
+        if (((1'b1 == ap_CS_fsm_state5) & (icmp_ln10_fu_207_p2 == 1'd1))) begin
+            grp_srcnn_Pipeline_VITIS_LOOP_30_4_VITIS_LOOP_31_5_VITIS_LOOP_32_6_fu_164_ap_start_reg <= 1'b1;
+        end else if ((grp_srcnn_Pipeline_VITIS_LOOP_30_4_VITIS_LOOP_31_5_VITIS_LOOP_32_6_fu_164_ap_ready == 1'b1)) begin
+            grp_srcnn_Pipeline_VITIS_LOOP_30_4_VITIS_LOOP_31_5_VITIS_LOOP_32_6_fu_164_ap_start_reg <= 1'b0;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (((1'b1 == ap_CS_fsm_state5) & (icmp_ln10_fu_207_p2 == 1'd1))) begin
+        indvar_flatten106_fu_110 <= 16'd0;
+    end else if (((1'b1 == ap_CS_fsm_state9) & (icmp_ln14_fu_285_p2 == 1'd0))) begin
+        indvar_flatten106_fu_110 <= add_ln14_1_fu_291_p2;
+>>>>>>> b41ed44 (Initial commit)
     end
 end
 
 always @ (posedge ap_clk) begin
     if (((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b1))) begin
+<<<<<<< HEAD
         c_fu_108 <= 7'd0;
     end else if (((icmp_ln19_fu_318_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
         c_fu_108 <= add_ln18_reg_574;
+=======
+        oc_fu_94 <= 6'd0;
+    end else if (((1'b1 == ap_CS_fsm_state5) & (icmp_ln10_fu_207_p2 == 1'd0))) begin
+        oc_fu_94 <= add_ln10_fu_213_p2;
+>>>>>>> b41ed44 (Initial commit)
     end
 end
 
 always @ (posedge ap_clk) begin
+<<<<<<< HEAD
     if ((1'b1 == ap_CS_fsm_state13)) begin
         x_1_reg_183 <= add_ln32_reg_669;
     end else if (((icmp_ln31_fu_477_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state10))) begin
         x_1_reg_183 <= 8'd0;
+=======
+    if (((1'b1 == ap_CS_fsm_state5) & (icmp_ln10_fu_207_p2 == 1'd1))) begin
+        x_fu_102 <= 8'd0;
+    end else if (((1'b1 == ap_CS_fsm_state9) & (icmp_ln14_fu_285_p2 == 1'd0))) begin
+        x_fu_102 <= add_ln15_fu_331_p2;
+>>>>>>> b41ed44 (Initial commit)
     end
 end
 
 always @ (posedge ap_clk) begin
+<<<<<<< HEAD
     if ((1'b1 == ap_CS_fsm_state7)) begin
         x_reg_161 <= add_ln20_reg_607;
     end else if (((icmp_ln19_fu_318_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state4))) begin
         x_reg_161 <= 8'd0;
+=======
+    if (((1'b1 == ap_CS_fsm_state5) & (icmp_ln10_fu_207_p2 == 1'd1))) begin
+        y_fu_106 <= 8'd0;
+    end else if (((1'b1 == ap_CS_fsm_state9) & (icmp_ln14_fu_285_p2 == 1'd0))) begin
+        y_fu_106 <= select_ln14_1_fu_323_p3;
+>>>>>>> b41ed44 (Initial commit)
     end
 end
 
 always @ (posedge ap_clk) begin
+<<<<<<< HEAD
     if (((1'b1 == ap_CS_fsm_state9) & (icmp_ln30_fu_429_p2 == 1'd0))) begin
         y_1_reg_172 <= 8'd0;
     end else if (((icmp_ln32_fu_507_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state11))) begin
@@ -593,25 +1081,49 @@ end
 always @ (posedge ap_clk) begin
     if (((1'b1 == ap_CS_fsm_state9) & (icmp_ln30_fu_429_p2 == 1'd1))) begin
         empty_reg_643 <= empty_fu_441_p1;
+=======
+    if ((1'b1 == ap_CS_fsm_state8)) begin
+        acc_1_reg_458 <= acc_1_fu_278_p1;
+>>>>>>> b41ed44 (Initial commit)
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state6)) begin
+<<<<<<< HEAD
         icmp_ln21_1_reg_622 <= icmp_ln21_1_fu_384_p2;
         icmp_ln21_reg_617 <= icmp_ln21_fu_378_p2;
+=======
+        acc_reg_453 <= acc_fu_273_p1;
+        sub_ln21_reg_443 <= sub_ln21_fu_258_p2;
+        tmp_7_reg_448[10 : 6] <= tmp_7_fu_265_p3[10 : 6];
+>>>>>>> b41ed44 (Initial commit)
     end
 end
 
 always @ (posedge ap_clk) begin
+<<<<<<< HEAD
     if ((1'b1 == ap_CS_fsm_state12)) begin
         icmp_ln33_1_reg_684 <= icmp_ln33_1_fu_543_p2;
         icmp_ln33_reg_679 <= icmp_ln33_fu_537_p2;
+=======
+    if ((1'b1 == ap_CS_fsm_state5)) begin
+        oc_1_reg_403 <= oc_fu_94;
+        trunc_ln10_reg_409 <= trunc_ln10_fu_203_p1;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (((1'b1 == ap_CS_fsm_state9) & (icmp_ln14_fu_285_p2 == 1'd0))) begin
+        select_ln14_1_reg_472 <= select_ln14_1_fu_323_p3;
+        select_ln14_reg_466 <= select_ln14_fu_315_p3;
+>>>>>>> b41ed44 (Initial commit)
     end
 end
 
 assign ap_ST_fsm_state10_blk = 1'b0;
 
+<<<<<<< HEAD
 assign ap_ST_fsm_state11_blk = 1'b0;
 
 assign ap_ST_fsm_state12_blk = 1'b0;
@@ -626,6 +1138,18 @@ always @ (*) begin
     end
 end
 
+=======
+always @ (*) begin
+    if ((grp_srcnn_Pipeline_VITIS_LOOP_19_4_VITIS_LOOP_20_5_VITIS_LOOP_23_6_fu_183_ap_done == 1'b0)) begin
+        ap_ST_fsm_state11_blk = 1'b1;
+    end else begin
+        ap_ST_fsm_state11_blk = 1'b0;
+    end
+end
+
+assign ap_ST_fsm_state12_blk = 1'b0;
+
+>>>>>>> b41ed44 (Initial commit)
 always @ (*) begin
     if ((ap_start == 1'b0)) begin
         ap_ST_fsm_state1_blk = 1'b1;
@@ -635,7 +1159,11 @@ always @ (*) begin
 end
 
 always @ (*) begin
+<<<<<<< HEAD
     if ((grp_conv1_fu_194_ap_done == 1'b0)) begin
+=======
+    if ((grp_conv1_fu_146_ap_done == 1'b0)) begin
+>>>>>>> b41ed44 (Initial commit)
         ap_ST_fsm_state2_blk = 1'b1;
     end else begin
         ap_ST_fsm_state2_blk = 1'b0;
@@ -644,16 +1172,39 @@ end
 
 assign ap_ST_fsm_state3_blk = 1'b0;
 
+<<<<<<< HEAD
 assign ap_ST_fsm_state4_blk = 1'b0;
+=======
+always @ (*) begin
+    if ((grp_srcnn_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_20_2_VITIS_LOOP_21_3_fu_158_ap_done == 1'b0)) begin
+        ap_ST_fsm_state4_blk = 1'b1;
+    end else begin
+        ap_ST_fsm_state4_blk = 1'b0;
+    end
+end
+>>>>>>> b41ed44 (Initial commit)
 
 assign ap_ST_fsm_state5_blk = 1'b0;
 
 assign ap_ST_fsm_state6_blk = 1'b0;
 
+<<<<<<< HEAD
 assign ap_ST_fsm_state7_blk = 1'b0;
 
 always @ (*) begin
     if ((grp_conv2_fu_206_ap_done == 1'b0)) begin
+=======
+always @ (*) begin
+    if ((grp_srcnn_Pipeline_VITIS_LOOP_11_2_VITIS_LOOP_12_3_VITIS_LOOP_15_4_fu_170_ap_done == 1'b0)) begin
+        ap_ST_fsm_state7_blk = 1'b1;
+    end else begin
+        ap_ST_fsm_state7_blk = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((grp_srcnn_Pipeline_VITIS_LOOP_30_4_VITIS_LOOP_31_5_VITIS_LOOP_32_6_fu_164_ap_done == 1'b0)) begin
+>>>>>>> b41ed44 (Initial commit)
         ap_ST_fsm_state8_blk = 1'b1;
     end else begin
         ap_ST_fsm_state8_blk = 1'b0;
@@ -663,7 +1214,11 @@ end
 assign ap_ST_fsm_state9_blk = 1'b0;
 
 always @ (*) begin
+<<<<<<< HEAD
     if (((grp_conv3_fu_218_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state14))) begin
+=======
+    if (((1'b1 == ap_CS_fsm_state9) & (icmp_ln14_fu_285_p2 == 1'd1))) begin
+>>>>>>> b41ed44 (Initial commit)
         ap_done = 1'b1;
     end else begin
         ap_done = 1'b0;
@@ -679,7 +1234,11 @@ always @ (*) begin
 end
 
 always @ (*) begin
+<<<<<<< HEAD
     if (((grp_conv3_fu_218_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state14))) begin
+=======
+    if (((1'b1 == ap_CS_fsm_state9) & (icmp_ln14_fu_285_p2 == 1'd1))) begin
+>>>>>>> b41ed44 (Initial commit)
         ap_ready = 1'b1;
     end else begin
         ap_ready = 1'b0;
@@ -687,6 +1246,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
+<<<<<<< HEAD
     if ((1'b1 == ap_CS_fsm_state7)) begin
         feat1_address0 = feat1_addr_reg_599;
     end else if ((1'b1 == ap_CS_fsm_state5)) begin
@@ -695,44 +1255,92 @@ always @ (*) begin
         feat1_address0 = grp_conv2_fu_206_feat1_address0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
         feat1_address0 = grp_conv1_fu_194_feat1_address0;
+=======
+    if ((1'b1 == ap_CS_fsm_state5)) begin
+        conv2_biases_ce0 = 1'b1;
+    end else begin
+        conv2_biases_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state7)) begin
+        feat1_address0 = grp_srcnn_Pipeline_VITIS_LOOP_11_2_VITIS_LOOP_12_3_VITIS_LOOP_15_4_fu_170_feat1_address0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        feat1_address0 = grp_srcnn_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_20_2_VITIS_LOOP_21_3_fu_158_feat1_address0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        feat1_address0 = grp_conv1_fu_146_feat1_address0;
+>>>>>>> b41ed44 (Initial commit)
     end else begin
         feat1_address0 = 'bx;
     end
 end
 
 always @ (*) begin
+<<<<<<< HEAD
     if (((1'b1 == ap_CS_fsm_state7) | (1'b1 == ap_CS_fsm_state5))) begin
         feat1_ce0 = 1'b1;
     end else if ((1'b1 == ap_CS_fsm_state8)) begin
         feat1_ce0 = grp_conv2_fu_206_feat1_ce0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
         feat1_ce0 = grp_conv1_fu_194_feat1_ce0;
+=======
+    if ((1'b1 == ap_CS_fsm_state7)) begin
+        feat1_ce0 = grp_srcnn_Pipeline_VITIS_LOOP_11_2_VITIS_LOOP_12_3_VITIS_LOOP_15_4_fu_170_feat1_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        feat1_ce0 = grp_srcnn_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_20_2_VITIS_LOOP_21_3_fu_158_feat1_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        feat1_ce0 = grp_conv1_fu_146_feat1_ce0;
+>>>>>>> b41ed44 (Initial commit)
     end else begin
         feat1_ce0 = 1'b0;
     end
 end
 
 always @ (*) begin
+<<<<<<< HEAD
     if ((1'b1 == ap_CS_fsm_state7)) begin
         feat1_d0 = 32'd0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
         feat1_d0 = grp_conv1_fu_194_feat1_d0;
+=======
+    if ((1'b1 == ap_CS_fsm_state4)) begin
+        feat1_ce1 = grp_srcnn_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_20_2_VITIS_LOOP_21_3_fu_158_feat1_ce1;
+    end else begin
+        feat1_ce1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state4)) begin
+        feat1_d0 = grp_srcnn_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_20_2_VITIS_LOOP_21_3_fu_158_feat1_d0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        feat1_d0 = grp_conv1_fu_146_feat1_d0;
+>>>>>>> b41ed44 (Initial commit)
     end else begin
         feat1_d0 = 'bx;
     end
 end
 
 always @ (*) begin
+<<<<<<< HEAD
     if (((1'b1 == ap_CS_fsm_state7) & (1'd1 == and_ln21_fu_394_p2))) begin
         feat1_we0 = 1'b1;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
         feat1_we0 = grp_conv1_fu_194_feat1_we0;
+=======
+    if ((1'b1 == ap_CS_fsm_state4)) begin
+        feat1_we0 = grp_srcnn_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_20_2_VITIS_LOOP_21_3_fu_158_feat1_we0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        feat1_we0 = grp_conv1_fu_146_feat1_we0;
+>>>>>>> b41ed44 (Initial commit)
     end else begin
         feat1_we0 = 1'b0;
     end
 end
 
 always @ (*) begin
+<<<<<<< HEAD
     if ((1'b1 == ap_CS_fsm_state13)) begin
         feat2_address0 = feat2_addr_reg_661;
     end else if ((1'b1 == ap_CS_fsm_state11)) begin
@@ -741,54 +1349,213 @@ always @ (*) begin
         feat2_address0 = grp_conv3_fu_218_feat2_address0;
     end else if ((1'b1 == ap_CS_fsm_state8)) begin
         feat2_address0 = grp_conv2_fu_206_feat2_address0;
+=======
+    if ((1'b1 == ap_CS_fsm_state11)) begin
+        feat2_address0 = grp_srcnn_Pipeline_VITIS_LOOP_19_4_VITIS_LOOP_20_5_VITIS_LOOP_23_6_fu_183_feat2_address0;
+    end else if ((1'b1 == ap_CS_fsm_state7)) begin
+        feat2_address0 = grp_srcnn_Pipeline_VITIS_LOOP_11_2_VITIS_LOOP_12_3_VITIS_LOOP_15_4_fu_170_feat2_address0;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        feat2_address0 = grp_srcnn_Pipeline_VITIS_LOOP_30_4_VITIS_LOOP_31_5_VITIS_LOOP_32_6_fu_164_feat2_address0;
+>>>>>>> b41ed44 (Initial commit)
     end else begin
         feat2_address0 = 'bx;
     end
 end
 
 always @ (*) begin
+<<<<<<< HEAD
     if (((1'b1 == ap_CS_fsm_state13) | (1'b1 == ap_CS_fsm_state11))) begin
         feat2_ce0 = 1'b1;
     end else if ((1'b1 == ap_CS_fsm_state14)) begin
         feat2_ce0 = grp_conv3_fu_218_feat2_ce0;
     end else if ((1'b1 == ap_CS_fsm_state8)) begin
         feat2_ce0 = grp_conv2_fu_206_feat2_ce0;
+=======
+    if ((1'b1 == ap_CS_fsm_state11)) begin
+        feat2_ce0 = grp_srcnn_Pipeline_VITIS_LOOP_19_4_VITIS_LOOP_20_5_VITIS_LOOP_23_6_fu_183_feat2_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state7)) begin
+        feat2_ce0 = grp_srcnn_Pipeline_VITIS_LOOP_11_2_VITIS_LOOP_12_3_VITIS_LOOP_15_4_fu_170_feat2_ce0;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        feat2_ce0 = grp_srcnn_Pipeline_VITIS_LOOP_30_4_VITIS_LOOP_31_5_VITIS_LOOP_32_6_fu_164_feat2_ce0;
+>>>>>>> b41ed44 (Initial commit)
     end else begin
         feat2_ce0 = 1'b0;
     end
 end
 
 always @ (*) begin
+<<<<<<< HEAD
     if ((1'b1 == ap_CS_fsm_state13)) begin
         feat2_d0 = 32'd0;
     end else if ((1'b1 == ap_CS_fsm_state8)) begin
         feat2_d0 = grp_conv2_fu_206_feat2_d0;
+=======
+    if ((1'b1 == ap_CS_fsm_state8)) begin
+        feat2_ce1 = grp_srcnn_Pipeline_VITIS_LOOP_30_4_VITIS_LOOP_31_5_VITIS_LOOP_32_6_fu_164_feat2_ce1;
+    end else begin
+        feat2_ce1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state7)) begin
+        feat2_d0 = grp_srcnn_Pipeline_VITIS_LOOP_11_2_VITIS_LOOP_12_3_VITIS_LOOP_15_4_fu_170_feat2_d0;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        feat2_d0 = grp_srcnn_Pipeline_VITIS_LOOP_30_4_VITIS_LOOP_31_5_VITIS_LOOP_32_6_fu_164_feat2_d0;
+>>>>>>> b41ed44 (Initial commit)
     end else begin
         feat2_d0 = 'bx;
     end
 end
 
 always @ (*) begin
+<<<<<<< HEAD
     if (((1'b1 == ap_CS_fsm_state13) & (1'd1 == and_ln33_fu_553_p2))) begin
         feat2_we0 = 1'b1;
     end else if ((1'b1 == ap_CS_fsm_state8)) begin
         feat2_we0 = grp_conv2_fu_206_feat2_we0;
+=======
+    if ((1'b1 == ap_CS_fsm_state7)) begin
+        feat2_we0 = grp_srcnn_Pipeline_VITIS_LOOP_11_2_VITIS_LOOP_12_3_VITIS_LOOP_15_4_fu_170_feat2_we0;
+    end else if ((1'b1 == ap_CS_fsm_state8)) begin
+        feat2_we0 = grp_srcnn_Pipeline_VITIS_LOOP_30_4_VITIS_LOOP_31_5_VITIS_LOOP_32_6_fu_164_feat2_we0;
+>>>>>>> b41ed44 (Initial commit)
     end else begin
         feat2_we0 = 1'b0;
     end
 end
 
 always @ (*) begin
+<<<<<<< HEAD
     if ((1'b1 == ap_CS_fsm_state12)) begin
         grp_fu_229_p0 = feat2_q0;
     end else if ((1'b1 == ap_CS_fsm_state6)) begin
         grp_fu_229_p0 = feat1_q0;
     end else begin
         grp_fu_229_p0 = 'bx;
+=======
+    if ((1'b1 == ap_CS_fsm_state11)) begin
+        grp_fu_479_ce = grp_srcnn_Pipeline_VITIS_LOOP_19_4_VITIS_LOOP_20_5_VITIS_LOOP_23_6_fu_183_grp_fu_479_p_ce;
+    end else if ((1'b1 == ap_CS_fsm_state7)) begin
+        grp_fu_479_ce = grp_srcnn_Pipeline_VITIS_LOOP_11_2_VITIS_LOOP_12_3_VITIS_LOOP_15_4_fu_170_grp_fu_479_p_ce;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        grp_fu_479_ce = grp_conv1_fu_146_grp_fu_479_p_ce;
+    end else begin
+        grp_fu_479_ce = 1'b1;
     end
 end
 
 always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state11)) begin
+        grp_fu_479_p0 = grp_srcnn_Pipeline_VITIS_LOOP_19_4_VITIS_LOOP_20_5_VITIS_LOOP_23_6_fu_183_grp_fu_479_p_din0;
+    end else if ((1'b1 == ap_CS_fsm_state7)) begin
+        grp_fu_479_p0 = grp_srcnn_Pipeline_VITIS_LOOP_11_2_VITIS_LOOP_12_3_VITIS_LOOP_15_4_fu_170_grp_fu_479_p_din0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        grp_fu_479_p0 = grp_conv1_fu_146_grp_fu_479_p_din0;
+    end else begin
+        grp_fu_479_p0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state11)) begin
+        grp_fu_479_p1 = grp_srcnn_Pipeline_VITIS_LOOP_19_4_VITIS_LOOP_20_5_VITIS_LOOP_23_6_fu_183_grp_fu_479_p_din1;
+    end else if ((1'b1 == ap_CS_fsm_state7)) begin
+        grp_fu_479_p1 = grp_srcnn_Pipeline_VITIS_LOOP_11_2_VITIS_LOOP_12_3_VITIS_LOOP_15_4_fu_170_grp_fu_479_p_din1;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        grp_fu_479_p1 = grp_conv1_fu_146_grp_fu_479_p_din1;
+    end else begin
+        grp_fu_479_p1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state11)) begin
+        grp_fu_483_ce = grp_srcnn_Pipeline_VITIS_LOOP_19_4_VITIS_LOOP_20_5_VITIS_LOOP_23_6_fu_183_grp_fu_483_p_ce;
+    end else if ((1'b1 == ap_CS_fsm_state7)) begin
+        grp_fu_483_ce = grp_srcnn_Pipeline_VITIS_LOOP_11_2_VITIS_LOOP_12_3_VITIS_LOOP_15_4_fu_170_grp_fu_483_p_ce;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        grp_fu_483_ce = grp_conv1_fu_146_grp_fu_483_p_ce;
+    end else begin
+        grp_fu_483_ce = 1'b1;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state11)) begin
+        grp_fu_483_p0 = grp_srcnn_Pipeline_VITIS_LOOP_19_4_VITIS_LOOP_20_5_VITIS_LOOP_23_6_fu_183_grp_fu_483_p_din0;
+    end else if ((1'b1 == ap_CS_fsm_state7)) begin
+        grp_fu_483_p0 = grp_srcnn_Pipeline_VITIS_LOOP_11_2_VITIS_LOOP_12_3_VITIS_LOOP_15_4_fu_170_grp_fu_483_p_din0;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        grp_fu_483_p0 = grp_conv1_fu_146_grp_fu_483_p_din0;
+    end else begin
+        grp_fu_483_p0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state11)) begin
+        grp_fu_483_p1 = grp_srcnn_Pipeline_VITIS_LOOP_19_4_VITIS_LOOP_20_5_VITIS_LOOP_23_6_fu_183_grp_fu_483_p_din1;
+    end else if ((1'b1 == ap_CS_fsm_state7)) begin
+        grp_fu_483_p1 = grp_srcnn_Pipeline_VITIS_LOOP_11_2_VITIS_LOOP_12_3_VITIS_LOOP_15_4_fu_170_grp_fu_483_p_din1;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        grp_fu_483_p1 = grp_conv1_fu_146_grp_fu_483_p_din1;
+    end else begin
+        grp_fu_483_p1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state8)) begin
+        grp_fu_487_ce = grp_srcnn_Pipeline_VITIS_LOOP_30_4_VITIS_LOOP_31_5_VITIS_LOOP_32_6_fu_164_grp_fu_487_p_ce;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        grp_fu_487_ce = grp_srcnn_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_20_2_VITIS_LOOP_21_3_fu_158_grp_fu_487_p_ce;
+    end else begin
+        grp_fu_487_ce = 1'b1;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state8)) begin
+        grp_fu_487_opcode = grp_srcnn_Pipeline_VITIS_LOOP_30_4_VITIS_LOOP_31_5_VITIS_LOOP_32_6_fu_164_grp_fu_487_p_opcode;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        grp_fu_487_opcode = grp_srcnn_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_20_2_VITIS_LOOP_21_3_fu_158_grp_fu_487_p_opcode;
+    end else begin
+        grp_fu_487_opcode = 'bx;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state8)) begin
+        grp_fu_487_p0 = grp_srcnn_Pipeline_VITIS_LOOP_30_4_VITIS_LOOP_31_5_VITIS_LOOP_32_6_fu_164_grp_fu_487_p_din0;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        grp_fu_487_p0 = grp_srcnn_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_20_2_VITIS_LOOP_21_3_fu_158_grp_fu_487_p_din0;
+    end else begin
+        grp_fu_487_p0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state8)) begin
+        grp_fu_487_p1 = grp_srcnn_Pipeline_VITIS_LOOP_30_4_VITIS_LOOP_31_5_VITIS_LOOP_32_6_fu_164_grp_fu_487_p_din1;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        grp_fu_487_p1 = grp_srcnn_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_20_2_VITIS_LOOP_21_3_fu_158_grp_fu_487_p_din1;
+    end else begin
+        grp_fu_487_p1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state12)) begin
+        output_ftmap_ce0 = 1'b1;
+    end else begin
+        output_ftmap_ce0 = 1'b0;
+>>>>>>> b41ed44 (Initial commit)
+    end
+end
+
+always @ (*) begin
+<<<<<<< HEAD
     if ((1'b1 == ap_CS_fsm_state14)) begin
         grp_fu_692_ce = grp_conv3_fu_218_grp_fu_692_p_ce;
     end else if ((1'b1 == ap_CS_fsm_state8)) begin
@@ -857,6 +1624,12 @@ always @ (*) begin
         grp_fu_696_p1 = grp_conv1_fu_194_grp_fu_696_p_din1;
     end else begin
         grp_fu_696_p1 = 'bx;
+=======
+    if ((1'b1 == ap_CS_fsm_state12)) begin
+        output_ftmap_we0 = 1'b1;
+    end else begin
+        output_ftmap_we0 = 1'b0;
+>>>>>>> b41ed44 (Initial commit)
     end
 end
 
@@ -870,13 +1643,18 @@ always @ (*) begin
             end
         end
         ap_ST_fsm_state2 : begin
+<<<<<<< HEAD
             if (((1'b1 == ap_CS_fsm_state2) & (grp_conv1_fu_194_ap_done == 1'b1))) begin
+=======
+            if (((1'b1 == ap_CS_fsm_state2) & (grp_conv1_fu_146_ap_done == 1'b1))) begin
+>>>>>>> b41ed44 (Initial commit)
                 ap_NS_fsm = ap_ST_fsm_state3;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state2;
             end
         end
         ap_ST_fsm_state3 : begin
+<<<<<<< HEAD
             if (((icmp_ln18_fu_270_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state3))) begin
                 ap_NS_fsm = ap_ST_fsm_state4;
             end else begin
@@ -893,6 +1671,20 @@ always @ (*) begin
         ap_ST_fsm_state5 : begin
             if (((icmp_ln20_fu_348_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state5))) begin
                 ap_NS_fsm = ap_ST_fsm_state4;
+=======
+            ap_NS_fsm = ap_ST_fsm_state4;
+        end
+        ap_ST_fsm_state4 : begin
+            if (((1'b1 == ap_CS_fsm_state4) & (grp_srcnn_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_20_2_VITIS_LOOP_21_3_fu_158_ap_done == 1'b1))) begin
+                ap_NS_fsm = ap_ST_fsm_state5;
+            end else begin
+                ap_NS_fsm = ap_ST_fsm_state4;
+            end
+        end
+        ap_ST_fsm_state5 : begin
+            if (((1'b1 == ap_CS_fsm_state5) & (icmp_ln10_fu_207_p2 == 1'd1))) begin
+                ap_NS_fsm = ap_ST_fsm_state8;
+>>>>>>> b41ed44 (Initial commit)
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state6;
             end
@@ -901,16 +1693,28 @@ always @ (*) begin
             ap_NS_fsm = ap_ST_fsm_state7;
         end
         ap_ST_fsm_state7 : begin
+<<<<<<< HEAD
             ap_NS_fsm = ap_ST_fsm_state5;
         end
         ap_ST_fsm_state8 : begin
             if (((grp_conv2_fu_206_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state8))) begin
+=======
+            if (((grp_srcnn_Pipeline_VITIS_LOOP_11_2_VITIS_LOOP_12_3_VITIS_LOOP_15_4_fu_170_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state7))) begin
+                ap_NS_fsm = ap_ST_fsm_state5;
+            end else begin
+                ap_NS_fsm = ap_ST_fsm_state7;
+            end
+        end
+        ap_ST_fsm_state8 : begin
+            if (((grp_srcnn_Pipeline_VITIS_LOOP_30_4_VITIS_LOOP_31_5_VITIS_LOOP_32_6_fu_164_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state8))) begin
+>>>>>>> b41ed44 (Initial commit)
                 ap_NS_fsm = ap_ST_fsm_state9;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state8;
             end
         end
         ap_ST_fsm_state9 : begin
+<<<<<<< HEAD
             if (((1'b1 == ap_CS_fsm_state9) & (icmp_ln30_fu_429_p2 == 1'd0))) begin
                 ap_NS_fsm = ap_ST_fsm_state10;
             end else begin
@@ -920,10 +1724,25 @@ always @ (*) begin
         ap_ST_fsm_state10 : begin
             if (((icmp_ln31_fu_477_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10))) begin
                 ap_NS_fsm = ap_ST_fsm_state9;
+=======
+            if (((1'b1 == ap_CS_fsm_state9) & (icmp_ln14_fu_285_p2 == 1'd1))) begin
+                ap_NS_fsm = ap_ST_fsm_state1;
+            end else begin
+                ap_NS_fsm = ap_ST_fsm_state10;
+            end
+        end
+        ap_ST_fsm_state10 : begin
+            ap_NS_fsm = ap_ST_fsm_state11;
+        end
+        ap_ST_fsm_state11 : begin
+            if (((grp_srcnn_Pipeline_VITIS_LOOP_19_4_VITIS_LOOP_20_5_VITIS_LOOP_23_6_fu_183_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state11))) begin
+                ap_NS_fsm = ap_ST_fsm_state12;
+>>>>>>> b41ed44 (Initial commit)
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state11;
             end
         end
+<<<<<<< HEAD
         ap_ST_fsm_state11 : begin
             if (((icmp_ln32_fu_507_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state11))) begin
                 ap_NS_fsm = ap_ST_fsm_state10;
@@ -943,6 +1762,10 @@ always @ (*) begin
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state14;
             end
+=======
+        ap_ST_fsm_state12 : begin
+            ap_NS_fsm = ap_ST_fsm_state9;
+>>>>>>> b41ed44 (Initial commit)
         end
         default : begin
             ap_NS_fsm = 'bx;
@@ -950,6 +1773,7 @@ always @ (*) begin
     endcase
 end
 
+<<<<<<< HEAD
 assign add_ln18_fu_276_p2 = (c_fu_108 + 7'd1);
 
 assign add_ln19_fu_324_p2 = (y_reg_150 + 8'd1);
@@ -973,6 +1797,21 @@ assign add_ln33_fu_450_p2 = ($signed(sext_ln30_reg_630) + $signed(zext_ln33_2_fu
 assign and_ln21_fu_394_p2 = (or_ln21_fu_390_p2 & grp_fu_229_p2);
 
 assign and_ln33_fu_553_p2 = (or_ln33_fu_549_p2 & grp_fu_229_p2);
+=======
+assign acc_1_fu_278_p1 = conv3_biases;
+
+assign acc_fu_273_p1 = conv2_biases_q0;
+
+assign add_ln10_fu_213_p2 = (oc_fu_94 + 6'd1);
+
+assign add_ln14_1_fu_291_p2 = (indvar_flatten106_fu_110 + 16'd1);
+
+assign add_ln14_fu_303_p2 = (y_fu_106 + 8'd1);
+
+assign add_ln15_fu_331_p2 = (select_ln14_fu_315_p3 + 8'd1);
+
+assign add_ln33_fu_371_p2 = (sub_ln33_fu_362_p2 + zext_ln33_1_fu_368_p1);
+>>>>>>> b41ed44 (Initial commit)
 
 assign ap_CS_fsm_state1 = ap_CS_fsm[32'd0];
 
@@ -982,6 +1821,7 @@ assign ap_CS_fsm_state11 = ap_CS_fsm[32'd10];
 
 assign ap_CS_fsm_state12 = ap_CS_fsm[32'd11];
 
+<<<<<<< HEAD
 assign ap_CS_fsm_state13 = ap_CS_fsm[32'd12];
 
 assign ap_CS_fsm_state14 = ap_CS_fsm[32'd13];
@@ -990,6 +1830,10 @@ assign ap_CS_fsm_state2 = ap_CS_fsm[32'd1];
 
 assign ap_CS_fsm_state3 = ap_CS_fsm[32'd2];
 
+=======
+assign ap_CS_fsm_state2 = ap_CS_fsm[32'd1];
+
+>>>>>>> b41ed44 (Initial commit)
 assign ap_CS_fsm_state4 = ap_CS_fsm[32'd3];
 
 assign ap_CS_fsm_state5 = ap_CS_fsm[32'd4];
@@ -1002,6 +1846,7 @@ assign ap_CS_fsm_state8 = ap_CS_fsm[32'd7];
 
 assign ap_CS_fsm_state9 = ap_CS_fsm[32'd8];
 
+<<<<<<< HEAD
 assign bitcast_ln21_fu_360_p1 = feat1_q0;
 
 assign bitcast_ln33_fu_519_p1 = feat2_q0;
@@ -1125,5 +1970,86 @@ assign zext_ln33_3_fu_493_p1 = x_1_reg_183;
 assign zext_ln33_4_fu_502_p1 = add_ln33_1_fu_497_p2;
 
 assign zext_ln33_fu_403_p1 = c_1_fu_112;
+=======
+assign ap_NS_fsm_state3 = ap_NS_fsm[32'd2];
+
+assign conv1_biases_address0 = grp_conv1_fu_146_conv1_biases_address0;
+
+assign conv1_biases_address1 = grp_conv1_fu_146_conv1_biases_address1;
+
+assign conv1_biases_ce0 = grp_conv1_fu_146_conv1_biases_ce0;
+
+assign conv1_biases_ce1 = grp_conv1_fu_146_conv1_biases_ce1;
+
+assign conv1_weights_address0 = grp_conv1_fu_146_conv1_weights_address0;
+
+assign conv1_weights_ce0 = grp_conv1_fu_146_conv1_weights_ce0;
+
+assign conv2_biases_address0 = zext_ln10_fu_219_p1;
+
+assign conv2_weights_address0 = grp_srcnn_Pipeline_VITIS_LOOP_11_2_VITIS_LOOP_12_3_VITIS_LOOP_15_4_fu_170_conv2_weights_address0;
+
+assign conv2_weights_ce0 = grp_srcnn_Pipeline_VITIS_LOOP_11_2_VITIS_LOOP_12_3_VITIS_LOOP_15_4_fu_170_conv2_weights_ce0;
+
+assign conv3_weights_address0 = grp_srcnn_Pipeline_VITIS_LOOP_19_4_VITIS_LOOP_20_5_VITIS_LOOP_23_6_fu_183_conv3_weights_address0;
+
+assign conv3_weights_ce0 = grp_srcnn_Pipeline_VITIS_LOOP_19_4_VITIS_LOOP_20_5_VITIS_LOOP_23_6_fu_183_conv3_weights_ce0;
+
+assign grp_conv1_fu_146_ap_start = grp_conv1_fu_146_ap_start_reg;
+
+assign grp_srcnn_Pipeline_VITIS_LOOP_11_2_VITIS_LOOP_12_3_VITIS_LOOP_15_4_fu_170_ap_start = grp_srcnn_Pipeline_VITIS_LOOP_11_2_VITIS_LOOP_12_3_VITIS_LOOP_15_4_fu_170_ap_start_reg;
+
+assign grp_srcnn_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_20_2_VITIS_LOOP_21_3_fu_158_ap_start = grp_srcnn_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_20_2_VITIS_LOOP_21_3_fu_158_ap_start_reg;
+
+assign grp_srcnn_Pipeline_VITIS_LOOP_19_4_VITIS_LOOP_20_5_VITIS_LOOP_23_6_fu_183_ap_start = grp_srcnn_Pipeline_VITIS_LOOP_19_4_VITIS_LOOP_20_5_VITIS_LOOP_23_6_fu_183_ap_start_reg;
+
+assign grp_srcnn_Pipeline_VITIS_LOOP_30_4_VITIS_LOOP_31_5_VITIS_LOOP_32_6_fu_164_ap_start = grp_srcnn_Pipeline_VITIS_LOOP_30_4_VITIS_LOOP_31_5_VITIS_LOOP_32_6_fu_164_ap_start_reg;
+
+assign icmp_ln10_fu_207_p2 = ((oc_fu_94 == 6'd32) ? 1'b1 : 1'b0);
+
+assign icmp_ln14_fu_285_p2 = ((indvar_flatten106_fu_110 == 16'd65025) ? 1'b1 : 1'b0);
+
+assign icmp_ln15_fu_309_p2 = ((x_fu_102 == 8'd255) ? 1'b1 : 1'b0);
+
+assign input_ftmap_address0 = grp_conv1_fu_146_input_ftmap_address0;
+
+assign input_ftmap_ce0 = grp_conv1_fu_146_input_ftmap_ce0;
+
+assign output_ftmap_address0 = zext_ln33_2_fu_377_p1;
+
+assign output_ftmap_d0 = grp_srcnn_Pipeline_VITIS_LOOP_19_4_VITIS_LOOP_20_5_VITIS_LOOP_23_6_fu_183_acc_5_out;
+
+assign select_ln14_1_fu_323_p3 = ((icmp_ln15_fu_309_p2[0:0] == 1'b1) ? add_ln14_fu_303_p2 : y_fu_106);
+
+assign select_ln14_fu_315_p3 = ((icmp_ln15_fu_309_p2[0:0] == 1'b1) ? 8'd0 : x_fu_102);
+
+assign sub_ln21_fu_258_p2 = (zext_ln21_5_fu_254_p1 - zext_ln21_fu_244_p1);
+
+assign sub_ln33_fu_362_p2 = (tmp_s_fu_355_p3 - zext_ln33_fu_352_p1);
+
+assign tmp_6_fu_247_p3 = {{oc_1_reg_403}, {8'd0}};
+
+assign tmp_7_fu_265_p3 = {{trunc_ln10_reg_409}, {6'd0}};
+
+assign tmp_s_fu_355_p3 = {{select_ln14_1_reg_472}, {8'd0}};
+
+assign trunc_ln10_fu_203_p1 = oc_fu_94[4:0];
+
+assign zext_ln10_fu_219_p1 = oc_fu_94;
+
+assign zext_ln21_5_fu_254_p1 = tmp_6_fu_247_p3;
+
+assign zext_ln21_fu_244_p1 = oc_1_reg_403;
+
+assign zext_ln33_1_fu_368_p1 = select_ln14_reg_466;
+
+assign zext_ln33_2_fu_377_p1 = add_ln33_fu_371_p2;
+
+assign zext_ln33_fu_352_p1 = select_ln14_1_reg_472;
+
+always @ (posedge ap_clk) begin
+    tmp_7_reg_448[5:0] <= 6'b000000;
+end
+>>>>>>> b41ed44 (Initial commit)
 
 endmodule //srcnn

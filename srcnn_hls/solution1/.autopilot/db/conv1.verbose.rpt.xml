@@ -1,7 +1,11 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv1'" level="0">
+<<<<<<< HEAD
 <item name = "Date">Sun Sep 28 13:51:33 2025
+=======
+<item name = "Date">Sun Oct 12 22:06:28 2025
+>>>>>>> b41ed44 (Initial commit)
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -15,7 +19,11 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<<<<<<< HEAD
 <column name="ap_clk">10.00 ns, 7.016 ns, 2.70 ns</column>
+=======
+<column name="ap_clk">10.00 ns, 7.060 ns, 2.70 ns</column>
+>>>>>>> b41ed44 (Initial commit)
 </table>
 </item>
 </section>
@@ -24,22 +32,34 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
+<<<<<<< HEAD
 <column name="">3117071233, 3117071233, 31.171 sec, 31.171 sec, 3117071233, 3117071233, no</column>
+=======
+<column name="">1065369601, 1065369601, 10.654 sec, 10.654 sec, 1065369601, 1065369601, no</column>
+>>>>>>> b41ed44 (Initial commit)
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<<<<<<< HEAD
+=======
+<column name="grp_conv1_Pipeline_VITIS_LOOP_24_8_VITIS_LOOP_27_9_fu_198">conv1_Pipeline_VITIS_LOOP_24_8_VITIS_LOOP_27_9, 250, 250, 2.500 us, 2.500 us, 250, 250, no</column>
+>>>>>>> b41ed44 (Initial commit)
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<<<<<<< HEAD
 <column name="- VITIS_LOOP_11_1">3117071232, 3117071232, 48704238, -, -, 64, no</column>
 <column name=" + VITIS_LOOP_12_2">48704235, 48704235, 190997, -, -, 255, no</column>
 <column name="  ++ VITIS_LOOP_13_3">190995, 190995, 749, -, -, 255, no</column>
 <column name="   +++ VITIS_LOOP_18_5">747, 747, 83, -, -, 9, no</column>
 <column name="    ++++ VITIS_LOOP_29_6">81, 81, 9, -, -, 9, no</column>
+=======
+<column name="- VITIS_LOOP_13_1_VITIS_LOOP_15_3_VITIS_LOOP_19_5_VITIS_LOOP_20_6">1065369600, 1065369600, 256, -, -, 4161600, no</column>
+>>>>>>> b41ed44 (Initial commit)
 </table>
 </item>
 </section>
@@ -52,6 +72,7 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
 <column name="DSP">-, -, -, -, -</column>
+<<<<<<< HEAD
 <column name="Expression">-, -, 0, 504, -</column>
 <column name="FIFO">-, -, -, -, -</column>
 <column name="Instance">-, -, -, -, -</column>
@@ -60,12 +81,26 @@
 <column name="Register">-, -, 386, -, -</column>
 <specialColumn name="Available">288, 1248, 234240, 117120, 64</specialColumn>
 <specialColumn name="Utilization (%)">0, 0, ~0, ~0, 0</specialColumn>
+=======
+<column name="Expression">-, -, 0, 842, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, -, 153, 544, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, 174, -</column>
+<column name="Register">-, -, 260, -, -</column>
+<specialColumn name="Available">288, 1248, 234240, 117120, 64</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, 1, 0</specialColumn>
+>>>>>>> b41ed44 (Initial commit)
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<<<<<<< HEAD
+=======
+<column name="grp_conv1_Pipeline_VITIS_LOOP_24_8_VITIS_LOOP_27_9_fu_198">conv1_Pipeline_VITIS_LOOP_24_8_VITIS_LOOP_27_9, 0, 0, 153, 544, 0</column>
+>>>>>>> b41ed44 (Initial commit)
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -82,6 +117,7 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<<<<<<< HEAD
 <column name="add_ln11_fu_283_p2">+, 0, 0, 14, 7, 1</column>
 <column name="add_ln12_fu_334_p2">+, 0, 0, 15, 8, 1</column>
 <column name="add_ln13_fu_368_p2">+, 0, 0, 15, 8, 1</column>
@@ -115,10 +151,91 @@
 <column name="iy_fu_470_p3">select, 0, 0, 8, 1, 8</column>
 <column name="select_ln21_fu_456_p3">select, 0, 0, 3, 1, 1</column>
 <column name="select_ln32_fu_559_p3">select, 0, 0, 8, 1, 1</column>
+=======
+<column name="add_ln13_1_fu_316_p2">+, 0, 0, 29, 22, 1</column>
+<column name="add_ln13_fu_337_p2">+, 0, 0, 14, 7, 4</column>
+<column name="add_ln14_2_fu_769_p2">+, 0, 0, 27, 20, 1</column>
+<column name="add_ln14_fu_452_p2">+, 0, 0, 15, 8, 5</column>
+<column name="add_ln15_1_fu_755_p2">+, 0, 0, 23, 16, 1</column>
+<column name="add_ln15_fu_869_p2">+, 0, 0, 15, 8, 5</column>
+<column name="add_ln18_3_fu_741_p2">+, 0, 0, 20, 13, 1</column>
+<column name="add_ln18_fu_585_p2">+, 0, 0, 12, 4, 1</column>
+<column name="add_ln19_3_fu_727_p2">+, 0, 0, 17, 10, 1</column>
+<column name="add_ln19_fu_663_p2">+, 0, 0, 12, 5, 1</column>
+<column name="add_ln20_fu_721_p2">+, 0, 0, 12, 5, 1</column>
+<column name="add_ln32_fu_938_p2">+, 0, 0, 17, 10, 10</column>
+<column name="add_ln36_1_fu_948_p2">+, 0, 0, 23, 16, 16</column>
+<column name="add_ln36_2_fu_989_p2">+, 0, 0, 22, 22, 22</column>
+<column name="add_ln36_fu_979_p2">+, 0, 0, 16, 9, 9</column>
+<column name="empty_16_fu_304_p2">+, 0, 0, 16, 9, 9</column>
+<column name="empty_fu_294_p2">+, 0, 0, 13, 6, 6</column>
+<column name="p_mid117_fu_615_p2">+, 0, 0, 13, 6, 6</column>
+<column name="p_mid1_fu_699_p2">+, 0, 0, 16, 9, 9</column>
+<column name="sub_ln36_1_fu_970_p2">-, 0, 0, 22, 22, 22</column>
+<column name="sub_ln36_fu_917_p2">-, 0, 0, 22, 15, 15</column>
+<column name="and_ln13_1_fu_414_p2">and, 0, 0, 2, 1, 1</column>
+<column name="and_ln13_2_fu_426_p2">and, 0, 0, 2, 1, 1</column>
+<column name="and_ln13_3_fu_438_p2">and, 0, 0, 2, 1, 1</column>
+<column name="and_ln13_fu_402_p2">and, 0, 0, 2, 1, 1</column>
+<column name="and_ln14_1_fu_519_p2">and, 0, 0, 2, 1, 1</column>
+<column name="and_ln14_2_fu_525_p2">and, 0, 0, 2, 1, 1</column>
+<column name="and_ln14_fu_513_p2">and, 0, 0, 2, 1, 1</column>
+<column name="and_ln15_1_fu_579_p2">and, 0, 0, 2, 1, 1</column>
+<column name="and_ln15_fu_573_p2">and, 0, 0, 2, 1, 1</column>
+<column name="and_ln18_fu_649_p2">and, 0, 0, 2, 1, 1</column>
+<column name="icmp_ln13_fu_310_p2">icmp, 0, 0, 29, 22, 16</column>
+<column name="icmp_ln14_fu_343_p2">icmp, 0, 0, 27, 20, 19</column>
+<column name="icmp_ln15_fu_432_p2">icmp, 0, 0, 23, 16, 16</column>
+<column name="icmp_ln18_fu_420_p2">icmp, 0, 0, 20, 13, 12</column>
+<column name="icmp_ln19_fu_408_p2">icmp, 0, 0, 17, 10, 9</column>
+<column name="icmp_ln20_fu_396_p2">icmp, 0, 0, 12, 5, 5</column>
+<column name="or_ln14_1_fu_507_p2">or, 0, 0, 2, 1, 1</column>
+<column name="or_ln14_fu_458_p2">or, 0, 0, 2, 1, 1</column>
+<column name="or_ln15_1_fu_537_p2">or, 0, 0, 2, 1, 1</column>
+<column name="or_ln15_fu_531_p2">or, 0, 0, 2, 1, 1</column>
+<column name="or_ln18_1_fu_643_p2">or, 0, 0, 2, 1, 1</column>
+<column name="or_ln18_2_fu_597_p2">or, 0, 0, 2, 1, 1</column>
+<column name="or_ln18_fu_591_p2">or, 0, 0, 2, 1, 1</column>
+<column name="or_ln19_1_fu_675_p2">or, 0, 0, 2, 1, 1</column>
+<column name="or_ln19_2_fu_681_p2">or, 0, 0, 2, 1, 1</column>
+<column name="or_ln19_fu_669_p2">or, 0, 0, 2, 1, 1</column>
+<column name="select_ln13_1_fu_361_p3">select, 0, 0, 6, 1, 6</column>
+<column name="select_ln13_2_fu_369_p3">select, 0, 0, 6, 1, 6</column>
+<column name="select_ln13_3_fu_382_p3">select, 0, 0, 9, 1, 1</column>
+<column name="select_ln13_4_fu_444_p3">select, 0, 0, 7, 1, 7</column>
+<column name="select_ln13_fu_349_p3">select, 0, 0, 8, 1, 1</column>
+<column name="select_ln14_2_fu_464_p3">select, 0, 0, 8, 1, 8</column>
+<column name="select_ln14_3_fu_481_p3">select, 0, 0, 6, 1, 6</column>
+<column name="select_ln14_4_fu_841_p3">select, 0, 0, 32, 1, 32</column>
+<column name="select_ln14_5_fu_493_p3">select, 0, 0, 9, 1, 9</column>
+<column name="select_ln14_6_fu_775_p3">select, 0, 0, 19, 1, 1</column>
+<column name="select_ln14_fu_862_p3">select, 0, 0, 8, 1, 1</column>
+<column name="select_ln15_1_fu_875_p3">select, 0, 0, 8, 1, 8</column>
+<column name="select_ln15_2_fu_551_p3">select, 0, 0, 6, 1, 6</column>
+<column name="select_ln15_3_fu_848_p3">select, 0, 0, 32, 1, 32</column>
+<column name="select_ln15_4_fu_559_p3">select, 0, 0, 9, 1, 9</column>
+<column name="select_ln15_5_fu_761_p3">select, 0, 0, 16, 1, 1</column>
+<column name="select_ln15_fu_543_p3">select, 0, 0, 4, 1, 1</column>
+<column name="select_ln18_1_fu_621_p3">select, 0, 0, 6, 1, 6</column>
+<column name="select_ln18_2_fu_886_p3">select, 0, 0, 32, 1, 32</column>
+<column name="select_ln18_3_fu_629_p3">select, 0, 0, 9, 1, 9</column>
+<column name="select_ln18_4_fu_655_p3">select, 0, 0, 4, 1, 4</column>
+<column name="select_ln18_5_fu_747_p3">select, 0, 0, 12, 1, 1</column>
+<column name="select_ln18_fu_603_p3">select, 0, 0, 5, 1, 1</column>
+<column name="select_ln19_3_fu_705_p3">select, 0, 0, 9, 1, 9</column>
+<column name="select_ln19_4_fu_713_p3">select, 0, 0, 5, 1, 5</column>
+<column name="select_ln19_5_fu_733_p3">select, 0, 0, 10, 1, 1</column>
+<column name="select_ln19_fu_687_p3">select, 0, 0, 5, 1, 1</column>
+<column name="xor_ln13_fu_390_p2">xor, 0, 0, 2, 1, 2</column>
+<column name="xor_ln14_fu_501_p2">xor, 0, 0, 2, 1, 2</column>
+<column name="xor_ln15_fu_567_p2">xor, 0, 0, 2, 2, 1</column>
+<column name="xor_ln18_fu_637_p2">xor, 0, 0, 2, 2, 1</column>
+>>>>>>> b41ed44 (Initial commit)
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<<<<<<< HEAD
 <column name="acc_7_reg_173">9, 2, 32, 64</column>
 <column name="acc_8_reg_195">9, 2, 32, 64</column>
 <column name="ap_NS_fsm">65, 16, 1, 16</column>
@@ -127,10 +244,28 @@
 <column name="oc_fu_84">9, 2, 7, 14</column>
 <column name="x_reg_151">9, 2, 8, 16</column>
 <column name="y_reg_139">9, 2, 8, 16</column>
+=======
+<column name="ap_NS_fsm">43, 8, 1, 8</column>
+<column name="conv1_biases_address0">14, 3, 6, 18</column>
+<column name="grp_fu_1176_ce">9, 2, 1, 2</column>
+<column name="grp_fu_1180_ce">9, 2, 1, 2</column>
+<column name="h_fu_132">9, 2, 8, 16</column>
+<column name="indvar_flatten143_fu_136">9, 2, 20, 40</column>
+<column name="indvar_flatten214_fu_144">9, 2, 22, 44</column>
+<column name="indvar_flatten37_fu_120">9, 2, 13, 26</column>
+<column name="indvar_flatten6_fu_112">9, 2, 10, 20</column>
+<column name="indvar_flatten84_fu_128">9, 2, 16, 32</column>
+<column name="n_fu_140">9, 2, 7, 14</column>
+<column name="oc_fu_116">9, 2, 4, 8</column>
+<column name="w_fu_124">9, 2, 8, 16</column>
+<column name="x_fu_104">9, 2, 5, 10</column>
+<column name="y_fu_108">9, 2, 5, 10</column>
+>>>>>>> b41ed44 (Initial commit)
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<<<<<<< HEAD
 <column name="acc_7_reg_173">32, 0, 32, 0</column>
 <column name="acc_8_reg_195">32, 0, 32, 0</column>
 <column name="acc_reg_633">32, 0, 32, 0</column>
@@ -156,6 +291,34 @@
 <column name="y_reg_139">8, 0, 8, 0</column>
 <column name="zext_ln12_reg_643">8, 0, 10, 2</column>
 <column name="zext_ln13_reg_661">8, 0, 10, 2</column>
+=======
+<column name="add_ln32_reg_1166">10, 0, 10, 0</column>
+<column name="add_ln36_2_reg_1171">22, 0, 22, 0</column>
+<column name="and_ln13_3_reg_1094">1, 0, 1, 0</column>
+<column name="and_ln14_2_reg_1109">1, 0, 1, 0</column>
+<column name="and_ln15_1_reg_1115">1, 0, 1, 0</column>
+<column name="ap_CS_fsm">7, 0, 7, 0</column>
+<column name="grp_conv1_Pipeline_VITIS_LOOP_24_8_VITIS_LOOP_27_9_fu_198_ap_start_reg">1, 0, 1, 0</column>
+<column name="h_fu_132">8, 0, 8, 0</column>
+<column name="indvar_flatten143_fu_136">20, 0, 20, 0</column>
+<column name="indvar_flatten214_fu_144">22, 0, 22, 0</column>
+<column name="indvar_flatten37_fu_120">13, 0, 13, 0</column>
+<column name="indvar_flatten6_fu_112">10, 0, 10, 0</column>
+<column name="indvar_flatten84_fu_128">16, 0, 16, 0</column>
+<column name="n_fu_140">7, 0, 7, 0</column>
+<column name="oc_fu_116">4, 0, 4, 0</column>
+<column name="or_ln14_reg_1099">1, 0, 1, 0</column>
+<column name="p_mid117_reg_1120">6, 0, 6, 0</column>
+<column name="select_ln15_1_reg_1155">8, 0, 8, 0</column>
+<column name="select_ln15_3_reg_1145">32, 0, 32, 0</column>
+<column name="select_ln18_1_reg_1125">6, 0, 6, 0</column>
+<column name="select_ln18_2_reg_1161">32, 0, 32, 0</column>
+<column name="select_ln19_3_reg_1139">9, 0, 9, 0</column>
+<column name="select_ln19_reg_1133">5, 0, 5, 0</column>
+<column name="w_fu_124">8, 0, 8, 0</column>
+<column name="x_fu_104">5, 0, 5, 0</column>
+<column name="y_fu_108">5, 0, 5, 0</column>
+>>>>>>> b41ed44 (Initial commit)
 </table>
 </item>
 </section>
@@ -171,6 +334,7 @@
 <column name="ap_done">out, 1, ap_ctrl_hs, conv1, return value</column>
 <column name="ap_idle">out, 1, ap_ctrl_hs, conv1, return value</column>
 <column name="ap_ready">out, 1, ap_ctrl_hs, conv1, return value</column>
+<<<<<<< HEAD
 <column name="grp_fu_692_p_din0">out, 32, ap_ctrl_hs, conv1, return value</column>
 <column name="grp_fu_692_p_din1">out, 32, ap_ctrl_hs, conv1, return value</column>
 <column name="grp_fu_692_p_opcode">out, 2, ap_ctrl_hs, conv1, return value</column>
@@ -180,6 +344,17 @@
 <column name="grp_fu_696_p_din1">out, 32, ap_ctrl_hs, conv1, return value</column>
 <column name="grp_fu_696_p_dout0">in, 32, ap_ctrl_hs, conv1, return value</column>
 <column name="grp_fu_696_p_ce">out, 1, ap_ctrl_hs, conv1, return value</column>
+=======
+<column name="grp_fu_479_p_din0">out, 32, ap_ctrl_hs, conv1, return value</column>
+<column name="grp_fu_479_p_din1">out, 32, ap_ctrl_hs, conv1, return value</column>
+<column name="grp_fu_479_p_opcode">out, 2, ap_ctrl_hs, conv1, return value</column>
+<column name="grp_fu_479_p_dout0">in, 32, ap_ctrl_hs, conv1, return value</column>
+<column name="grp_fu_479_p_ce">out, 1, ap_ctrl_hs, conv1, return value</column>
+<column name="grp_fu_483_p_din0">out, 32, ap_ctrl_hs, conv1, return value</column>
+<column name="grp_fu_483_p_din1">out, 32, ap_ctrl_hs, conv1, return value</column>
+<column name="grp_fu_483_p_dout0">in, 32, ap_ctrl_hs, conv1, return value</column>
+<column name="grp_fu_483_p_ce">out, 1, ap_ctrl_hs, conv1, return value</column>
+>>>>>>> b41ed44 (Initial commit)
 <column name="input_ftmap_address0">out, 16, ap_memory, input_ftmap, array</column>
 <column name="input_ftmap_ce0">out, 1, ap_memory, input_ftmap, array</column>
 <column name="input_ftmap_q0">in, 32, ap_memory, input_ftmap, array</column>
@@ -189,6 +364,12 @@
 <column name="conv1_biases_address0">out, 6, ap_memory, conv1_biases, array</column>
 <column name="conv1_biases_ce0">out, 1, ap_memory, conv1_biases, array</column>
 <column name="conv1_biases_q0">in, 32, ap_memory, conv1_biases, array</column>
+<<<<<<< HEAD
+=======
+<column name="conv1_biases_address1">out, 6, ap_memory, conv1_biases, array</column>
+<column name="conv1_biases_ce1">out, 1, ap_memory, conv1_biases, array</column>
+<column name="conv1_biases_q1">in, 32, ap_memory, conv1_biases, array</column>
+>>>>>>> b41ed44 (Initial commit)
 <column name="feat1_address0">out, 22, ap_memory, feat1, array</column>
 <column name="feat1_ce0">out, 1, ap_memory, feat1, array</column>
 <column name="feat1_we0">out, 1, ap_memory, feat1, array</column>

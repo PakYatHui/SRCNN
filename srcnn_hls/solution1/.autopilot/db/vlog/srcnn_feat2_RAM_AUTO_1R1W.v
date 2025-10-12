@@ -9,6 +9,13 @@ module srcnn_feat2_RAM_AUTO_1R1W (
     address0, ce0,
     d0, we0, 
     q0, 
+<<<<<<< HEAD
+=======
+      
+    address1, ce1,
+    
+    q1, 
+>>>>>>> b41ed44 (Initial commit)
      
     reset, clk);
 
@@ -21,6 +28,14 @@ input ce0;
 input[DataWidth-1:0] d0;
 input we0; 
 output reg[DataWidth-1:0] q0; 
+<<<<<<< HEAD
+=======
+ 
+input[AddressWidth-1:0] address1;
+input ce1;
+
+output reg[DataWidth-1:0] q1; 
+>>>>>>> b41ed44 (Initial commit)
 
 input reset;
 input clk;
@@ -48,6 +63,21 @@ begin
     end
 end 
  
+<<<<<<< HEAD
+=======
+  
+
+
+
+always @(posedge clk) 
+begin 
+    if (ce1) begin
+        q1 <= ram[address1];
+    end
+end 
+
+ 
+>>>>>>> b41ed44 (Initial commit)
  
 
 endmodule

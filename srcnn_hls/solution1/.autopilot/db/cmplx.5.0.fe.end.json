@@ -1,5 +1,6 @@
 {
     "1": {
+<<<<<<< HEAD
         "name": "conv2",
         "file": "",
         "fileloc": "0",
@@ -18,12 +19,128 @@
         "loops": {
             "L": "1",
             "N": "3"
+=======
+        "name": "srcnn_Pipeline_VITIS_LOOP_11_2_VITIS_LOOP_12_3_VITIS_LOOP_15_4",
+        "file": "",
+        "fileloc": "0",
+        "instructions": "94",
+        "total_instructions": "94",
+        "calls": "",
+        "basicblocks": "6",
+        "loads": {
+            "G": "1",
+            "L": "7"
+        },
+        "stores": {
+            "G": "1",
+            "L": "12"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "2": {
+        "name": "srcnn_Pipeline_VITIS_LOOP_30_4_VITIS_LOOP_31_5_VITIS_LOOP_32_6",
+        "file": "",
+        "fileloc": "0",
+        "instructions": "71",
+        "total_instructions": "71",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "G": "1",
+            "L": "5"
+        },
+        "stores": {
+            "G": "1",
+            "L": "10"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "3": {
+        "name": "conv1_Pipeline_VITIS_LOOP_24_8_VITIS_LOOP_27_9",
+        "file": "",
+        "fileloc": "0",
+        "instructions": "92",
+        "total_instructions": "92",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "7"
+        },
+        "stores": {
+            "L": "8"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "4": {
+        "name": "conv1",
+        "file": "",
+        "fileloc": "0",
+        "instructions": "177",
+        "total_instructions": "269",
+        "calls": "3",
+        "basicblocks": "4",
+        "loads": {
+            "L": "15"
+        },
+        "stores": {
+            "G": "1",
+            "L": "22"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "5": {
+        "name": "srcnn_Pipeline_VITIS_LOOP_19_4_VITIS_LOOP_20_5_VITIS_LOOP_23_6",
+        "file": "",
+        "fileloc": "0",
+        "instructions": "121",
+        "total_instructions": "121",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "G": "1",
+            "L": "8"
+        },
+        "stores": {
+            "L": "12"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "6": {
+        "name": "srcnn_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_20_2_VITIS_LOOP_21_3",
+        "file": "",
+        "fileloc": "0",
+        "instructions": "71",
+        "total_instructions": "71",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "G": "1",
+            "L": "5"
+        },
+        "stores": {
+            "G": "1",
+            "L": "10"
+        },
+        "loops": {
+            "L": "1"
+>>>>>>> b41ed44 (Initial commit)
         }
     },
     "0": {
         "name": "srcnn",
         "file": "",
         "fileloc": "0",
+<<<<<<< HEAD
         "instructions": "131",
         "total_instructions": "446",
         "calls": "3 1 2",
@@ -79,6 +196,22 @@
         "loops": {
             "L": "1",
             "N": "4"
+=======
+        "instructions": "82",
+        "total_instructions": "708",
+        "calls": "4 6 2 1 5",
+        "basicblocks": "7",
+        "loads": {
+            "L": "5",
+            "T": "1"
+        },
+        "stores": {
+            "L": "8",
+            "T": "1"
+        },
+        "loops": {
+            "L": "2"
+>>>>>>> b41ed44 (Initial commit)
         }
     }
 }

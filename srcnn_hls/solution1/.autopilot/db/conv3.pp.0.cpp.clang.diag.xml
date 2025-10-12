@@ -1,6 +1,10 @@
 <dict>
   <key>main-file</key>
+<<<<<<< HEAD
   <string>C:/Xilinx/golden/srcnn_hls/solution1/.autopilot/db/conv3.pp.0.cpp</string>
+=======
+  <string>D:/unimelb_files/96/SRCNN_2/srcnn_hls/solution1/.autopilot/db/conv3.pp.0.cpp</string>
+>>>>>>> b41ed44 (Initial commit)
   <key>diagnostics</key>
   <array>
     <dict>
@@ -9,11 +13,19 @@
       <key>filename</key>
       <string>src/conv3.cpp</string>
       <key>line</key>
+<<<<<<< HEAD
       <integer>9</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
       <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv3_XLX_SEP_ PragmaOptions=off_XLX_SEP_</string>
+=======
+      <integer>24</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv3_XLX_SEP_ PragmaOptions=II=3_XLX_SEP_</string>
+>>>>>>> b41ed44 (Initial commit)
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>

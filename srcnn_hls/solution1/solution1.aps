@@ -13,7 +13,11 @@
         <library value="xilinx/zynquplus/zynquplus" name="DefaultPlatform"/>
     </libraryList>
     <clockList>
+<<<<<<< HEAD
         <clock name="default" default="false" period="10"/>
+=======
+        <clock default="false" name="default" period="10"/>
+>>>>>>> b41ed44 (Initial commit)
     </clockList>
 </AutoPilot:solution>
 

@@ -1,5 +1,6 @@
 {
   "0": {
+<<<<<<< HEAD
     "basicblocks": 21,
     "calls": "1 3 2",
     "file": "srcnn.cpp",
@@ -46,6 +47,68 @@
     "total_instructions": 84
   },
   "3": {
+=======
+    "basicblocks": 17,
+    "calls": "3 6 4 6 2",
+    "file": "srcnn.cpp",
+    "fileloc": 5,
+    "instructions": 72,
+    "loads": {
+      "L": 2
+    },
+    "name": "srcnn",
+    "stores": {
+      "G": 2,
+      "L": 2
+    },
+    "total_instructions": 430
+  },
+  "1": {
+    "basicblocks": 4,
+    "calls": "",
+    "file": "stl_algobase.h",
+    "fileloc": 219,
+    "instructions": 8,
+    "loads": {
+      "L": 2
+    },
+    "name": "max<int>",
+    "total_instructions": 8
+  },
+  "2": {
+    "basicblocks": 15,
+    "calls": "5 1 5 1",
+    "file": "conv3.cpp",
+    "fileloc": 6,
+    "instructions": 106,
+    "loads": {
+      "G": 1,
+      "L": 4
+    },
+    "name": "conv3",
+    "stores": {
+      "L": 7
+    },
+    "total_instructions": 138
+  },
+  "3": {
+    "basicblocks": 21,
+    "calls": "5 1 5 1",
+    "file": "conv1.cpp",
+    "fileloc": 6,
+    "instructions": 128,
+    "loads": {
+      "L": 5
+    },
+    "name": "conv1",
+    "stores": {
+      "G": 1,
+      "L": 6
+    },
+    "total_instructions": 160
+  },
+  "4": {
+>>>>>>> b41ed44 (Initial commit)
     "basicblocks": 11,
     "calls": "",
     "file": "conv2.cpp",
@@ -60,5 +123,32 @@
       "G": 1
     },
     "total_instructions": 44
+<<<<<<< HEAD
+=======
+  },
+  "5": {
+    "basicblocks": 4,
+    "calls": "",
+    "file": "stl_algobase.h",
+    "fileloc": 195,
+    "instructions": 8,
+    "loads": {
+      "L": 2
+    },
+    "name": "min<int>",
+    "total_instructions": 8
+  },
+  "6": {
+    "basicblocks": 4,
+    "calls": "",
+    "file": "stl_algobase.h",
+    "fileloc": 219,
+    "instructions": 8,
+    "loads": {
+      "L": 2
+    },
+    "name": "max<float>",
+    "total_instructions": 8
+>>>>>>> b41ed44 (Initial commit)
   }
 }

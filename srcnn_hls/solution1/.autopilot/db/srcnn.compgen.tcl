@@ -1,11 +1,14 @@
 # This script segment is generated automatically by AutoPilot
 
+<<<<<<< HEAD
 set name srcnn_fcmp_32ns_32ns_1_2_no_dsp_1
 if {${::AESL::PGuard_rtl_comp_handler}} {
 	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fcmp} IMPL {auto} LATENCY 1 ALLOW_PRAGMA 1
 }
 
 
+=======
+>>>>>>> b41ed44 (Initial commit)
 set name srcnn_fadd_32ns_32ns_32_4_full_dsp_1
 if {${::AESL::PGuard_rtl_comp_handler}} {
 	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fadd} IMPL {fulldsp} LATENCY 3 ALLOW_PRAGMA 1
@@ -18,6 +21,15 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 }
 
 
+<<<<<<< HEAD
+=======
+set name srcnn_fcmp_32ns_32ns_1_2_no_dsp_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fcmp} IMPL {auto} LATENCY 1 ALLOW_PRAGMA 1
+}
+
+
+>>>>>>> b41ed44 (Initial commit)
 if {${::AESL::PGuard_rtl_comp_handler}} {
 	::AP::rtl_comp_handler srcnn_feat1_RAM_AUTO_1R1W BINDTYPE {storage} TYPE {ram} IMPL {auto} LATENCY 2 ALLOW_PRAGMA 1
 }
@@ -40,7 +52,11 @@ set axilite_register_dict [dict create]
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+<<<<<<< HEAD
     id 27 \
+=======
+    id 45 \
+>>>>>>> b41ed44 (Initial commit)
     name input_ftmap \
     reset_level 1 \
     sync_rst true \
@@ -59,7 +75,11 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+<<<<<<< HEAD
     id 28 \
+=======
+    id 46 \
+>>>>>>> b41ed44 (Initial commit)
     name conv1_weights \
     reset_level 1 \
     sync_rst true \
@@ -78,14 +98,22 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+<<<<<<< HEAD
     id 29 \
+=======
+    id 47 \
+>>>>>>> b41ed44 (Initial commit)
     name conv1_biases \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename conv1_biases \
     op interface \
+<<<<<<< HEAD
     ports { conv1_biases_address0 { O 6 vector } conv1_biases_ce0 { O 1 bit } conv1_biases_q0 { I 32 vector } } \
+=======
+    ports { conv1_biases_address0 { O 6 vector } conv1_biases_ce0 { O 1 bit } conv1_biases_q0 { I 32 vector } conv1_biases_address1 { O 6 vector } conv1_biases_ce1 { O 1 bit } conv1_biases_q1 { I 32 vector } } \
+>>>>>>> b41ed44 (Initial commit)
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'conv1_biases'"
@@ -97,7 +125,11 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+<<<<<<< HEAD
     id 30 \
+=======
+    id 48 \
+>>>>>>> b41ed44 (Initial commit)
     name conv2_weights \
     reset_level 1 \
     sync_rst true \
@@ -116,7 +148,11 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+<<<<<<< HEAD
     id 31 \
+=======
+    id 49 \
+>>>>>>> b41ed44 (Initial commit)
     name conv2_biases \
     reset_level 1 \
     sync_rst true \
@@ -135,7 +171,11 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+<<<<<<< HEAD
     id 32 \
+=======
+    id 50 \
+>>>>>>> b41ed44 (Initial commit)
     name conv3_weights \
     reset_level 1 \
     sync_rst true \
@@ -154,7 +194,11 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+<<<<<<< HEAD
     id 34 \
+=======
+    id 52 \
+>>>>>>> b41ed44 (Initial commit)
     name output_ftmap \
     reset_level 1 \
     sync_rst true \
@@ -172,7 +216,11 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
+<<<<<<< HEAD
     id 33 \
+=======
+    id 51 \
+>>>>>>> b41ed44 (Initial commit)
     name conv3_biases \
     type other \
     dir I \

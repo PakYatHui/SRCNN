@@ -18,6 +18,7 @@
 <PipelineType>no</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
+<<<<<<< HEAD
 <EstimatedClockPeriod>7.016</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
@@ -77,13 +78,43 @@
 </VITIS_LOOP_13_3>
 </VITIS_LOOP_12_2>
 </VITIS_LOOP_11_1>
+=======
+<EstimatedClockPeriod>7.060</EstimatedClockPeriod>
+</SummaryOfTimingAnalysis>
+<SummaryOfOverallLatency>
+<unit>clock cycles</unit>
+<Best-caseLatency>1065369601</Best-caseLatency>
+<Average-caseLatency>1065369601</Average-caseLatency>
+<Worst-caseLatency>1065369601</Worst-caseLatency>
+<Best-caseRealTimeLatency>10.654 sec</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>10.654 sec</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>10.654 sec</Worst-caseRealTimeLatency>
+<Interval-min>1065369601</Interval-min>
+<Interval-max>1065369601</Interval-max>
+</SummaryOfOverallLatency>
+<SummaryOfLoopLatency>
+<VITIS_LOOP_13_1_VITIS_LOOP_15_3_VITIS_LOOP_19_5_VITIS_LOOP_20_6>
+<Slack>7.30</Slack>
+<TripCount>4161600</TripCount>
+<Latency>1065369600</Latency>
+<AbsoluteTimeLatency>10653696000</AbsoluteTimeLatency>
+<IterationLatency>256</IterationLatency>
+<InstanceList>
+</InstanceList>
+</VITIS_LOOP_13_1_VITIS_LOOP_15_3_VITIS_LOOP_19_5_VITIS_LOOP_20_6>
+>>>>>>> b41ed44 (Initial commit)
 </SummaryOfLoopLatency>
 </PerformanceEstimates>
 
 <AreaEstimates>
 <Resources>
+<<<<<<< HEAD
 <FF>386</FF>
 <LUT>632</LUT>
+=======
+<FF>413</FF>
+<LUT>1560</LUT>
+>>>>>>> b41ed44 (Initial commit)
 <BRAM_18K>0</BRAM_18K>
 <DSP>0</DSP>
 <URAM>0</URAM>
@@ -165,7 +196,11 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
+<<<<<<< HEAD
 <name>grp_fu_692_p_din0</name>
+=======
+<name>grp_fu_479_p_din0</name>
+>>>>>>> b41ed44 (Initial commit)
 <Object>conv1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -176,7 +211,11 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
+<<<<<<< HEAD
 <name>grp_fu_692_p_din1</name>
+=======
+<name>grp_fu_479_p_din1</name>
+>>>>>>> b41ed44 (Initial commit)
 <Object>conv1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -187,7 +226,11 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
+<<<<<<< HEAD
 <name>grp_fu_692_p_opcode</name>
+=======
+<name>grp_fu_479_p_opcode</name>
+>>>>>>> b41ed44 (Initial commit)
 <Object>conv1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -198,7 +241,11 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
+<<<<<<< HEAD
 <name>grp_fu_692_p_dout0</name>
+=======
+<name>grp_fu_479_p_dout0</name>
+>>>>>>> b41ed44 (Initial commit)
 <Object>conv1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -209,7 +256,11 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
+<<<<<<< HEAD
 <name>grp_fu_692_p_ce</name>
+=======
+<name>grp_fu_479_p_ce</name>
+>>>>>>> b41ed44 (Initial commit)
 <Object>conv1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -220,7 +271,11 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
+<<<<<<< HEAD
 <name>grp_fu_696_p_din0</name>
+=======
+<name>grp_fu_483_p_din0</name>
+>>>>>>> b41ed44 (Initial commit)
 <Object>conv1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -231,7 +286,11 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
+<<<<<<< HEAD
 <name>grp_fu_696_p_din1</name>
+=======
+<name>grp_fu_483_p_din1</name>
+>>>>>>> b41ed44 (Initial commit)
 <Object>conv1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -242,7 +301,11 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
+<<<<<<< HEAD
 <name>grp_fu_696_p_dout0</name>
+=======
+<name>grp_fu_483_p_dout0</name>
+>>>>>>> b41ed44 (Initial commit)
 <Object>conv1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -253,7 +316,11 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
+<<<<<<< HEAD
 <name>grp_fu_696_p_ce</name>
+=======
+<name>grp_fu_483_p_ce</name>
+>>>>>>> b41ed44 (Initial commit)
 <Object>conv1</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -363,6 +430,42 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
+<<<<<<< HEAD
+=======
+<name>conv1_biases_address1</name>
+<Object>conv1_biases</Object>
+<Type>array</Type>
+<Scope></Scope>
+<IOProtocol>ap_memory</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>6</Bits>
+<Attribute>address</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>conv1_biases_ce1</name>
+<Object>conv1_biases</Object>
+<Type>array</Type>
+<Scope></Scope>
+<IOProtocol>ap_memory</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>conv1_biases_q1</name>
+<Object>conv1_biases</Object>
+<Type>array</Type>
+<Scope></Scope>
+<IOProtocol>ap_memory</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>32</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+>>>>>>> b41ed44 (Initial commit)
 <name>feat1_address0</name>
 <Object>feat1</Object>
 <Type>array</Type>

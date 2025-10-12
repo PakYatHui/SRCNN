@@ -1,7 +1,11 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'srcnn'" level="0">
+<<<<<<< HEAD
 <item name = "Date">Sun Sep 28 13:51:37 2025
+=======
+<item name = "Date">Sun Oct 12 22:06:29 2025
+>>>>>>> b41ed44 (Initial commit)
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -15,7 +19,11 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<<<<<<< HEAD
 <column name="ap_clk">10.00 ns, 7.016 ns, 2.70 ns</column>
+=======
+<column name="ap_clk">10.00 ns, 7.183 ns, 2.70 ns</column>
+>>>>>>> b41ed44 (Initial commit)
 </table>
 </item>
 </section>
@@ -24,26 +32,43 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
+<<<<<<< HEAD
 <column name="">4831846568, 4831846568, 48.318 sec, 48.318 sec, 4831846569, 4831846569, no</column>
+=======
+<column name="">1627901240, 1627901240, 16.279 sec, 16.279 sec, 1627901241, 1627901241, no</column>
+>>>>>>> b41ed44 (Initial commit)
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<<<<<<< HEAD
 <column name="grp_conv1_fu_194">conv1, 3117071233, 3117071233, 31.171 sec, 31.171 sec, 3117071233, 3117071233, no</column>
 <column name="grp_conv2_fu_206">conv2, 1202718817, 1202718817, 12.027 sec, 12.027 sec, 1202718817, 1202718817, no</column>
 <column name="grp_conv3_fu_218">conv3, 493280161, 493280161, 4.933 sec, 4.933 sec, 493280161, 493280161, no</column>
+=======
+<column name="grp_conv1_fu_146">conv1, 1065369601, 1065369601, 10.654 sec, 10.654 sec, 1065369601, 1065369601, no</column>
+<column name="grp_srcnn_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_20_2_VITIS_LOOP_21_3_fu_158">srcnn_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_20_2_VITIS_LOOP_21_3, 4161603, 4161603, 41.616 ms, 41.616 ms, 4161603, 4161603, no</column>
+<column name="grp_srcnn_Pipeline_VITIS_LOOP_30_4_VITIS_LOOP_31_5_VITIS_LOOP_32_6_fu_164">srcnn_Pipeline_VITIS_LOOP_30_4_VITIS_LOOP_31_5_VITIS_LOOP_32_6, 2080803, 2080803, 20.808 ms, 20.808 ms, 2080803, 2080803, no</column>
+<column name="grp_srcnn_Pipeline_VITIS_LOOP_11_2_VITIS_LOOP_12_3_VITIS_LOOP_15_4_fu_170">srcnn_Pipeline_VITIS_LOOP_11_2_VITIS_LOOP_12_3_VITIS_LOOP_15_4, 12484808, 12484808, 0.125 sec, 0.125 sec, 12484808, 12484808, no</column>
+<column name="grp_srcnn_Pipeline_VITIS_LOOP_19_4_VITIS_LOOP_20_5_VITIS_LOOP_23_6_fu_183">srcnn_Pipeline_VITIS_LOOP_19_4_VITIS_LOOP_20_5_VITIS_LOOP_23_6, 2407, 2407, 24.070 us, 24.070 us, 2407, 2407, no</column>
+>>>>>>> b41ed44 (Initial commit)
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<<<<<<< HEAD
 <column name="- VITIS_LOOP_18_1">12517568, 12517568, 195587, -, -, 64, no</column>
 <column name=" + VITIS_LOOP_19_2">195585, 195585, 767, -, -, 255, no</column>
 <column name="  ++ VITIS_LOOP_20_3">765, 765, 3, -, -, 255, no</column>
 <column name="- VITIS_LOOP_30_4">6258784, 6258784, 195587, -, -, 32, no</column>
 <column name=" + VITIS_LOOP_31_5">195585, 195585, 767, -, -, 255, no</column>
 <column name="  ++ VITIS_LOOP_32_6">765, 765, 3, -, -, 255, no</column>
+=======
+<column name="- VITIS_LOOP_10_1">399513952, 399513952, 12484811, -, -, 32, no</column>
+<column name="- VITIS_LOOP_14_2_VITIS_LOOP_15_3">156775275, 156775275, 2411, -, -, 65025, no</column>
+>>>>>>> b41ed44 (Initial commit)
 </table>
 </item>
 </section>
@@ -56,6 +81,7 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
 <column name="DSP">-, -, -, -, -</column>
+<<<<<<< HEAD
 <column name="Expression">-, -, 0, 480, -</column>
 <column name="FIFO">-, -, -, -, -</column>
 <column name="Instance">-, 5, 1418, 2022, -</column>
@@ -64,18 +90,39 @@
 <column name="Register">-, -, 262, -, -</column>
 <specialColumn name="Available">288, 1248, 234240, 117120, 64</specialColumn>
 <specialColumn name="Utilization (%)">3841, ~0, ~0, 2, 0</specialColumn>
+=======
+<column name="Expression">-, -, 0, 188, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, 5, 1677, 4271, -</column>
+<column name="Memory">11064, -, 0, 0, 0</column>
+<column name="Multiplexer">-, -, -, 431, -</column>
+<column name="Register">-, -, 166, -, -</column>
+<specialColumn name="Available">288, 1248, 234240, 117120, 64</specialColumn>
+<specialColumn name="Utilization (%)">3841, ~0, ~0, 4, 0</specialColumn>
+>>>>>>> b41ed44 (Initial commit)
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<<<<<<< HEAD
 <column name="grp_conv1_fu_194">conv1, 0, 0, 386, 632, 0</column>
 <column name="grp_conv2_fu_206">conv2, 0, 0, 311, 436, 0</column>
 <column name="grp_conv3_fu_218">conv3, 0, 0, 366, 605, 0</column>
 <column name="fadd_32ns_32ns_32_4_full_dsp_1_U20">fadd_32ns_32ns_32_4_full_dsp_1, 0, 2, 227, 214, 0</column>
 <column name="fcmp_32ns_32ns_1_2_no_dsp_1_U19">fcmp_32ns_32ns_1_2_no_dsp_1, 0, 0, 0, 0, 0</column>
 <column name="fmul_32ns_32ns_32_3_max_dsp_1_U21">fmul_32ns_32ns_32_3_max_dsp_1, 0, 3, 128, 135, 0</column>
+=======
+<column name="grp_conv1_fu_146">conv1, 0, 0, 413, 1560, 0</column>
+<column name="fadd_32ns_32ns_32_4_full_dsp_1_U37">fadd_32ns_32ns_32_4_full_dsp_1, 0, 2, 227, 214, 0</column>
+<column name="fcmp_32ns_32ns_1_2_no_dsp_1_U39">fcmp_32ns_32ns_1_2_no_dsp_1, 0, 0, 0, 0, 0</column>
+<column name="fmul_32ns_32ns_32_3_max_dsp_1_U38">fmul_32ns_32ns_32_3_max_dsp_1, 0, 3, 128, 135, 0</column>
+<column name="grp_srcnn_Pipeline_VITIS_LOOP_11_2_VITIS_LOOP_12_3_VITIS_LOOP_15_4_fu_170">srcnn_Pipeline_VITIS_LOOP_11_2_VITIS_LOOP_12_3_VITIS_LOOP_15_4, 0, 0, 461, 701, 0</column>
+<column name="grp_srcnn_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_20_2_VITIS_LOOP_21_3_fu_158">srcnn_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_20_2_VITIS_LOOP_21_3, 0, 0, 143, 462, 0</column>
+<column name="grp_srcnn_Pipeline_VITIS_LOOP_19_4_VITIS_LOOP_20_5_VITIS_LOOP_23_6_fu_183">srcnn_Pipeline_VITIS_LOOP_19_4_VITIS_LOOP_20_5_VITIS_LOOP_23_6, 0, 0, 166, 745, 0</column>
+<column name="grp_srcnn_Pipeline_VITIS_LOOP_30_4_VITIS_LOOP_31_5_VITIS_LOOP_32_6_fu_164">srcnn_Pipeline_VITIS_LOOP_30_4_VITIS_LOOP_31_5_VITIS_LOOP_32_6, 0, 0, 139, 454, 0</column>
+>>>>>>> b41ed44 (Initial commit)
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -94,6 +141,7 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<<<<<<< HEAD
 <column name="add_ln18_fu_276_p2">+, 0, 0, 14, 7, 1</column>
 <column name="add_ln19_fu_324_p2">+, 0, 0, 15, 8, 1</column>
 <column name="add_ln20_fu_354_p2">+, 0, 0, 15, 8, 1</column>
@@ -122,10 +170,25 @@
 <column name="icmp_ln33_fu_537_p2">icmp, 0, 0, 15, 8, 2</column>
 <column name="or_ln21_fu_390_p2">or, 0, 0, 2, 1, 1</column>
 <column name="or_ln33_fu_549_p2">or, 0, 0, 2, 1, 1</column>
+=======
+<column name="add_ln10_fu_213_p2">+, 0, 0, 13, 6, 1</column>
+<column name="add_ln14_1_fu_291_p2">+, 0, 0, 23, 16, 1</column>
+<column name="add_ln14_fu_303_p2">+, 0, 0, 15, 8, 1</column>
+<column name="add_ln15_fu_331_p2">+, 0, 0, 15, 8, 1</column>
+<column name="add_ln33_fu_371_p2">+, 0, 0, 16, 16, 16</column>
+<column name="sub_ln21_fu_258_p2">-, 0, 0, 22, 15, 15</column>
+<column name="sub_ln33_fu_362_p2">-, 0, 0, 16, 16, 16</column>
+<column name="icmp_ln10_fu_207_p2">icmp, 0, 0, 14, 6, 7</column>
+<column name="icmp_ln14_fu_285_p2">icmp, 0, 0, 23, 16, 10</column>
+<column name="icmp_ln15_fu_309_p2">icmp, 0, 0, 15, 8, 2</column>
+<column name="select_ln14_1_fu_323_p3">select, 0, 0, 8, 1, 8</column>
+<column name="select_ln14_fu_315_p3">select, 0, 0, 8, 1, 1</column>
+>>>>>>> b41ed44 (Initial commit)
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<<<<<<< HEAD
 <column name="ap_NS_fsm">65, 15, 1, 15</column>
 <column name="c_1_fu_112">9, 2, 6, 12</column>
 <column name="c_fu_108">9, 2, 7, 14</column>
@@ -148,10 +211,38 @@
 <column name="x_reg_161">9, 2, 8, 16</column>
 <column name="y_1_reg_172">9, 2, 8, 16</column>
 <column name="y_reg_150">9, 2, 8, 16</column>
+=======
+<column name="ap_NS_fsm">65, 13, 1, 13</column>
+<column name="feat1_address0">20, 4, 22, 88</column>
+<column name="feat1_ce0">20, 4, 1, 4</column>
+<column name="feat1_ce1">9, 2, 1, 2</column>
+<column name="feat1_d0">14, 3, 32, 96</column>
+<column name="feat1_we0">14, 3, 1, 3</column>
+<column name="feat2_address0">20, 4, 21, 84</column>
+<column name="feat2_ce0">20, 4, 1, 4</column>
+<column name="feat2_ce1">9, 2, 1, 2</column>
+<column name="feat2_d0">14, 3, 32, 96</column>
+<column name="feat2_we0">14, 3, 1, 3</column>
+<column name="grp_fu_479_ce">20, 4, 1, 4</column>
+<column name="grp_fu_479_p0">20, 4, 32, 128</column>
+<column name="grp_fu_479_p1">20, 4, 32, 128</column>
+<column name="grp_fu_483_ce">20, 4, 1, 4</column>
+<column name="grp_fu_483_p0">20, 4, 32, 128</column>
+<column name="grp_fu_483_p1">20, 4, 32, 128</column>
+<column name="grp_fu_487_ce">14, 3, 1, 3</column>
+<column name="grp_fu_487_opcode">14, 3, 5, 15</column>
+<column name="grp_fu_487_p0">14, 3, 32, 96</column>
+<column name="grp_fu_487_p1">14, 3, 32, 96</column>
+<column name="indvar_flatten106_fu_110">9, 2, 16, 32</column>
+<column name="oc_fu_94">9, 2, 6, 12</column>
+<column name="x_fu_102">9, 2, 8, 16</column>
+<column name="y_fu_106">9, 2, 8, 16</column>
+>>>>>>> b41ed44 (Initial commit)
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<<<<<<< HEAD
 <column name="add_ln18_reg_574">7, 0, 7, 0</column>
 <column name="add_ln19_reg_594">8, 0, 8, 0</column>
 <column name="add_ln20_reg_607">8, 0, 8, 0</column>
@@ -179,6 +270,26 @@
 <column name="x_reg_161">8, 0, 8, 0</column>
 <column name="y_1_reg_172">8, 0, 8, 0</column>
 <column name="y_reg_150">8, 0, 8, 0</column>
+=======
+<column name="acc_1_reg_458">32, 0, 32, 0</column>
+<column name="acc_reg_453">32, 0, 32, 0</column>
+<column name="ap_CS_fsm">12, 0, 12, 0</column>
+<column name="grp_conv1_fu_146_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_srcnn_Pipeline_VITIS_LOOP_11_2_VITIS_LOOP_12_3_VITIS_LOOP_15_4_fu_170_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_srcnn_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_20_2_VITIS_LOOP_21_3_fu_158_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_srcnn_Pipeline_VITIS_LOOP_19_4_VITIS_LOOP_20_5_VITIS_LOOP_23_6_fu_183_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_srcnn_Pipeline_VITIS_LOOP_30_4_VITIS_LOOP_31_5_VITIS_LOOP_32_6_fu_164_ap_start_reg">1, 0, 1, 0</column>
+<column name="indvar_flatten106_fu_110">16, 0, 16, 0</column>
+<column name="oc_1_reg_403">6, 0, 6, 0</column>
+<column name="oc_fu_94">6, 0, 6, 0</column>
+<column name="select_ln14_1_reg_472">8, 0, 8, 0</column>
+<column name="select_ln14_reg_466">8, 0, 8, 0</column>
+<column name="sub_ln21_reg_443">15, 0, 15, 0</column>
+<column name="tmp_7_reg_448">5, 0, 11, 6</column>
+<column name="trunc_ln10_reg_409">5, 0, 5, 0</column>
+<column name="x_fu_102">8, 0, 8, 0</column>
+<column name="y_fu_106">8, 0, 8, 0</column>
+>>>>>>> b41ed44 (Initial commit)
 </table>
 </item>
 </section>
@@ -203,6 +314,12 @@
 <column name="conv1_biases_address0">out, 6, ap_memory, conv1_biases, array</column>
 <column name="conv1_biases_ce0">out, 1, ap_memory, conv1_biases, array</column>
 <column name="conv1_biases_q0">in, 32, ap_memory, conv1_biases, array</column>
+<<<<<<< HEAD
+=======
+<column name="conv1_biases_address1">out, 6, ap_memory, conv1_biases, array</column>
+<column name="conv1_biases_ce1">out, 1, ap_memory, conv1_biases, array</column>
+<column name="conv1_biases_q1">in, 32, ap_memory, conv1_biases, array</column>
+>>>>>>> b41ed44 (Initial commit)
 <column name="conv2_weights_address0">out, 11, ap_memory, conv2_weights, array</column>
 <column name="conv2_weights_ce0">out, 1, ap_memory, conv2_weights, array</column>
 <column name="conv2_weights_q0">in, 32, ap_memory, conv2_weights, array</column>

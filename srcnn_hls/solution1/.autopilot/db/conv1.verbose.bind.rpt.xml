@@ -1,7 +1,11 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv1'" level="0">
+<<<<<<< HEAD
 <item name = "Date">Sun Sep 28 13:51:30 2025
+=======
+<item name = "Date">Sun Oct 12 22:06:26 2025
+>>>>>>> b41ed44 (Initial commit)
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -15,7 +19,11 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<<<<<<< HEAD
 <column name="ap_clk">10.00 ns, 7.016 ns, 2.70 ns</column>
+=======
+<column name="ap_clk">10.00 ns, 7.060 ns, 2.70 ns</column>
+>>>>>>> b41ed44 (Initial commit)
 </table>
 </item>
 </section>
@@ -24,22 +32,34 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
+<<<<<<< HEAD
 <column name="">3117071233, 3117071233, 31.171 sec, 31.171 sec, 3117071233, 3117071233, no</column>
+=======
+<column name="">1065369601, 1065369601, 10.654 sec, 10.654 sec, 1065369601, 1065369601, no</column>
+>>>>>>> b41ed44 (Initial commit)
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<<<<<<< HEAD
+=======
+<column name="grp_conv1_Pipeline_VITIS_LOOP_24_8_VITIS_LOOP_27_9_fu_198">conv1_Pipeline_VITIS_LOOP_24_8_VITIS_LOOP_27_9, 250, 250, 2.500 us, 2.500 us, 250, 250, no</column>
+>>>>>>> b41ed44 (Initial commit)
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<<<<<<< HEAD
 <column name="- VITIS_LOOP_11_1">3117071232, 3117071232, 48704238, -, -, 64, no</column>
 <column name=" + VITIS_LOOP_12_2">48704235, 48704235, 190997, -, -, 255, no</column>
 <column name="  ++ VITIS_LOOP_13_3">190995, 190995, 749, -, -, 255, no</column>
 <column name="   +++ VITIS_LOOP_18_5">747, 747, 83, -, -, 9, no</column>
 <column name="    ++++ VITIS_LOOP_29_6">81, 81, 9, -, -, 9, no</column>
+=======
+<column name="- VITIS_LOOP_13_1_VITIS_LOOP_15_3_VITIS_LOOP_19_5_VITIS_LOOP_20_6">1065369600, 1065369600, 256, -, -, 4161600, no</column>
+>>>>>>> b41ed44 (Initial commit)
 </table>
 </item>
 </section>
