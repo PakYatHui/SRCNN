@@ -13,14 +13,14 @@
     "stores": {
       "G": 2
     },
-    "total_instructions": 426
+    "total_instructions": 446
   },
   "1": {
-    "basicblocks": 58,
+    "basicblocks": 66,
     "calls": "",
     "file": "conv1.cpp",
     "fileloc": 16,
-    "instructions": 222,
+    "instructions": 242,
     "loads": {
       "G": 4,
       "L": 3
@@ -29,7 +29,7 @@
     "stores": {
       "G": 5
     },
-    "total_instructions": 222
+    "total_instructions": 242
   },
   "2": {
     "basicblocks": 13,

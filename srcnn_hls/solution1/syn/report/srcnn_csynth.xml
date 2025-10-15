@@ -22,14 +22,14 @@
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>1718753720</Best-caseLatency>
-<Average-caseLatency>51482862008</Average-caseLatency>
-<Worst-caseLatency>202348745144</Worst-caseLatency>
-<Best-caseRealTimeLatency>17.188 sec</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>514.829 sec</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>2.0e+03 sec</Worst-caseRealTimeLatency>
-<Interval-min>1718753721</Interval-min>
-<Interval-max>202348745145</Interval-max>
+<Best-caseLatency>1738990008</Best-caseLatency>
+<Average-caseLatency>3307659704</Average-caseLatency>
+<Worst-caseLatency>4876329400</Worst-caseLatency>
+<Best-caseRealTimeLatency>17.390 sec</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>33.077 sec</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>48.763 sec</Worst-caseRealTimeLatency>
+<Interval-min>1738990009</Interval-min>
+<Interval-max>4876329401</Interval-max>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
 <VITIS_LOOP_18_1>
@@ -93,8 +93,8 @@
 <Resources>
 <BRAM_18K>11086</BRAM_18K>
 <DSP>5</DSP>
-<FF>2065</FF>
-<LUT>4071</LUT>
+<FF>2024</FF>
+<LUT>4134</LUT>
 <URAM>0</URAM>
 </Resources>
 <AvailableResources>

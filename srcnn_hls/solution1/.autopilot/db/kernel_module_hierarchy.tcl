@@ -11,31 +11,31 @@ set ModuleHierarchy {[{
 				"SubLoops" : [
 				{"Name" : "initializeWithBias","ID" : "5","Type" : "no",
 					"SubLoops" : [
-					{"Name" : "VITIS_LOOP_43_1","ID" : "6","Type" : "no",
+					{"Name" : "VITIS_LOOP_42_1","ID" : "6","Type" : "no",
 						"SubLoops" : [
-						{"Name" : "VITIS_LOOP_44_2","ID" : "7","Type" : "no"},]},]},
+						{"Name" : "VITIS_LOOP_43_2","ID" : "7","Type" : "no"},]},]},
 				{"Name" : "VITIS_LOOP_58_3","ID" : "8","Type" : "no",
 					"SubLoops" : [
-					{"Name" : "VITIS_LOOP_60_4","ID" : "9","Type" : "no"},]},
+					{"Name" : "VITIS_LOOP_59_4","ID" : "9","Type" : "no"},]},
 				{"Name" : "loadWeightTile","ID" : "10","Type" : "no",
 					"SubLoops" : [
-					{"Name" : "VITIS_LOOP_71_6","ID" : "11","Type" : "no",
+					{"Name" : "VITIS_LOOP_74_6","ID" : "11","Type" : "no",
 						"SubLoops" : [
-						{"Name" : "VITIS_LOOP_72_7","ID" : "12","Type" : "no"},]},]},
-				{"Name" : "tileCalculation","ID" : "13","Type" : "no",
+						{"Name" : "VITIS_LOOP_75_7","ID" : "12","Type" : "no"},]},]},
+				{"Name" : "VITIS_LOOP_81_8","ID" : "13","Type" : "no",
 					"SubLoops" : [
-					{"Name" : "VITIS_LOOP_83_8","ID" : "14","Type" : "no",
+					{"Name" : "VITIS_LOOP_82_9","ID" : "14","Type" : "no",
 						"SubLoops" : [
-						{"Name" : "VITIS_LOOP_84_9","ID" : "15","Type" : "no",
+						{"Name" : "VITIS_LOOP_83_10","ID" : "15","Type" : "no",
 							"SubLoops" : [
-							{"Name" : "VITIS_LOOP_87_11","ID" : "16","Type" : "no",
+							{"Name" : "VITIS_LOOP_88_12","ID" : "16","Type" : "no",
 								"SubLoops" : [
-								{"Name" : "VITIS_LOOP_89_12","ID" : "17","Type" : "no"},]},]},]},]},
+								{"Name" : "VITIS_LOOP_90_13","ID" : "17","Type" : "no"},]},]},]},]},
 				{"Name" : "tileWritewBack","ID" : "18","Type" : "no",
 					"SubLoops" : [
-					{"Name" : "VITIS_LOOP_104_13","ID" : "19","Type" : "no",
+					{"Name" : "VITIS_LOOP_102_14","ID" : "19","Type" : "no",
 						"SubLoops" : [
-						{"Name" : "VITIS_LOOP_105_14","ID" : "20","Type" : "no"},]},]},]},]},]},]},
+						{"Name" : "VITIS_LOOP_103_15","ID" : "20","Type" : "no"},]},]},]},]},]},]},
 	{"Name" : "grp_conv2_fu_218","ID" : "21","Type" : "sequential",
 		"SubLoops" : [
 		{"Name" : "VITIS_LOOP_10_1","ID" : "22","Type" : "no",

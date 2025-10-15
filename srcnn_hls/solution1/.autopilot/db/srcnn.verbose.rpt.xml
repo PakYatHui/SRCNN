@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'srcnn'" level="0">
-<item name = "Date">Thu Oct 16 00:21:14 2025
+<item name = "Date">Thu Oct 16 01:19:29 2025
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -24,14 +24,14 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">1718753720, 202348745144, 17.188 sec, 2.0e+03 sec, 1718753721, 202348745145, no</column>
+<column name="">1738990008, 4876329400, 17.390 sec, 48.763 sec, 1738990009, 4876329401, no</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_conv1_fu_200">conv1, 3978385, 200633969809, 39.784 ms, 2.0e+03 sec, 3978385, 200633969809, no</column>
+<column name="grp_conv1_fu_200">conv1, 24214673, 3161554065, 0.242 sec, 31.616 sec, 24214673, 3161554065, no</column>
 <column name="grp_conv2_fu_218">conv2, 1202718817, 1202718817, 12.027 sec, 12.027 sec, 1202718817, 1202718817, no</column>
 <column name="grp_conv3_fu_230">conv3, 493280161, 493280161, 4.933 sec, 4.933 sec, 493280161, 493280161, no</column>
 </table>
@@ -58,7 +58,7 @@
 <column name="DSP">-, -, -, -, -</column>
 <column name="Expression">-, -, 0, 480, -</column>
 <column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">22, 5, 1803, 3190, 0</column>
+<column name="Instance">22, 5, 1762, 3253, 0</column>
 <column name="Memory">11064, -, 0, 0, 0</column>
 <column name="Multiplexer">-, -, -, 401, -</column>
 <column name="Register">-, -, 262, -, -</column>
@@ -70,7 +70,7 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="grp_conv1_fu_200">conv1, 22, 0, 771, 1800, 0</column>
+<column name="grp_conv1_fu_200">conv1, 22, 0, 730, 1863, 0</column>
 <column name="grp_conv2_fu_218">conv2, 0, 0, 311, 436, 0</column>
 <column name="grp_conv3_fu_230">conv3, 0, 0, 366, 605, 0</column>
 <column name="fadd_32ns_32ns_32_4_full_dsp_1_U23">fadd_32ns_32ns_32_4_full_dsp_1, 0, 2, 227, 214, 0</column>

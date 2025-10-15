@@ -226,14 +226,14 @@ void conv1(ftmap_t input_ftmap[1][255][255],
 
 
                 initializeWithBias:
-                for (int tn = 0; tn < tN; ++tn) {
-                    float b = conv1_biases[n + tn];
-                    VITIS_LOOP_43_1: for (int th = 0; th < tH; ++th) {
-                        VITIS_LOOP_44_2: for (int tw = 0; tw < tW; ++tw) {
-                            out_tile[tn][th][tw] = b;
-                        }
-                    }
-                }
+    for (int tn = 0; tn < 8; ++tn) {
+      VITIS_LOOP_42_1: for (int th = 0; th < 32; ++th) {
+        VITIS_LOOP_43_2: for (int tw = 0; tw < 32; ++tw) {
+          if (tn < tN && th < tH && tw < tW)
+            out_tile[tn][th][tw] = conv1_biases[n+tn];
+        }
+      }
+    }
 
 
                 tileAccumulation:
@@ -242,60 +242,57 @@ void conv1(ftmap_t input_ftmap[1][255][255],
 
 
                     loadInputTile:
-                    for (int tc = 0; tc < tC; ++tc) {
-                        VITIS_LOOP_58_3: for (int ih = 0; ih < tH + 9 - 1; ++ih) {
-                            int gy = clampi(h + ih - R, 0, 255 - 1);
-                            VITIS_LOOP_60_4: for (int iw = 0; iw < tW + 9 - 1; ++iw) {
-                                int gx = clampi(w + iw - R, 0, 255 - 1);
-                                in_tile[tc][ih][iw] = input_ftmap[c + tc][gy][gx];
-                            }
-                        }
-                    }
+     for (int tc = 0; tc < 1; ++tc) {
+       VITIS_LOOP_58_3: for (int ih = 0; ih < 32 + 9 - 1; ++ih) {
+         VITIS_LOOP_59_4: for (int iw = 0; iw < 32 + 9 - 1; ++iw) {
+           if (ih < tH + 9 - 1 && iw < tW + 9 - 1) {
+             int gy = clampi(h + ih - R, 0, 255 - 1);
+             int gx = clampi(w + iw - R, 0, 255 - 1);
+             in_tile[tc][ih][iw] = input_ftmap[c + tc][gy][gx];
+           }
+         }
+       }
+     }
 
 
                     loadWeightTile:
-                    for (int tn = 0; tn < tN; ++tn) {
-                        VITIS_LOOP_70_5: for (int tc = 0; tc < tC; ++tc) {
-                            VITIS_LOOP_71_6: for (int kh = 0; kh < 9; ++kh) {
-                                VITIS_LOOP_72_7: for (int kw = 0; kw < 9; ++kw) {
-                                    w_tile[tn][tc][kh][kw] =
-                                        conv1_weights[n + tn][c + tc][kh][kw];
-                                }
-                            }
-                        }
-                    }
+     for (int tn = 0; tn < 8; ++tn) {
+       VITIS_LOOP_72_5: for (int tc = 0; tc < 1; ++tc) {
+         if (tn < tN && tc < tC)
+           VITIS_LOOP_74_6: for (int kh = 0; kh < 9; ++kh)
+             VITIS_LOOP_75_7: for (int kw = 0; kw < 9; ++kw)
+               w_tile[tn][tc][kh][kw] = conv1_weights[n+tn][c+tc][kh][kw];
+       }
+     }
 
 
-                    tileCalculation:
-                    for (int tn = 0; tn < tN; ++tn) {
-                        VITIS_LOOP_83_8: for (int th = 0; th < tH; ++th) {
-                            VITIS_LOOP_84_9: for (int tw = 0; tw < tW; ++tw) {
-                                float acc = out_tile[tn][th][tw];
-                                VITIS_LOOP_86_10: for (int tc = 0; tc < tC; ++tc) {
-                                    VITIS_LOOP_87_11: for (int kh = 0; kh < 9; ++kh) {
+     VITIS_LOOP_81_8: for (int tn = 0; tn < 8; ++tn) {
+       VITIS_LOOP_82_9: for (int th = 0; th < 32; ++th) {
+         VITIS_LOOP_83_10: for (int tw = 0; tw < 32; ++tw) {
+           if (tn < tN && th < tH && tw < tW) {
+             float acc = out_tile[tn][th][tw];
+             VITIS_LOOP_86_11: for (int tc = 0; tc < 1; ++tc)
 
-                                        VITIS_LOOP_89_12: for (int kw = 0; kw < 9; ++kw) {
+               VITIS_LOOP_88_12: for (int kh = 0; kh < 9; ++kh) {
 
-                                            acc += w_tile[tn][tc][kh][kw] *
-                                                   in_tile[tc][th + kh][tw + kw];
-                                        }
-                                    }
-                                }
-                                out_tile[tn][th][tw] = acc;
-                            }
-                        }
-                    }
-                }
+                 VITIS_LOOP_90_13: for (int kw = 0; kw < 9; ++kw) {
+                   acc += w_tile[tn][tc][kh][kw] * in_tile[tc][th+kh][tw+kw];
+                 }
+               }
+             out_tile[tn][th][tw] = acc;
+           }
+         }
+       }
+     }
 
                 tileWritewBack:
-                for (int tn = 0; tn < tN; ++tn) {
-                    VITIS_LOOP_104_13: for (int th = 0; th < tH; ++th) {
-                        VITIS_LOOP_105_14: for (int tw = 0; tw < tW; ++tw) {
-                            output_ftmap[n + tn][h + th][w + tw] = out_tile[tn][th][tw];
+    for (int tn = 0; tn < 8; ++tn)
+      VITIS_LOOP_102_14: for (int th = 0; th < 32; ++th)
+        VITIS_LOOP_103_15: for (int tw = 0; tw < 32; ++tw)
+          if (tn < tN && th < tH && tw < tW)
+            output_ftmap[n+tn][h+th][w+tw] = out_tile[tn][th][tw];
                         }
                     }
                 }
             }
         }
-    }
-}

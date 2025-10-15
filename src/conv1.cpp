@@ -38,14 +38,14 @@ void conv1(ftmap_t input_ftmap[N0][H][W],
 
                 // ---- initialize tile with bias（Output-stationary: only write back once toDRAM）----
                 initializeWithBias:
-                for (int tn = 0; tn < tN; ++tn) {
-                    float b = conv1_biases[n + tn];
-                    for (int th = 0; th < tH; ++th) {
-                        for (int tw = 0; tw < tW; ++tw) {
-                            out_tile[tn][th][tw] = b;
-                        }
-                    }
-                }
+				for (int tn = 0; tn < TN; ++tn) {
+				  for (int th = 0; th < TH; ++th) {
+				    for (int tw = 0; tw < TW; ++tw) {
+				      if (tn < tN && th < tH && tw < tW)
+				        out_tile[tn][th][tw] = conv1_biases[n+tn];
+				    }
+				  }
+				}
 
                 // ---- tile accumulation with C ----
                 tileAccumulation:
@@ -54,60 +54,58 @@ void conv1(ftmap_t input_ftmap[N0][H][W],
 
                     // 1) load input tile（Load additional input feature borders, same padding）
                     loadInputTile:
-                    for (int tc = 0; tc < tC; ++tc) {
-                        for (int ih = 0; ih < tH + F1 - 1; ++ih) {
-                            int gy = clampi(h + ih - R, 0, H - 1);
-                            for (int iw = 0; iw < tW + F1 - 1; ++iw) {
-                                int gx = clampi(w + iw - R, 0, W - 1);
-                                in_tile[tc][ih][iw] = input_ftmap[c + tc][gy][gx];
-                            }
-                        }
-                    }
+					for (int tc = 0; tc < TC; ++tc) {
+					  for (int ih = 0; ih < TH + F1 - 1; ++ih) {
+					    for (int iw = 0; iw < TW + F1 - 1; ++iw) {
+					      if (ih < tH + F1 - 1 && iw < tW + F1 - 1) {
+					        int gy = clampi(h + ih - R, 0, H - 1);
+					        int gx = clampi(w + iw - R, 0, W - 1);
+					        in_tile[tc][ih][iw] = input_ftmap[c + tc][gy][gx];
+					      }
+					    }
+					  }
+					}
 
                     // 2) load weight tile（n..n+tN-1 × c..c+tC-1 9x9
                     loadWeightTile:
-                    for (int tn = 0; tn < tN; ++tn) {
-                        for (int tc = 0; tc < tC; ++tc) {
-                            for (int kh = 0; kh < F1; ++kh) {
-                                for (int kw = 0; kw < F1; ++kw) {
-                                    w_tile[tn][tc][kh][kw] =
-                                        conv1_weights[n + tn][c + tc][kh][kw];
-                                }
-                            }
-                        }
-                    }
+					for (int tn = 0; tn < TN; ++tn) {
+					  for (int tc = 0; tc < TC; ++tc) {
+					    if (tn < tN && tc < tC)
+					      for (int kh = 0; kh < F1; ++kh)
+					        for (int kw = 0; kw < F1; ++kw)
+					          w_tile[tn][tc][kh][kw] = conv1_weights[n+tn][c+tc][kh][kw];
+					  }
+					}
 
                     // 3) tile calculation（对本c块累加到 out_tile）
-                    tileCalculation:
-                    for (int tn = 0; tn < tN; ++tn) {                 // output tile feature
-                        for (int th = 0; th < tH; ++th) {             // output tile height
-                            for (int tw = 0; tw < tW; ++tw) {         // output tile width
-                                float acc = out_tile[tn][th][tw];
-                                for (int tc = 0; tc < tC; ++tc) {     // input tile feature
-                                    for (int kh = 0; kh < F1; ++kh) { // kernel height
+					for (int tn = 0; tn < TN; ++tn) {
+					  for (int th = 0; th < TH; ++th) {
+					    for (int tw = 0; tw < TW; ++tw) {
+					      if (tn < tN && th < tH && tw < tW) {
+					        float acc = out_tile[tn][th][tw];
+					        for (int tc = 0; tc < TC; ++tc)
 //#pragma HLS UNROLL factor=9
-                                        for (int kw = 0; kw < F1; ++kw) { // kernel width
+					          for (int kh = 0; kh < F1; ++kh) {      // 这两个是常量 9，可安全 unroll
 //#pragma HLS UNROLL factor=9
-                                            acc += w_tile[tn][tc][kh][kw] *
-                                                   in_tile[tc][th + kh][tw + kw];
-                                        }
-                                    }
-                                }
-                                out_tile[tn][th][tw] = acc;
-                            }
-                        }
-                    }
-                } // end for c (input tiles)
+					            for (int kw = 0; kw < F1; ++kw) {
+					              acc += w_tile[tn][tc][kh][kw] * in_tile[tc][th+kh][tw+kw];
+					            }
+					          }
+					        out_tile[tn][th][tw] = acc;
+					      }
+					    }
+					  }
+					}
                 // ---- tile write back to DRAM----
                 tileWritewBack:
-                for (int tn = 0; tn < tN; ++tn) {
-                    for (int th = 0; th < tH; ++th) {
-                        for (int tw = 0; tw < tW; ++tw) {
-                            output_ftmap[n + tn][h + th][w + tw] = out_tile[tn][th][tw];
+				for (int tn = 0; tn < TN; ++tn)
+				  for (int th = 0; th < TH; ++th)
+				    for (int tw = 0; tw < TW; ++tw)
+				      if (tn < tN && th < tH && tw < tW)
+				        output_ftmap[n+tn][h+th][w+tw] = out_tile[tn][th][tw];
                         }
                     }
                 }
             }
         }
-    }
-}
+

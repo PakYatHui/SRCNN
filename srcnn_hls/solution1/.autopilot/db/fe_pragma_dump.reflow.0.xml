@@ -1,5 +1,5 @@
 <pragmas>
 <pragma file="src/conv3.cpp" line="9" pragmaType="pipeline" parentfunction="conv3" off="1" ii="0" style=""/>
-<pragma file="src/srcnn.cpp" line="12" pragmaType="pipeline" parentfunction="srcnn" off="1" ii="0" style=""/>
 <pragma file="src/conv2.cpp" line="9" pragmaType="pipeline" parentfunction="conv2" off="1" ii="0" style=""/>
+<pragma file="src/srcnn.cpp" line="12" pragmaType="pipeline" parentfunction="srcnn" off="1" ii="0" style=""/>
 </pragmas>
