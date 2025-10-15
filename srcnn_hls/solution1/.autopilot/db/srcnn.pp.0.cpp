@@ -201,6 +201,10 @@ __attribute__((sdx_kernel("srcnn", 0))) void srcnn(ftmap_t input_ftmap[1][255][2
 #pragma HLSDIRECTIVE TOP name=srcnn
 # 11 "src/srcnn.cpp"
 
+#line 7 "C:/Xilinx/golden/srcnn_hls/solution1/directives.tcl"
+#pragma HLSDIRECTIVE TOP name=srcnn
+# 11 "src/srcnn.cpp"
+
 #pragma HLS PIPELINE off
  static ftmap_t feat1[64][255][255];
      static ftmap_t feat2[32][255][255];

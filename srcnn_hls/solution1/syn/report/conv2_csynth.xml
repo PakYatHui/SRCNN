@@ -156,7 +156,7 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_692_p_din0</name>
+<name>grp_fu_704_p_din0</name>
 <Object>conv2</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -167,7 +167,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_692_p_din1</name>
+<name>grp_fu_704_p_din1</name>
 <Object>conv2</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -178,7 +178,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_692_p_opcode</name>
+<name>grp_fu_704_p_opcode</name>
 <Object>conv2</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -189,7 +189,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_692_p_dout0</name>
+<name>grp_fu_704_p_dout0</name>
 <Object>conv2</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -200,7 +200,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_692_p_ce</name>
+<name>grp_fu_704_p_ce</name>
 <Object>conv2</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -211,7 +211,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_696_p_din0</name>
+<name>grp_fu_708_p_din0</name>
 <Object>conv2</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -222,7 +222,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_696_p_din1</name>
+<name>grp_fu_708_p_din1</name>
 <Object>conv2</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -233,7 +233,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_696_p_dout0</name>
+<name>grp_fu_708_p_dout0</name>
 <Object>conv2</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -244,7 +244,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_696_p_ce</name>
+<name>grp_fu_708_p_ce</name>
 <Object>conv2</Object>
 <Type>return value</Type>
 <Scope></Scope>

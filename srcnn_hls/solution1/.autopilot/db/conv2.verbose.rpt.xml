@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv2'" level="0">
-<item name = "Date">Sun Sep 28 13:51:34 2025
+<item name = "Date">Thu Oct 16 00:21:12 2025
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -147,15 +147,15 @@
 <column name="ap_done">out, 1, ap_ctrl_hs, conv2, return value</column>
 <column name="ap_idle">out, 1, ap_ctrl_hs, conv2, return value</column>
 <column name="ap_ready">out, 1, ap_ctrl_hs, conv2, return value</column>
-<column name="grp_fu_692_p_din0">out, 32, ap_ctrl_hs, conv2, return value</column>
-<column name="grp_fu_692_p_din1">out, 32, ap_ctrl_hs, conv2, return value</column>
-<column name="grp_fu_692_p_opcode">out, 2, ap_ctrl_hs, conv2, return value</column>
-<column name="grp_fu_692_p_dout0">in, 32, ap_ctrl_hs, conv2, return value</column>
-<column name="grp_fu_692_p_ce">out, 1, ap_ctrl_hs, conv2, return value</column>
-<column name="grp_fu_696_p_din0">out, 32, ap_ctrl_hs, conv2, return value</column>
-<column name="grp_fu_696_p_din1">out, 32, ap_ctrl_hs, conv2, return value</column>
-<column name="grp_fu_696_p_dout0">in, 32, ap_ctrl_hs, conv2, return value</column>
-<column name="grp_fu_696_p_ce">out, 1, ap_ctrl_hs, conv2, return value</column>
+<column name="grp_fu_704_p_din0">out, 32, ap_ctrl_hs, conv2, return value</column>
+<column name="grp_fu_704_p_din1">out, 32, ap_ctrl_hs, conv2, return value</column>
+<column name="grp_fu_704_p_opcode">out, 2, ap_ctrl_hs, conv2, return value</column>
+<column name="grp_fu_704_p_dout0">in, 32, ap_ctrl_hs, conv2, return value</column>
+<column name="grp_fu_704_p_ce">out, 1, ap_ctrl_hs, conv2, return value</column>
+<column name="grp_fu_708_p_din0">out, 32, ap_ctrl_hs, conv2, return value</column>
+<column name="grp_fu_708_p_din1">out, 32, ap_ctrl_hs, conv2, return value</column>
+<column name="grp_fu_708_p_dout0">in, 32, ap_ctrl_hs, conv2, return value</column>
+<column name="grp_fu_708_p_ce">out, 1, ap_ctrl_hs, conv2, return value</column>
 <column name="conv2_weights_address0">out, 11, ap_memory, conv2_weights, array</column>
 <column name="conv2_weights_ce0">out, 1, ap_memory, conv2_weights, array</column>
 <column name="conv2_weights_q0">in, 32, ap_memory, conv2_weights, array</column>

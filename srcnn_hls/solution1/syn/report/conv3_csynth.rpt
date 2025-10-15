@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'conv3'
 ================================================================
-* Date:           Sun Sep 28 13:51:34 2025
+* Date:           Thu Oct 16 00:21:12 2025
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -190,15 +190,15 @@
 |ap_done                 |  out|    1|  ap_ctrl_hs|          conv3|  return value|
 |ap_idle                 |  out|    1|  ap_ctrl_hs|          conv3|  return value|
 |ap_ready                |  out|    1|  ap_ctrl_hs|          conv3|  return value|
-|grp_fu_692_p_din0       |  out|   32|  ap_ctrl_hs|          conv3|  return value|
-|grp_fu_692_p_din1       |  out|   32|  ap_ctrl_hs|          conv3|  return value|
-|grp_fu_692_p_opcode     |  out|    2|  ap_ctrl_hs|          conv3|  return value|
-|grp_fu_692_p_dout0      |   in|   32|  ap_ctrl_hs|          conv3|  return value|
-|grp_fu_692_p_ce         |  out|    1|  ap_ctrl_hs|          conv3|  return value|
-|grp_fu_696_p_din0       |  out|   32|  ap_ctrl_hs|          conv3|  return value|
-|grp_fu_696_p_din1       |  out|   32|  ap_ctrl_hs|          conv3|  return value|
-|grp_fu_696_p_dout0      |   in|   32|  ap_ctrl_hs|          conv3|  return value|
-|grp_fu_696_p_ce         |  out|    1|  ap_ctrl_hs|          conv3|  return value|
+|grp_fu_704_p_din0       |  out|   32|  ap_ctrl_hs|          conv3|  return value|
+|grp_fu_704_p_din1       |  out|   32|  ap_ctrl_hs|          conv3|  return value|
+|grp_fu_704_p_opcode     |  out|    2|  ap_ctrl_hs|          conv3|  return value|
+|grp_fu_704_p_dout0      |   in|   32|  ap_ctrl_hs|          conv3|  return value|
+|grp_fu_704_p_ce         |  out|    1|  ap_ctrl_hs|          conv3|  return value|
+|grp_fu_708_p_din0       |  out|   32|  ap_ctrl_hs|          conv3|  return value|
+|grp_fu_708_p_din1       |  out|   32|  ap_ctrl_hs|          conv3|  return value|
+|grp_fu_708_p_dout0      |   in|   32|  ap_ctrl_hs|          conv3|  return value|
+|grp_fu_708_p_ce         |  out|    1|  ap_ctrl_hs|          conv3|  return value|
 |conv3_weights_address0  |  out|   10|   ap_memory|  conv3_weights|         array|
 |conv3_weights_ce0       |  out|    1|   ap_memory|  conv3_weights|         array|
 |conv3_weights_q0        |   in|   32|   ap_memory|  conv3_weights|         array|

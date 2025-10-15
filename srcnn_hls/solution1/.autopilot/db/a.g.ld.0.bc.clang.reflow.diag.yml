@@ -1,0 +1,14 @@
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: src/conv1.cpp, Line: 20, Column: 0 }
+Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'clampi(int, int, int)'
+    DebugLoc:        { File: src/conv1.cpp, Line: 9, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'conv1(float (*) [255][255], float (*) [1][9][9], float*, float (*) [255][255])'
+    DebugLoc:        { File: src/conv1.cpp, Line: 20, Column: 0 }
+  - String:          ''''
+...

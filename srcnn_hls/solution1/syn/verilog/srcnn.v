@@ -6,7 +6,7 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="srcnn_srcnn,hls_ip_2023_1,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xck26-sfvc784-2LV-c,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=7.016000,HLS_SYN_LAT=536879272,HLS_SYN_TPT=none,HLS_SYN_MEM=11064,HLS_SYN_DSP=0,HLS_SYN_FF=1680,HLS_SYN_LUT=2903,HLS_VERSION=2023_1}" *)
+(* CORE_GENERATION_INFO="srcnn_srcnn,hls_ip_2023_1,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xck26-sfvc784-2LV-c,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=7.016000,HLS_SYN_LAT=-56745544,HLS_SYN_TPT=none,HLS_SYN_MEM=11086,HLS_SYN_DSP=0,HLS_SYN_FF=2065,HLS_SYN_LUT=4071,HLS_VERSION=2023_1}" *)
 
 module srcnn (
         ap_clk,
@@ -101,171 +101,171 @@ reg    feat2_ce0;
 reg    feat2_we0;
 reg   [31:0] feat2_d0;
 wire   [31:0] feat2_q0;
-wire  signed [16:0] sext_ln18_fu_266_p1;
-reg  signed [16:0] sext_ln18_reg_566;
+wire  signed [16:0] sext_ln18_fu_278_p1;
+reg  signed [16:0] sext_ln18_reg_578;
 wire    ap_CS_fsm_state3;
-wire   [6:0] add_ln18_fu_276_p2;
-reg   [6:0] add_ln18_reg_574;
-wire   [21:0] sub_ln21_1_fu_312_p2;
-reg   [21:0] sub_ln21_1_reg_586;
+wire   [6:0] add_ln18_fu_288_p2;
+reg   [6:0] add_ln18_reg_586;
+wire   [21:0] sub_ln21_1_fu_324_p2;
+reg   [21:0] sub_ln21_1_reg_598;
 wire    ap_CS_fsm_state4;
-wire   [7:0] add_ln19_fu_324_p2;
-reg   [7:0] add_ln19_reg_594;
-reg   [21:0] feat1_addr_reg_599;
+wire   [7:0] add_ln19_fu_336_p2;
+reg   [7:0] add_ln19_reg_606;
+reg   [21:0] feat1_addr_reg_611;
 wire    ap_CS_fsm_state5;
-wire   [7:0] add_ln20_fu_354_p2;
-reg   [7:0] add_ln20_reg_607;
+wire   [7:0] add_ln20_fu_366_p2;
+reg   [7:0] add_ln20_reg_619;
 wire    ap_CS_fsm_state6;
-wire   [0:0] icmp_ln21_fu_378_p2;
-reg   [0:0] icmp_ln21_reg_617;
-wire   [0:0] icmp_ln21_1_fu_384_p2;
-reg   [0:0] icmp_ln21_1_reg_622;
-wire  signed [15:0] sext_ln30_fu_425_p1;
-reg  signed [15:0] sext_ln30_reg_630;
+wire   [0:0] icmp_ln21_fu_390_p2;
+reg   [0:0] icmp_ln21_reg_629;
+wire   [0:0] icmp_ln21_1_fu_396_p2;
+reg   [0:0] icmp_ln21_1_reg_634;
+wire  signed [15:0] sext_ln30_fu_437_p1;
+reg  signed [15:0] sext_ln30_reg_642;
 wire    ap_CS_fsm_state9;
-wire   [5:0] add_ln30_fu_435_p2;
-reg   [5:0] add_ln30_reg_638;
-wire   [31:0] empty_fu_441_p1;
-reg   [31:0] empty_reg_643;
-wire   [0:0] icmp_ln30_fu_429_p2;
-wire   [20:0] sub_ln33_1_fu_471_p2;
-reg   [20:0] sub_ln33_1_reg_648;
+wire   [5:0] add_ln30_fu_447_p2;
+reg   [5:0] add_ln30_reg_650;
+wire   [31:0] empty_fu_453_p1;
+reg   [31:0] empty_reg_655;
+wire   [0:0] icmp_ln30_fu_441_p2;
+wire   [20:0] sub_ln33_1_fu_483_p2;
+reg   [20:0] sub_ln33_1_reg_660;
 wire    ap_CS_fsm_state10;
-wire   [7:0] add_ln31_fu_483_p2;
-reg   [7:0] add_ln31_reg_656;
-reg   [20:0] feat2_addr_reg_661;
+wire   [7:0] add_ln31_fu_495_p2;
+reg   [7:0] add_ln31_reg_668;
+reg   [20:0] feat2_addr_reg_673;
 wire    ap_CS_fsm_state11;
-wire   [7:0] add_ln32_fu_513_p2;
-reg   [7:0] add_ln32_reg_669;
+wire   [7:0] add_ln32_fu_525_p2;
+reg   [7:0] add_ln32_reg_681;
 wire    ap_CS_fsm_state12;
-wire   [0:0] icmp_ln33_fu_537_p2;
-reg   [0:0] icmp_ln33_reg_679;
-wire   [0:0] icmp_ln33_1_fu_543_p2;
-reg   [0:0] icmp_ln33_1_reg_684;
-wire    grp_conv1_fu_194_ap_start;
-wire    grp_conv1_fu_194_ap_done;
-wire    grp_conv1_fu_194_ap_idle;
-wire    grp_conv1_fu_194_ap_ready;
-wire   [15:0] grp_conv1_fu_194_input_ftmap_address0;
-wire    grp_conv1_fu_194_input_ftmap_ce0;
-wire   [12:0] grp_conv1_fu_194_conv1_weights_address0;
-wire    grp_conv1_fu_194_conv1_weights_ce0;
-wire   [5:0] grp_conv1_fu_194_conv1_biases_address0;
-wire    grp_conv1_fu_194_conv1_biases_ce0;
-wire   [21:0] grp_conv1_fu_194_feat1_address0;
-wire    grp_conv1_fu_194_feat1_ce0;
-wire    grp_conv1_fu_194_feat1_we0;
-wire   [31:0] grp_conv1_fu_194_feat1_d0;
-wire   [31:0] grp_conv1_fu_194_grp_fu_692_p_din0;
-wire   [31:0] grp_conv1_fu_194_grp_fu_692_p_din1;
-wire   [1:0] grp_conv1_fu_194_grp_fu_692_p_opcode;
-wire    grp_conv1_fu_194_grp_fu_692_p_ce;
-wire   [31:0] grp_conv1_fu_194_grp_fu_696_p_din0;
-wire   [31:0] grp_conv1_fu_194_grp_fu_696_p_din1;
-wire    grp_conv1_fu_194_grp_fu_696_p_ce;
-wire    grp_conv2_fu_206_ap_start;
-wire    grp_conv2_fu_206_ap_done;
-wire    grp_conv2_fu_206_ap_idle;
-wire    grp_conv2_fu_206_ap_ready;
-wire   [10:0] grp_conv2_fu_206_conv2_weights_address0;
-wire    grp_conv2_fu_206_conv2_weights_ce0;
-wire   [4:0] grp_conv2_fu_206_conv2_biases_address0;
-wire    grp_conv2_fu_206_conv2_biases_ce0;
-wire   [21:0] grp_conv2_fu_206_feat1_address0;
-wire    grp_conv2_fu_206_feat1_ce0;
-wire   [20:0] grp_conv2_fu_206_feat2_address0;
-wire    grp_conv2_fu_206_feat2_ce0;
-wire    grp_conv2_fu_206_feat2_we0;
-wire   [31:0] grp_conv2_fu_206_feat2_d0;
-wire   [31:0] grp_conv2_fu_206_grp_fu_692_p_din0;
-wire   [31:0] grp_conv2_fu_206_grp_fu_692_p_din1;
-wire   [1:0] grp_conv2_fu_206_grp_fu_692_p_opcode;
-wire    grp_conv2_fu_206_grp_fu_692_p_ce;
-wire   [31:0] grp_conv2_fu_206_grp_fu_696_p_din0;
-wire   [31:0] grp_conv2_fu_206_grp_fu_696_p_din1;
-wire    grp_conv2_fu_206_grp_fu_696_p_ce;
-wire    grp_conv3_fu_218_ap_start;
-wire    grp_conv3_fu_218_ap_done;
-wire    grp_conv3_fu_218_ap_idle;
-wire    grp_conv3_fu_218_ap_ready;
-wire   [9:0] grp_conv3_fu_218_conv3_weights_address0;
-wire    grp_conv3_fu_218_conv3_weights_ce0;
-wire   [15:0] grp_conv3_fu_218_output_ftmap_address0;
-wire    grp_conv3_fu_218_output_ftmap_ce0;
-wire    grp_conv3_fu_218_output_ftmap_we0;
-wire   [31:0] grp_conv3_fu_218_output_ftmap_d0;
-wire   [20:0] grp_conv3_fu_218_feat2_address0;
-wire    grp_conv3_fu_218_feat2_ce0;
-wire   [31:0] grp_conv3_fu_218_grp_fu_692_p_din0;
-wire   [31:0] grp_conv3_fu_218_grp_fu_692_p_din1;
-wire   [1:0] grp_conv3_fu_218_grp_fu_692_p_opcode;
-wire    grp_conv3_fu_218_grp_fu_692_p_ce;
-wire   [31:0] grp_conv3_fu_218_grp_fu_696_p_din0;
-wire   [31:0] grp_conv3_fu_218_grp_fu_696_p_din1;
-wire    grp_conv3_fu_218_grp_fu_696_p_ce;
-reg   [7:0] y_reg_150;
-wire   [0:0] icmp_ln20_fu_348_p2;
-wire   [0:0] icmp_ln18_fu_270_p2;
-reg   [7:0] x_reg_161;
-wire   [0:0] icmp_ln19_fu_318_p2;
+wire   [0:0] icmp_ln33_fu_549_p2;
+reg   [0:0] icmp_ln33_reg_691;
+wire   [0:0] icmp_ln33_1_fu_555_p2;
+reg   [0:0] icmp_ln33_1_reg_696;
+wire    grp_conv1_fu_200_ap_start;
+wire    grp_conv1_fu_200_ap_done;
+wire    grp_conv1_fu_200_ap_idle;
+wire    grp_conv1_fu_200_ap_ready;
+wire   [15:0] grp_conv1_fu_200_input_ftmap_address0;
+wire    grp_conv1_fu_200_input_ftmap_ce0;
+wire   [12:0] grp_conv1_fu_200_conv1_weights_address0;
+wire    grp_conv1_fu_200_conv1_weights_ce0;
+wire   [5:0] grp_conv1_fu_200_conv1_biases_address0;
+wire    grp_conv1_fu_200_conv1_biases_ce0;
+wire   [21:0] grp_conv1_fu_200_feat1_address0;
+wire    grp_conv1_fu_200_feat1_ce0;
+wire    grp_conv1_fu_200_feat1_we0;
+wire   [31:0] grp_conv1_fu_200_feat1_d0;
+wire   [31:0] grp_conv1_fu_200_grp_fu_704_p_din0;
+wire   [31:0] grp_conv1_fu_200_grp_fu_704_p_din1;
+wire   [1:0] grp_conv1_fu_200_grp_fu_704_p_opcode;
+wire    grp_conv1_fu_200_grp_fu_704_p_ce;
+wire   [31:0] grp_conv1_fu_200_grp_fu_708_p_din0;
+wire   [31:0] grp_conv1_fu_200_grp_fu_708_p_din1;
+wire    grp_conv1_fu_200_grp_fu_708_p_ce;
+wire    grp_conv2_fu_218_ap_start;
+wire    grp_conv2_fu_218_ap_done;
+wire    grp_conv2_fu_218_ap_idle;
+wire    grp_conv2_fu_218_ap_ready;
+wire   [10:0] grp_conv2_fu_218_conv2_weights_address0;
+wire    grp_conv2_fu_218_conv2_weights_ce0;
+wire   [4:0] grp_conv2_fu_218_conv2_biases_address0;
+wire    grp_conv2_fu_218_conv2_biases_ce0;
+wire   [21:0] grp_conv2_fu_218_feat1_address0;
+wire    grp_conv2_fu_218_feat1_ce0;
+wire   [20:0] grp_conv2_fu_218_feat2_address0;
+wire    grp_conv2_fu_218_feat2_ce0;
+wire    grp_conv2_fu_218_feat2_we0;
+wire   [31:0] grp_conv2_fu_218_feat2_d0;
+wire   [31:0] grp_conv2_fu_218_grp_fu_704_p_din0;
+wire   [31:0] grp_conv2_fu_218_grp_fu_704_p_din1;
+wire   [1:0] grp_conv2_fu_218_grp_fu_704_p_opcode;
+wire    grp_conv2_fu_218_grp_fu_704_p_ce;
+wire   [31:0] grp_conv2_fu_218_grp_fu_708_p_din0;
+wire   [31:0] grp_conv2_fu_218_grp_fu_708_p_din1;
+wire    grp_conv2_fu_218_grp_fu_708_p_ce;
+wire    grp_conv3_fu_230_ap_start;
+wire    grp_conv3_fu_230_ap_done;
+wire    grp_conv3_fu_230_ap_idle;
+wire    grp_conv3_fu_230_ap_ready;
+wire   [9:0] grp_conv3_fu_230_conv3_weights_address0;
+wire    grp_conv3_fu_230_conv3_weights_ce0;
+wire   [15:0] grp_conv3_fu_230_output_ftmap_address0;
+wire    grp_conv3_fu_230_output_ftmap_ce0;
+wire    grp_conv3_fu_230_output_ftmap_we0;
+wire   [31:0] grp_conv3_fu_230_output_ftmap_d0;
+wire   [20:0] grp_conv3_fu_230_feat2_address0;
+wire    grp_conv3_fu_230_feat2_ce0;
+wire   [31:0] grp_conv3_fu_230_grp_fu_704_p_din0;
+wire   [31:0] grp_conv3_fu_230_grp_fu_704_p_din1;
+wire   [1:0] grp_conv3_fu_230_grp_fu_704_p_opcode;
+wire    grp_conv3_fu_230_grp_fu_704_p_ce;
+wire   [31:0] grp_conv3_fu_230_grp_fu_708_p_din0;
+wire   [31:0] grp_conv3_fu_230_grp_fu_708_p_din1;
+wire    grp_conv3_fu_230_grp_fu_708_p_ce;
+reg   [7:0] y_reg_156;
+wire   [0:0] icmp_ln20_fu_360_p2;
+wire   [0:0] icmp_ln18_fu_282_p2;
+reg   [7:0] x_reg_167;
+wire   [0:0] icmp_ln19_fu_330_p2;
 wire    ap_CS_fsm_state7;
-reg   [7:0] y_1_reg_172;
-wire   [0:0] icmp_ln32_fu_507_p2;
-reg   [7:0] x_1_reg_183;
-wire   [0:0] icmp_ln31_fu_477_p2;
+reg   [7:0] y_1_reg_178;
+wire   [0:0] icmp_ln32_fu_519_p2;
+reg   [7:0] x_1_reg_189;
+wire   [0:0] icmp_ln31_fu_489_p2;
 wire    ap_CS_fsm_state13;
-reg    grp_conv1_fu_194_ap_start_reg;
+reg    grp_conv1_fu_200_ap_start_reg;
 wire    ap_CS_fsm_state2;
-reg    grp_conv2_fu_206_ap_start_reg;
+reg    grp_conv2_fu_218_ap_start_reg;
 wire    ap_CS_fsm_state8;
-reg    grp_conv3_fu_218_ap_start_reg;
+reg    grp_conv3_fu_230_ap_start_reg;
 wire    ap_CS_fsm_state14;
-wire   [63:0] zext_ln21_4_fu_343_p1;
-wire   [63:0] zext_ln33_4_fu_502_p1;
-reg   [6:0] c_fu_108;
-reg   [5:0] c_1_fu_112;
-wire   [0:0] and_ln21_fu_394_p2;
-wire   [0:0] and_ln33_fu_553_p2;
-reg   [31:0] grp_fu_229_p0;
-wire   [14:0] tmp_4_fu_248_p3;
-wire   [15:0] zext_ln21_1_fu_256_p1;
-wire   [15:0] zext_ln21_fu_244_p1;
-wire   [15:0] sub_ln21_fu_260_p2;
-wire   [16:0] zext_ln21_2_fu_287_p1;
-wire  signed [16:0] add_ln21_fu_291_p2;
-wire   [13:0] trunc_ln21_fu_300_p1;
-wire   [21:0] p_shl1_fu_304_p3;
-wire  signed [21:0] sext_ln21_fu_296_p1;
-wire   [21:0] zext_ln21_3_fu_334_p1;
-wire   [21:0] add_ln21_1_fu_338_p2;
-wire   [31:0] bitcast_ln21_fu_360_p1;
-wire   [7:0] tmp_fu_364_p4;
-wire   [22:0] trunc_ln21_1_fu_374_p1;
-wire   [0:0] or_ln21_fu_390_p2;
-wire   [0:0] grp_fu_229_p2;
-wire   [13:0] tmp_5_fu_407_p3;
-wire   [14:0] zext_ln33_1_fu_415_p1;
-wire   [14:0] zext_ln33_fu_403_p1;
-wire   [14:0] sub_ln33_fu_419_p2;
-wire   [15:0] zext_ln33_2_fu_446_p1;
-wire  signed [15:0] add_ln33_fu_450_p2;
-wire   [12:0] trunc_ln33_fu_459_p1;
-wire   [20:0] p_shl3_fu_463_p3;
-wire  signed [20:0] sext_ln33_fu_455_p1;
-wire   [20:0] zext_ln33_3_fu_493_p1;
-wire   [20:0] add_ln33_1_fu_497_p2;
-wire   [31:0] bitcast_ln33_fu_519_p1;
-wire   [7:0] tmp_2_fu_523_p4;
-wire   [22:0] trunc_ln33_1_fu_533_p1;
-wire   [0:0] or_ln33_fu_549_p2;
-wire   [31:0] grp_fu_692_p2;
-reg   [31:0] grp_fu_692_p0;
-reg   [31:0] grp_fu_692_p1;
-reg    grp_fu_692_ce;
-wire   [31:0] grp_fu_696_p2;
-reg   [31:0] grp_fu_696_p0;
-reg   [31:0] grp_fu_696_p1;
-reg    grp_fu_696_ce;
+wire   [63:0] zext_ln21_4_fu_355_p1;
+wire   [63:0] zext_ln33_4_fu_514_p1;
+reg   [6:0] c_fu_114;
+reg   [5:0] c_1_fu_118;
+wire   [0:0] and_ln21_fu_406_p2;
+wire   [0:0] and_ln33_fu_565_p2;
+reg   [31:0] grp_fu_241_p0;
+wire   [14:0] tmp_4_fu_260_p3;
+wire   [15:0] zext_ln21_1_fu_268_p1;
+wire   [15:0] zext_ln21_fu_256_p1;
+wire   [15:0] sub_ln21_fu_272_p2;
+wire   [16:0] zext_ln21_2_fu_299_p1;
+wire  signed [16:0] add_ln21_fu_303_p2;
+wire   [13:0] trunc_ln21_fu_312_p1;
+wire   [21:0] p_shl1_fu_316_p3;
+wire  signed [21:0] sext_ln21_fu_308_p1;
+wire   [21:0] zext_ln21_3_fu_346_p1;
+wire   [21:0] add_ln21_1_fu_350_p2;
+wire   [31:0] bitcast_ln21_fu_372_p1;
+wire   [7:0] tmp_fu_376_p4;
+wire   [22:0] trunc_ln21_1_fu_386_p1;
+wire   [0:0] or_ln21_fu_402_p2;
+wire   [0:0] grp_fu_241_p2;
+wire   [13:0] tmp_5_fu_419_p3;
+wire   [14:0] zext_ln33_1_fu_427_p1;
+wire   [14:0] zext_ln33_fu_415_p1;
+wire   [14:0] sub_ln33_fu_431_p2;
+wire   [15:0] zext_ln33_2_fu_458_p1;
+wire  signed [15:0] add_ln33_fu_462_p2;
+wire   [12:0] trunc_ln33_fu_471_p1;
+wire   [20:0] p_shl3_fu_475_p3;
+wire  signed [20:0] sext_ln33_fu_467_p1;
+wire   [20:0] zext_ln33_3_fu_505_p1;
+wire   [20:0] add_ln33_1_fu_509_p2;
+wire   [31:0] bitcast_ln33_fu_531_p1;
+wire   [7:0] tmp_2_fu_535_p4;
+wire   [22:0] trunc_ln33_1_fu_545_p1;
+wire   [0:0] or_ln33_fu_561_p2;
+wire   [31:0] grp_fu_704_p2;
+reg   [31:0] grp_fu_704_p0;
+reg   [31:0] grp_fu_704_p1;
+reg    grp_fu_704_ce;
+wire   [31:0] grp_fu_708_p2;
+reg   [31:0] grp_fu_708_p0;
+reg   [31:0] grp_fu_708_p1;
+reg    grp_fu_708_ce;
 reg   [13:0] ap_NS_fsm;
 reg    ap_ST_fsm_state1_blk;
 reg    ap_ST_fsm_state2_blk;
@@ -286,9 +286,9 @@ wire    ap_ce_reg;
 // power-on initialization
 initial begin
 #0 ap_CS_fsm = 14'd1;
-#0 grp_conv1_fu_194_ap_start_reg = 1'b0;
-#0 grp_conv2_fu_206_ap_start_reg = 1'b0;
-#0 grp_conv3_fu_218_ap_start_reg = 1'b0;
+#0 grp_conv1_fu_200_ap_start_reg = 1'b0;
+#0 grp_conv2_fu_218_ap_start_reg = 1'b0;
+#0 grp_conv3_fu_230_ap_start_reg = 1'b0;
 end
 
 srcnn_feat1_RAM_AUTO_1R1W #(
@@ -319,95 +319,95 @@ feat2_U(
     .q0(feat2_q0)
 );
 
-srcnn_conv1 grp_conv1_fu_194(
+srcnn_conv1 grp_conv1_fu_200(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst),
-    .ap_start(grp_conv1_fu_194_ap_start),
-    .ap_done(grp_conv1_fu_194_ap_done),
-    .ap_idle(grp_conv1_fu_194_ap_idle),
-    .ap_ready(grp_conv1_fu_194_ap_ready),
-    .input_ftmap_address0(grp_conv1_fu_194_input_ftmap_address0),
-    .input_ftmap_ce0(grp_conv1_fu_194_input_ftmap_ce0),
+    .ap_start(grp_conv1_fu_200_ap_start),
+    .ap_done(grp_conv1_fu_200_ap_done),
+    .ap_idle(grp_conv1_fu_200_ap_idle),
+    .ap_ready(grp_conv1_fu_200_ap_ready),
+    .input_ftmap_address0(grp_conv1_fu_200_input_ftmap_address0),
+    .input_ftmap_ce0(grp_conv1_fu_200_input_ftmap_ce0),
     .input_ftmap_q0(input_ftmap_q0),
-    .conv1_weights_address0(grp_conv1_fu_194_conv1_weights_address0),
-    .conv1_weights_ce0(grp_conv1_fu_194_conv1_weights_ce0),
+    .conv1_weights_address0(grp_conv1_fu_200_conv1_weights_address0),
+    .conv1_weights_ce0(grp_conv1_fu_200_conv1_weights_ce0),
     .conv1_weights_q0(conv1_weights_q0),
-    .conv1_biases_address0(grp_conv1_fu_194_conv1_biases_address0),
-    .conv1_biases_ce0(grp_conv1_fu_194_conv1_biases_ce0),
+    .conv1_biases_address0(grp_conv1_fu_200_conv1_biases_address0),
+    .conv1_biases_ce0(grp_conv1_fu_200_conv1_biases_ce0),
     .conv1_biases_q0(conv1_biases_q0),
-    .feat1_address0(grp_conv1_fu_194_feat1_address0),
-    .feat1_ce0(grp_conv1_fu_194_feat1_ce0),
-    .feat1_we0(grp_conv1_fu_194_feat1_we0),
-    .feat1_d0(grp_conv1_fu_194_feat1_d0),
-    .grp_fu_692_p_din0(grp_conv1_fu_194_grp_fu_692_p_din0),
-    .grp_fu_692_p_din1(grp_conv1_fu_194_grp_fu_692_p_din1),
-    .grp_fu_692_p_opcode(grp_conv1_fu_194_grp_fu_692_p_opcode),
-    .grp_fu_692_p_dout0(grp_fu_692_p2),
-    .grp_fu_692_p_ce(grp_conv1_fu_194_grp_fu_692_p_ce),
-    .grp_fu_696_p_din0(grp_conv1_fu_194_grp_fu_696_p_din0),
-    .grp_fu_696_p_din1(grp_conv1_fu_194_grp_fu_696_p_din1),
-    .grp_fu_696_p_dout0(grp_fu_696_p2),
-    .grp_fu_696_p_ce(grp_conv1_fu_194_grp_fu_696_p_ce)
+    .feat1_address0(grp_conv1_fu_200_feat1_address0),
+    .feat1_ce0(grp_conv1_fu_200_feat1_ce0),
+    .feat1_we0(grp_conv1_fu_200_feat1_we0),
+    .feat1_d0(grp_conv1_fu_200_feat1_d0),
+    .grp_fu_704_p_din0(grp_conv1_fu_200_grp_fu_704_p_din0),
+    .grp_fu_704_p_din1(grp_conv1_fu_200_grp_fu_704_p_din1),
+    .grp_fu_704_p_opcode(grp_conv1_fu_200_grp_fu_704_p_opcode),
+    .grp_fu_704_p_dout0(grp_fu_704_p2),
+    .grp_fu_704_p_ce(grp_conv1_fu_200_grp_fu_704_p_ce),
+    .grp_fu_708_p_din0(grp_conv1_fu_200_grp_fu_708_p_din0),
+    .grp_fu_708_p_din1(grp_conv1_fu_200_grp_fu_708_p_din1),
+    .grp_fu_708_p_dout0(grp_fu_708_p2),
+    .grp_fu_708_p_ce(grp_conv1_fu_200_grp_fu_708_p_ce)
 );
 
-srcnn_conv2 grp_conv2_fu_206(
+srcnn_conv2 grp_conv2_fu_218(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst),
-    .ap_start(grp_conv2_fu_206_ap_start),
-    .ap_done(grp_conv2_fu_206_ap_done),
-    .ap_idle(grp_conv2_fu_206_ap_idle),
-    .ap_ready(grp_conv2_fu_206_ap_ready),
-    .conv2_weights_address0(grp_conv2_fu_206_conv2_weights_address0),
-    .conv2_weights_ce0(grp_conv2_fu_206_conv2_weights_ce0),
+    .ap_start(grp_conv2_fu_218_ap_start),
+    .ap_done(grp_conv2_fu_218_ap_done),
+    .ap_idle(grp_conv2_fu_218_ap_idle),
+    .ap_ready(grp_conv2_fu_218_ap_ready),
+    .conv2_weights_address0(grp_conv2_fu_218_conv2_weights_address0),
+    .conv2_weights_ce0(grp_conv2_fu_218_conv2_weights_ce0),
     .conv2_weights_q0(conv2_weights_q0),
-    .conv2_biases_address0(grp_conv2_fu_206_conv2_biases_address0),
-    .conv2_biases_ce0(grp_conv2_fu_206_conv2_biases_ce0),
+    .conv2_biases_address0(grp_conv2_fu_218_conv2_biases_address0),
+    .conv2_biases_ce0(grp_conv2_fu_218_conv2_biases_ce0),
     .conv2_biases_q0(conv2_biases_q0),
-    .feat1_address0(grp_conv2_fu_206_feat1_address0),
-    .feat1_ce0(grp_conv2_fu_206_feat1_ce0),
+    .feat1_address0(grp_conv2_fu_218_feat1_address0),
+    .feat1_ce0(grp_conv2_fu_218_feat1_ce0),
     .feat1_q0(feat1_q0),
-    .feat2_address0(grp_conv2_fu_206_feat2_address0),
-    .feat2_ce0(grp_conv2_fu_206_feat2_ce0),
-    .feat2_we0(grp_conv2_fu_206_feat2_we0),
-    .feat2_d0(grp_conv2_fu_206_feat2_d0),
-    .grp_fu_692_p_din0(grp_conv2_fu_206_grp_fu_692_p_din0),
-    .grp_fu_692_p_din1(grp_conv2_fu_206_grp_fu_692_p_din1),
-    .grp_fu_692_p_opcode(grp_conv2_fu_206_grp_fu_692_p_opcode),
-    .grp_fu_692_p_dout0(grp_fu_692_p2),
-    .grp_fu_692_p_ce(grp_conv2_fu_206_grp_fu_692_p_ce),
-    .grp_fu_696_p_din0(grp_conv2_fu_206_grp_fu_696_p_din0),
-    .grp_fu_696_p_din1(grp_conv2_fu_206_grp_fu_696_p_din1),
-    .grp_fu_696_p_dout0(grp_fu_696_p2),
-    .grp_fu_696_p_ce(grp_conv2_fu_206_grp_fu_696_p_ce)
+    .feat2_address0(grp_conv2_fu_218_feat2_address0),
+    .feat2_ce0(grp_conv2_fu_218_feat2_ce0),
+    .feat2_we0(grp_conv2_fu_218_feat2_we0),
+    .feat2_d0(grp_conv2_fu_218_feat2_d0),
+    .grp_fu_704_p_din0(grp_conv2_fu_218_grp_fu_704_p_din0),
+    .grp_fu_704_p_din1(grp_conv2_fu_218_grp_fu_704_p_din1),
+    .grp_fu_704_p_opcode(grp_conv2_fu_218_grp_fu_704_p_opcode),
+    .grp_fu_704_p_dout0(grp_fu_704_p2),
+    .grp_fu_704_p_ce(grp_conv2_fu_218_grp_fu_704_p_ce),
+    .grp_fu_708_p_din0(grp_conv2_fu_218_grp_fu_708_p_din0),
+    .grp_fu_708_p_din1(grp_conv2_fu_218_grp_fu_708_p_din1),
+    .grp_fu_708_p_dout0(grp_fu_708_p2),
+    .grp_fu_708_p_ce(grp_conv2_fu_218_grp_fu_708_p_ce)
 );
 
-srcnn_conv3 grp_conv3_fu_218(
+srcnn_conv3 grp_conv3_fu_230(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst),
-    .ap_start(grp_conv3_fu_218_ap_start),
-    .ap_done(grp_conv3_fu_218_ap_done),
-    .ap_idle(grp_conv3_fu_218_ap_idle),
-    .ap_ready(grp_conv3_fu_218_ap_ready),
-    .conv3_weights_address0(grp_conv3_fu_218_conv3_weights_address0),
-    .conv3_weights_ce0(grp_conv3_fu_218_conv3_weights_ce0),
+    .ap_start(grp_conv3_fu_230_ap_start),
+    .ap_done(grp_conv3_fu_230_ap_done),
+    .ap_idle(grp_conv3_fu_230_ap_idle),
+    .ap_ready(grp_conv3_fu_230_ap_ready),
+    .conv3_weights_address0(grp_conv3_fu_230_conv3_weights_address0),
+    .conv3_weights_ce0(grp_conv3_fu_230_conv3_weights_ce0),
     .conv3_weights_q0(conv3_weights_q0),
-    .b_0_0_val(empty_reg_643),
-    .output_ftmap_address0(grp_conv3_fu_218_output_ftmap_address0),
-    .output_ftmap_ce0(grp_conv3_fu_218_output_ftmap_ce0),
-    .output_ftmap_we0(grp_conv3_fu_218_output_ftmap_we0),
-    .output_ftmap_d0(grp_conv3_fu_218_output_ftmap_d0),
-    .feat2_address0(grp_conv3_fu_218_feat2_address0),
-    .feat2_ce0(grp_conv3_fu_218_feat2_ce0),
+    .b_0_0_val(empty_reg_655),
+    .output_ftmap_address0(grp_conv3_fu_230_output_ftmap_address0),
+    .output_ftmap_ce0(grp_conv3_fu_230_output_ftmap_ce0),
+    .output_ftmap_we0(grp_conv3_fu_230_output_ftmap_we0),
+    .output_ftmap_d0(grp_conv3_fu_230_output_ftmap_d0),
+    .feat2_address0(grp_conv3_fu_230_feat2_address0),
+    .feat2_ce0(grp_conv3_fu_230_feat2_ce0),
     .feat2_q0(feat2_q0),
-    .grp_fu_692_p_din0(grp_conv3_fu_218_grp_fu_692_p_din0),
-    .grp_fu_692_p_din1(grp_conv3_fu_218_grp_fu_692_p_din1),
-    .grp_fu_692_p_opcode(grp_conv3_fu_218_grp_fu_692_p_opcode),
-    .grp_fu_692_p_dout0(grp_fu_692_p2),
-    .grp_fu_692_p_ce(grp_conv3_fu_218_grp_fu_692_p_ce),
-    .grp_fu_696_p_din0(grp_conv3_fu_218_grp_fu_696_p_din0),
-    .grp_fu_696_p_din1(grp_conv3_fu_218_grp_fu_696_p_din1),
-    .grp_fu_696_p_dout0(grp_fu_696_p2),
-    .grp_fu_696_p_ce(grp_conv3_fu_218_grp_fu_696_p_ce)
+    .grp_fu_704_p_din0(grp_conv3_fu_230_grp_fu_704_p_din0),
+    .grp_fu_704_p_din1(grp_conv3_fu_230_grp_fu_704_p_din1),
+    .grp_fu_704_p_opcode(grp_conv3_fu_230_grp_fu_704_p_opcode),
+    .grp_fu_704_p_dout0(grp_fu_704_p2),
+    .grp_fu_704_p_ce(grp_conv3_fu_230_grp_fu_704_p_ce),
+    .grp_fu_708_p_din0(grp_conv3_fu_230_grp_fu_708_p_din0),
+    .grp_fu_708_p_din1(grp_conv3_fu_230_grp_fu_708_p_din1),
+    .grp_fu_708_p_dout0(grp_fu_708_p2),
+    .grp_fu_708_p_ce(grp_conv3_fu_230_grp_fu_708_p_ce)
 );
 
 srcnn_fcmp_32ns_32ns_1_2_no_dsp_1 #(
@@ -416,14 +416,14 @@ srcnn_fcmp_32ns_32ns_1_2_no_dsp_1 #(
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 1 ))
-fcmp_32ns_32ns_1_2_no_dsp_1_U19(
+fcmp_32ns_32ns_1_2_no_dsp_1_U22(
     .clk(ap_clk),
     .reset(ap_rst),
-    .din0(grp_fu_229_p0),
+    .din0(grp_fu_241_p0),
     .din1(32'd0),
     .ce(1'b1),
     .opcode(5'd4),
-    .dout(grp_fu_229_p2)
+    .dout(grp_fu_241_p2)
 );
 
 srcnn_fadd_32ns_32ns_32_4_full_dsp_1 #(
@@ -432,13 +432,13 @@ srcnn_fadd_32ns_32ns_32_4_full_dsp_1 #(
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-fadd_32ns_32ns_32_4_full_dsp_1_U20(
+fadd_32ns_32ns_32_4_full_dsp_1_U23(
     .clk(ap_clk),
     .reset(ap_rst),
-    .din0(grp_fu_692_p0),
-    .din1(grp_fu_692_p1),
-    .ce(grp_fu_692_ce),
-    .dout(grp_fu_692_p2)
+    .din0(grp_fu_704_p0),
+    .din1(grp_fu_704_p1),
+    .ce(grp_fu_704_ce),
+    .dout(grp_fu_704_p2)
 );
 
 srcnn_fmul_32ns_32ns_32_3_max_dsp_1 #(
@@ -447,13 +447,13 @@ srcnn_fmul_32ns_32ns_32_3_max_dsp_1 #(
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-fmul_32ns_32ns_32_3_max_dsp_1_U21(
+fmul_32ns_32ns_32_3_max_dsp_1_U24(
     .clk(ap_clk),
     .reset(ap_rst),
-    .din0(grp_fu_696_p0),
-    .din1(grp_fu_696_p1),
-    .ce(grp_fu_696_ce),
-    .dout(grp_fu_696_p2)
+    .din0(grp_fu_708_p0),
+    .din1(grp_fu_708_p1),
+    .ce(grp_fu_708_ce),
+    .dout(grp_fu_708_p2)
 );
 
 always @ (posedge ap_clk) begin
@@ -466,147 +466,147 @@ end
 
 always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
-        grp_conv1_fu_194_ap_start_reg <= 1'b0;
+        grp_conv1_fu_200_ap_start_reg <= 1'b0;
     end else begin
         if (((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b1))) begin
-            grp_conv1_fu_194_ap_start_reg <= 1'b1;
-        end else if ((grp_conv1_fu_194_ap_ready == 1'b1)) begin
-            grp_conv1_fu_194_ap_start_reg <= 1'b0;
+            grp_conv1_fu_200_ap_start_reg <= 1'b1;
+        end else if ((grp_conv1_fu_200_ap_ready == 1'b1)) begin
+            grp_conv1_fu_200_ap_start_reg <= 1'b0;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
-        grp_conv2_fu_206_ap_start_reg <= 1'b0;
+        grp_conv2_fu_218_ap_start_reg <= 1'b0;
     end else begin
-        if (((icmp_ln18_fu_270_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state3))) begin
-            grp_conv2_fu_206_ap_start_reg <= 1'b1;
-        end else if ((grp_conv2_fu_206_ap_ready == 1'b1)) begin
-            grp_conv2_fu_206_ap_start_reg <= 1'b0;
+        if (((icmp_ln18_fu_282_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state3))) begin
+            grp_conv2_fu_218_ap_start_reg <= 1'b1;
+        end else if ((grp_conv2_fu_218_ap_ready == 1'b1)) begin
+            grp_conv2_fu_218_ap_start_reg <= 1'b0;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
-        grp_conv3_fu_218_ap_start_reg <= 1'b0;
+        grp_conv3_fu_230_ap_start_reg <= 1'b0;
     end else begin
-        if (((1'b1 == ap_CS_fsm_state9) & (icmp_ln30_fu_429_p2 == 1'd1))) begin
-            grp_conv3_fu_218_ap_start_reg <= 1'b1;
-        end else if ((grp_conv3_fu_218_ap_ready == 1'b1)) begin
-            grp_conv3_fu_218_ap_start_reg <= 1'b0;
+        if (((1'b1 == ap_CS_fsm_state9) & (icmp_ln30_fu_441_p2 == 1'd1))) begin
+            grp_conv3_fu_230_ap_start_reg <= 1'b1;
+        end else if ((grp_conv3_fu_230_ap_ready == 1'b1)) begin
+            grp_conv3_fu_230_ap_start_reg <= 1'b0;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((icmp_ln18_fu_270_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state3))) begin
-        c_1_fu_112 <= 6'd0;
-    end else if (((icmp_ln31_fu_477_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10))) begin
-        c_1_fu_112 <= add_ln30_reg_638;
+    if (((icmp_ln18_fu_282_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state3))) begin
+        c_1_fu_118 <= 6'd0;
+    end else if (((icmp_ln31_fu_489_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10))) begin
+        c_1_fu_118 <= add_ln30_reg_650;
     end
 end
 
 always @ (posedge ap_clk) begin
     if (((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b1))) begin
-        c_fu_108 <= 7'd0;
-    end else if (((icmp_ln19_fu_318_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
-        c_fu_108 <= add_ln18_reg_574;
+        c_fu_114 <= 7'd0;
+    end else if (((icmp_ln19_fu_330_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        c_fu_114 <= add_ln18_reg_586;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state13)) begin
-        x_1_reg_183 <= add_ln32_reg_669;
-    end else if (((icmp_ln31_fu_477_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state10))) begin
-        x_1_reg_183 <= 8'd0;
+        x_1_reg_189 <= add_ln32_reg_681;
+    end else if (((icmp_ln31_fu_489_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state10))) begin
+        x_1_reg_189 <= 8'd0;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state7)) begin
-        x_reg_161 <= add_ln20_reg_607;
-    end else if (((icmp_ln19_fu_318_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state4))) begin
-        x_reg_161 <= 8'd0;
+        x_reg_167 <= add_ln20_reg_619;
+    end else if (((icmp_ln19_fu_330_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state4))) begin
+        x_reg_167 <= 8'd0;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b1 == ap_CS_fsm_state9) & (icmp_ln30_fu_429_p2 == 1'd0))) begin
-        y_1_reg_172 <= 8'd0;
-    end else if (((icmp_ln32_fu_507_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state11))) begin
-        y_1_reg_172 <= add_ln31_reg_656;
+    if (((1'b1 == ap_CS_fsm_state9) & (icmp_ln30_fu_441_p2 == 1'd0))) begin
+        y_1_reg_178 <= 8'd0;
+    end else if (((icmp_ln32_fu_519_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state11))) begin
+        y_1_reg_178 <= add_ln31_reg_668;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((icmp_ln18_fu_270_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state3))) begin
-        y_reg_150 <= 8'd0;
-    end else if (((icmp_ln20_fu_348_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state5))) begin
-        y_reg_150 <= add_ln19_reg_594;
+    if (((icmp_ln18_fu_282_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state3))) begin
+        y_reg_156 <= 8'd0;
+    end else if (((icmp_ln20_fu_360_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state5))) begin
+        y_reg_156 <= add_ln19_reg_606;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state3)) begin
-        add_ln18_reg_574 <= add_ln18_fu_276_p2;
-        sext_ln18_reg_566 <= sext_ln18_fu_266_p1;
+        add_ln18_reg_586 <= add_ln18_fu_288_p2;
+        sext_ln18_reg_578 <= sext_ln18_fu_278_p1;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state4)) begin
-        add_ln19_reg_594 <= add_ln19_fu_324_p2;
-        sub_ln21_1_reg_586 <= sub_ln21_1_fu_312_p2;
+        add_ln19_reg_606 <= add_ln19_fu_336_p2;
+        sub_ln21_1_reg_598 <= sub_ln21_1_fu_324_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state5)) begin
-        add_ln20_reg_607 <= add_ln20_fu_354_p2;
-        feat1_addr_reg_599 <= zext_ln21_4_fu_343_p1;
+        add_ln20_reg_619 <= add_ln20_fu_366_p2;
+        feat1_addr_reg_611 <= zext_ln21_4_fu_355_p1;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state9)) begin
-        add_ln30_reg_638 <= add_ln30_fu_435_p2;
-        sext_ln30_reg_630 <= sext_ln30_fu_425_p1;
+        add_ln30_reg_650 <= add_ln30_fu_447_p2;
+        sext_ln30_reg_642 <= sext_ln30_fu_437_p1;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state10)) begin
-        add_ln31_reg_656 <= add_ln31_fu_483_p2;
-        sub_ln33_1_reg_648 <= sub_ln33_1_fu_471_p2;
+        add_ln31_reg_668 <= add_ln31_fu_495_p2;
+        sub_ln33_1_reg_660 <= sub_ln33_1_fu_483_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state11)) begin
-        add_ln32_reg_669 <= add_ln32_fu_513_p2;
-        feat2_addr_reg_661 <= zext_ln33_4_fu_502_p1;
+        add_ln32_reg_681 <= add_ln32_fu_525_p2;
+        feat2_addr_reg_673 <= zext_ln33_4_fu_514_p1;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b1 == ap_CS_fsm_state9) & (icmp_ln30_fu_429_p2 == 1'd1))) begin
-        empty_reg_643 <= empty_fu_441_p1;
+    if (((1'b1 == ap_CS_fsm_state9) & (icmp_ln30_fu_441_p2 == 1'd1))) begin
+        empty_reg_655 <= empty_fu_453_p1;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state6)) begin
-        icmp_ln21_1_reg_622 <= icmp_ln21_1_fu_384_p2;
-        icmp_ln21_reg_617 <= icmp_ln21_fu_378_p2;
+        icmp_ln21_1_reg_634 <= icmp_ln21_1_fu_396_p2;
+        icmp_ln21_reg_629 <= icmp_ln21_fu_390_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state12)) begin
-        icmp_ln33_1_reg_684 <= icmp_ln33_1_fu_543_p2;
-        icmp_ln33_reg_679 <= icmp_ln33_fu_537_p2;
+        icmp_ln33_1_reg_696 <= icmp_ln33_1_fu_555_p2;
+        icmp_ln33_reg_691 <= icmp_ln33_fu_549_p2;
     end
 end
 
@@ -619,7 +619,7 @@ assign ap_ST_fsm_state12_blk = 1'b0;
 assign ap_ST_fsm_state13_blk = 1'b0;
 
 always @ (*) begin
-    if ((grp_conv3_fu_218_ap_done == 1'b0)) begin
+    if ((grp_conv3_fu_230_ap_done == 1'b0)) begin
         ap_ST_fsm_state14_blk = 1'b1;
     end else begin
         ap_ST_fsm_state14_blk = 1'b0;
@@ -635,7 +635,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((grp_conv1_fu_194_ap_done == 1'b0)) begin
+    if ((grp_conv1_fu_200_ap_done == 1'b0)) begin
         ap_ST_fsm_state2_blk = 1'b1;
     end else begin
         ap_ST_fsm_state2_blk = 1'b0;
@@ -653,7 +653,7 @@ assign ap_ST_fsm_state6_blk = 1'b0;
 assign ap_ST_fsm_state7_blk = 1'b0;
 
 always @ (*) begin
-    if ((grp_conv2_fu_206_ap_done == 1'b0)) begin
+    if ((grp_conv2_fu_218_ap_done == 1'b0)) begin
         ap_ST_fsm_state8_blk = 1'b1;
     end else begin
         ap_ST_fsm_state8_blk = 1'b0;
@@ -663,7 +663,7 @@ end
 assign ap_ST_fsm_state9_blk = 1'b0;
 
 always @ (*) begin
-    if (((grp_conv3_fu_218_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state14))) begin
+    if (((grp_conv3_fu_230_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state14))) begin
         ap_done = 1'b1;
     end else begin
         ap_done = 1'b0;
@@ -679,7 +679,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((grp_conv3_fu_218_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state14))) begin
+    if (((grp_conv3_fu_230_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state14))) begin
         ap_ready = 1'b1;
     end else begin
         ap_ready = 1'b0;
@@ -688,13 +688,13 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state7)) begin
-        feat1_address0 = feat1_addr_reg_599;
+        feat1_address0 = feat1_addr_reg_611;
     end else if ((1'b1 == ap_CS_fsm_state5)) begin
-        feat1_address0 = zext_ln21_4_fu_343_p1;
+        feat1_address0 = zext_ln21_4_fu_355_p1;
     end else if ((1'b1 == ap_CS_fsm_state8)) begin
-        feat1_address0 = grp_conv2_fu_206_feat1_address0;
+        feat1_address0 = grp_conv2_fu_218_feat1_address0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        feat1_address0 = grp_conv1_fu_194_feat1_address0;
+        feat1_address0 = grp_conv1_fu_200_feat1_address0;
     end else begin
         feat1_address0 = 'bx;
     end
@@ -704,9 +704,9 @@ always @ (*) begin
     if (((1'b1 == ap_CS_fsm_state7) | (1'b1 == ap_CS_fsm_state5))) begin
         feat1_ce0 = 1'b1;
     end else if ((1'b1 == ap_CS_fsm_state8)) begin
-        feat1_ce0 = grp_conv2_fu_206_feat1_ce0;
+        feat1_ce0 = grp_conv2_fu_218_feat1_ce0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        feat1_ce0 = grp_conv1_fu_194_feat1_ce0;
+        feat1_ce0 = grp_conv1_fu_200_feat1_ce0;
     end else begin
         feat1_ce0 = 1'b0;
     end
@@ -716,17 +716,17 @@ always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state7)) begin
         feat1_d0 = 32'd0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        feat1_d0 = grp_conv1_fu_194_feat1_d0;
+        feat1_d0 = grp_conv1_fu_200_feat1_d0;
     end else begin
         feat1_d0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state7) & (1'd1 == and_ln21_fu_394_p2))) begin
+    if (((1'b1 == ap_CS_fsm_state7) & (1'd1 == and_ln21_fu_406_p2))) begin
         feat1_we0 = 1'b1;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        feat1_we0 = grp_conv1_fu_194_feat1_we0;
+        feat1_we0 = grp_conv1_fu_200_feat1_we0;
     end else begin
         feat1_we0 = 1'b0;
     end
@@ -734,13 +734,13 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state13)) begin
-        feat2_address0 = feat2_addr_reg_661;
+        feat2_address0 = feat2_addr_reg_673;
     end else if ((1'b1 == ap_CS_fsm_state11)) begin
-        feat2_address0 = zext_ln33_4_fu_502_p1;
+        feat2_address0 = zext_ln33_4_fu_514_p1;
     end else if ((1'b1 == ap_CS_fsm_state14)) begin
-        feat2_address0 = grp_conv3_fu_218_feat2_address0;
+        feat2_address0 = grp_conv3_fu_230_feat2_address0;
     end else if ((1'b1 == ap_CS_fsm_state8)) begin
-        feat2_address0 = grp_conv2_fu_206_feat2_address0;
+        feat2_address0 = grp_conv2_fu_218_feat2_address0;
     end else begin
         feat2_address0 = 'bx;
     end
@@ -750,9 +750,9 @@ always @ (*) begin
     if (((1'b1 == ap_CS_fsm_state13) | (1'b1 == ap_CS_fsm_state11))) begin
         feat2_ce0 = 1'b1;
     end else if ((1'b1 == ap_CS_fsm_state14)) begin
-        feat2_ce0 = grp_conv3_fu_218_feat2_ce0;
+        feat2_ce0 = grp_conv3_fu_230_feat2_ce0;
     end else if ((1'b1 == ap_CS_fsm_state8)) begin
-        feat2_ce0 = grp_conv2_fu_206_feat2_ce0;
+        feat2_ce0 = grp_conv2_fu_218_feat2_ce0;
     end else begin
         feat2_ce0 = 1'b0;
     end
@@ -762,17 +762,17 @@ always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state13)) begin
         feat2_d0 = 32'd0;
     end else if ((1'b1 == ap_CS_fsm_state8)) begin
-        feat2_d0 = grp_conv2_fu_206_feat2_d0;
+        feat2_d0 = grp_conv2_fu_218_feat2_d0;
     end else begin
         feat2_d0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state13) & (1'd1 == and_ln33_fu_553_p2))) begin
+    if (((1'b1 == ap_CS_fsm_state13) & (1'd1 == and_ln33_fu_565_p2))) begin
         feat2_we0 = 1'b1;
     end else if ((1'b1 == ap_CS_fsm_state8)) begin
-        feat2_we0 = grp_conv2_fu_206_feat2_we0;
+        feat2_we0 = grp_conv2_fu_218_feat2_we0;
     end else begin
         feat2_we0 = 1'b0;
     end
@@ -780,83 +780,83 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state12)) begin
-        grp_fu_229_p0 = feat2_q0;
+        grp_fu_241_p0 = feat2_q0;
     end else if ((1'b1 == ap_CS_fsm_state6)) begin
-        grp_fu_229_p0 = feat1_q0;
+        grp_fu_241_p0 = feat1_q0;
     end else begin
-        grp_fu_229_p0 = 'bx;
+        grp_fu_241_p0 = 'bx;
     end
 end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state14)) begin
-        grp_fu_692_ce = grp_conv3_fu_218_grp_fu_692_p_ce;
+        grp_fu_704_ce = grp_conv3_fu_230_grp_fu_704_p_ce;
     end else if ((1'b1 == ap_CS_fsm_state8)) begin
-        grp_fu_692_ce = grp_conv2_fu_206_grp_fu_692_p_ce;
+        grp_fu_704_ce = grp_conv2_fu_218_grp_fu_704_p_ce;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        grp_fu_692_ce = grp_conv1_fu_194_grp_fu_692_p_ce;
+        grp_fu_704_ce = grp_conv1_fu_200_grp_fu_704_p_ce;
     end else begin
-        grp_fu_692_ce = 1'b1;
+        grp_fu_704_ce = 1'b1;
     end
 end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state14)) begin
-        grp_fu_692_p0 = grp_conv3_fu_218_grp_fu_692_p_din0;
+        grp_fu_704_p0 = grp_conv3_fu_230_grp_fu_704_p_din0;
     end else if ((1'b1 == ap_CS_fsm_state8)) begin
-        grp_fu_692_p0 = grp_conv2_fu_206_grp_fu_692_p_din0;
+        grp_fu_704_p0 = grp_conv2_fu_218_grp_fu_704_p_din0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        grp_fu_692_p0 = grp_conv1_fu_194_grp_fu_692_p_din0;
+        grp_fu_704_p0 = grp_conv1_fu_200_grp_fu_704_p_din0;
     end else begin
-        grp_fu_692_p0 = 'bx;
+        grp_fu_704_p0 = 'bx;
     end
 end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state14)) begin
-        grp_fu_692_p1 = grp_conv3_fu_218_grp_fu_692_p_din1;
+        grp_fu_704_p1 = grp_conv3_fu_230_grp_fu_704_p_din1;
     end else if ((1'b1 == ap_CS_fsm_state8)) begin
-        grp_fu_692_p1 = grp_conv2_fu_206_grp_fu_692_p_din1;
+        grp_fu_704_p1 = grp_conv2_fu_218_grp_fu_704_p_din1;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        grp_fu_692_p1 = grp_conv1_fu_194_grp_fu_692_p_din1;
+        grp_fu_704_p1 = grp_conv1_fu_200_grp_fu_704_p_din1;
     end else begin
-        grp_fu_692_p1 = 'bx;
+        grp_fu_704_p1 = 'bx;
     end
 end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state14)) begin
-        grp_fu_696_ce = grp_conv3_fu_218_grp_fu_696_p_ce;
+        grp_fu_708_ce = grp_conv3_fu_230_grp_fu_708_p_ce;
     end else if ((1'b1 == ap_CS_fsm_state8)) begin
-        grp_fu_696_ce = grp_conv2_fu_206_grp_fu_696_p_ce;
+        grp_fu_708_ce = grp_conv2_fu_218_grp_fu_708_p_ce;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        grp_fu_696_ce = grp_conv1_fu_194_grp_fu_696_p_ce;
+        grp_fu_708_ce = grp_conv1_fu_200_grp_fu_708_p_ce;
     end else begin
-        grp_fu_696_ce = 1'b1;
+        grp_fu_708_ce = 1'b1;
     end
 end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state14)) begin
-        grp_fu_696_p0 = grp_conv3_fu_218_grp_fu_696_p_din0;
+        grp_fu_708_p0 = grp_conv3_fu_230_grp_fu_708_p_din0;
     end else if ((1'b1 == ap_CS_fsm_state8)) begin
-        grp_fu_696_p0 = grp_conv2_fu_206_grp_fu_696_p_din0;
+        grp_fu_708_p0 = grp_conv2_fu_218_grp_fu_708_p_din0;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        grp_fu_696_p0 = grp_conv1_fu_194_grp_fu_696_p_din0;
+        grp_fu_708_p0 = grp_conv1_fu_200_grp_fu_708_p_din0;
     end else begin
-        grp_fu_696_p0 = 'bx;
+        grp_fu_708_p0 = 'bx;
     end
 end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state14)) begin
-        grp_fu_696_p1 = grp_conv3_fu_218_grp_fu_696_p_din1;
+        grp_fu_708_p1 = grp_conv3_fu_230_grp_fu_708_p_din1;
     end else if ((1'b1 == ap_CS_fsm_state8)) begin
-        grp_fu_696_p1 = grp_conv2_fu_206_grp_fu_696_p_din1;
+        grp_fu_708_p1 = grp_conv2_fu_218_grp_fu_708_p_din1;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        grp_fu_696_p1 = grp_conv1_fu_194_grp_fu_696_p_din1;
+        grp_fu_708_p1 = grp_conv1_fu_200_grp_fu_708_p_din1;
     end else begin
-        grp_fu_696_p1 = 'bx;
+        grp_fu_708_p1 = 'bx;
     end
 end
 
@@ -870,28 +870,28 @@ always @ (*) begin
             end
         end
         ap_ST_fsm_state2 : begin
-            if (((1'b1 == ap_CS_fsm_state2) & (grp_conv1_fu_194_ap_done == 1'b1))) begin
+            if (((1'b1 == ap_CS_fsm_state2) & (grp_conv1_fu_200_ap_done == 1'b1))) begin
                 ap_NS_fsm = ap_ST_fsm_state3;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state2;
             end
         end
         ap_ST_fsm_state3 : begin
-            if (((icmp_ln18_fu_270_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state3))) begin
+            if (((icmp_ln18_fu_282_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state3))) begin
                 ap_NS_fsm = ap_ST_fsm_state4;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state8;
             end
         end
         ap_ST_fsm_state4 : begin
-            if (((icmp_ln19_fu_318_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+            if (((icmp_ln19_fu_330_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
                 ap_NS_fsm = ap_ST_fsm_state3;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state5;
             end
         end
         ap_ST_fsm_state5 : begin
-            if (((icmp_ln20_fu_348_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state5))) begin
+            if (((icmp_ln20_fu_360_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state5))) begin
                 ap_NS_fsm = ap_ST_fsm_state4;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state6;
@@ -904,28 +904,28 @@ always @ (*) begin
             ap_NS_fsm = ap_ST_fsm_state5;
         end
         ap_ST_fsm_state8 : begin
-            if (((grp_conv2_fu_206_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state8))) begin
+            if (((grp_conv2_fu_218_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state8))) begin
                 ap_NS_fsm = ap_ST_fsm_state9;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state8;
             end
         end
         ap_ST_fsm_state9 : begin
-            if (((1'b1 == ap_CS_fsm_state9) & (icmp_ln30_fu_429_p2 == 1'd0))) begin
+            if (((1'b1 == ap_CS_fsm_state9) & (icmp_ln30_fu_441_p2 == 1'd0))) begin
                 ap_NS_fsm = ap_ST_fsm_state10;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state14;
             end
         end
         ap_ST_fsm_state10 : begin
-            if (((icmp_ln31_fu_477_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10))) begin
+            if (((icmp_ln31_fu_489_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state10))) begin
                 ap_NS_fsm = ap_ST_fsm_state9;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state11;
             end
         end
         ap_ST_fsm_state11 : begin
-            if (((icmp_ln32_fu_507_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state11))) begin
+            if (((icmp_ln32_fu_519_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state11))) begin
                 ap_NS_fsm = ap_ST_fsm_state10;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state12;
@@ -938,7 +938,7 @@ always @ (*) begin
             ap_NS_fsm = ap_ST_fsm_state11;
         end
         ap_ST_fsm_state14 : begin
-            if (((grp_conv3_fu_218_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state14))) begin
+            if (((grp_conv3_fu_230_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state14))) begin
                 ap_NS_fsm = ap_ST_fsm_state1;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state14;
@@ -950,29 +950,29 @@ always @ (*) begin
     endcase
 end
 
-assign add_ln18_fu_276_p2 = (c_fu_108 + 7'd1);
+assign add_ln18_fu_288_p2 = (c_fu_114 + 7'd1);
 
-assign add_ln19_fu_324_p2 = (y_reg_150 + 8'd1);
+assign add_ln19_fu_336_p2 = (y_reg_156 + 8'd1);
 
-assign add_ln20_fu_354_p2 = (x_reg_161 + 8'd1);
+assign add_ln20_fu_366_p2 = (x_reg_167 + 8'd1);
 
-assign add_ln21_1_fu_338_p2 = (sub_ln21_1_reg_586 + zext_ln21_3_fu_334_p1);
+assign add_ln21_1_fu_350_p2 = (sub_ln21_1_reg_598 + zext_ln21_3_fu_346_p1);
 
-assign add_ln21_fu_291_p2 = ($signed(sext_ln18_reg_566) + $signed(zext_ln21_2_fu_287_p1));
+assign add_ln21_fu_303_p2 = ($signed(sext_ln18_reg_578) + $signed(zext_ln21_2_fu_299_p1));
 
-assign add_ln30_fu_435_p2 = (c_1_fu_112 + 6'd1);
+assign add_ln30_fu_447_p2 = (c_1_fu_118 + 6'd1);
 
-assign add_ln31_fu_483_p2 = (y_1_reg_172 + 8'd1);
+assign add_ln31_fu_495_p2 = (y_1_reg_178 + 8'd1);
 
-assign add_ln32_fu_513_p2 = (x_1_reg_183 + 8'd1);
+assign add_ln32_fu_525_p2 = (x_1_reg_189 + 8'd1);
 
-assign add_ln33_1_fu_497_p2 = (sub_ln33_1_reg_648 + zext_ln33_3_fu_493_p1);
+assign add_ln33_1_fu_509_p2 = (sub_ln33_1_reg_660 + zext_ln33_3_fu_505_p1);
 
-assign add_ln33_fu_450_p2 = ($signed(sext_ln30_reg_630) + $signed(zext_ln33_2_fu_446_p1));
+assign add_ln33_fu_462_p2 = ($signed(sext_ln30_reg_642) + $signed(zext_ln33_2_fu_458_p1));
 
-assign and_ln21_fu_394_p2 = (or_ln21_fu_390_p2 & grp_fu_229_p2);
+assign and_ln21_fu_406_p2 = (or_ln21_fu_402_p2 & grp_fu_241_p2);
 
-assign and_ln33_fu_553_p2 = (or_ln33_fu_549_p2 & grp_fu_229_p2);
+assign and_ln33_fu_565_p2 = (or_ln33_fu_561_p2 & grp_fu_241_p2);
 
 assign ap_CS_fsm_state1 = ap_CS_fsm[32'd0];
 
@@ -1002,128 +1002,128 @@ assign ap_CS_fsm_state8 = ap_CS_fsm[32'd7];
 
 assign ap_CS_fsm_state9 = ap_CS_fsm[32'd8];
 
-assign bitcast_ln21_fu_360_p1 = feat1_q0;
+assign bitcast_ln21_fu_372_p1 = feat1_q0;
 
-assign bitcast_ln33_fu_519_p1 = feat2_q0;
+assign bitcast_ln33_fu_531_p1 = feat2_q0;
 
-assign conv1_biases_address0 = grp_conv1_fu_194_conv1_biases_address0;
+assign conv1_biases_address0 = grp_conv1_fu_200_conv1_biases_address0;
 
-assign conv1_biases_ce0 = grp_conv1_fu_194_conv1_biases_ce0;
+assign conv1_biases_ce0 = grp_conv1_fu_200_conv1_biases_ce0;
 
-assign conv1_weights_address0 = grp_conv1_fu_194_conv1_weights_address0;
+assign conv1_weights_address0 = grp_conv1_fu_200_conv1_weights_address0;
 
-assign conv1_weights_ce0 = grp_conv1_fu_194_conv1_weights_ce0;
+assign conv1_weights_ce0 = grp_conv1_fu_200_conv1_weights_ce0;
 
-assign conv2_biases_address0 = grp_conv2_fu_206_conv2_biases_address0;
+assign conv2_biases_address0 = grp_conv2_fu_218_conv2_biases_address0;
 
-assign conv2_biases_ce0 = grp_conv2_fu_206_conv2_biases_ce0;
+assign conv2_biases_ce0 = grp_conv2_fu_218_conv2_biases_ce0;
 
-assign conv2_weights_address0 = grp_conv2_fu_206_conv2_weights_address0;
+assign conv2_weights_address0 = grp_conv2_fu_218_conv2_weights_address0;
 
-assign conv2_weights_ce0 = grp_conv2_fu_206_conv2_weights_ce0;
+assign conv2_weights_ce0 = grp_conv2_fu_218_conv2_weights_ce0;
 
-assign conv3_weights_address0 = grp_conv3_fu_218_conv3_weights_address0;
+assign conv3_weights_address0 = grp_conv3_fu_230_conv3_weights_address0;
 
-assign conv3_weights_ce0 = grp_conv3_fu_218_conv3_weights_ce0;
+assign conv3_weights_ce0 = grp_conv3_fu_230_conv3_weights_ce0;
 
-assign empty_fu_441_p1 = conv3_biases;
+assign empty_fu_453_p1 = conv3_biases;
 
-assign grp_conv1_fu_194_ap_start = grp_conv1_fu_194_ap_start_reg;
+assign grp_conv1_fu_200_ap_start = grp_conv1_fu_200_ap_start_reg;
 
-assign grp_conv2_fu_206_ap_start = grp_conv2_fu_206_ap_start_reg;
+assign grp_conv2_fu_218_ap_start = grp_conv2_fu_218_ap_start_reg;
 
-assign grp_conv3_fu_218_ap_start = grp_conv3_fu_218_ap_start_reg;
+assign grp_conv3_fu_230_ap_start = grp_conv3_fu_230_ap_start_reg;
 
-assign icmp_ln18_fu_270_p2 = ((c_fu_108 == 7'd64) ? 1'b1 : 1'b0);
+assign icmp_ln18_fu_282_p2 = ((c_fu_114 == 7'd64) ? 1'b1 : 1'b0);
 
-assign icmp_ln19_fu_318_p2 = ((y_reg_150 == 8'd255) ? 1'b1 : 1'b0);
+assign icmp_ln19_fu_330_p2 = ((y_reg_156 == 8'd255) ? 1'b1 : 1'b0);
 
-assign icmp_ln20_fu_348_p2 = ((x_reg_161 == 8'd255) ? 1'b1 : 1'b0);
+assign icmp_ln20_fu_360_p2 = ((x_reg_167 == 8'd255) ? 1'b1 : 1'b0);
 
-assign icmp_ln21_1_fu_384_p2 = ((trunc_ln21_1_fu_374_p1 == 23'd0) ? 1'b1 : 1'b0);
+assign icmp_ln21_1_fu_396_p2 = ((trunc_ln21_1_fu_386_p1 == 23'd0) ? 1'b1 : 1'b0);
 
-assign icmp_ln21_fu_378_p2 = ((tmp_fu_364_p4 != 8'd255) ? 1'b1 : 1'b0);
+assign icmp_ln21_fu_390_p2 = ((tmp_fu_376_p4 != 8'd255) ? 1'b1 : 1'b0);
 
-assign icmp_ln30_fu_429_p2 = ((c_1_fu_112 == 6'd32) ? 1'b1 : 1'b0);
+assign icmp_ln30_fu_441_p2 = ((c_1_fu_118 == 6'd32) ? 1'b1 : 1'b0);
 
-assign icmp_ln31_fu_477_p2 = ((y_1_reg_172 == 8'd255) ? 1'b1 : 1'b0);
+assign icmp_ln31_fu_489_p2 = ((y_1_reg_178 == 8'd255) ? 1'b1 : 1'b0);
 
-assign icmp_ln32_fu_507_p2 = ((x_1_reg_183 == 8'd255) ? 1'b1 : 1'b0);
+assign icmp_ln32_fu_519_p2 = ((x_1_reg_189 == 8'd255) ? 1'b1 : 1'b0);
 
-assign icmp_ln33_1_fu_543_p2 = ((trunc_ln33_1_fu_533_p1 == 23'd0) ? 1'b1 : 1'b0);
+assign icmp_ln33_1_fu_555_p2 = ((trunc_ln33_1_fu_545_p1 == 23'd0) ? 1'b1 : 1'b0);
 
-assign icmp_ln33_fu_537_p2 = ((tmp_2_fu_523_p4 != 8'd255) ? 1'b1 : 1'b0);
+assign icmp_ln33_fu_549_p2 = ((tmp_2_fu_535_p4 != 8'd255) ? 1'b1 : 1'b0);
 
-assign input_ftmap_address0 = grp_conv1_fu_194_input_ftmap_address0;
+assign input_ftmap_address0 = grp_conv1_fu_200_input_ftmap_address0;
 
-assign input_ftmap_ce0 = grp_conv1_fu_194_input_ftmap_ce0;
+assign input_ftmap_ce0 = grp_conv1_fu_200_input_ftmap_ce0;
 
-assign or_ln21_fu_390_p2 = (icmp_ln21_reg_617 | icmp_ln21_1_reg_622);
+assign or_ln21_fu_402_p2 = (icmp_ln21_reg_629 | icmp_ln21_1_reg_634);
 
-assign or_ln33_fu_549_p2 = (icmp_ln33_reg_679 | icmp_ln33_1_reg_684);
+assign or_ln33_fu_561_p2 = (icmp_ln33_reg_691 | icmp_ln33_1_reg_696);
 
-assign output_ftmap_address0 = grp_conv3_fu_218_output_ftmap_address0;
+assign output_ftmap_address0 = grp_conv3_fu_230_output_ftmap_address0;
 
-assign output_ftmap_ce0 = grp_conv3_fu_218_output_ftmap_ce0;
+assign output_ftmap_ce0 = grp_conv3_fu_230_output_ftmap_ce0;
 
-assign output_ftmap_d0 = grp_conv3_fu_218_output_ftmap_d0;
+assign output_ftmap_d0 = grp_conv3_fu_230_output_ftmap_d0;
 
-assign output_ftmap_we0 = grp_conv3_fu_218_output_ftmap_we0;
+assign output_ftmap_we0 = grp_conv3_fu_230_output_ftmap_we0;
 
-assign p_shl1_fu_304_p3 = {{trunc_ln21_fu_300_p1}, {8'd0}};
+assign p_shl1_fu_316_p3 = {{trunc_ln21_fu_312_p1}, {8'd0}};
 
-assign p_shl3_fu_463_p3 = {{trunc_ln33_fu_459_p1}, {8'd0}};
+assign p_shl3_fu_475_p3 = {{trunc_ln33_fu_471_p1}, {8'd0}};
 
-assign sext_ln18_fu_266_p1 = $signed(sub_ln21_fu_260_p2);
+assign sext_ln18_fu_278_p1 = $signed(sub_ln21_fu_272_p2);
 
-assign sext_ln21_fu_296_p1 = add_ln21_fu_291_p2;
+assign sext_ln21_fu_308_p1 = add_ln21_fu_303_p2;
 
-assign sext_ln30_fu_425_p1 = $signed(sub_ln33_fu_419_p2);
+assign sext_ln30_fu_437_p1 = $signed(sub_ln33_fu_431_p2);
 
-assign sext_ln33_fu_455_p1 = add_ln33_fu_450_p2;
+assign sext_ln33_fu_467_p1 = add_ln33_fu_462_p2;
 
-assign sub_ln21_1_fu_312_p2 = ($signed(p_shl1_fu_304_p3) - $signed(sext_ln21_fu_296_p1));
+assign sub_ln21_1_fu_324_p2 = ($signed(p_shl1_fu_316_p3) - $signed(sext_ln21_fu_308_p1));
 
-assign sub_ln21_fu_260_p2 = (zext_ln21_1_fu_256_p1 - zext_ln21_fu_244_p1);
+assign sub_ln21_fu_272_p2 = (zext_ln21_1_fu_268_p1 - zext_ln21_fu_256_p1);
 
-assign sub_ln33_1_fu_471_p2 = ($signed(p_shl3_fu_463_p3) - $signed(sext_ln33_fu_455_p1));
+assign sub_ln33_1_fu_483_p2 = ($signed(p_shl3_fu_475_p3) - $signed(sext_ln33_fu_467_p1));
 
-assign sub_ln33_fu_419_p2 = (zext_ln33_1_fu_415_p1 - zext_ln33_fu_403_p1);
+assign sub_ln33_fu_431_p2 = (zext_ln33_1_fu_427_p1 - zext_ln33_fu_415_p1);
 
-assign tmp_2_fu_523_p4 = {{bitcast_ln33_fu_519_p1[30:23]}};
+assign tmp_2_fu_535_p4 = {{bitcast_ln33_fu_531_p1[30:23]}};
 
-assign tmp_4_fu_248_p3 = {{c_fu_108}, {8'd0}};
+assign tmp_4_fu_260_p3 = {{c_fu_114}, {8'd0}};
 
-assign tmp_5_fu_407_p3 = {{c_1_fu_112}, {8'd0}};
+assign tmp_5_fu_419_p3 = {{c_1_fu_118}, {8'd0}};
 
-assign tmp_fu_364_p4 = {{bitcast_ln21_fu_360_p1[30:23]}};
+assign tmp_fu_376_p4 = {{bitcast_ln21_fu_372_p1[30:23]}};
 
-assign trunc_ln21_1_fu_374_p1 = bitcast_ln21_fu_360_p1[22:0];
+assign trunc_ln21_1_fu_386_p1 = bitcast_ln21_fu_372_p1[22:0];
 
-assign trunc_ln21_fu_300_p1 = add_ln21_fu_291_p2[13:0];
+assign trunc_ln21_fu_312_p1 = add_ln21_fu_303_p2[13:0];
 
-assign trunc_ln33_1_fu_533_p1 = bitcast_ln33_fu_519_p1[22:0];
+assign trunc_ln33_1_fu_545_p1 = bitcast_ln33_fu_531_p1[22:0];
 
-assign trunc_ln33_fu_459_p1 = add_ln33_fu_450_p2[12:0];
+assign trunc_ln33_fu_471_p1 = add_ln33_fu_462_p2[12:0];
 
-assign zext_ln21_1_fu_256_p1 = tmp_4_fu_248_p3;
+assign zext_ln21_1_fu_268_p1 = tmp_4_fu_260_p3;
 
-assign zext_ln21_2_fu_287_p1 = y_reg_150;
+assign zext_ln21_2_fu_299_p1 = y_reg_156;
 
-assign zext_ln21_3_fu_334_p1 = x_reg_161;
+assign zext_ln21_3_fu_346_p1 = x_reg_167;
 
-assign zext_ln21_4_fu_343_p1 = add_ln21_1_fu_338_p2;
+assign zext_ln21_4_fu_355_p1 = add_ln21_1_fu_350_p2;
 
-assign zext_ln21_fu_244_p1 = c_fu_108;
+assign zext_ln21_fu_256_p1 = c_fu_114;
 
-assign zext_ln33_1_fu_415_p1 = tmp_5_fu_407_p3;
+assign zext_ln33_1_fu_427_p1 = tmp_5_fu_419_p3;
 
-assign zext_ln33_2_fu_446_p1 = y_1_reg_172;
+assign zext_ln33_2_fu_458_p1 = y_1_reg_178;
 
-assign zext_ln33_3_fu_493_p1 = x_1_reg_183;
+assign zext_ln33_3_fu_505_p1 = x_1_reg_189;
 
-assign zext_ln33_4_fu_502_p1 = add_ln33_1_fu_497_p2;
+assign zext_ln33_4_fu_514_p1 = add_ln33_1_fu_509_p2;
 
-assign zext_ln33_fu_403_p1 = c_1_fu_112;
+assign zext_ln33_fu_415_p1 = c_1_fu_118;
 
 endmodule //srcnn

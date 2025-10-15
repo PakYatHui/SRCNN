@@ -29,15 +29,15 @@ port (
     feat2_ce0 : OUT STD_LOGIC;
     feat2_we0 : OUT STD_LOGIC;
     feat2_d0 : OUT STD_LOGIC_VECTOR (31 downto 0);
-    grp_fu_692_p_din0 : OUT STD_LOGIC_VECTOR (31 downto 0);
-    grp_fu_692_p_din1 : OUT STD_LOGIC_VECTOR (31 downto 0);
-    grp_fu_692_p_opcode : OUT STD_LOGIC_VECTOR (1 downto 0);
-    grp_fu_692_p_dout0 : IN STD_LOGIC_VECTOR (31 downto 0);
-    grp_fu_692_p_ce : OUT STD_LOGIC;
-    grp_fu_696_p_din0 : OUT STD_LOGIC_VECTOR (31 downto 0);
-    grp_fu_696_p_din1 : OUT STD_LOGIC_VECTOR (31 downto 0);
-    grp_fu_696_p_dout0 : IN STD_LOGIC_VECTOR (31 downto 0);
-    grp_fu_696_p_ce : OUT STD_LOGIC );
+    grp_fu_704_p_din0 : OUT STD_LOGIC_VECTOR (31 downto 0);
+    grp_fu_704_p_din1 : OUT STD_LOGIC_VECTOR (31 downto 0);
+    grp_fu_704_p_opcode : OUT STD_LOGIC_VECTOR (1 downto 0);
+    grp_fu_704_p_dout0 : IN STD_LOGIC_VECTOR (31 downto 0);
+    grp_fu_704_p_ce : OUT STD_LOGIC;
+    grp_fu_708_p_din0 : OUT STD_LOGIC_VECTOR (31 downto 0);
+    grp_fu_708_p_din1 : OUT STD_LOGIC_VECTOR (31 downto 0);
+    grp_fu_708_p_dout0 : IN STD_LOGIC_VECTOR (31 downto 0);
+    grp_fu_708_p_ce : OUT STD_LOGIC );
 end;
 
 
@@ -244,7 +244,7 @@ begin
             if (((ap_const_logic_1 = ap_CS_fsm_state5) and (icmp_ln12_fu_312_p2 = ap_const_lv1_0))) then 
                 acc_4_reg_156 <= acc_reg_447;
             elsif ((ap_const_logic_1 = ap_CS_fsm_state14)) then 
-                acc_4_reg_156 <= grp_fu_692_p_dout0;
+                acc_4_reg_156 <= grp_fu_704_p_dout0;
             end if; 
         end if;
     end process;
@@ -351,7 +351,7 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if ((ap_const_logic_1 = ap_CS_fsm_state10)) then
-                mul_reg_521 <= grp_fu_696_p_dout0;
+                mul_reg_521 <= grp_fu_708_p_dout0;
             end if;
         end if;
     end process;
@@ -543,13 +543,13 @@ begin
         end if; 
     end process;
 
-    grp_fu_692_p_ce <= ap_const_logic_1;
-    grp_fu_692_p_din0 <= acc_4_reg_156;
-    grp_fu_692_p_din1 <= mul_reg_521;
-    grp_fu_692_p_opcode <= ap_const_lv2_0;
-    grp_fu_696_p_ce <= ap_const_logic_1;
-    grp_fu_696_p_din0 <= feat1_load_reg_506;
-    grp_fu_696_p_din1 <= bitcast_ln17_fu_413_p1;
+    grp_fu_704_p_ce <= ap_const_logic_1;
+    grp_fu_704_p_din0 <= acc_4_reg_156;
+    grp_fu_704_p_din1 <= mul_reg_521;
+    grp_fu_704_p_opcode <= ap_const_lv2_0;
+    grp_fu_708_p_ce <= ap_const_logic_1;
+    grp_fu_708_p_din0 <= feat1_load_reg_506;
+    grp_fu_708_p_din1 <= bitcast_ln17_fu_413_p1;
     icmp_ln10_fu_227_p2 <= "1" when (oc_fu_68 = ap_const_lv6_20) else "0";
     icmp_ln11_fu_278_p2 <= "1" when (y_reg_123 = ap_const_lv8_FF) else "0";
     icmp_ln12_fu_312_p2 <= "1" when (x_reg_134 = ap_const_lv8_FF) else "0";
