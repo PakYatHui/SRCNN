@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'conv2'
 ================================================================
-* Date:           Thu Oct 16 01:19:26 2025
+* Date:           Thu Oct 16 20:29:13 2025
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -166,15 +166,15 @@
 |ap_done                 |  out|    1|  ap_ctrl_hs|          conv2|  return value|
 |ap_idle                 |  out|    1|  ap_ctrl_hs|          conv2|  return value|
 |ap_ready                |  out|    1|  ap_ctrl_hs|          conv2|  return value|
-|grp_fu_704_p_din0       |  out|   32|  ap_ctrl_hs|          conv2|  return value|
-|grp_fu_704_p_din1       |  out|   32|  ap_ctrl_hs|          conv2|  return value|
-|grp_fu_704_p_opcode     |  out|    2|  ap_ctrl_hs|          conv2|  return value|
-|grp_fu_704_p_dout0      |   in|   32|  ap_ctrl_hs|          conv2|  return value|
-|grp_fu_704_p_ce         |  out|    1|  ap_ctrl_hs|          conv2|  return value|
-|grp_fu_708_p_din0       |  out|   32|  ap_ctrl_hs|          conv2|  return value|
-|grp_fu_708_p_din1       |  out|   32|  ap_ctrl_hs|          conv2|  return value|
-|grp_fu_708_p_dout0      |   in|   32|  ap_ctrl_hs|          conv2|  return value|
-|grp_fu_708_p_ce         |  out|    1|  ap_ctrl_hs|          conv2|  return value|
+|grp_fu_3424_p_din0      |  out|   32|  ap_ctrl_hs|          conv2|  return value|
+|grp_fu_3424_p_din1      |  out|   32|  ap_ctrl_hs|          conv2|  return value|
+|grp_fu_3424_p_opcode    |  out|    2|  ap_ctrl_hs|          conv2|  return value|
+|grp_fu_3424_p_dout0     |   in|   32|  ap_ctrl_hs|          conv2|  return value|
+|grp_fu_3424_p_ce        |  out|    1|  ap_ctrl_hs|          conv2|  return value|
+|grp_fu_3428_p_din0      |  out|   32|  ap_ctrl_hs|          conv2|  return value|
+|grp_fu_3428_p_din1      |  out|   32|  ap_ctrl_hs|          conv2|  return value|
+|grp_fu_3428_p_dout0     |   in|   32|  ap_ctrl_hs|          conv2|  return value|
+|grp_fu_3428_p_ce        |  out|    1|  ap_ctrl_hs|          conv2|  return value|
 |conv2_weights_address0  |  out|   11|   ap_memory|  conv2_weights|         array|
 |conv2_weights_ce0       |  out|    1|   ap_memory|  conv2_weights|         array|
 |conv2_weights_q0        |   in|   32|   ap_memory|  conv2_weights|         array|

@@ -26,15 +26,15 @@ module srcnn_conv2 (
         feat2_ce0,
         feat2_we0,
         feat2_d0,
-        grp_fu_704_p_din0,
-        grp_fu_704_p_din1,
-        grp_fu_704_p_opcode,
-        grp_fu_704_p_dout0,
-        grp_fu_704_p_ce,
-        grp_fu_708_p_din0,
-        grp_fu_708_p_din1,
-        grp_fu_708_p_dout0,
-        grp_fu_708_p_ce
+        grp_fu_3424_p_din0,
+        grp_fu_3424_p_din1,
+        grp_fu_3424_p_opcode,
+        grp_fu_3424_p_dout0,
+        grp_fu_3424_p_ce,
+        grp_fu_3428_p_din0,
+        grp_fu_3428_p_din1,
+        grp_fu_3428_p_dout0,
+        grp_fu_3428_p_ce
 );
 
 parameter    ap_ST_fsm_state1 = 14'd1;
@@ -71,15 +71,15 @@ output  [20:0] feat2_address0;
 output   feat2_ce0;
 output   feat2_we0;
 output  [31:0] feat2_d0;
-output  [31:0] grp_fu_704_p_din0;
-output  [31:0] grp_fu_704_p_din1;
-output  [1:0] grp_fu_704_p_opcode;
-input  [31:0] grp_fu_704_p_dout0;
-output   grp_fu_704_p_ce;
-output  [31:0] grp_fu_708_p_din0;
-output  [31:0] grp_fu_708_p_din1;
-input  [31:0] grp_fu_708_p_dout0;
-output   grp_fu_708_p_ce;
+output  [31:0] grp_fu_3424_p_din0;
+output  [31:0] grp_fu_3424_p_din1;
+output  [1:0] grp_fu_3424_p_opcode;
+input  [31:0] grp_fu_3424_p_dout0;
+output   grp_fu_3424_p_ce;
+output  [31:0] grp_fu_3428_p_din0;
+output  [31:0] grp_fu_3428_p_din1;
+input  [31:0] grp_fu_3428_p_dout0;
+output   grp_fu_3428_p_ce;
 
 reg ap_done;
 reg ap_idle;
@@ -198,7 +198,7 @@ always @ (posedge ap_clk) begin
     if (((1'b1 == ap_CS_fsm_state5) & (icmp_ln12_fu_312_p2 == 1'd0))) begin
         acc_4_reg_156 <= acc_reg_447;
     end else if ((1'b1 == ap_CS_fsm_state14)) begin
-        acc_4_reg_156 <= grp_fu_704_p_dout0;
+        acc_4_reg_156 <= grp_fu_3424_p_dout0;
     end
 end
 
@@ -279,7 +279,7 @@ end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state10)) begin
-        mul_reg_521 <= grp_fu_708_p_dout0;
+        mul_reg_521 <= grp_fu_3428_p_dout0;
     end
 end
 
@@ -503,19 +503,19 @@ assign feat2_address0 = feat2_addr_reg_475;
 
 assign feat2_d0 = acc_4_reg_156;
 
-assign grp_fu_704_p_ce = 1'b1;
+assign grp_fu_3424_p_ce = 1'b1;
 
-assign grp_fu_704_p_din0 = acc_4_reg_156;
+assign grp_fu_3424_p_din0 = acc_4_reg_156;
 
-assign grp_fu_704_p_din1 = mul_reg_521;
+assign grp_fu_3424_p_din1 = mul_reg_521;
 
-assign grp_fu_704_p_opcode = 2'd0;
+assign grp_fu_3424_p_opcode = 2'd0;
 
-assign grp_fu_708_p_ce = 1'b1;
+assign grp_fu_3428_p_ce = 1'b1;
 
-assign grp_fu_708_p_din0 = feat1_load_reg_506;
+assign grp_fu_3428_p_din0 = feat1_load_reg_506;
 
-assign grp_fu_708_p_din1 = bitcast_ln17_fu_413_p1;
+assign grp_fu_3428_p_din1 = bitcast_ln17_fu_413_p1;
 
 assign icmp_ln10_fu_227_p2 = ((oc_fu_68 == 6'd32) ? 1'b1 : 1'b0);
 

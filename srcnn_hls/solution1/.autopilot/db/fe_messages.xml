@@ -1,4 +1,34 @@
 <xilinx:hls_fe_msgs>
+    <msg msg_groups="" msg_id="207-5533" msg_severity="WARNING" msg_loc="src/conv1.cpp:84:52" msg_body="'factor' in '#pragma HLS array_partition' is ignored">
+        <args ClangWarningOption="extra-tokens"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv1.cpp:80:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv1" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=out_tile complete dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv1.cpp:81:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv1" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=w_tile complete dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv1.cpp:84:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv1" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=w_tile factor=3 dim=3" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv1.cpp:85:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv1" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=w_tile complete dim=4" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv1.cpp:88:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv1" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=in_tile cyclic factor=3 dim=2" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv1.cpp:89:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv1" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=in_tile cyclic factor=9 dim=3" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv1.cpp:97:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv1" ARG_PragmaIsValid="1" ARG_PragmaOptions="factor=2" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv1.cpp:103:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv1" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=acc factor=5 type=cyclic" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv1.cpp:104:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv1" ARG_PragmaIsValid="1" ARG_PragmaOptions="factor=9" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv2.cpp:9:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="conv2" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
@@ -14,8 +44,26 @@
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/srcnn.cpp:12:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="srcnn" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-188" msg_severity="INFO" msg_loc="src/conv1.cpp:20:0" msg_body="Unrolling loop 'debug2' (src/conv1.cpp:96:12) in function 'conv1' partially with a factor of 2">
+        <args Factor="2" LoopLoc="src/conv1.cpp:96:12" LoopName="debug2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-359" msg_severity="INFO" msg_loc="src/conv1.cpp:20:0" msg_body="Unrolling loop 'VITIS_LOOP_102_8' (src/conv1.cpp:102:36) in function 'conv1': changing partial unrolling into complete unrolling since the unrolling factor (=9) is no less than the loop trip count (=9).">
+        <args Factor="9" LoopLoc="src/conv1.cpp:102:36" LoopName="VITIS_LOOP_102_8" TripCount="9"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="src/conv1.cpp:20:0" msg_body="Unrolling loop 'VITIS_LOOP_102_8' (src/conv1.cpp:102:36) in function 'conv1' completely with a factor of 9">
+        <args Factor="9" LoopLoc="src/conv1.cpp:102:36" LoopName="VITIS_LOOP_102_8"/>
+    </msg>
     <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="src/conv1.cpp:20:0" msg_body="Inlining function 'clampi(int, int, int)' into 'conv1(float (*) [255][255], float (*) [1][9][9], float*, float (*) [255][255])'">
         <args Callee="clampi(int, int, int)" Callee-DebugLoc="File src/conv1.cpp Line 9 Column 0" Caller="conv1(float (*) [255][255], float (*) [1][9][9], float*, float (*) [255][255])" Caller-DebugLoc="File src/conv1.cpp Line 20 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="src/conv1.cpp:23:0" msg_body="Applying array_partition to '_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E7in_tile': Cyclic partitioning with factor 3 on dimension 2. Cyclic partitioning with factor 9 on dimension 3.">
+        <args Dim="islist 2 3" Factor="islist 3 9" Mode="islist Cyclic Cyclic" UOName="_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E7in_tile"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="src/conv1.cpp:24:0" msg_body="Applying array_partition to '_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile': Complete partitioning on dimension 1. Complete partitioning on dimension 3. Complete partitioning on dimension 4.">
+        <args Dim="islist 1 3 4" Mode="islist Complete Complete Complete" UOName="_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="src/conv1.cpp:25:0" msg_body="Applying array_partition to '_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E8out_tile': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E8out_tile"/>
     </msg>
 </xilinx:hls_fe_msgs>
 

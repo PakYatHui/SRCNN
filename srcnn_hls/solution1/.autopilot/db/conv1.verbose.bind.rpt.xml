@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv1'" level="0">
-<item name = "Date">Thu Oct 16 01:19:22 2025
+<item name = "Date">Thu Oct 16 20:28:14 2025
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 7.016 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 7.272 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">24214673, 3161554065, 0.242 sec, 31.616 sec, 24214673, 3161554065, no</column>
+<column name="">21826705, 1882819729, 0.218 sec, 18.828 sec, 21826705, 1882819729, no</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,25 +35,25 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- outputFeatureTile">24214672, 3161554064, 3026834 ~ 395194258, -, -, 8, no</column>
-<column name=" + outputHeightTile">3026832, 395194256, 378354 ~ 49399282, -, -, 8, no</column>
-<column name="  ++ outputWidthTile">378352, 49399280, 47294 ~ 6174910, -, -, 8, no</column>
-<column name="   +++ initializeWithBias">8728, 8728, 1091, -, -, 8, no</column>
-<column name="    ++++ VITIS_LOOP_42_1">1088, 1088, 34, -, -, 32, no</column>
-<column name="     +++++ VITIS_LOOP_43_2">32, 32, 1, -, -, 32, no</column>
-<column name="   +++ VITIS_LOOP_58_3">3280, 3280, 82, -, -, 40, no</column>
-<column name="    ++++ VITIS_LOOP_59_4">80, 80, 2, -, -, 40, no</column>
-<column name="   +++ loadWeightTile">1456, 1456, 182, -, -, 8, no</column>
-<column name="    ++++ VITIS_LOOP_74_6">180, 180, 20, -, -, 9, no</column>
-<column name="     +++++ VITIS_LOOP_75_7">18, 18, 2, -, -, 9, no</column>
-<column name="   +++ VITIS_LOOP_81_8">16912, 6144528, 2114 ~ 768066, -, -, 8, no</column>
-<column name="    ++++ VITIS_LOOP_82_9">2112, 768064, 66 ~ 24002, -, -, 32, no</column>
-<column name="     +++++ VITIS_LOOP_83_10">64, 24000, 2 ~ 750, -, -, 32, no</column>
-<column name="      ++++++ VITIS_LOOP_88_12">747, 747, 83, -, -, 9, no</column>
-<column name="       +++++++ VITIS_LOOP_90_13">81, 81, 9, -, -, 9, no</column>
+<column name="- outputFeatureTile">21826704, 1882819728, 2728338 ~ 235352466, -, -, 8, no</column>
+<column name=" + outputHeightTile">2728336, 235352464, 341042 ~ 29419058, -, -, 8, no</column>
+<column name="  ++ outputWidthTile">341040, 29419056, 42630 ~ 3677382, -, -, 8, no</column>
+<column name="   +++ initializeWithBias">16920, 16920, 2115, -, -, 8, no</column>
+<column name="    ++++ VITIS_LOOP_41_1">2112, 2112, 66, -, -, 32, no</column>
+<column name="     +++++ VITIS_LOOP_42_2">64, 64, 2, -, -, 32, no</column>
+<column name="   +++ VITIS_LOOP_57_3">3280, 4880, 82 ~ 122, -, -, 40, no</column>
+<column name="    ++++ VITIS_LOOP_58_4">80, 120, 2 ~ 3, -, -, 40, no</column>
+<column name="   +++ loadWeightTile">3400, 3400, 425, -, -, 8, no</column>
+<column name="    ++++ VITIS_LOOP_73_6">423, 423, 47, -, -, 9, no</column>
+<column name="     +++++ VITIS_LOOP_74_7">45, 45, 5, -, -, 9, no</column>
+<column name="   +++ tileCalculation">2112, 3635264, 66 ~ 113602, -, -, 32, no</column>
+<column name="    ++++ debug1">64, 113600, 2 ~ 3550, -, -, 32, no</column>
+<column name="     +++++ debug2">3548, 3548, 887, -, -, 4, no</column>
+<column name="      ++++++ debug3">441, 441, 49, -, -, 9, no</column>
+<column name="      ++++++ debug3">441, 441, 49, -, -, 9, no</column>
 <column name="   +++ tileWritewBack">16912, 16912, 2114, -, -, 8, no</column>
-<column name="    ++++ VITIS_LOOP_102_14">2112, 2112, 66, -, -, 32, no</column>
-<column name="     +++++ VITIS_LOOP_103_15">64, 64, 2, -, -, 32, no</column>
+<column name="    ++++ VITIS_LOOP_118_9">2112, 2112, 66, -, -, 32, no</column>
+<column name="     +++++ VITIS_LOOP_119_10">64, 64, 2, -, -, 32, no</column>
 </table>
 </item>
 </section>

@@ -224,11 +224,10 @@ void conv1(ftmap_t input_ftmap[1][255][255],
             for (int w = 0; w < 255; w += 32) {
                 int tW = (w + 32 <= 255) ? 32 : (255 - w);
 
-
                 initializeWithBias:
     for (int tn = 0; tn < 8; ++tn) {
-      VITIS_LOOP_42_1: for (int th = 0; th < 32; ++th) {
-        VITIS_LOOP_43_2: for (int tw = 0; tw < 32; ++tw) {
+      VITIS_LOOP_41_1: for (int th = 0; th < 32; ++th) {
+        VITIS_LOOP_42_2: for (int tw = 0; tw < 32; ++tw) {
           if (tn < tN && th < tH && tw < tW)
             out_tile[tn][th][tw] = conv1_biases[n+tn];
         }
@@ -243,8 +242,8 @@ void conv1(ftmap_t input_ftmap[1][255][255],
 
                     loadInputTile:
      for (int tc = 0; tc < 1; ++tc) {
-       VITIS_LOOP_58_3: for (int ih = 0; ih < 32 + 9 - 1; ++ih) {
-         VITIS_LOOP_59_4: for (int iw = 0; iw < 32 + 9 - 1; ++iw) {
+       VITIS_LOOP_57_3: for (int ih = 0; ih < 32 + 9 - 1; ++ih) {
+         VITIS_LOOP_58_4: for (int iw = 0; iw < 32 + 9 - 1; ++iw) {
            if (ih < tH + 9 - 1 && iw < tW + 9 - 1) {
              int gy = clampi(h + ih - R, 0, 255 - 1);
              int gx = clampi(w + iw - R, 0, 255 - 1);
@@ -257,29 +256,46 @@ void conv1(ftmap_t input_ftmap[1][255][255],
 
                     loadWeightTile:
      for (int tn = 0; tn < 8; ++tn) {
-       VITIS_LOOP_72_5: for (int tc = 0; tc < 1; ++tc) {
+       VITIS_LOOP_71_5: for (int tc = 0; tc < 1; ++tc) {
          if (tn < tN && tc < tC)
-           VITIS_LOOP_74_6: for (int kh = 0; kh < 9; ++kh)
-             VITIS_LOOP_75_7: for (int kw = 0; kw < 9; ++kw)
+           VITIS_LOOP_73_6: for (int kh = 0; kh < 9; ++kh)
+             VITIS_LOOP_74_7: for (int kw = 0; kw < 9; ++kw)
                w_tile[tn][tc][kh][kw] = conv1_weights[n+tn][c+tc][kh][kw];
        }
      }
 
 
-     VITIS_LOOP_81_8: for (int tn = 0; tn < 8; ++tn) {
-       VITIS_LOOP_82_9: for (int th = 0; th < 32; ++th) {
-         VITIS_LOOP_83_10: for (int tw = 0; tw < 32; ++tw) {
-           if (tn < tN && th < tH && tw < tW) {
-             float acc = out_tile[tn][th][tw];
-             VITIS_LOOP_86_11: for (int tc = 0; tc < 1; ++tc)
+#pragma HLS ARRAY_PARTITION variable=out_tile complete dim=1
+#pragma HLS ARRAY_PARTITION variable=w_tile complete dim=1
 
-               VITIS_LOOP_88_12: for (int kh = 0; kh < 9; ++kh) {
 
-                 VITIS_LOOP_90_13: for (int kw = 0; kw < 9; ++kw) {
-                   acc += w_tile[tn][tc][kh][kw] * in_tile[tc][th+kh][tw+kw];
+#pragma HLS ARRAY_PARTITION variable=w_tile factor=3 dim=3
+#pragma HLS ARRAY_PARTITION variable=w_tile complete dim=4
+
+
+#pragma HLS ARRAY_PARTITION variable=in_tile cyclic factor=3 dim=2
+#pragma HLS ARRAY_PARTITION variable=in_tile cyclic factor=9 dim=3
+ tileCalculation:
+     for (int th = 0; th < 32; ++th) {
+      debug1:
+       for (int tw = 0; tw < 32; ++tw) {
+         if (th < tH && tw < tW) {
+          debug2:
+           for (int tn = 0; tn < 8; ++tn) {
+#pragma HLS UNROLL factor=2
+ if (tn < tN) {
+               float acc = out_tile[tn][th][tw];
+               debug3:
+               for (int kh = 0; kh < 9; ++kh) {
+                 VITIS_LOOP_102_8: for (int kw = 0; kw < 9; ++kw) {
+#pragma HLS ARRAY_PARTITION variable=acc factor=5 type=cyclic
+#pragma HLS UNROLL factor=9
+ acc += w_tile[tn][0][kh][kw] * in_tile[0][th + kh][tw + kw];
                  }
                }
-             out_tile[tn][th][tw] = acc;
+
+               out_tile[tn][th][tw] = acc;
+             }
            }
          }
        }
@@ -287,8 +303,8 @@ void conv1(ftmap_t input_ftmap[1][255][255],
 
                 tileWritewBack:
     for (int tn = 0; tn < 8; ++tn)
-      VITIS_LOOP_102_14: for (int th = 0; th < 32; ++th)
-        VITIS_LOOP_103_15: for (int tw = 0; tw < 32; ++tw)
+      VITIS_LOOP_118_9: for (int th = 0; th < 32; ++th)
+        VITIS_LOOP_119_10: for (int tw = 0; tw < 32; ++tw)
           if (tn < tN && th < tH && tw < tW)
             output_ftmap[n+tn][h+th][w+tw] = out_tile[tn][th][tw];
                         }

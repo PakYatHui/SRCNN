@@ -1,7 +1,7 @@
 #define TN 8       //input parallel
 #define TH 32      // tile height
 #define TW 32      // tile width
-#define TC 1
+#define TC 1		//tile input channel parallel
 
 
 #include "srcnn.h"
@@ -35,7 +35,6 @@ void conv1(ftmap_t input_ftmap[N0][H][W],
             outputWidthTile:
             for (int w = 0; w < W; w += TW) {         // output width tile
                 int tW = (w + TW <= W) ? TW : (W - w);
-
                 // ---- initialize tile with bias（Output-stationary: only write back once toDRAM）----
                 initializeWithBias:
 				for (int tn = 0; tn < TN; ++tn) {
@@ -49,7 +48,7 @@ void conv1(ftmap_t input_ftmap[N0][H][W],
 
                 // ---- tile accumulation with C ----
                 tileAccumulation:
-                for (int c = 0; c < N0; c += TC) {    // input feature tile
+                for (int c = 0; c < N0; c += TC) {    // the number of input feature
                     int tC = (c + TC <= N0) ? TC : (N0 - c);
 
                     // 1) load input tile（Load additional input feature borders, same padding）
@@ -77,21 +76,37 @@ void conv1(ftmap_t input_ftmap[N0][H][W],
 					  }
 					}
 
-                    // 3) tile calculation（对本c块累加到 out_tile）
-					for (int tn = 0; tn < TN; ++tn) {
-					  for (int th = 0; th < TH; ++th) {
-					    for (int tw = 0; tw < TW; ++tw) {
-					      if (tn < tN && th < tH && tw < tW) {
-					        float acc = out_tile[tn][th][tw];
-					        for (int tc = 0; tc < TC; ++tc)
-//#pragma HLS UNROLL factor=9
-					          for (int kh = 0; kh < F1; ++kh) {      // 这两个是常量 9，可安全 unroll
-//#pragma HLS UNROLL factor=9
+                    // 3) tile calculation
+#pragma HLS ARRAY_PARTITION variable=out_tile complete dim=1
+#pragma HLS ARRAY_PARTITION variable=w_tile  complete dim=1
+
+// 卷积核的并行需要（与 kh/kw 的 unroll 因子对应）
+#pragma HLS ARRAY_PARTITION variable=w_tile  factor=3 dim=3   // kh
+#pragma HLS ARRAY_PARTITION variable=w_tile  complete  dim=4  // kw=9
+
+// 给 in_tile 做 banking（按行/列）
+#pragma HLS ARRAY_PARTITION variable=in_tile cyclic factor=3 dim=2
+#pragma HLS ARRAY_PARTITION variable=in_tile cyclic factor=9 dim=3
+					tileCalculation:
+					for (int th = 0; th < TH; ++th) {
+						debug1:
+					  for (int tw = 0; tw < TW; ++tw) {
+					    if (th < tH && tw < tW) {
+					    	debug2:
+					      for (int tn = 0; tn < TN; ++tn) {
+#pragma HLS UNROLL factor=2
+					        if (tn < tN) {
+					          float acc = out_tile[tn][th][tw];
+					          debug3:
+					          for (int kh = 0; kh < F1; ++kh) {
 					            for (int kw = 0; kw < F1; ++kw) {
-					              acc += w_tile[tn][tc][kh][kw] * in_tile[tc][th+kh][tw+kw];
+#pragma HLS UNROLL factor=9
+					              acc += w_tile[tn][0][kh][kw] * in_tile[0][th + kh][tw + kw];
 					            }
 					          }
-					        out_tile[tn][th][tw] = acc;
+
+					          out_tile[tn][th][tw] = acc;
+					        }
 					      }
 					    }
 					  }

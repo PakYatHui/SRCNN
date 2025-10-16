@@ -1,5 +1,14 @@
 <pragmas>
-<pragma file="src/conv3.cpp" line="9" pragmaType="pipeline" parentfunction="conv3" off="1" ii="0" style=""/>
 <pragma file="src/conv2.cpp" line="9" pragmaType="pipeline" parentfunction="conv2" off="1" ii="0" style=""/>
 <pragma file="src/srcnn.cpp" line="12" pragmaType="pipeline" parentfunction="srcnn" off="1" ii="0" style=""/>
+<pragma file="src/conv1.cpp" line="97" pragmaType="unroll" parentfunction="conv1" factor="2" skip_exit_check="0"/>
+<pragma file="src/conv1.cpp" line="104" pragmaType="unroll" parentfunction="conv1" factor="9" skip_exit_check="0"/>
+<pragma file="src/conv1.cpp" line="80" pragmaType="array_partition" parentfunction="conv1" dim="1" factor="0" mode="complete" dynamic="0" variable="_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E8out_tile"/>
+<pragma file="src/conv1.cpp" line="81" pragmaType="array_partition" parentfunction="conv1" dim="1" factor="0" mode="complete" dynamic="0" variable="_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile"/>
+<pragma file="src/conv1.cpp" line="84" pragmaType="array_partition" parentfunction="conv1" dim="3" factor="0" mode="complete" dynamic="0" variable="_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile"/>
+<pragma file="src/conv1.cpp" line="85" pragmaType="array_partition" parentfunction="conv1" dim="4" factor="0" mode="complete" dynamic="0" variable="_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile"/>
+<pragma file="src/conv1.cpp" line="88" pragmaType="array_partition" parentfunction="conv1" dim="2" factor="3" mode="cyclic" dynamic="0" variable="_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E7in_tile"/>
+<pragma file="src/conv1.cpp" line="89" pragmaType="array_partition" parentfunction="conv1" dim="3" factor="9" mode="cyclic" dynamic="0" variable="_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E7in_tile"/>
+<pragma file="src/conv1.cpp" line="103" pragmaType="array_partition" parentfunction="conv1" dim="1" factor="5" mode="cyclic" dynamic="0" variable="acc"/>
+<pragma file="src/conv3.cpp" line="9" pragmaType="pipeline" parentfunction="conv3" off="1" ii="0" style=""/>
 </pragmas>

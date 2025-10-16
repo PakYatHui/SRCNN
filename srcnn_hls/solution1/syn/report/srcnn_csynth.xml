@@ -18,18 +18,18 @@
 <PipelineType>no</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
-<EstimatedClockPeriod>7.016</EstimatedClockPeriod>
+<EstimatedClockPeriod>7.272</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>1738990008</Best-caseLatency>
-<Average-caseLatency>3307659704</Average-caseLatency>
-<Worst-caseLatency>4876329400</Worst-caseLatency>
-<Best-caseRealTimeLatency>17.390 sec</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>33.077 sec</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>48.763 sec</Worst-caseRealTimeLatency>
-<Interval-min>1738990009</Interval-min>
-<Interval-max>4876329401</Interval-max>
+<Best-caseLatency>1736602040</Best-caseLatency>
+<Average-caseLatency>2667508152</Average-caseLatency>
+<Worst-caseLatency>3597595064</Worst-caseLatency>
+<Best-caseRealTimeLatency>17.366 sec</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>26.675 sec</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>35.976 sec</Worst-caseRealTimeLatency>
+<Interval-min>1736602041</Interval-min>
+<Interval-max>3597595065</Interval-max>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
 <VITIS_LOOP_18_1>
@@ -91,10 +91,10 @@
 
 <AreaEstimates>
 <Resources>
-<BRAM_18K>11086</BRAM_18K>
-<DSP>5</DSP>
-<FF>2024</FF>
-<LUT>4134</LUT>
+<BRAM_18K>11134</BRAM_18K>
+<DSP>8</DSP>
+<FF>66425</FF>
+<LUT>16466</LUT>
 <URAM>0</URAM>
 </Resources>
 <AvailableResources>
