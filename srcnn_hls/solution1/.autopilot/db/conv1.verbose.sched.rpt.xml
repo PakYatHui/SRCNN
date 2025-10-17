@@ -1,0 +1,64 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'conv1'" level="0">
+<item name = "Date">Fri Oct 17 19:42:08 2025
+</item>
+<item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
+<item name = "Project">srcnn_hls</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xck26-sfvc784-2LV-c</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.016 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">3749521, 1882819729, 37.495 ms, 18.828 sec, 3749521, 1882819729, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- outputFeatureTile">3749520, 1882819728, 468690 ~ 235352466, -, -, 8, no</column>
+<column name=" + outputHeightTile">468688, 235352464, 58586 ~ 29419058, -, -, 8, no</column>
+<column name="  ++ outputWidthTile">58584, 29419056, 7323 ~ 3677382, -, -, 8, no</column>
+<column name="   +++ initializeWithBias">56, 16920, 7 ~ 2115, -, -, 8, no</column>
+<column name="    ++++ VITIS_LOOP_35_1">4, 2112, 4 ~ 66, -, -, 1 ~ 32, no</column>
+<column name="     +++++ VITIS_LOOP_36_2">2, 64, 2, -, -, 1 ~ 32, no</column>
+<column name="   +++ VITIS_LOOP_50_3">261, 4880, 29 ~ 122, -, -, 9 ~ 40, no</column>
+<column name="    ++++ VITIS_LOOP_51_4">27, 120, 3, -, -, 9 ~ 40, no</column>
+<column name="   +++ loadWeightTile">3400, 3400, 425, -, -, 8, no</column>
+<column name="    ++++ VITIS_LOOP_63_6">423, 423, 47, -, -, 9, no</column>
+<column name="     +++++ VITIS_LOOP_64_7">45, 45, 5, -, -, 9, no</column>
+<column name="   +++ tileCalculation">3552, 3635264, 3552 ~ 113602, -, -, 1 ~ 32, no</column>
+<column name="    ++++ debug1">3550, 113600, 3550, -, -, 1 ~ 32, no</column>
+<column name="     +++++ debug2">3548, 3548, 887, -, -, 4, no</column>
+<column name="      ++++++ debug3">441, 441, 49, -, -, 9, no</column>
+<column name="      ++++++ debug3">441, 441, 49, -, -, 9, no</column>
+<column name="   +++ tileWritewBack">48, 16912, 6 ~ 2114, -, -, 8, no</column>
+<column name="    ++++ VITIS_LOOP_102_9">4, 2112, 4 ~ 66, -, -, 1 ~ 32, no</column>
+<column name="     +++++ VITIS_LOOP_103_10">2, 64, 2, -, -, 1 ~ 32, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

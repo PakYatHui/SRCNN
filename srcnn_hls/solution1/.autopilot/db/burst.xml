@@ -1,0 +1,4 @@
+<VitisHLS:BurstInfo>
+    <burst group="BURST_VERBOSE_MISSED" fe_name="CouldNotAnalyzeBoundsPatternMissed" src_info="src/conv1.cpp:85:8" msg_id="214-252" msg_severity="INFO" msg_body="Could not analyze the loop bounds" resolution="214-252" LoopLoc="src/conv1.cpp:85:8" LoopName="debug2" ParentFunc="conv1(float (*) [255][255], float (*) [1][9][9], float*, float (*) [255][255])"/>
+</VitisHLS:BurstInfo>
+

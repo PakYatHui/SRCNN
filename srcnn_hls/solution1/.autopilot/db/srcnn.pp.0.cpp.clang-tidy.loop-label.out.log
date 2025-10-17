@@ -1,0 +1,30 @@
+D:\unimelb_files\96\SRCNN-main\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:214:6: warning: Added loop label VITIS_LOOP_18_1:   [xilinx-label-all-loops]
+     for (int c = 0; c < 64; c++) {
+     ^~~
+     VITIS_LOOP_18_1: 
+D:\unimelb_files\96\SRCNN-main\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:214:6: note: FIX-IT applied suggested code changes
+D:\unimelb_files\96\SRCNN-main\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:215:7: warning: Added loop label VITIS_LOOP_19_2:   [xilinx-label-all-loops]
+      for (int y = 0; y < 255; y++) {
+      ^~~
+      VITIS_LOOP_19_2: 
+D:\unimelb_files\96\SRCNN-main\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:215:7: note: FIX-IT applied suggested code changes
+D:\unimelb_files\96\SRCNN-main\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:216:8: warning: Added loop label VITIS_LOOP_20_3:   [xilinx-label-all-loops]
+       for (int x = 0; x < 255; x++) {
+       ^~~
+       VITIS_LOOP_20_3: 
+D:\unimelb_files\96\SRCNN-main\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:216:8: note: FIX-IT applied suggested code changes
+D:\unimelb_files\96\SRCNN-main\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:224:6: warning: Added loop label VITIS_LOOP_28_4:   [xilinx-label-all-loops]
+     for (int c = 0; c < 32; c++) {
+     ^~~
+     VITIS_LOOP_28_4: 
+D:\unimelb_files\96\SRCNN-main\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:224:6: note: FIX-IT applied suggested code changes
+D:\unimelb_files\96\SRCNN-main\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:225:10: warning: Added loop label VITIS_LOOP_29_5:   [xilinx-label-all-loops]
+         for (int y = 0; y < 255; y++) {
+         ^~~
+         VITIS_LOOP_29_5: 
+D:\unimelb_files\96\SRCNN-main\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:225:10: note: FIX-IT applied suggested code changes
+D:\unimelb_files\96\SRCNN-main\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:226:14: warning: Added loop label VITIS_LOOP_30_6:   [xilinx-label-all-loops]
+             for (int x = 0; x < 255; x++) {
+             ^~~
+             VITIS_LOOP_30_6: 
+D:\unimelb_files\96\SRCNN-main\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp:226:14: note: FIX-IT applied suggested code changes

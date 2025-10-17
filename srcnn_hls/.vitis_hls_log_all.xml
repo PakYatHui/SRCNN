@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile_7_8_8_0' is power-on initialization." projectName="srcnn_hls" solutionName="solution1" date="2025-10-17T19:42:17.506+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile_7_7_8_0' is power-on initialization." projectName="srcnn_hls" solutionName="solution1" date="2025-10-17T19:42:17.096+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile_7_6_8_0' is power-on initialization." projectName="srcnn_hls" solutionName="solution1" date="2025-10-17T19:42:17.080+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile_7_5_8_0' is power-on initialization." projectName="srcnn_hls" solutionName="solution1" date="2025-10-17T19:42:17.080+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile_7_4_8_0' is power-on initialization." projectName="srcnn_hls" solutionName="solution1" date="2025-10-17T19:42:17.070+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile_7_3_8_0' is power-on initialization." projectName="srcnn_hls" solutionName="solution1" date="2025-10-17T19:42:17.070+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile_7_2_8_0' is power-on initialization." projectName="srcnn_hls" solutionName="solution1" date="2025-10-17T19:42:17.048+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile_7_1_8_0' is power-on initialization." projectName="srcnn_hls" solutionName="solution1" date="2025-10-17T19:42:17.048+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile_7_0_8_0' is power-on initialization." projectName="srcnn_hls" solutionName="solution1" date="2025-10-17T19:42:17.033+0800" type="Warning"/>
+      </synLog>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>
