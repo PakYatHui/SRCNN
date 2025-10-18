@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'conv3'
 ================================================================
-* Date:           Thu Oct 16 20:28:21 2025
+* Date:           Sat Oct 18 21:53:49 2025
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -98,8 +98,8 @@ IsGatedGlobalClock: 0
 
 State 1 <SV = 0> <Delay = 0.42>
 ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%y = alloca i32 1"   --->   Operation 15 'alloca' 'y' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %output_ftmap, void @empty_8, i32 0, i32 0, void @empty_7, i32 4294967295, i32 0, void @empty_7, void @empty_7, void @empty_7, i32 0, i32 0, i32 0, i32 0, void @empty_7, void @empty_7, i32 4294967295, i32 0"   --->   Operation 16 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %conv3_weights, void @empty_8, i32 0, i32 0, void @empty_7, i32 4294967295, i32 0, void @empty_7, void @empty_7, void @empty_7, i32 0, i32 0, i32 0, i32 0, void @empty_7, void @empty_7, i32 4294967295, i32 0"   --->   Operation 17 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %output_ftmap, void @empty_20, i32 0, i32 0, void @empty_21, i32 4294967295, i32 0, void @empty_21, void @empty_21, void @empty_21, i32 0, i32 0, i32 0, i32 0, void @empty_21, void @empty_21, i32 4294967295, i32 0"   --->   Operation 16 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %conv3_weights, void @empty_20, i32 0, i32 0, void @empty_21, i32 4294967295, i32 0, void @empty_21, void @empty_21, void @empty_21, i32 0, i32 0, i32 0, i32 0, void @empty_21, void @empty_21, i32 4294967295, i32 0"   --->   Operation 17 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%b_0_0_val_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %b_0_0_val" [src/conv3.cpp:13]   --->   Operation 18 'read' 'b_0_0_val_read' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 19 [1/1] (0.42ns)   --->   "%store_ln13 = store i8 0, i8 %y" [src/conv3.cpp:13]   --->   Operation 19 'store' 'store_ln13' <Predicate = true> <Delay = 0.42>
 ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%br_ln13 = br void %VITIS_LOOP_14_3" [src/conv3.cpp:13]   --->   Operation 20 'br' 'br_ln13' <Predicate = true> <Delay = 0.00>
@@ -114,7 +114,7 @@ ST_2 : Operation 26 [1/1] (0.76ns)   --->   "%icmp_ln13 = icmp_eq  i8 %y_2, i8 2
 ST_2 : Operation 27 [1/1] (0.76ns)   --->   "%add_ln13 = add i8 %y_2, i8 1" [src/conv3.cpp:13]   --->   Operation 27 'add' 'add_ln13' <Predicate = true> <Delay = 0.76> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_2 : Operation 28 [1/1] (0.00ns)   --->   "%br_ln13 = br i1 %icmp_ln13, void %VITIS_LOOP_14_3.split, void %for.end71" [src/conv3.cpp:13]   --->   Operation 28 'br' 'br_ln13' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 29 [1/1] (0.00ns)   --->   "%speclooptripcount_ln13 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 255, i64 255, i64 255" [src/conv3.cpp:13]   --->   Operation 29 'speclooptripcount' 'speclooptripcount_ln13' <Predicate = (!icmp_ln13)> <Delay = 0.00>
-ST_2 : Operation 30 [1/1] (0.00ns)   --->   "%specloopname_ln13 = specloopname void @_ssdm_op_SpecLoopName, void @empty_26" [src/conv3.cpp:13]   --->   Operation 30 'specloopname' 'specloopname_ln13' <Predicate = (!icmp_ln13)> <Delay = 0.00>
+ST_2 : Operation 30 [1/1] (0.00ns)   --->   "%specloopname_ln13 = specloopname void @_ssdm_op_SpecLoopName, void @empty_19" [src/conv3.cpp:13]   --->   Operation 30 'specloopname' 'specloopname_ln13' <Predicate = (!icmp_ln13)> <Delay = 0.00>
 ST_2 : Operation 31 [1/1] (0.42ns)   --->   "%br_ln14 = br void %VITIS_LOOP_18_4" [src/conv3.cpp:14]   --->   Operation 31 'br' 'br_ln14' <Predicate = (!icmp_ln13)> <Delay = 0.42>
 ST_2 : Operation 32 [1/1] (0.00ns)   --->   "%ret_ln50 = ret" [src/conv3.cpp:50]   --->   Operation 32 'ret' 'ret_ln50' <Predicate = (icmp_ln13)> <Delay = 0.00>
 
@@ -129,7 +129,7 @@ ST_3 : Operation 39 [1/1] (0.76ns)   --->   "%icmp_ln14 = icmp_eq  i8 %x, i8 255
 ST_3 : Operation 40 [1/1] (0.76ns)   --->   "%add_ln14 = add i8 %x, i8 1" [src/conv3.cpp:14]   --->   Operation 40 'add' 'add_ln14' <Predicate = true> <Delay = 0.76> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_3 : Operation 41 [1/1] (0.00ns)   --->   "%br_ln14 = br i1 %icmp_ln14, void %VITIS_LOOP_18_4.split, void %for.inc66" [src/conv3.cpp:14]   --->   Operation 41 'br' 'br_ln14' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 42 [1/1] (0.00ns)   --->   "%speclooptripcount_ln14 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 255, i64 255, i64 255" [src/conv3.cpp:14]   --->   Operation 42 'speclooptripcount' 'speclooptripcount_ln14' <Predicate = (!icmp_ln14)> <Delay = 0.00>
-ST_3 : Operation 43 [1/1] (0.00ns)   --->   "%specloopname_ln14 = specloopname void @_ssdm_op_SpecLoopName, void @empty_17" [src/conv3.cpp:14]   --->   Operation 43 'specloopname' 'specloopname_ln14' <Predicate = (!icmp_ln14)> <Delay = 0.00>
+ST_3 : Operation 43 [1/1] (0.00ns)   --->   "%specloopname_ln14 = specloopname void @_ssdm_op_SpecLoopName, void @empty_18" [src/conv3.cpp:14]   --->   Operation 43 'specloopname' 'specloopname_ln14' <Predicate = (!icmp_ln14)> <Delay = 0.00>
 ST_3 : Operation 44 [1/1] (0.42ns)   --->   "%br_ln18 = br void %VITIS_LOOP_19_5" [src/conv3.cpp:18]   --->   Operation 44 'br' 'br_ln18' <Predicate = (!icmp_ln14)> <Delay = 0.42>
 ST_3 : Operation 45 [1/1] (0.42ns)   --->   "%store_ln13 = store i8 %add_ln13, i8 %y" [src/conv3.cpp:13]   --->   Operation 45 'store' 'store_ln13' <Predicate = (icmp_ln14)> <Delay = 0.42>
 ST_3 : Operation 46 [1/1] (0.00ns)   --->   "%br_ln13 = br void %VITIS_LOOP_14_3" [src/conv3.cpp:13]   --->   Operation 46 'br' 'br_ln13' <Predicate = (icmp_ln14)> <Delay = 0.00>
@@ -150,7 +150,7 @@ ST_4 : Operation 58 [1/1] (0.78ns)   --->   "%icmp_ln18 = icmp_eq  i6 %ic, i6 32
 ST_4 : Operation 59 [1/1] (0.78ns)   --->   "%add_ln18 = add i6 %ic, i6 1" [src/conv3.cpp:18]   --->   Operation 59 'add' 'add_ln18' <Predicate = true> <Delay = 0.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_4 : Operation 60 [1/1] (0.00ns)   --->   "%br_ln18 = br i1 %icmp_ln18, void %VITIS_LOOP_19_5.split, void %for.inc63" [src/conv3.cpp:18]   --->   Operation 60 'br' 'br_ln18' <Predicate = true> <Delay = 0.00>
 ST_4 : Operation 61 [1/1] (0.00ns)   --->   "%speclooptripcount_ln16 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 32, i64 32, i64 32" [src/conv3.cpp:16]   --->   Operation 61 'speclooptripcount' 'speclooptripcount_ln16' <Predicate = (!icmp_ln18)> <Delay = 0.00>
-ST_4 : Operation 62 [1/1] (0.00ns)   --->   "%specloopname_ln18 = specloopname void @_ssdm_op_SpecLoopName, void @empty_27" [src/conv3.cpp:18]   --->   Operation 62 'specloopname' 'specloopname_ln18' <Predicate = (!icmp_ln18)> <Delay = 0.00>
+ST_4 : Operation 62 [1/1] (0.00ns)   --->   "%specloopname_ln18 = specloopname void @_ssdm_op_SpecLoopName, void @empty_17" [src/conv3.cpp:18]   --->   Operation 62 'specloopname' 'specloopname_ln18' <Predicate = (!icmp_ln18)> <Delay = 0.00>
 ST_4 : Operation 63 [1/1] (0.42ns)   --->   "%br_ln19 = br void %for.body16" [src/conv3.cpp:19]   --->   Operation 63 'br' 'br_ln19' <Predicate = (!icmp_ln18)> <Delay = 0.42>
 ST_4 : Operation 64 [1/1] (0.00ns)   --->   "%bitcast_ln46 = bitcast i32 %acc" [src/conv3.cpp:46]   --->   Operation 64 'bitcast' 'bitcast_ln46' <Predicate = (icmp_ln18)> <Delay = 0.00>
 ST_4 : Operation 65 [1/1] (1.23ns)   --->   "%store_ln46 = store i32 %bitcast_ln46, i16 %output_ftmap_addr" [src/conv3.cpp:46]   --->   Operation 65 'store' 'store_ln46' <Predicate = (icmp_ln18)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 65025> <RAM>
@@ -169,7 +169,7 @@ ST_5 : Operation 75 [1/1] (0.67ns)   --->   "%icmp_ln19 = icmp_eq  i3 %ky, i3 5"
 ST_5 : Operation 76 [1/1] (0.67ns)   --->   "%add_ln19 = add i3 %ky, i3 1" [src/conv3.cpp:19]   --->   Operation 76 'add' 'add_ln19' <Predicate = true> <Delay = 0.67> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_5 : Operation 77 [1/1] (0.00ns)   --->   "%br_ln19 = br i1 %icmp_ln19, void %for.body16.split, void %for.inc54" [src/conv3.cpp:19]   --->   Operation 77 'br' 'br_ln19' <Predicate = true> <Delay = 0.00>
 ST_5 : Operation 78 [1/1] (0.00ns)   --->   "%speclooptripcount_ln16 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 5, i64 5, i64 5" [src/conv3.cpp:16]   --->   Operation 78 'speclooptripcount' 'speclooptripcount_ln16' <Predicate = (!icmp_ln19)> <Delay = 0.00>
-ST_5 : Operation 79 [1/1] (0.00ns)   --->   "%specloopname_ln19 = specloopname void @_ssdm_op_SpecLoopName, void @empty_11" [src/conv3.cpp:19]   --->   Operation 79 'specloopname' 'specloopname_ln19' <Predicate = (!icmp_ln19)> <Delay = 0.00>
+ST_5 : Operation 79 [1/1] (0.00ns)   --->   "%specloopname_ln19 = specloopname void @_ssdm_op_SpecLoopName, void @empty_16" [src/conv3.cpp:19]   --->   Operation 79 'specloopname' 'specloopname_ln19' <Predicate = (!icmp_ln19)> <Delay = 0.00>
 ST_5 : Operation 80 [1/1] (0.67ns)   --->   "%add_ln20 = add i3 %ky, i3 6" [src/conv3.cpp:20]   --->   Operation 80 'add' 'add_ln20' <Predicate = (!icmp_ln19)> <Delay = 0.67> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_5 : Operation 81 [1/1] (0.00ns)   --->   "%sext_ln20 = sext i3 %add_ln20" [src/conv3.cpp:20]   --->   Operation 81 'sext' 'sext_ln20' <Predicate = (!icmp_ln19)> <Delay = 0.00>
 ST_5 : Operation 82 [1/1] (0.76ns)   --->   "%add_ln20_1 = add i10 %sext_ln20, i10 %zext_ln13" [src/conv3.cpp:20]   --->   Operation 82 'add' 'add_ln20_1' <Predicate = (!icmp_ln19)> <Delay = 0.76> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
@@ -221,8 +221,8 @@ ST_7 : Operation 123 [1/2] (1.23ns)   --->   "%conv3_weights_load = load i10 %co
 
 State 8 <SV = 7> <Delay = 7.01>
 ST_8 : Operation 124 [1/1] (0.00ns)   --->   "%bitcast_ln41 = bitcast i32 %conv3_weights_load" [src/conv3.cpp:41]   --->   Operation 124 'bitcast' 'bitcast_ln41' <Predicate = true> <Delay = 0.00>
-ST_8 : [1/1] (0.73ns)   --->   Input mux for Operation 125 '%mul = fmul i32 %feat2_load, i32 %bitcast_ln41'
-ST_8 : Operation 125 [3/3] (6.27ns)   --->   "%mul = fmul i32 %feat2_load, i32 %bitcast_ln41" [src/conv3.cpp:41]   --->   Operation 125 'fmul' 'mul' <Predicate = true> <Delay = 6.27> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 7.01> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_8 : [1/1] (1.31ns)   --->   Input mux for Operation 125 '%mul = fmul i32 %feat2_load, i32 %bitcast_ln41'
+ST_8 : Operation 125 [3/3] (5.70ns)   --->   "%mul = fmul i32 %feat2_load, i32 %bitcast_ln41" [src/conv3.cpp:41]   --->   Operation 125 'fmul' 'mul' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 7.01> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
 
 State 9 <SV = 8> <Delay = 7.01>
 ST_9 : Operation 126 [2/3] (7.01ns)   --->   "%mul = fmul i32 %feat2_load, i32 %bitcast_ln41" [src/conv3.cpp:41]   --->   Operation 126 'fmul' 'mul' <Predicate = true> <Delay = 7.01> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 7.01> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
@@ -231,8 +231,8 @@ State 10 <SV = 9> <Delay = 7.01>
 ST_10 : Operation 127 [1/3] (7.01ns)   --->   "%mul = fmul i32 %feat2_load, i32 %bitcast_ln41" [src/conv3.cpp:41]   --->   Operation 127 'fmul' 'mul' <Predicate = true> <Delay = 7.01> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 2> <II = 1> <Delay = 7.01> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
 
 State 11 <SV = 10> <Delay = 6.43>
-ST_11 : [1/1] (0.73ns)   --->   Input mux for Operation 128 '%acc_1 = fadd i32 %acc_3, i32 %mul'
-ST_11 : Operation 128 [4/4] (5.69ns)   --->   "%acc_1 = fadd i32 %acc_3, i32 %mul" [src/conv3.cpp:41]   --->   Operation 128 'fadd' 'acc_1' <Predicate = true> <Delay = 5.69> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : [1/1] (1.31ns)   --->   Input mux for Operation 128 '%acc_1 = fadd i32 %acc_3, i32 %mul'
+ST_11 : Operation 128 [4/4] (5.12ns)   --->   "%acc_1 = fadd i32 %acc_3, i32 %mul" [src/conv3.cpp:41]   --->   Operation 128 'fadd' 'acc_1' <Predicate = true> <Delay = 5.12> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
 
 State 12 <SV = 11> <Delay = 6.43>
 ST_12 : Operation 129 [3/4] (6.43ns)   --->   "%acc_1 = fadd i32 %acc_3, i32 %mul" [src/conv3.cpp:41]   --->   Operation 129 'fadd' 'acc_1' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
@@ -242,7 +242,7 @@ ST_13 : Operation 130 [2/4] (6.43ns)   --->   "%acc_1 = fadd i32 %acc_3, i32 %mu
 
 State 14 <SV = 13> <Delay = 6.43>
 ST_14 : Operation 131 [1/1] (0.00ns)   --->   "%speclooptripcount_ln16 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 5, i64 5, i64 5" [src/conv3.cpp:16]   --->   Operation 131 'speclooptripcount' 'speclooptripcount_ln16' <Predicate = true> <Delay = 0.00>
-ST_14 : Operation 132 [1/1] (0.00ns)   --->   "%specloopname_ln30 = specloopname void @_ssdm_op_SpecLoopName, void @empty_12" [src/conv3.cpp:30]   --->   Operation 132 'specloopname' 'specloopname_ln30' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 132 [1/1] (0.00ns)   --->   "%specloopname_ln30 = specloopname void @_ssdm_op_SpecLoopName, void @empty_15" [src/conv3.cpp:30]   --->   Operation 132 'specloopname' 'specloopname_ln30' <Predicate = true> <Delay = 0.00>
 ST_14 : Operation 133 [1/4] (6.43ns)   --->   "%acc_1 = fadd i32 %acc_3, i32 %mul" [src/conv3.cpp:41]   --->   Operation 133 'fadd' 'acc_1' <Predicate = true> <Delay = 6.43> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
 ST_14 : Operation 134 [1/1] (0.00ns)   --->   "%br_ln30 = br void %for.body25" [src/conv3.cpp:30]   --->   Operation 134 'br' 'br_ln30' <Predicate = true> <Delay = 0.00>
 
@@ -448,7 +448,7 @@ br_ln30                (br               ) [ 001111111111111]
 <pin id="13" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_8"/></StgValue>
+<StgValue><ssdm name="empty_20"/></StgValue>
 </bind>
 </comp>
 
@@ -466,7 +466,7 @@ br_ln30                (br               ) [ 001111111111111]
 <pin id="17" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_7"/></StgValue>
+<StgValue><ssdm name="empty_21"/></StgValue>
 </bind>
 </comp>
 
@@ -556,7 +556,7 @@ br_ln30                (br               ) [ 001111111111111]
 <pin id="37" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_26"/></StgValue>
+<StgValue><ssdm name="empty_19"/></StgValue>
 </bind>
 </comp>
 
@@ -574,7 +574,7 @@ br_ln30                (br               ) [ 001111111111111]
 <pin id="41" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_17"/></StgValue>
+<StgValue><ssdm name="empty_18"/></StgValue>
 </bind>
 </comp>
 
@@ -646,7 +646,7 @@ br_ln30                (br               ) [ 001111111111111]
 <pin id="57" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_27"/></StgValue>
+<StgValue><ssdm name="empty_17"/></StgValue>
 </bind>
 </comp>
 
@@ -700,7 +700,7 @@ br_ln30                (br               ) [ 001111111111111]
 <pin id="69" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_11"/></StgValue>
+<StgValue><ssdm name="empty_16"/></StgValue>
 </bind>
 </comp>
 
@@ -763,7 +763,7 @@ br_ln30                (br               ) [ 001111111111111]
 <pin id="83" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_12"/></StgValue>
+<StgValue><ssdm name="empty_15"/></StgValue>
 </bind>
 </comp>
 

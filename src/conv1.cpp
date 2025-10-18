@@ -77,16 +77,16 @@ void conv1(ftmap_t input_ftmap[N0][H][W],
 					}
 
                     // 3) tile calculation
-#pragma HLS ARRAY_PARTITION variable=out_tile complete dim=1
-#pragma HLS ARRAY_PARTITION variable=w_tile  complete dim=1
+//#pragma HLS ARRAY_PARTITION variable=out_tile complete dim=1
+//#pragma HLS ARRAY_PARTITION variable=w_tile  complete dim=1
 
 // 卷积核的并行需要（与 kh/kw 的 unroll 因子对应）
-#pragma HLS ARRAY_PARTITION variable=w_tile  factor=3 dim=3   // kh
+//#pragma HLS ARRAY_PARTITION variable=w_tile  factor=3 dim=3   // kh
 #pragma HLS ARRAY_PARTITION variable=w_tile  complete  dim=4  // kw=9
 
 // 给 in_tile 做 banking（按行/列）
-#pragma HLS ARRAY_PARTITION variable=in_tile cyclic factor=3 dim=2
-#pragma HLS ARRAY_PARTITION variable=in_tile cyclic factor=9 dim=3
+//#pragma HLS ARRAY_PARTITION variable=in_tile cyclic factor=3 dim=2
+//#pragma HLS ARRAY_PARTITION variable=in_tile cyclic factor=9 dim=3
 					tileCalculation:
 					for (int th = 0; th < TH; ++th) {
 						debug1:
@@ -95,6 +95,7 @@ void conv1(ftmap_t input_ftmap[N0][H][W],
 					    	debug2:
 					      for (int tn = 0; tn < TN; ++tn) {
 #pragma HLS UNROLL factor=2
+#pragma HLS PIPELINE II=9
 					        if (tn < tN) {
 					          float acc = out_tile[tn][th][tw];
 					          debug3:

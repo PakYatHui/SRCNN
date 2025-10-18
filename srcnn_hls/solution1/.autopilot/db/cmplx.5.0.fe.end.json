@@ -1,25 +1,5 @@
 {
     "1": {
-        "name": "conv3",
-        "file": "",
-        "fileloc": "0",
-        "instructions": "113",
-        "total_instructions": "113",
-        "calls": "",
-        "basicblocks": "16",
-        "loads": {
-            "G": "1",
-            "L": "2"
-        },
-        "stores": {
-            "L": "3"
-        },
-        "loops": {
-            "L": "1",
-            "N": "4"
-        }
-    },
-    "2": {
         "name": "conv2",
         "file": "",
         "fileloc": "0",
@@ -40,25 +20,24 @@
             "N": "3"
         }
     },
-    "3": {
-        "name": "conv1",
+    "2": {
+        "name": "conv1_Pipeline_debug2",
         "file": "",
         "fileloc": "0",
-        "instructions": "3873",
-        "total_instructions": "3873",
+        "instructions": "799",
+        "total_instructions": "799",
         "calls": "",
-        "basicblocks": "928",
+        "basicblocks": "4",
         "loads": {
-            "G": "1150",
-            "L": "4"
+            "G": "164",
+            "L": "1"
         },
         "stores": {
-            "G": "692",
+            "G": "2",
             "L": "2"
         },
         "loops": {
-            "L": "1",
-            "N": "18"
+            "L": "1"
         }
     },
     "0": {
@@ -66,8 +45,8 @@
         "file": "",
         "fileloc": "0",
         "instructions": "131",
-        "total_instructions": "4202",
-        "calls": "3 2 1",
+        "total_instructions": "1833",
+        "calls": "4 1 3",
         "basicblocks": "23",
         "loads": {
             "G": "2",
@@ -80,6 +59,47 @@
         "loops": {
             "L": "2",
             "N": "4"
+        }
+    },
+    "3": {
+        "name": "conv3",
+        "file": "",
+        "fileloc": "0",
+        "instructions": "113",
+        "total_instructions": "113",
+        "calls": "",
+        "basicblocks": "16",
+        "loads": {
+            "G": "1",
+            "L": "2"
+        },
+        "stores": {
+            "L": "3"
+        },
+        "loops": {
+            "L": "1",
+            "N": "4"
+        }
+    },
+    "4": {
+        "name": "conv1",
+        "file": "",
+        "fileloc": "0",
+        "instructions": "705",
+        "total_instructions": "1504",
+        "calls": "2",
+        "basicblocks": "67",
+        "loads": {
+            "G": "82",
+            "L": "4"
+        },
+        "stores": {
+            "G": "12",
+            "L": "2"
+        },
+        "loops": {
+            "L": "1",
+            "N": "15"
         }
     }
 }

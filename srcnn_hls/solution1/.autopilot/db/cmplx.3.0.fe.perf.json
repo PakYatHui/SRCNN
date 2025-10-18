@@ -13,7 +13,7 @@
     "stores": {
       "G": 2
     },
-    "total_instructions": 4023
+    "total_instructions": 1158
   },
   "1": {
     "basicblocks": 9,
@@ -32,20 +32,20 @@
     "total_instructions": 32
   },
   "2": {
-    "basicblocks": 908,
+    "basicblocks": 52,
     "calls": "",
     "file": "conv1.cpp",
     "fileloc": 16,
-    "instructions": 3890,
+    "instructions": 1025,
     "loads": {
-      "G": 1150,
+      "G": 246,
       "L": 3
     },
     "name": "conv1",
     "stores": {
-      "G": 692
+      "G": 14
     },
-    "total_instructions": 3890
+    "total_instructions": 1025
   },
   "3": {
     "basicblocks": 11,

@@ -265,16 +265,16 @@ void conv1(ftmap_t input_ftmap[1][255][255],
      }
 
 
-#pragma HLS ARRAY_PARTITION variable=out_tile complete dim=1
-#pragma HLS ARRAY_PARTITION variable=w_tile complete dim=1
 
 
-#pragma HLS ARRAY_PARTITION variable=w_tile factor=3 dim=3
+
+
+
 #pragma HLS ARRAY_PARTITION variable=w_tile complete dim=4
 
 
-#pragma HLS ARRAY_PARTITION variable=in_tile cyclic factor=3 dim=2
-#pragma HLS ARRAY_PARTITION variable=in_tile cyclic factor=9 dim=3
+
+
  tileCalculation:
      for (int th = 0; th < 32; ++th) {
       debug1:
@@ -283,12 +283,12 @@ void conv1(ftmap_t input_ftmap[1][255][255],
           debug2:
            for (int tn = 0; tn < 8; ++tn) {
 #pragma HLS UNROLL factor=2
+#pragma HLS PIPELINE II=9
  if (tn < tN) {
                float acc = out_tile[tn][th][tw];
                debug3:
                for (int kh = 0; kh < 9; ++kh) {
-                 VITIS_LOOP_102_8: for (int kw = 0; kw < 9; ++kw) {
-#pragma HLS ARRAY_PARTITION variable=acc factor=5 type=cyclic
+                 VITIS_LOOP_103_8: for (int kw = 0; kw < 9; ++kw) {
 #pragma HLS UNROLL factor=9
  acc += w_tile[tn][0][kh][kw] * in_tile[0][th + kh][tw + kw];
                  }

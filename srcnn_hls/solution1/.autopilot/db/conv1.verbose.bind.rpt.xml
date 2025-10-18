@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv1'" level="0">
-<item name = "Date">Thu Oct 16 20:28:14 2025
+<item name = "Date">Sat Oct 18 21:53:31 2025
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 7.272 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 7.016 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -24,33 +24,31 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">21826705, 1882819729, 0.218 sec, 18.828 sec, 21826705, 1882819729, no</column>
+<column name="">16968849, 226159761, 0.170 sec, 2.262 sec, 16968849, 226159761, no</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_conv1_Pipeline_debug2_fu_1203">conv1_Pipeline_debug2, 358, 358, 3.580 us, 3.580 us, 358, 358, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- outputFeatureTile">21826704, 1882819728, 2728338 ~ 235352466, -, -, 8, no</column>
-<column name=" + outputHeightTile">2728336, 235352464, 341042 ~ 29419058, -, -, 8, no</column>
-<column name="  ++ outputWidthTile">341040, 29419056, 42630 ~ 3677382, -, -, 8, no</column>
-<column name="   +++ initializeWithBias">16920, 16920, 2115, -, -, 8, no</column>
-<column name="    ++++ VITIS_LOOP_41_1">2112, 2112, 66, -, -, 32, no</column>
-<column name="     +++++ VITIS_LOOP_42_2">64, 64, 2, -, -, 32, no</column>
-<column name="   +++ VITIS_LOOP_57_3">3280, 4880, 82 ~ 122, -, -, 40, no</column>
-<column name="    ++++ VITIS_LOOP_58_4">80, 120, 2 ~ 3, -, -, 40, no</column>
-<column name="   +++ loadWeightTile">3400, 3400, 425, -, -, 8, no</column>
-<column name="    ++++ VITIS_LOOP_73_6">423, 423, 47, -, -, 9, no</column>
-<column name="     +++++ VITIS_LOOP_74_7">45, 45, 5, -, -, 9, no</column>
-<column name="   +++ tileCalculation">2112, 3635264, 66 ~ 113602, -, -, 32, no</column>
-<column name="    ++++ debug1">64, 113600, 2 ~ 3550, -, -, 32, no</column>
-<column name="     +++++ debug2">3548, 3548, 887, -, -, 4, no</column>
-<column name="      ++++++ debug3">441, 441, 49, -, -, 9, no</column>
-<column name="      ++++++ debug3">441, 441, 49, -, -, 9, no</column>
+<column name="- outputFeatureTile">16968848, 226159760, 2121106 ~ 28269970, -, -, 8, no</column>
+<column name=" + outputHeightTile">2121104, 28269968, 265138 ~ 3533746, -, -, 8, no</column>
+<column name="  ++ outputWidthTile">265136, 3533744, 33142 ~ 441718, -, -, 8, no</column>
+<column name="   +++ initializeWithBias">8728, 8728, 1091, -, -, 8, no</column>
+<column name="    ++++ VITIS_LOOP_41_1">1088, 1088, 34, -, -, 32, no</column>
+<column name="     +++++ VITIS_LOOP_42_2">32, 32, 1, -, -, 32, no</column>
+<column name="   +++ VITIS_LOOP_57_3">3280, 3280, 82, -, -, 40, no</column>
+<column name="    ++++ VITIS_LOOP_58_4">80, 80, 2, -, -, 40, no</column>
+<column name="   +++ loadWeightTile">2104, 2104, 263, -, -, 8, no</column>
+<column name="    ++++ VITIS_LOOP_73_6">261, 261, 29, -, -, 9, no</column>
+<column name="     +++++ VITIS_LOOP_74_7">27, 27, 3, -, -, 9, no</column>
+<column name="   +++ tileCalculation">2112, 410688, 66 ~ 12834, -, -, 32, no</column>
+<column name="    ++++ debug1">64, 12832, 2 ~ 401, -, -, 32, no</column>
 <column name="   +++ tileWritewBack">16912, 16912, 2114, -, -, 8, no</column>
 <column name="    ++++ VITIS_LOOP_118_9">2112, 2112, 66, -, -, 32, no</column>
 <column name="     +++++ VITIS_LOOP_119_10">64, 64, 2, -, -, 32, no</column>

@@ -33,11 +33,11 @@ C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:262:14: warnin
              ^~~
              VITIS_LOOP_74_7: 
 C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:262:14: note: FIX-IT applied suggested code changes
-C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:290:18: warning: Added loop label VITIS_LOOP_102_8:   [xilinx-label-all-loops]
+C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:291:18: warning: Added loop label VITIS_LOOP_103_8:   [xilinx-label-all-loops]
                  for (int kw = 0; kw < 9; ++kw) {
                  ^~~
-                 VITIS_LOOP_102_8: 
-C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:290:18: note: FIX-IT applied suggested code changes
+                 VITIS_LOOP_103_8: 
+C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:291:18: note: FIX-IT applied suggested code changes
 C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:306:7: warning: Added loop label VITIS_LOOP_118_9:   [xilinx-label-all-loops]
       for (int th = 0; th < 32; ++th)
       ^~~

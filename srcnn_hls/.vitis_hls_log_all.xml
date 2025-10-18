@@ -3,76 +3,22 @@
   <errorLogs>
     <logs>
       <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
     </logs>
   </errorLogs>
   <warningLogs>
     <logs>
       <synLog>
-        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile_7_8_8_0' is power-on initialization." projectName="srcnn_hls" solutionName="solution1" date="2025-10-16T20:29:02.975+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile_7_7_8_0' is power-on initialization." projectName="srcnn_hls" solutionName="solution1" date="2025-10-16T20:29:01.545+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile_7_6_8_0' is power-on initialization." projectName="srcnn_hls" solutionName="solution1" date="2025-10-16T20:29:01.469+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile_7_5_8_0' is power-on initialization." projectName="srcnn_hls" solutionName="solution1" date="2025-10-16T20:29:01.405+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile_7_4_8_0' is power-on initialization." projectName="srcnn_hls" solutionName="solution1" date="2025-10-16T20:29:01.344+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile_7_3_8_0' is power-on initialization." projectName="srcnn_hls" solutionName="solution1" date="2025-10-16T20:29:01.286+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile_7_2_8_0' is power-on initialization." projectName="srcnn_hls" solutionName="solution1" date="2025-10-16T20:29:01.218+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile_7_1_8_0' is power-on initialization." projectName="srcnn_hls" solutionName="solution1" date="2025-10-16T20:29:01.141+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile_7_0_8_0' is power-on initialization." projectName="srcnn_hls" solutionName="solution1" date="2025-10-16T20:29:01.066+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile_5_8_8_0' is power-on initialization." projectName="srcnn_hls" solutionName="solution1" date="2025-10-16T20:29:00.982+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile_5_7_8_0' is power-on initialization." projectName="srcnn_hls" solutionName="solution1" date="2025-10-16T20:29:00.919+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile_5_6_8_0' is power-on initialization." projectName="srcnn_hls" solutionName="solution1" date="2025-10-16T20:29:00.824+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile_5_5_8_0' is power-on initialization." projectName="srcnn_hls" solutionName="solution1" date="2025-10-16T20:29:00.751+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile_5_4_8_0' is power-on initialization." projectName="srcnn_hls" solutionName="solution1" date="2025-10-16T20:29:00.669+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile_5_3_8_0' is power-on initialization." projectName="srcnn_hls" solutionName="solution1" date="2025-10-16T20:29:00.602+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile_5_2_8_0' is power-on initialization." projectName="srcnn_hls" solutionName="solution1" date="2025-10-16T20:29:00.550+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile_5_1_8_0' is power-on initialization." projectName="srcnn_hls" solutionName="solution1" date="2025-10-16T20:29:00.482+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile_5_0_8_0' is power-on initialization." projectName="srcnn_hls" solutionName="solution1" date="2025-10-16T20:29:00.435+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile_3_8_8_0' is power-on initialization." projectName="srcnn_hls" solutionName="solution1" date="2025-10-16T20:29:00.330+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile_3_7_8_0' is power-on initialization." projectName="srcnn_hls" solutionName="solution1" date="2025-10-16T20:29:00.252+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile_3_6_8_0' is power-on initialization." projectName="srcnn_hls" solutionName="solution1" date="2025-10-16T20:29:00.161+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile_3_5_8_0' is power-on initialization." projectName="srcnn_hls" solutionName="solution1" date="2025-10-16T20:29:00.087+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile_3_4_8_0' is power-on initialization." projectName="srcnn_hls" solutionName="solution1" date="2025-10-16T20:29:00.047+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile_3_3_8_0' is power-on initialization." projectName="srcnn_hls" solutionName="solution1" date="2025-10-16T20:28:59.964+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile_3_2_8_0' is power-on initialization." projectName="srcnn_hls" solutionName="solution1" date="2025-10-16T20:28:59.876+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile_3_1_8_0' is power-on initialization." projectName="srcnn_hls" solutionName="solution1" date="2025-10-16T20:28:59.800+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile_3_0_8_0' is power-on initialization." projectName="srcnn_hls" solutionName="solution1" date="2025-10-16T20:28:59.732+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile_1_8_8_0' is power-on initialization." projectName="srcnn_hls" solutionName="solution1" date="2025-10-16T20:28:59.660+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile_1_7_8_0' is power-on initialization." projectName="srcnn_hls" solutionName="solution1" date="2025-10-16T20:28:59.590+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile_1_6_8_0' is power-on initialization." projectName="srcnn_hls" solutionName="solution1" date="2025-10-16T20:28:59.528+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile_1_5_8_0' is power-on initialization." projectName="srcnn_hls" solutionName="solution1" date="2025-10-16T20:28:59.467+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile_1_4_8_0' is power-on initialization." projectName="srcnn_hls" solutionName="solution1" date="2025-10-16T20:28:59.404+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile_1_3_8_0' is power-on initialization." projectName="srcnn_hls" solutionName="solution1" date="2025-10-16T20:28:59.340+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile_1_2_8_0' is power-on initialization." projectName="srcnn_hls" solutionName="solution1" date="2025-10-16T20:28:59.276+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile_1_1_8_0' is power-on initialization." projectName="srcnn_hls" solutionName="solution1" date="2025-10-16T20:28:59.218+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile_1_0_8_0' is power-on initialization." projectName="srcnn_hls" solutionName="solution1" date="2025-10-16T20:28:59.162+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile_7_8_7_0' is power-on initialization." projectName="srcnn_hls" solutionName="solution1" date="2025-10-16T20:28:59.100+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile_7_7_7_0' is power-on initialization." projectName="srcnn_hls" solutionName="solution1" date="2025-10-16T20:28:59.047+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile_7_6_7_0' is power-on initialization." projectName="srcnn_hls" solutionName="solution1" date="2025-10-16T20:28:58.974+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile_7_5_7_0' is power-on initialization." projectName="srcnn_hls" solutionName="solution1" date="2025-10-16T20:28:58.908+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile_7_4_7_0' is power-on initialization." projectName="srcnn_hls" solutionName="solution1" date="2025-10-16T20:28:58.843+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile_7_3_7_0' is power-on initialization." projectName="srcnn_hls" solutionName="solution1" date="2025-10-16T20:28:58.788+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile_7_2_7_0' is power-on initialization." projectName="srcnn_hls" solutionName="solution1" date="2025-10-16T20:28:58.717+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile_7_1_7_0' is power-on initialization." projectName="srcnn_hls" solutionName="solution1" date="2025-10-16T20:28:58.662+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile_7_0_7_0' is power-on initialization." projectName="srcnn_hls" solutionName="solution1" date="2025-10-16T20:28:58.601+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile_5_8_7_0' is power-on initialization." projectName="srcnn_hls" solutionName="solution1" date="2025-10-16T20:28:58.547+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile_5_7_7_0' is power-on initialization." projectName="srcnn_hls" solutionName="solution1" date="2025-10-16T20:28:58.484+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile_5_6_7_0' is power-on initialization." projectName="srcnn_hls" solutionName="solution1" date="2025-10-16T20:28:58.430+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile_5_5_7_0' is power-on initialization." projectName="srcnn_hls" solutionName="solution1" date="2025-10-16T20:28:58.359+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile_5_4_7_0' is power-on initialization." projectName="srcnn_hls" solutionName="solution1" date="2025-10-16T20:28:58.294+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile_5_3_7_0' is power-on initialization." projectName="srcnn_hls" solutionName="solution1" date="2025-10-16T20:28:58.226+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile_5_2_7_0' is power-on initialization." projectName="srcnn_hls" solutionName="solution1" date="2025-10-16T20:28:58.154+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile_5_1_7_0' is power-on initialization." projectName="srcnn_hls" solutionName="solution1" date="2025-10-16T20:28:58.105+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile_5_0_7_0' is power-on initialization." projectName="srcnn_hls" solutionName="solution1" date="2025-10-16T20:28:58.028+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile_3_8_7_0' is power-on initialization." projectName="srcnn_hls" solutionName="solution1" date="2025-10-16T20:28:57.983+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile_3_7_7_0' is power-on initialization." projectName="srcnn_hls" solutionName="solution1" date="2025-10-16T20:28:57.916+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile_3_6_7_0' is power-on initialization." projectName="srcnn_hls" solutionName="solution1" date="2025-10-16T20:28:57.848+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile_3_5_7_0' is power-on initialization." projectName="srcnn_hls" solutionName="solution1" date="2025-10-16T20:28:57.765+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile_3_4_7_0' is power-on initialization." projectName="srcnn_hls" solutionName="solution1" date="2025-10-16T20:28:57.722+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile_3_3_7_0' is power-on initialization." projectName="srcnn_hls" solutionName="solution1" date="2025-10-16T20:28:57.657+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile_3_2_7_0' is power-on initialization." projectName="srcnn_hls" solutionName="solution1" date="2025-10-16T20:28:57.592+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile_3_1_7_0' is power-on initialization." projectName="srcnn_hls" solutionName="solution1" date="2025-10-16T20:28:57.501+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile_3_0_7_0' is power-on initialization." projectName="srcnn_hls" solutionName="solution1" date="2025-10-16T20:28:57.416+1100" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'p_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile_1_8_7_0' is power-on initialization." projectName="srcnn_hls" solutionName="solution1" date="2025-10-16T20:28:57.342+1100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'conv1/grp_fu_736_p_opcode' to 0." projectName="srcnn_hls" solutionName="solution1" date="2025-10-18T21:53:58.577+1100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-2049] Adding the rewind optimization to the pipelined process 'debug2' with inout ports inside a dataflow region can result in the creation of loop-carried dependencies and errors. Use caution when adding the rewind optimization to such loops." projectName="srcnn_hls" solutionName="solution1" date="2025-10-18T21:53:50.951+1100" type="Warning"/>
       </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
     </logs>
   </warningLogs>
 </vivadoHLSLog:LogRoot>
