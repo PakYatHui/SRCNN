@@ -1,1 +1,4 @@
-clang-tidy applied 10 of 10 suggested fixes.
+1 warning and 3 errors generated.
+Error while processing C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp.
+clang-tidy applied 31 of 31 suggested fixes.
+Suppressed 1 warnings (1 with check filters).

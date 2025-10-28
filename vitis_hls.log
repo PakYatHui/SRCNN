@@ -2,7 +2,7 @@ ECHO is off.
 ECHO is off.
 NOTE: Using modified tcl85t.dll from https://gitenterprise.xilinx.com/ACT/vitis_hls_tcl
 INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2023.1/bin/unwrapped/win64.o/vitis_hls.exe'
-INFO: [HLS 200-10] For user '16696' on host 'bernie' (Windows NT_amd64 version 6.2) on Sat Oct 18 21:52:54 +1100 2025
+INFO: [HLS 200-10] For user '16696' on host 'bernie' (Windows NT_amd64 version 6.2) on Wed Oct 29 00:01:02 +1100 2025
 INFO: [HLS 200-10] In directory 'C:/Xilinx/golden'
 Sourcing Tcl script 'C:/Xilinx/golden/srcnn_hls/solution1/csynth.tcl'
 INFO: [HLS 200-1510] Running: source C:/Xilinx/golden/srcnn_hls/solution1/csynth.tcl
@@ -48,138 +48,351 @@ INFO: [HLS 200-1510] Running: create_clock -period 10 -name default
 INFO: [HLS 200-1510] Running: source ./srcnn_hls/solution1/directives.tcl
 INFO: [HLS 200-1510] Running: set_directive_top -name srcnn srcnn 
 INFO: [HLS 200-1510] Running: csynth_design 
-INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.177 seconds; current allocated memory: 97.129 MB.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.15 seconds; current allocated memory: 97.238 MB.
 INFO: [HLS 200-10] Analyzing design file 'src/conv1.cpp' ... 
+WARNING: [HLS 207-5576] unknown HLS pragma ignored (src/conv1.cpp:97:9)
 INFO: [HLS 200-10] Analyzing design file 'src/conv2.cpp' ... 
 INFO: [HLS 200-10] Analyzing design file 'src/conv3.cpp' ... 
 INFO: [HLS 200-10] Analyzing design file 'src/srcnn.cpp' ... 
-INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 4.757 seconds; current allocated memory: 98.348 MB.
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 4.026 seconds; current allocated memory: 99.125 MB.
 INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
-INFO: [HLS 214-291] Loop 'debug3' is marked as complete unroll implied by the pipeline pragma (src/conv1.cpp:102:16)
-INFO: [HLS 214-291] Loop 'VITIS_LOOP_103_8' is marked as complete unroll implied by the pipeline pragma (src/conv1.cpp:103:36)
-INFO: [HLS 214-188] Unrolling loop 'debug2' (src/conv1.cpp:96:12) in function 'conv1' partially with a factor of 2 (src/conv1.cpp:20:0)
-INFO: [HLS 214-186] Unrolling loop 'debug3' (src/conv1.cpp:102:16) in function 'conv1' completely with a factor of 9 (src/conv1.cpp:20:0)
-INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_103_8' (src/conv1.cpp:103:36) in function 'conv1' completely with a factor of 9 (src/conv1.cpp:20:0)
-INFO: [HLS 214-178] Inlining function 'clampi(int, int, int)' into 'conv1(float (*) [255][255], float (*) [1][9][9], float*, float (*) [255][255])' (src/conv1.cpp:20:0)
-INFO: [HLS 214-248] Applying array_partition to '_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile': Complete partitioning on dimension 4. (src/conv1.cpp:24:0)
-INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 6.485 seconds; current allocated memory: 99.086 MB.
-INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.006 seconds; current allocated memory: 99.086 MB.
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_142_13' is marked as complete unroll implied by the pipeline pragma (src/conv1.cpp:142:48)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_144_14' is marked as complete unroll implied by the pipeline pragma (src/conv1.cpp:144:56)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_145_15' is marked as complete unroll implied by the pipeline pragma (src/conv1.cpp:145:60)
+WARNING: [HLS 214-398] Updating loop lower bound from 1 to 512 for loop 'VITIS_LOOP_57_1' (src/conv1.cpp:57:22) in function 'load_stage'. (src/conv1.cpp:53:0)
+WARNING: [HLS 214-398] Updating loop upper bound from 8 to 512 for loop 'VITIS_LOOP_57_1' (src/conv1.cpp:57:22) in function 'load_stage'. (src/conv1.cpp:53:0)
+WARNING: [HLS 214-398] Updating loop lower bound from 1 to 512 for loop 'VITIS_LOOP_109_1' (src/conv1.cpp:109:23) in function 'compute_stage'. (src/conv1.cpp:93:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_142_13' (src/conv1.cpp:142:48) in function 'compute_stage' completely with a factor of 1 (src/conv1.cpp:93:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_144_14' (src/conv1.cpp:144:56) in function 'compute_stage' completely with a factor of 9 (src/conv1.cpp:93:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_145_15' (src/conv1.cpp:145:60) in function 'compute_stage' completely with a factor of 9 (src/conv1.cpp:93:0)
+INFO: [HLS 214-178] Inlining function 'clampi(int, int, int)' into 'load_stage(hls::stream<TileDesc, 0>&, int, float (*) [255][255], float (*) [1][9][9], float*, hls::stream<TileDesc, 0>&, hls::stream<float, 0>&, hls::stream<float, 0>&, hls::stream<float, 0>&)' (src/conv1.cpp:53:0)
+INFO: [HLS 214-178] Inlining function 'conv2(float (*) [255][255], float (*) [64][1][1], float*, float (*) [255][255])' into 'srcnn(float (*) [255][255], float (*) [1][9][9], float*, float (*) [64][1][1], float*, float (*) [32][5][5], float*, float (*) [255][255])' (src/srcnn.cpp:11:0)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'q0' with compact=bit mode in 224-bits (src/conv1.cpp:200:24)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'q1' with compact=bit mode in 224-bits (src/conv1.cpp:200:28)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'q2' with compact=bit mode in 224-bits (src/conv1.cpp:200:32)
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=3' for array 'compute_stage(hls::stream<TileDesc, 0>&, hls::stream<float, 0>&, hls::stream<float, 0>&, hls::stream<float, 0>&, hls::stream<TileDesc, 0>&, hls::stream<float, 0>&)::w_tile' due to pipeline pragma (src/conv1.cpp:138:9)
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=4' for array 'compute_stage(hls::stream<TileDesc, 0>&, hls::stream<float, 0>&, hls::stream<float, 0>&, hls::stream<float, 0>&, hls::stream<TileDesc, 0>&, hls::stream<float, 0>&)::w_tile' due to pipeline pragma (src/conv1.cpp:138:9)
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=cyclic factor=9 dim=3' for array 'compute_stage(hls::stream<TileDesc, 0>&, hls::stream<float, 0>&, hls::stream<float, 0>&, hls::stream<float, 0>&, hls::stream<TileDesc, 0>&, hls::stream<float, 0>&)::in_tile' due to pipeline pragma (src/conv1.cpp:138:9)
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=cyclic factor=5 dim=2' for array 'compute_stage(hls::stream<TileDesc, 0>&, hls::stream<float, 0>&, hls::stream<float, 0>&, hls::stream<float, 0>&, hls::stream<TileDesc, 0>&, hls::stream<float, 0>&)::in_tile' due to pipeline pragma (src/conv1.cpp:138:9)
+INFO: [HLS 214-248] Applying array_partition to '_ZZL13compute_stageRN3hls6streamI8TileDescLi0EEERNS0_IfLi0EEES5_S5_S3_S5_E7in_tile': Cyclic partitioning with factor 5 on dimension 2. Cyclic partitioning with factor 9 on dimension 3. (src/conv1.cpp:99:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZZL13compute_stageRN3hls6streamI8TileDescLi0EEERNS0_IfLi0EEES5_S5_S3_S5_E6w_tile': Complete partitioning on dimension 3. Complete partitioning on dimension 4. (src/conv1.cpp:100:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 9.81 seconds; current allocated memory: 99.656 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.008 seconds; current allocated memory: 99.656 MB.
 INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.299 seconds; current allocated memory: 106.340 MB.
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 3 seconds. CPU system time: 0 seconds. Elapsed time: 3.554 seconds; current allocated memory: 117.758 MB.
 INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.212 seconds; current allocated memory: 109.789 MB.
-INFO: [XFORM 203-102] Partitioning array 'in_tile' in dimension 1 automatically.
-INFO: [XFORM 203-102] Partitioning array 'conv1(float (*) [255][255], float (*) [1][9][9], float*, float (*) [255][255])w_tile.8' in dimension 2 automatically.
-INFO: [XFORM 203-102] Partitioning array 'conv1(float (*) [255][255], float (*) [1][9][9], float*, float (*) [255][255])w_tile.7' in dimension 2 automatically.
-INFO: [XFORM 203-102] Partitioning array 'conv1(float (*) [255][255], float (*) [1][9][9], float*, float (*) [255][255])w_tile.6' in dimension 2 automatically.
-INFO: [XFORM 203-102] Partitioning array 'conv1(float (*) [255][255], float (*) [1][9][9], float*, float (*) [255][255])w_tile.5' in dimension 2 automatically.
-INFO: [XFORM 203-102] Partitioning array 'conv1(float (*) [255][255], float (*) [1][9][9], float*, float (*) [255][255])w_tile.4' in dimension 2 automatically.
-INFO: [XFORM 203-102] Partitioning array 'conv1(float (*) [255][255], float (*) [1][9][9], float*, float (*) [255][255])w_tile.3' in dimension 2 automatically.
-INFO: [XFORM 203-102] Partitioning array 'conv1(float (*) [255][255], float (*) [1][9][9], float*, float (*) [255][255])w_tile.2' in dimension 2 automatically.
-INFO: [XFORM 203-102] Partitioning array 'conv1(float (*) [255][255], float (*) [1][9][9], float*, float (*) [255][255])w_tile.1' in dimension 2 automatically.
-INFO: [XFORM 203-102] Partitioning array 'conv1(float (*) [255][255], float (*) [1][9][9], float*, float (*) [255][255])w_tile' in dimension 2 automatically.
-INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.856 seconds; current allocated memory: 136.262 MB.
-INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.649 seconds; current allocated memory: 173.137 MB.
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 2.362 seconds; current allocated memory: 139.812 MB.
+INFO: [XFORM 203-712] Applying dataflow to function 'conv1' (src/conv1.cpp:195:1), detected/extracted 4 process function(s): 
+	 'gen_tiles_stream_all'
+	 'load_stage'
+	 'compute_stage'
+	 'store_stage'.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (src/conv1.cpp:140:41) to (src/conv1.cpp:151:25) in function 'compute_stage'... converting 3 basic blocks.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 19 seconds. CPU system time: 0 seconds. Elapsed time: 19.301 seconds; current allocated memory: 174.566 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 8 seconds. CPU system time: 0 seconds. Elapsed time: 8.257 seconds; current allocated memory: 289.102 MB.
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-10] Synthesizing 'srcnn' ...
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'conv1_Pipeline_debug2' 
+INFO: [HLS 200-42] -- Implementing module 'gen_tiles_stream_all' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-61] Pipelining loop 'debug2'.
-INFO: [HLS 200-1470] Pipelining result : Target II = 9, Final II = 9, Depth = 330, loop 'debug2'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 9 seconds. CPU system time: 0 seconds. Elapsed time: 9.39 seconds; current allocated memory: 186.211 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 3 seconds. CPU system time: 0 seconds. Elapsed time: 3.057 seconds; current allocated memory: 295.973 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 6 seconds. CPU system time: 1 seconds. Elapsed time: 6.786 seconds; current allocated memory: 186.516 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.151 seconds; current allocated memory: 297.164 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'load_stage' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.4 seconds; current allocated memory: 297.840 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.21 seconds; current allocated memory: 297.867 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'compute_stage_Pipeline_VITIS_LOOP_137_12' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_137_12'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 2, Final II = 2, Depth = 332, loop 'VITIS_LOOP_137_12'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 16 seconds. CPU system time: 0 seconds. Elapsed time: 17.19 seconds; current allocated memory: 386.906 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 8 seconds. CPU system time: 1 seconds. Elapsed time: 7.948 seconds; current allocated memory: 386.906 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'compute_stage' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 4 seconds. CPU system time: 0 seconds. Elapsed time: 3.957 seconds; current allocated memory: 386.906 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.477 seconds; current allocated memory: 386.906 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'store_stage_Pipeline_VITIS_LOOP_175_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_175_4'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 2, Final II = 2, Depth = 2, loop 'VITIS_LOOP_175_4'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.609 seconds; current allocated memory: 386.906 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 386.906 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'store_stage' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.203 seconds; current allocated memory: 386.906 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.127 seconds; current allocated memory: 386.906 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'conv1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 4 seconds. CPU system time: 0 seconds. Elapsed time: 4.727 seconds; current allocated memory: 186.516 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.201 seconds; current allocated memory: 386.906 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 1.51 seconds; current allocated memory: 186.516 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'conv2' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 7 seconds. CPU system time: 0 seconds. Elapsed time: 7.891 seconds; current allocated memory: 186.516 MB.
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.314 seconds; current allocated memory: 186.516 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.262 seconds; current allocated memory: 386.906 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'conv3' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 9 seconds. CPU system time: 0 seconds. Elapsed time: 8.988 seconds; current allocated memory: 186.516 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.707 seconds; current allocated memory: 386.906 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.364 seconds; current allocated memory: 186.516 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.241 seconds; current allocated memory: 386.906 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'srcnn' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.582 seconds; current allocated memory: 186.516 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.608 seconds; current allocated memory: 386.906 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.405 seconds; current allocated memory: 186.516 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.512 seconds; current allocated memory: 386.906 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'conv1_Pipeline_debug2' 
+INFO: [HLS 200-10] -- Generating RTL for module 'gen_tiles_stream_all' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-WARNING: [HLS 200-2049] Adding the rewind optimization to the pipelined process 'debug2' with inout ports inside a dataflow region can result in the creation of loop-carried dependencies and errors. Use caution when adding the rewind optimization to such loops.
-INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv1_Pipeline_debug2' pipeline 'debug2' pipeline type 'loop pipeline'
-INFO: [RTGEN 206-104] Estimated max fanout for 'conv1_Pipeline_debug2' is 18688 from HDL expression: ((1'b1 == ap_CS_fsm_pp0_stage3) & (1'b0 == ap_block_pp0_stage3_11001))
-INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 18 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 18 instance(s).
-INFO: [RTGEN 206-100] Finished creating RTL model for 'conv1_Pipeline_debug2'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.493 seconds; current allocated memory: 186.516 MB.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'gen_tiles_stream_all'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.572 seconds; current allocated memory: 386.906 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'load_stage' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'load_stage'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.281 seconds; current allocated memory: 386.906 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'compute_stage_Pipeline_VITIS_LOOP_137_12' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'compute_stage_Pipeline_VITIS_LOOP_137_12' pipeline 'VITIS_LOOP_137_12' pipeline type 'loop pipeline'
+INFO: [HLS 200-1552] Enabling free running pipeline (frp) architecture on pipeline 'VITIS_LOOP_137_12' in module 'compute_stage_Pipeline_VITIS_LOOP_137_12'. Estimated max control fanout for pipeline is 91711.
+INFO: [RTGEN 206-104] Estimated max fanout for 'compute_stage_Pipeline_VITIS_LOOP_137_12' is 160237 from HDL expression: ((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 41 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 41 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_5_3_32_1_1': 81 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_9_4_32_1_1': 405 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'compute_stage_Pipeline_VITIS_LOOP_137_12'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 16 seconds. CPU system time: 0 seconds. Elapsed time: 17.164 seconds; current allocated memory: 777.387 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'compute_stage' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_in_ti_4_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_strebkb' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_in_ti_4_0_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_strecud' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_in_ti_4_1_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stredEe' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_in_ti_4_2_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_streeOg' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_in_ti_4_3_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_strefYi' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_in_ti_3_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_streg8j' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_in_ti_3_5_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_strehbi' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_in_ti_3_6_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_streibs' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_in_ti_3_7_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_strejbC' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_in_ti_3_8_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_strekbM' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_in_ti_3_9_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_strelbW' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_in_ti_3_10_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stremb6' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_in_ti_3_11_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_strencg' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_in_ti_3_12_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_streocq' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_in_ti_3_13_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_strepcA' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_in_ti_2_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_streqcK' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_in_ti_2_15_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_strercU' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_in_ti_2_16_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stresc4' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_in_ti_2_17_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stretde' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_in_ti_2_18_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_streudo' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_in_ti_2_19_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_strevdy' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_in_ti_2_20_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_strewdI' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_in_ti_2_21_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_strexdS' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_in_ti_2_22_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_streyd2' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_in_ti_2_23_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_strezec' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_in_ti_1_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_streAem' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_in_ti_1_25_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_streBew' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_in_ti_1_26_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_streCeG' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_in_ti_1_27_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_streDeQ' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_in_ti_1_28_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_streEe0' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_in_ti_1_29_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_streFfa' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_in_ti_1_30_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_streGfk' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_in_ti_1_31_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_streHfu' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_in_ti_1_32_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_streIfE' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_in_ti_1_33_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_streJfO' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_in_ti_9_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_streKfY' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_in_ti_8_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_streLf8' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_in_ti_7_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_streMgi' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_in_ti_6_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_streNgs' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_in_ti_5_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_streOgC' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_in_ti_4_4_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_strePgM' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_in_ti_3_14_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_streQgW' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_in_ti_2_24_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_streRg6' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_in_ti_1_34_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_streShg' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_p_ZZL13compute_stageRN3hls6streamI8TileDescLi0EEERNS0_IfLi0EEES5_S5_S3_S5_E7in_ti_RAM_2P_BRAM_1R1W' to 'compute_stage_p_ZZL13compute_stageRN3hls6streamI8TileDescLi0EEERNS0_IfLi0EEESThq' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_35_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_streUhA' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_37_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_streVhK' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_38_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_streWhU' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_39_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_streXh4' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_40_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_streYie' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_41_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_streZio' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_42_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stre0iy' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_43_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stre1iI' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_44_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stre2iS' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_45_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stre3i2' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_46_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stre4jc' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_48_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stre5jm' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_49_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stre6jw' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_50_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stre7jG' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_51_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stre8jQ' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_52_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stre9j0' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_53_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_strebak' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_54_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_strebbk' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_55_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_strebck' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_56_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_strebdk' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_57_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_strebek' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_59_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_strebfk' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_60_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_strebgk' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_61_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_strebhl' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_62_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_strebil' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_63_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_strebjl' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_64_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_strebkl' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_65_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_strebll' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_66_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_strebml' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_67_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_strebnm' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_68_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_strebom' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_70_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_strebpm' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_71_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_strebqm' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_72_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_strebrm' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_73_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_strebsm' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_74_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_strebtn' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_75_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_strebun' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_76_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_strebvn' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_77_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_strebwn' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_78_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_strebxn' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_79_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_strebyn' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_81_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_strebzo' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_82_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_strebAo' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_83_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_strebBo' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_84_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_strebCo' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_85_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_strebDo' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_86_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_strebEo' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_87_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_strebFp' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_88_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_strebGp' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_89_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_strebHp' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_90_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_strebIp' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_92_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_strebJp' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_93_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_strebKp' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_94_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_strebLp' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_95_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_strebMq' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_96_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_strebNq' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_97_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_strebOq' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_98_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_strebPq' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_99_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_strebQq' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_100_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_strebRq' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_101_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_strebSr' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_103_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_strebTr' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_104_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_strebUr' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_105_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_strebVr' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_106_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_strebWr' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_107_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_strebXr' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_108_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_strebYs' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_109_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_strebZs' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_110_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_streb0s' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_111_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_streb1s' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_112_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_streb2s' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_streb3s' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_36_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_streb4t' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_47_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_streb5t' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_58_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_streb6t' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_69_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_streb7t' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_80_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_streb8t' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_91_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_streb9t' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_102_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_strecau' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_stream_float_0_hls_stream_float_0_hls_stream_TileDesc_0_hls_stream_float_0_w_til_s_113_RAM_2P_BRAM_1R1W' to 'compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_strecbu' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'compute_stage_p_ZZL13compute_stageRN3hls6streamI8TileDescLi0EEERNS0_IfLi0EEES5_S5_S3_S5_E6w_til_RAM_2P_BRAM_1R1W' to 'compute_stage_p_ZZL13compute_stageRN3hls6streamI8TileDescLi0EEERNS0_IfLi0EEESccu' due to the length limit 80
+INFO: [RTGEN 206-100] Generating core module 'mul_6ns_8ns_13_1_1': 15 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'compute_stage'.
+INFO: [RTMG 210-278] Implementing memory 'srcnn_compute_stage_bias_RAM_1P_BRAM_1R1W' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'srcnn_compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_strebkb' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'srcnn_compute_stage_compute_stage_hls_stream_TileDesc_0_hls_stream_float_0_hls_streUhA' using block RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 7 seconds. CPU system time: 3 seconds. Elapsed time: 11.567 seconds; current allocated memory: 777.387 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'store_stage_Pipeline_VITIS_LOOP_175_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'store_stage_Pipeline_VITIS_LOOP_175_4'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.968 seconds; current allocated memory: 777.387 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'store_stage' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'store_stage'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.23 seconds; current allocated memory: 777.387 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'conv1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SYN 201-210] Renamed object name 'conv1_conv1_mulmulmulmulfloat_255_255_float_1_9_9_float_float_255_255_w_RAM_AUTO_1R1W' to 'conv1_conv1_mulmulmulmulfloat_255_255_float_1_9_9_float_float_255_255_w_RAM_Abkb' due to the length limit 80
-WARNING: [RTGEN 206-101] Setting dangling out port 'conv1/grp_fu_736_p_opcode' to 0.
-INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'conv1'.
-INFO: [RTMG 210-278] Implementing memory 'srcnn_conv1_out_tile_RAM_AUTO_1R1W' using auto RAMs.
-INFO: [RTMG 210-278] Implementing memory 'srcnn_conv1_in_tile_0_RAM_AUTO_1R1W' using auto RAMs.
-INFO: [RTMG 210-278] Implementing memory 'srcnn_conv1_conv1_float_255_255_float_1_9_9_float_float_255_255_w_8_RAM_AUTO_1R1W' using auto RAMs.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 6 seconds. CPU system time: 1 seconds. Elapsed time: 6.835 seconds; current allocated memory: 186.516 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'conv2' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 2.94 seconds; current allocated memory: 186.516 MB.
+INFO: [RTMG 210-285] Implementing FIFO 'q0_U(srcnn_fifo_w224_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'q1_U(srcnn_fifo_w224_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 's_bias_U(srcnn_fifo_w32_d4_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 's_in_U(srcnn_fifo_w32_d64_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 's_w_U(srcnn_fifo_w32_d64_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'q2_U(srcnn_fifo_w224_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 's_out_U(srcnn_fifo_w32_d256_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_load_stage_U0_U(srcnn_start_for_load_stage_U0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_compute_stage_U0_U(srcnn_start_for_compute_stage_U0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_store_stage_U0_U(srcnn_start_for_store_stage_U0)' using Shift Registers.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.567 seconds; current allocated memory: 777.387 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'conv3' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'conv3'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.445 seconds; current allocated memory: 186.516 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.843 seconds; current allocated memory: 777.387 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'srcnn' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -198,12 +411,12 @@ INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 1 
 INFO: [RTGEN 206-100] Finished creating RTL model for 'srcnn'.
 INFO: [RTMG 210-278] Implementing memory 'srcnn_feat1_RAM_AUTO_1R1W' using auto RAMs.
 INFO: [RTMG 210-278] Implementing memory 'srcnn_feat2_RAM_AUTO_1R1W' using auto RAMs.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 3 seconds. CPU system time: 0 seconds. Elapsed time: 3.409 seconds; current allocated memory: 186.516 MB.
-INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 3 seconds. CPU system time: 1 seconds. Elapsed time: 4.127 seconds; current allocated memory: 186.516 MB.
-INFO: [HLS 200-111] Finished Updating report files: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 2.379 seconds; current allocated memory: 186.516 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 2.342 seconds; current allocated memory: 777.387 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 2.753 seconds; current allocated memory: 777.387 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 2 seconds. CPU system time: 1 seconds. Elapsed time: 3.523 seconds; current allocated memory: 777.387 MB.
 INFO: [VHDL 208-304] Generating VHDL RTL for srcnn.
 INFO: [VLOG 209-307] Generating Verilog RTL for srcnn.
 INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
 INFO: [HLS 200-789] **** Estimated Fmax: 142.53 MHz
-INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 58 seconds. CPU system time: 3 seconds. Elapsed time: 76.368 seconds; current allocated memory: 89.445 MB.
-INFO: [HLS 200-112] Total CPU user time: 59 seconds. Total CPU system time: 4 seconds. Total elapsed time: 78.269 seconds; peak allocated memory: 186.516 MB.
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 101 seconds. CPU system time: 5 seconds. Elapsed time: 126.809 seconds; current allocated memory: 680.195 MB.
+INFO: [HLS 200-112] Total CPU user time: 102 seconds. Total CPU system time: 6 seconds. Total elapsed time: 128.864 seconds; peak allocated memory: 777.387 MB.

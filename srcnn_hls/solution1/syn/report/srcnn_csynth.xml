@@ -22,14 +22,14 @@
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>1731744184</Best-caseLatency>
-<Average-caseLatency>1836601784</Average-caseLatency>
-<Worst-caseLatency>1940935096</Worst-caseLatency>
-<Best-caseRealTimeLatency>17.317 sec</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>18.366 sec</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>19.409 sec</Worst-caseRealTimeLatency>
-<Interval-min>1731744185</Interval-min>
-<Interval-max>1940935097</Interval-max>
+<Best-caseLatency>undef</Best-caseLatency>
+<Average-caseLatency>undef</Average-caseLatency>
+<Worst-caseLatency>undef</Worst-caseLatency>
+<Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
+<Interval-min>undef</Interval-min>
+<Interval-max>undef</Interval-max>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
 <VITIS_LOOP_18_1>
@@ -59,6 +59,42 @@
 </VITIS_LOOP_20_3>
 </VITIS_LOOP_19_2>
 </VITIS_LOOP_18_1>
+<debug1>
+<Slack>7.30</Slack>
+<TripCount>32</TripCount>
+<Latency>1202718816</Latency>
+<AbsoluteTimeLatency>12027188160</AbsoluteTimeLatency>
+<IterationLatency>37584963</IterationLatency>
+<InstanceList>
+</InstanceList>
+<debug2>
+<Slack>7.30</Slack>
+<TripCount>255</TripCount>
+<Latency>37584960</Latency>
+<AbsoluteTimeLatency>375849600</AbsoluteTimeLatency>
+<IterationLatency>147392</IterationLatency>
+<InstanceList>
+</InstanceList>
+<debug3>
+<Slack>7.30</Slack>
+<TripCount>255</TripCount>
+<Latency>147390</Latency>
+<AbsoluteTimeLatency>1473900</AbsoluteTimeLatency>
+<IterationLatency>578</IterationLatency>
+<InstanceList>
+</InstanceList>
+<debug4>
+<Slack>7.30</Slack>
+<TripCount>64</TripCount>
+<Latency>576</Latency>
+<AbsoluteTimeLatency>5760</AbsoluteTimeLatency>
+<IterationLatency>9</IterationLatency>
+<InstanceList>
+</InstanceList>
+</debug4>
+</debug3>
+</debug2>
+</debug1>
 <VITIS_LOOP_30_4>
 <Slack>7.30</Slack>
 <TripCount>32</TripCount>
@@ -91,10 +127,10 @@
 
 <AreaEstimates>
 <Resources>
-<BRAM_18K>11102</BRAM_18K>
-<DSP>90</DSP>
-<FF>30917</FF>
-<LUT>21986</LUT>
+<BRAM_18K>11242</BRAM_18K>
+<DSP>210</DSP>
+<FF>38696</FF>
+<LUT>70382</LUT>
 <URAM>0</URAM>
 </Resources>
 <AvailableResources>

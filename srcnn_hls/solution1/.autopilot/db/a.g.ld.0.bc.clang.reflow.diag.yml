@@ -1,386 +1,553 @@
 --- !Passed
 Pass:            reflow-infer-unroll
 Name:            ImplicitUnroll
-DebugLoc:        { File: src/conv1.cpp, Line: 102, Column: 16 }
-Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
+DebugLoc:        { File: src/conv1.cpp, Line: 142, Column: 48 }
+Function:        _ZL13compute_stageRN3hls6streamI8TileDescLi0EEERNS0_IfLi0EEES5_S5_S3_S5_
 Args:            
   - String:          'Loop '''
-  - LoopName:        debug3
+  - LoopName:        VITIS_LOOP_142_13
   - String:          ''' is marked as complete unroll implied by the pipeline pragma'
 ...
 --- !Passed
 Pass:            reflow-infer-unroll
 Name:            ImplicitUnroll
-DebugLoc:        { File: src/conv1.cpp, Line: 103, Column: 36 }
-Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
+DebugLoc:        { File: src/conv1.cpp, Line: 144, Column: 56 }
+Function:        _ZL13compute_stageRN3hls6streamI8TileDescLi0EEERNS0_IfLi0EEES5_S5_S3_S5_
 Args:            
   - String:          'Loop '''
-  - LoopName:        VITIS_LOOP_103_8
+  - LoopName:        VITIS_LOOP_144_14
   - String:          ''' is marked as complete unroll implied by the pipeline pragma'
 ...
 --- !Passed
-Pass:            reflow-pragma-loop-unroll
-Name:            PragmaPartiallyUnroll
-DebugLoc:        { File: src/conv1.cpp, Line: 20, Column: 0 }
-Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: src/conv1.cpp, Line: 145, Column: 60 }
+Function:        _ZL13compute_stageRN3hls6streamI8TileDescLi0EEERNS0_IfLi0EEES5_S5_S3_S5_
 Args:            
-  - String:          'Unrolling loop '''
-  - LoopName:        debug2
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_145_15
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Missed
+Pass:            reflow-infer-loop-tripcount
+Name:            UpdateLoopBound
+DebugLoc:        { File: src/conv1.cpp, Line: 53, Column: 0 }
+Function:        _ZL10load_stageRN3hls6streamI8TileDescLi0EEEiPA255_A255_fPA1_A9_A9_fPfS3_RNS0_IfLi0EEESD_SD_
+Args:            
+  - String:          'Updating loop '
+  - String:          lower
+  - String:          ' bound from '
+  - OldBound:        '1'
+  - String:          ' to '
+  - NewBound:        '512'
+  - String:          ' for loop '''
+  - LoopName:        VITIS_LOOP_57_1
   - String:          ''' ('
-  - LoopLoc:         'src/conv1.cpp:96:12'
-  - String:          ') '
-  - String:          'in function '''
-  - String:          conv1
-  - String:          ''' partially '
-  - String:          ''
-  - String:          'with a factor of '
-  - Factor:          '2'
+  - LoopLoc:         'src/conv1.cpp:57:22'
+  - String:          ')'
+  - String:          ' in function '''
+  - String:          load_stage
+  - String:          '''.'
+...
+--- !Missed
+Pass:            reflow-infer-loop-tripcount
+Name:            UpdateLoopBound
+DebugLoc:        { File: src/conv1.cpp, Line: 53, Column: 0 }
+Function:        _ZL10load_stageRN3hls6streamI8TileDescLi0EEEiPA255_A255_fPA1_A9_A9_fPfS3_RNS0_IfLi0EEESD_SD_
+Args:            
+  - String:          'Updating loop '
+  - String:          upper
+  - String:          ' bound from '
+  - OldBound:        '8'
+  - String:          ' to '
+  - NewBound:        '512'
+  - String:          ' for loop '''
+  - LoopName:        VITIS_LOOP_57_1
+  - String:          ''' ('
+  - LoopLoc:         'src/conv1.cpp:57:22'
+  - String:          ')'
+  - String:          ' in function '''
+  - String:          load_stage
+  - String:          '''.'
+...
+--- !Missed
+Pass:            reflow-infer-loop-tripcount
+Name:            UpdateLoopBound
+DebugLoc:        { File: src/conv1.cpp, Line: 93, Column: 0 }
+Function:        _ZL13compute_stageRN3hls6streamI8TileDescLi0EEERNS0_IfLi0EEES5_S5_S3_S5_
+Args:            
+  - String:          'Updating loop '
+  - String:          lower
+  - String:          ' bound from '
+  - OldBound:        '1'
+  - String:          ' to '
+  - NewBound:        '512'
+  - String:          ' for loop '''
+  - LoopName:        VITIS_LOOP_109_1
+  - String:          ''' ('
+  - LoopLoc:         'src/conv1.cpp:109:23'
+  - String:          ')'
+  - String:          ' in function '''
+  - String:          compute_stage
+  - String:          '''.'
 ...
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
-DebugLoc:        { File: src/conv1.cpp, Line: 20, Column: 0 }
-Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
+DebugLoc:        { File: src/conv1.cpp, Line: 93, Column: 0 }
+Function:        _ZL13compute_stageRN3hls6streamI8TileDescLi0EEERNS0_IfLi0EEES5_S5_S3_S5_
 Args:            
   - String:          'Unrolling loop '''
-  - LoopName:        debug3
+  - LoopName:        VITIS_LOOP_142_13
   - String:          ''' ('
-  - LoopLoc:         'src/conv1.cpp:102:16'
+  - LoopLoc:         'src/conv1.cpp:142:48'
   - String:          ') '
   - String:          'in function '''
-  - String:          conv1
+  - String:          compute_stage
+  - String:          ''' completely with a factor of '
+  - Factor:          '1'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: src/conv1.cpp, Line: 93, Column: 0 }
+Function:        _ZL13compute_stageRN3hls6streamI8TileDescLi0EEERNS0_IfLi0EEES5_S5_S3_S5_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_144_14
+  - String:          ''' ('
+  - LoopLoc:         'src/conv1.cpp:144:56'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          compute_stage
   - String:          ''' completely with a factor of '
   - Factor:          '9'
 ...
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
-DebugLoc:        { File: src/conv1.cpp, Line: 20, Column: 0 }
-Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
+DebugLoc:        { File: src/conv1.cpp, Line: 93, Column: 0 }
+Function:        _ZL13compute_stageRN3hls6streamI8TileDescLi0EEERNS0_IfLi0EEES5_S5_S3_S5_
 Args:            
   - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_103_8
+  - LoopName:        VITIS_LOOP_145_15
   - String:          ''' ('
-  - LoopLoc:         'src/conv1.cpp:103:36'
+  - LoopLoc:         'src/conv1.cpp:145:60'
   - String:          ') '
   - String:          'in function '''
-  - String:          conv1
+  - String:          compute_stage
   - String:          ''' completely with a factor of '
   - Factor:          '9'
 ...
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
-DebugLoc:        { File: src/conv1.cpp, Line: 20, Column: 0 }
-Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
+DebugLoc:        { File: src/conv1.cpp, Line: 93, Column: 0 }
+Function:        _ZL13compute_stageRN3hls6streamI8TileDescLi0EEERNS0_IfLi0EEES5_S5_S3_S5_
 Args:            
   - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_103_8
+  - LoopName:        VITIS_LOOP_145_15
   - String:          ''' ('
-  - LoopLoc:         'src/conv1.cpp:103:36'
+  - LoopLoc:         'src/conv1.cpp:145:60'
   - String:          ') '
   - String:          'in function '''
-  - String:          conv1
+  - String:          compute_stage
   - String:          ''' completely with a factor of '
   - Factor:          '9'
 ...
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
-DebugLoc:        { File: src/conv1.cpp, Line: 20, Column: 0 }
-Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
+DebugLoc:        { File: src/conv1.cpp, Line: 93, Column: 0 }
+Function:        _ZL13compute_stageRN3hls6streamI8TileDescLi0EEERNS0_IfLi0EEES5_S5_S3_S5_
 Args:            
   - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_103_8
+  - LoopName:        VITIS_LOOP_145_15
   - String:          ''' ('
-  - LoopLoc:         'src/conv1.cpp:103:36'
+  - LoopLoc:         'src/conv1.cpp:145:60'
   - String:          ') '
   - String:          'in function '''
-  - String:          conv1
+  - String:          compute_stage
   - String:          ''' completely with a factor of '
   - Factor:          '9'
 ...
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
-DebugLoc:        { File: src/conv1.cpp, Line: 20, Column: 0 }
-Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
+DebugLoc:        { File: src/conv1.cpp, Line: 93, Column: 0 }
+Function:        _ZL13compute_stageRN3hls6streamI8TileDescLi0EEERNS0_IfLi0EEES5_S5_S3_S5_
 Args:            
   - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_103_8
+  - LoopName:        VITIS_LOOP_145_15
   - String:          ''' ('
-  - LoopLoc:         'src/conv1.cpp:103:36'
+  - LoopLoc:         'src/conv1.cpp:145:60'
   - String:          ') '
   - String:          'in function '''
-  - String:          conv1
+  - String:          compute_stage
   - String:          ''' completely with a factor of '
   - Factor:          '9'
 ...
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
-DebugLoc:        { File: src/conv1.cpp, Line: 20, Column: 0 }
-Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
+DebugLoc:        { File: src/conv1.cpp, Line: 93, Column: 0 }
+Function:        _ZL13compute_stageRN3hls6streamI8TileDescLi0EEERNS0_IfLi0EEES5_S5_S3_S5_
 Args:            
   - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_103_8
+  - LoopName:        VITIS_LOOP_145_15
   - String:          ''' ('
-  - LoopLoc:         'src/conv1.cpp:103:36'
+  - LoopLoc:         'src/conv1.cpp:145:60'
   - String:          ') '
   - String:          'in function '''
-  - String:          conv1
+  - String:          compute_stage
   - String:          ''' completely with a factor of '
   - Factor:          '9'
 ...
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
-DebugLoc:        { File: src/conv1.cpp, Line: 20, Column: 0 }
-Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
+DebugLoc:        { File: src/conv1.cpp, Line: 93, Column: 0 }
+Function:        _ZL13compute_stageRN3hls6streamI8TileDescLi0EEERNS0_IfLi0EEES5_S5_S3_S5_
 Args:            
   - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_103_8
+  - LoopName:        VITIS_LOOP_145_15
   - String:          ''' ('
-  - LoopLoc:         'src/conv1.cpp:103:36'
+  - LoopLoc:         'src/conv1.cpp:145:60'
   - String:          ') '
   - String:          'in function '''
-  - String:          conv1
+  - String:          compute_stage
   - String:          ''' completely with a factor of '
   - Factor:          '9'
 ...
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
-DebugLoc:        { File: src/conv1.cpp, Line: 20, Column: 0 }
-Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
+DebugLoc:        { File: src/conv1.cpp, Line: 93, Column: 0 }
+Function:        _ZL13compute_stageRN3hls6streamI8TileDescLi0EEERNS0_IfLi0EEES5_S5_S3_S5_
 Args:            
   - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_103_8
+  - LoopName:        VITIS_LOOP_145_15
   - String:          ''' ('
-  - LoopLoc:         'src/conv1.cpp:103:36'
+  - LoopLoc:         'src/conv1.cpp:145:60'
   - String:          ') '
   - String:          'in function '''
-  - String:          conv1
+  - String:          compute_stage
   - String:          ''' completely with a factor of '
   - Factor:          '9'
 ...
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
-DebugLoc:        { File: src/conv1.cpp, Line: 20, Column: 0 }
-Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
+DebugLoc:        { File: src/conv1.cpp, Line: 93, Column: 0 }
+Function:        _ZL13compute_stageRN3hls6streamI8TileDescLi0EEERNS0_IfLi0EEES5_S5_S3_S5_
 Args:            
   - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_103_8
+  - LoopName:        VITIS_LOOP_145_15
   - String:          ''' ('
-  - LoopLoc:         'src/conv1.cpp:103:36'
+  - LoopLoc:         'src/conv1.cpp:145:60'
   - String:          ') '
   - String:          'in function '''
-  - String:          conv1
+  - String:          compute_stage
   - String:          ''' completely with a factor of '
   - Factor:          '9'
 ...
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
-DebugLoc:        { File: src/conv1.cpp, Line: 20, Column: 0 }
-Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
+DebugLoc:        { File: src/conv1.cpp, Line: 93, Column: 0 }
+Function:        _ZL13compute_stageRN3hls6streamI8TileDescLi0EEERNS0_IfLi0EEES5_S5_S3_S5_
 Args:            
   - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_103_8
+  - LoopName:        VITIS_LOOP_145_15
   - String:          ''' ('
-  - LoopLoc:         'src/conv1.cpp:103:36'
+  - LoopLoc:         'src/conv1.cpp:145:60'
   - String:          ') '
   - String:          'in function '''
-  - String:          conv1
-  - String:          ''' completely with a factor of '
-  - Factor:          '9'
-...
---- !Passed
-Pass:            reflow-pragma-loop-unroll
-Name:            PragmaFullyUnroll
-DebugLoc:        { File: src/conv1.cpp, Line: 20, Column: 0 }
-Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
-Args:            
-  - String:          'Unrolling loop '''
-  - LoopName:        debug3
-  - String:          ''' ('
-  - LoopLoc:         'src/conv1.cpp:102:16'
-  - String:          ') '
-  - String:          'in function '''
-  - String:          conv1
-  - String:          ''' completely with a factor of '
-  - Factor:          '9'
-...
---- !Passed
-Pass:            reflow-pragma-loop-unroll
-Name:            PragmaFullyUnroll
-DebugLoc:        { File: src/conv1.cpp, Line: 20, Column: 0 }
-Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
-Args:            
-  - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_103_8
-  - String:          ''' ('
-  - LoopLoc:         'src/conv1.cpp:103:36'
-  - String:          ') '
-  - String:          'in function '''
-  - String:          conv1
-  - String:          ''' completely with a factor of '
-  - Factor:          '9'
-...
---- !Passed
-Pass:            reflow-pragma-loop-unroll
-Name:            PragmaFullyUnroll
-DebugLoc:        { File: src/conv1.cpp, Line: 20, Column: 0 }
-Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
-Args:            
-  - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_103_8
-  - String:          ''' ('
-  - LoopLoc:         'src/conv1.cpp:103:36'
-  - String:          ') '
-  - String:          'in function '''
-  - String:          conv1
-  - String:          ''' completely with a factor of '
-  - Factor:          '9'
-...
---- !Passed
-Pass:            reflow-pragma-loop-unroll
-Name:            PragmaFullyUnroll
-DebugLoc:        { File: src/conv1.cpp, Line: 20, Column: 0 }
-Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
-Args:            
-  - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_103_8
-  - String:          ''' ('
-  - LoopLoc:         'src/conv1.cpp:103:36'
-  - String:          ') '
-  - String:          'in function '''
-  - String:          conv1
-  - String:          ''' completely with a factor of '
-  - Factor:          '9'
-...
---- !Passed
-Pass:            reflow-pragma-loop-unroll
-Name:            PragmaFullyUnroll
-DebugLoc:        { File: src/conv1.cpp, Line: 20, Column: 0 }
-Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
-Args:            
-  - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_103_8
-  - String:          ''' ('
-  - LoopLoc:         'src/conv1.cpp:103:36'
-  - String:          ') '
-  - String:          'in function '''
-  - String:          conv1
-  - String:          ''' completely with a factor of '
-  - Factor:          '9'
-...
---- !Passed
-Pass:            reflow-pragma-loop-unroll
-Name:            PragmaFullyUnroll
-DebugLoc:        { File: src/conv1.cpp, Line: 20, Column: 0 }
-Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
-Args:            
-  - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_103_8
-  - String:          ''' ('
-  - LoopLoc:         'src/conv1.cpp:103:36'
-  - String:          ') '
-  - String:          'in function '''
-  - String:          conv1
-  - String:          ''' completely with a factor of '
-  - Factor:          '9'
-...
---- !Passed
-Pass:            reflow-pragma-loop-unroll
-Name:            PragmaFullyUnroll
-DebugLoc:        { File: src/conv1.cpp, Line: 20, Column: 0 }
-Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
-Args:            
-  - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_103_8
-  - String:          ''' ('
-  - LoopLoc:         'src/conv1.cpp:103:36'
-  - String:          ') '
-  - String:          'in function '''
-  - String:          conv1
-  - String:          ''' completely with a factor of '
-  - Factor:          '9'
-...
---- !Passed
-Pass:            reflow-pragma-loop-unroll
-Name:            PragmaFullyUnroll
-DebugLoc:        { File: src/conv1.cpp, Line: 20, Column: 0 }
-Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
-Args:            
-  - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_103_8
-  - String:          ''' ('
-  - LoopLoc:         'src/conv1.cpp:103:36'
-  - String:          ') '
-  - String:          'in function '''
-  - String:          conv1
-  - String:          ''' completely with a factor of '
-  - Factor:          '9'
-...
---- !Passed
-Pass:            reflow-pragma-loop-unroll
-Name:            PragmaFullyUnroll
-DebugLoc:        { File: src/conv1.cpp, Line: 20, Column: 0 }
-Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
-Args:            
-  - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_103_8
-  - String:          ''' ('
-  - LoopLoc:         'src/conv1.cpp:103:36'
-  - String:          ') '
-  - String:          'in function '''
-  - String:          conv1
-  - String:          ''' completely with a factor of '
-  - Factor:          '9'
-...
---- !Passed
-Pass:            reflow-pragma-loop-unroll
-Name:            PragmaFullyUnroll
-DebugLoc:        { File: src/conv1.cpp, Line: 20, Column: 0 }
-Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
-Args:            
-  - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_103_8
-  - String:          ''' ('
-  - LoopLoc:         'src/conv1.cpp:103:36'
-  - String:          ') '
-  - String:          'in function '''
-  - String:          conv1
+  - String:          compute_stage
   - String:          ''' completely with a factor of '
   - Factor:          '9'
 ...
 --- !Passed
 Pass:            reflow-inliner
 Name:            AutoInline
-DebugLoc:        { File: src/conv1.cpp, Line: 20, Column: 0 }
-Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
+DebugLoc:        { File: src/conv1.cpp, Line: 53, Column: 0 }
+Function:        _ZL10load_stageRN3hls6streamI8TileDescLi0EEEiPA255_A255_fPA1_A9_A9_fPfS3_RNS0_IfLi0EEESD_SD_
 Args:            
   - String:          'Inlining function '''
   - Callee:          'clampi(int, int, int)'
-    DebugLoc:        { File: src/conv1.cpp, Line: 9, Column: 0 }
+    DebugLoc:        { File: src/conv1.cpp, Line: 24, Column: 0 }
   - String:          ''' into '''
-  - Caller:          'conv1(float (*) [255][255], float (*) [1][9][9], float*, float (*) [255][255])'
-    DebugLoc:        { File: src/conv1.cpp, Line: 20, Column: 0 }
+  - Caller:          'load_stage(hls::stream<TileDesc, 0>&, int, float (*) [255][255], float (*) [1][9][9], float*, hls::stream<TileDesc, 0>&, hls::stream<float, 0>&, hls::stream<float, 0>&, hls::stream<float, 0>&)'
+    DebugLoc:        { File: src/conv1.cpp, Line: 53, Column: 0 }
   - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: src/srcnn.cpp, Line: 11, Column: 0 }
+Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'conv2(float (*) [255][255], float (*) [64][1][1], float*, float (*) [255][255])'
+    DebugLoc:        { File: src/conv2.cpp, Line: 8, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'srcnn(float (*) [255][255], float (*) [1][9][9], float*, float (*) [64][1][1], float*, float (*) [32][5][5], float*, float (*) [255][255])'
+    DebugLoc:        { File: src/srcnn.cpp, Line: 11, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: src/conv1.cpp, Line: 200, Column: 24 }
+Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        'fifo (hls::stream)'
+  - String:          ' variable '''
+  - Name:            q0
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '224'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: src/conv1.cpp, Line: 200, Column: 28 }
+Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        'fifo (hls::stream)'
+  - String:          ' variable '''
+  - Name:            q1
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '224'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: src/conv1.cpp, Line: 200, Column: 32 }
+Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        'fifo (hls::stream)'
+  - String:          ' variable '''
+  - Name:            q2
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '224'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=3 type=complete  variable=_ZZL13compute_stageRN3hls6streamI8TileDescLi0EEERNS0_IfLi0EEES5_S5_S3_S5_E6w_tile'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  srcnn
+  - String:          ' '
+  - varLoc:          'src/conv1.cpp:100:0'
+  - String:          ' '
+  - PragmaSrcLoc:    'src/conv1.cpp:138:9'
+    DebugLoc:        { File: src/conv1.cpp, Line: 138, Column: 9 }
+  - VarName:         'compute_stage(hls::stream<TileDesc, 0>&, hls::stream<float, 0>&, hls::stream<float, 0>&, hls::stream<float, 0>&, hls::stream<TileDesc, 0>&, hls::stream<float, 0>&)::w_tile'
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: src/conv1.cpp, Line: 138, Column: 9 }
+Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '3'
+  - String:          ''' for array '''
+  - Name:            'compute_stage(hls::stream<TileDesc, 0>&, hls::stream<float, 0>&, hls::stream<float, 0>&, hls::stream<float, 0>&, hls::stream<TileDesc, 0>&, hls::stream<float, 0>&)::w_tile'
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=4 type=complete  variable=_ZZL13compute_stageRN3hls6streamI8TileDescLi0EEERNS0_IfLi0EEES5_S5_S3_S5_E6w_tile'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  srcnn
+  - String:          ' '
+  - varLoc:          'src/conv1.cpp:100:0'
+  - String:          ' '
+  - PragmaSrcLoc:    'src/conv1.cpp:138:9'
+    DebugLoc:        { File: src/conv1.cpp, Line: 138, Column: 9 }
+  - VarName:         'compute_stage(hls::stream<TileDesc, 0>&, hls::stream<float, 0>&, hls::stream<float, 0>&, hls::stream<float, 0>&, hls::stream<TileDesc, 0>&, hls::stream<float, 0>&)::w_tile'
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: src/conv1.cpp, Line: 138, Column: 9 }
+Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            complete
+  - String:          ' dim='
+  - Dim:             '4'
+  - String:          ''' for array '''
+  - Name:            'compute_stage(hls::stream<TileDesc, 0>&, hls::stream<float, 0>&, hls::stream<float, 0>&, hls::stream<float, 0>&, hls::stream<TileDesc, 0>&, hls::stream<float, 0>&)::w_tile'
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=3 type=cyclic factor=9 variable=_ZZL13compute_stageRN3hls6streamI8TileDescLi0EEERNS0_IfLi0EEES5_S5_S3_S5_E7in_tile'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  srcnn
+  - String:          ' '
+  - varLoc:          'src/conv1.cpp:99:0'
+  - String:          ' '
+  - PragmaSrcLoc:    'src/conv1.cpp:138:9'
+    DebugLoc:        { File: src/conv1.cpp, Line: 138, Column: 9 }
+  - VarName:         'compute_stage(hls::stream<TileDesc, 0>&, hls::stream<float, 0>&, hls::stream<float, 0>&, hls::stream<float, 0>&, hls::stream<TileDesc, 0>&, hls::stream<float, 0>&)::in_tile'
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: src/conv1.cpp, Line: 138, Column: 9 }
+Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            cyclic
+  - String:          ' factor='
+  - Factor:          '9'
+  - String:          ' dim='
+  - Dim:             '3'
+  - String:          ''' for array '''
+  - Name:            'compute_stage(hls::stream<TileDesc, 0>&, hls::stream<float, 0>&, hls::stream<float, 0>&, hls::stream<float, 0>&, hls::stream<TileDesc, 0>&, hls::stream<float, 0>&)::in_tile'
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=2 type=cyclic factor=5 variable=_ZZL13compute_stageRN3hls6streamI8TileDescLi0EEERNS0_IfLi0EEES5_S5_S3_S5_E7in_tile'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  srcnn
+  - String:          ' '
+  - varLoc:          'src/conv1.cpp:99:0'
+  - String:          ' '
+  - PragmaSrcLoc:    'src/conv1.cpp:138:9'
+    DebugLoc:        { File: src/conv1.cpp, Line: 138, Column: 9 }
+  - VarName:         'compute_stage(hls::stream<TileDesc, 0>&, hls::stream<float, 0>&, hls::stream<float, 0>&, hls::stream<float, 0>&, hls::stream<TileDesc, 0>&, hls::stream<float, 0>&)::in_tile'
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: src/conv1.cpp, Line: 138, Column: 9 }
+Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            cyclic
+  - String:          ' factor='
+  - Factor:          '5'
+  - String:          ' dim='
+  - Dim:             '2'
+  - String:          ''' for array '''
+  - Name:            'compute_stage(hls::stream<TileDesc, 0>&, hls::stream<float, 0>&, hls::stream<float, 0>&, hls::stream<float, 0>&, hls::stream<TileDesc, 0>&, hls::stream<float, 0>&)::in_tile'
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
 ...
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: src/conv1.cpp, Line: 24, Column: 0 }
-Function:        _Z5conv1PA255_A255_fPA1_A9_A9_fPfS1_
+DebugLoc:        { File: src/conv1.cpp, Line: 99, Column: 0 }
+Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_
 Args:            
   - String:          'Applying '
   - String:          array_partition
   - String:          ' to '''
-  - UOName:          _ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile
+  - UOName:          _ZZL13compute_stageRN3hls6streamI8TileDescLi0EEERNS0_IfLi0EEES5_S5_S3_S5_E7in_tile
   - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '5'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '9'
+  - String:          ' on dimension '
+  - Dim:             '3'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/conv1.cpp, Line: 100, Column: 0 }
+Function:        _Z5srcnnPA255_A255_fPA1_A9_A9_fPfPA64_A1_A1_fS6_PA32_A5_A5_fS6_S1_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZZL13compute_stageRN3hls6streamI8TileDescLi0EEERNS0_IfLi0EEES5_S5_S3_S5_E6w_tile
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '3'
+  - String:          .
   - String:          ' '
   - Mode:            Complete
   - String:          ' partitioning'

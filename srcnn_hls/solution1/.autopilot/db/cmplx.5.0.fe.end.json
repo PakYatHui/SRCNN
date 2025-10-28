@@ -1,72 +1,29 @@
 {
     "1": {
-        "name": "conv2",
+        "name": "load_stage",
         "file": "",
         "fileloc": "0",
-        "instructions": "85",
-        "total_instructions": "85",
+        "instructions": "156",
+        "total_instructions": "156",
         "calls": "",
-        "basicblocks": "13",
+        "basicblocks": "28",
         "loads": {
-            "G": "1",
-            "L": "3"
+            "L": "4"
         },
         "stores": {
-            "G": "1",
             "L": "2"
         },
         "loops": {
             "L": "1",
-            "N": "3"
+            "N": "8"
         }
     },
     "2": {
-        "name": "conv1_Pipeline_debug2",
-        "file": "",
-        "fileloc": "0",
-        "instructions": "799",
-        "total_instructions": "799",
-        "calls": "",
-        "basicblocks": "4",
-        "loads": {
-            "G": "164",
-            "L": "1"
-        },
-        "stores": {
-            "G": "2",
-            "L": "2"
-        },
-        "loops": {
-            "L": "1"
-        }
-    },
-    "0": {
-        "name": "srcnn",
-        "file": "",
-        "fileloc": "0",
-        "instructions": "131",
-        "total_instructions": "1833",
-        "calls": "4 1 3",
-        "basicblocks": "23",
-        "loads": {
-            "G": "2",
-            "L": "2"
-        },
-        "stores": {
-            "G": "2",
-            "L": "4"
-        },
-        "loops": {
-            "L": "2",
-            "N": "4"
-        }
-    },
-    "3": {
         "name": "conv3",
         "file": "",
         "fileloc": "0",
-        "instructions": "113",
-        "total_instructions": "113",
+        "instructions": "120",
+        "total_instructions": "120",
         "calls": "",
         "basicblocks": "16",
         "loads": {
@@ -81,25 +38,131 @@
             "N": "4"
         }
     },
-    "4": {
-        "name": "conv1",
-        "file": "",
+    "3": {
+        "name": "store_stage_Pipeline_VITIS_LOOP_175_4",
+        "file": "conv1.cpp",
         "fileloc": "0",
-        "instructions": "705",
-        "total_instructions": "1504",
-        "calls": "2",
-        "basicblocks": "67",
+        "instructions": "41",
+        "total_instructions": "41",
+        "calls": "",
+        "basicblocks": "6",
         "loads": {
-            "G": "82",
-            "L": "4"
+            "L": "1"
         },
         "stores": {
-            "G": "12",
+            "G": "1",
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "4": {
+        "name": "compute_stage_Pipeline_VITIS_LOOP_137_12",
+        "file": "conv1.cpp",
+        "fileloc": "0",
+        "instructions": "8417",
+        "total_instructions": "8417",
+        "calls": "",
+        "basicblocks": "6",
+        "loads": {
+            "G": "3727",
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "0": {
+        "name": "srcnn",
+        "file": "",
+        "fileloc": "0",
+        "instructions": "257",
+        "total_instructions": "10022",
+        "calls": "6 2",
+        "basicblocks": "35",
+        "loads": {
+            "G": "3",
+            "L": "3",
+            "T": "2"
+        },
+        "stores": {
+            "G": "3",
+            "L": "6"
+        },
+        "loops": {
+            "L": "3",
+            "N": "7"
+        }
+    },
+    "5": {
+        "name": "gen_tiles_stream_all",
+        "file": "conv1.cpp",
+        "fileloc": "27",
+        "instructions": "50",
+        "total_instructions": "50",
+        "calls": "",
+        "basicblocks": "10",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
             "L": "2"
         },
         "loops": {
             "L": "1",
-            "N": "15"
+            "N": "2"
+        }
+    },
+    "6": {
+        "name": "conv1",
+        "file": "",
+        "fileloc": "0",
+        "instructions": "33",
+        "total_instructions": "9645",
+        "calls": "5 1 8 7",
+        "basicblocks": "1"
+    },
+    "7": {
+        "name": "store_stage",
+        "file": "conv1.cpp",
+        "fileloc": "160",
+        "instructions": "50",
+        "total_instructions": "91",
+        "calls": "3",
+        "basicblocks": "12",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1",
+            "N": "2"
+        }
+    },
+    "8": {
+        "name": "compute_stage",
+        "file": "conv1.cpp",
+        "fileloc": "87",
+        "instructions": "898",
+        "total_instructions": "9315",
+        "calls": "4",
+        "basicblocks": "192",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "G": "127",
+            "L": "2"
+        },
+        "loops": {
+            "L": "1",
+            "N": "10"
         }
     }
 }

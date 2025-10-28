@@ -82,8 +82,8 @@
 
 <AreaEstimates>
 <Resources>
-<FF>366</FF>
-<LUT>605</LUT>
+<FF>386</FF>
+<LUT>633</LUT>
 <BRAM_18K>0</BRAM_18K>
 <DSP>0</DSP>
 <URAM>0</URAM>
@@ -165,7 +165,7 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_736_p_din0</name>
+<name>grp_fu_830_p_din0</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -176,7 +176,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_736_p_din1</name>
+<name>grp_fu_830_p_din1</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -187,7 +187,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_736_p_opcode</name>
+<name>grp_fu_830_p_opcode</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -198,7 +198,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_736_p_dout0</name>
+<name>grp_fu_830_p_dout0</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -209,7 +209,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_736_p_ce</name>
+<name>grp_fu_830_p_ce</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -220,7 +220,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_740_p_din0</name>
+<name>grp_fu_835_p_din0</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -231,7 +231,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_740_p_din1</name>
+<name>grp_fu_835_p_din1</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -242,7 +242,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_740_p_dout0</name>
+<name>grp_fu_835_p_dout0</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>
@@ -253,7 +253,7 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>grp_fu_740_p_ce</name>
+<name>grp_fu_835_p_ce</name>
 <Object>conv3</Object>
 <Type>return value</Type>
 <Scope></Scope>

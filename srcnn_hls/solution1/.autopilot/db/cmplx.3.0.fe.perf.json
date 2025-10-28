@@ -1,53 +1,69 @@
 {
   "0": {
-    "basicblocks": 17,
-    "calls": "2 1 3",
+    "basicblocks": 25,
+    "calls": "6 5",
     "file": "srcnn.cpp",
     "fileloc": 3,
-    "instructions": 48,
+    "instructions": 213,
     "loads": {
-      "G": 2,
-      "T": 1
+      "G": 3,
+      "T": 3
     },
     "name": "srcnn",
     "stores": {
-      "G": 2
+      "G": 3
     },
-    "total_instructions": 1158
+    "total_instructions": 9380
   },
   "1": {
-    "basicblocks": 9,
+    "basicblocks": 25,
     "calls": "",
-    "file": "conv2.cpp",
-    "fileloc": 4,
-    "instructions": 32,
+    "file": "conv1.cpp",
+    "fileloc": 45,
+    "instructions": 99,
     "loads": {
-      "G": 1,
-      "L": 2
+      "L": 3
     },
-    "name": "conv2",
+    "name": "load_stage",
+    "total_instructions": 120
+  },
+  "2": {
+    "basicblocks": 12,
+    "calls": "",
+    "file": "conv1.cpp",
+    "fileloc": 160,
+    "instructions": 48,
+    "name": "store_stage",
     "stores": {
       "G": 1
     },
-    "total_instructions": 32
-  },
-  "2": {
-    "basicblocks": 52,
-    "calls": "",
-    "file": "conv1.cpp",
-    "fileloc": 16,
-    "instructions": 1025,
-    "loads": {
-      "G": 246,
-      "L": 3
-    },
-    "name": "conv1",
-    "stores": {
-      "G": 14
-    },
-    "total_instructions": 1025
+    "total_instructions": 69
   },
   "3": {
+    "basicblocks": 7,
+    "calls": "",
+    "file": "conv1.cpp",
+    "fileloc": 27,
+    "instructions": 35,
+    "name": "gen_tiles_stream_all",
+    "total_instructions": 59
+  },
+  "4": {
+    "basicblocks": 192,
+    "calls": "",
+    "file": "conv1.cpp",
+    "fileloc": 87,
+    "instructions": 8813,
+    "loads": {
+      "G": 3727
+    },
+    "name": "compute_stage",
+    "stores": {
+      "G": 127
+    },
+    "total_instructions": 8834
+  },
+  "5": {
     "basicblocks": 11,
     "calls": "",
     "file": "conv3.cpp",
@@ -62,5 +78,14 @@
       "L": 1
     },
     "total_instructions": 53
+  },
+  "6": {
+    "basicblocks": 1,
+    "calls": "3 1 4 2",
+    "file": "conv1.cpp",
+    "fileloc": 189,
+    "instructions": 32,
+    "name": "conv1",
+    "total_instructions": 9114
   }
 }

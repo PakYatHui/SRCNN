@@ -162,6 +162,138 @@ extern "C" {
 
 
 
+# 1 "C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\\hls_stream.h" 1
+# 15 "C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\\hls_stream.h"
+# 1 "C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_stream_39.h" 1
+# 26 "C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_stream_39.h"
+namespace hls {
+# 52 "C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/hls_stream_39.h"
+template<typename __STREAM_T__, int DEPTH=0>
+class stream;
+
+template<typename __STREAM_T__>
+class stream<__STREAM_T__, 0>
+{
+  public:
+    using value_type = __STREAM_T__;
+
+    inline __attribute__((always_inline)) __attribute__((nodebug)) stream() {
+      __fpga_set_stream_depth(&this->V, 0);
+    }
+
+    inline __attribute__((always_inline)) __attribute__((nodebug)) stream(const char* name) {
+      (void)(name);
+      __fpga_set_stream_depth(&this->V, 0);
+    }
+
+
+  private:
+    inline __attribute__((always_inline)) __attribute__((nodebug)) stream(const stream< __STREAM_T__ >& chn):V(chn.V) {
+    }
+
+    inline __attribute__((always_inline)) __attribute__((nodebug)) stream& operator= (const stream< __STREAM_T__ >& chn) {
+        V = chn.V;
+        return *this;
+    }
+
+  public:
+
+    inline __attribute__((always_inline)) __attribute__((nodebug)) void operator >> (__STREAM_T__& rdata) {
+        read(rdata);
+    }
+
+    inline __attribute__((always_inline)) __attribute__((nodebug)) void operator << (const __STREAM_T__& wdata) {
+        write(wdata);
+    }
+
+
+  public:
+
+    inline __attribute__((always_inline)) __attribute__((nodebug)) bool empty() const {
+        return !__fpga_fifo_not_empty(&V);
+    }
+
+    inline __attribute__((always_inline)) __attribute__((nodebug)) bool full() const {
+        return !__fpga_fifo_not_full(&V);
+    }
+
+
+    inline __attribute__((always_inline)) __attribute__((nodebug)) void read(__STREAM_T__& dout) {
+        __fpga_fifo_pop(&V, &dout);
+    }
+
+
+    inline __attribute__((noinline)) __attribute__((nodebug)) bool read_dep(__STREAM_T__& dout, volatile bool flag) {
+        __fpga_fifo_pop(&V, &dout);
+        return flag;
+    }
+
+    inline __attribute__((always_inline)) __attribute__((nodebug)) __STREAM_T__ read() {
+        __STREAM_T__ tmp;
+        read(tmp);
+        return tmp;
+    }
+
+
+    inline __attribute__((always_inline)) __attribute__((nodebug)) bool read_nb(__STREAM_T__& dout) {
+        __STREAM_T__ tmp;
+
+        if (__fpga_fifo_nb_pop(&V, &tmp)) {
+            dout = tmp;
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+
+    inline __attribute__((always_inline)) __attribute__((nodebug)) void write(const __STREAM_T__& din) {
+        __fpga_fifo_push(&V, &din);
+    }
+
+
+    inline __attribute__((noinline)) __attribute__((nodebug)) bool write_dep(const __STREAM_T__& din, volatile bool flag) {
+        __fpga_fifo_push(&V, &din);
+        return flag;
+    }
+
+
+    inline __attribute__((always_inline)) __attribute__((nodebug)) bool write_nb(const __STREAM_T__& din) {
+        return __fpga_fifo_nb_push(&V, &din);
+    }
+
+
+    inline __attribute__((always_inline)) __attribute__((nodebug)) unsigned size() const {
+        return __fpga_fifo_size(&V);
+    }
+
+
+    inline __attribute__((always_inline)) __attribute__((nodebug)) unsigned capacity() const {
+        return __fpga_fifo_capacity(&V);
+    }
+
+
+    void set_name(const char* name) { (void)(name); }
+
+  public:
+    __STREAM_T__ V __attribute__((no_ctor));
+};
+
+template<typename __STREAM_T__, int DEPTH>
+class stream : public stream<__STREAM_T__, 0> {
+  public:
+    inline __attribute__((always_inline)) __attribute__((nodebug)) stream() {
+      __fpga_set_stream_depth(&this->V, DEPTH);
+    }
+
+    inline __attribute__((always_inline)) __attribute__((nodebug)) stream(const char* name) {
+      (void)(name);
+      __fpga_set_stream_depth(&this->V, DEPTH);
+    }
+};
+}
+# 16 "C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\\hls_stream.h" 2
+# 8 "src/conv1.cpp" 2
 # 1 "src/srcnn.h" 1
 # 19 "src/srcnn.h"
 typedef float ftmap_t;
@@ -192,12 +324,171 @@ void conv3(ftmap_t in_ftmap[32][255][255],
            param_t w[1][32][5][5],
            param_t b[1],
            ftmap_t out_ftmap[1][255][255]);
-# 8 "src/conv1.cpp" 2
+# 9 "src/conv1.cpp" 2
+# 23 "src/conv1.cpp"
+struct TileDesc { int n, h0, w0, tN, tH, tW, tC; };
+static inline int clampi(int v,int lo,int hi){return v<lo?lo:(v>hi?hi:v);}
 
-static inline int clampi(int v, int lo, int hi) {
-    if (v < lo) return lo;
-    if (v > hi) return hi;
-    return v;
+
+static void gen_tiles_stream_all(hls::stream<TileDesc>& q_out){
+#pragma HLS INLINE off
+ const int NB = (64 + 8 - 1) / 8;
+    VITIS_LOOP_30_1: for(int nb=0; nb<NB; ++nb){
+        int n = nb * 8;
+        int tN = (nb < NB-1) ? 8 : (64 - n);
+        VITIS_LOOP_33_2: for(int h0=0; h0<255; h0+=32){
+            int tH = (h0 + 32 <= 255) ? 32 : (255 - h0);
+            VITIS_LOOP_35_3: for(int w0=0; w0<255; w0+=32){
+                int tW = (w0 + 32 <= 255) ? 32 : (255 - w0);
+                TileDesc d{n,h0,w0,tN,tH,tW,(1<1)?1:1};
+                q_out.write(d);
+            }
+        }
+    }
+}
+
+
+static void load_stage(hls::stream<TileDesc>& qin, int R,
+                       ftmap_t input_ftmap[1][255][255],
+                       param_t conv1_weights[64][1][9][9],
+                       param_t conv1_biases[64],
+                       hls::stream<TileDesc>& q_to_compute,
+                       hls::stream<param_t>& s_bias,
+                       hls::stream<ftmap_t>& s_in,
+                       hls::stream<param_t>& s_w)
+{
+#pragma HLS INLINE off
+ const int tilesH=(255 +32 -1)/32, tilesW=(255 +32 -1)/32, T=tilesH*tilesW, NB=(64 +8 -1)/8;
+
+    VITIS_LOOP_57_1: for(int i=0;i<NB*T;++i){
+#pragma HLS loop_tripcount min=1 max=(((64 +8 -1)/8)*((255 +32 -1)/32)*((255 +32 -1)/32))
+ TileDesc d = qin.read();
+        q_to_compute.write(d);
+
+
+        VITIS_LOOP_63_2: for(int tn=0; tn<d.tN; ++tn) s_bias.write(conv1_biases[d.n+tn]);
+#pragma HLS loop_tripcount min=1 max=8
+
+ VITIS_LOOP_66_3: for(int tc=0; tc<d.tC; ++tc)
+#pragma HLS loop_tripcount min=1 max=1
+ VITIS_LOOP_68_4: for(int ih=0; ih<d.tH + 9 - 1; ++ih){
+                int gy = clampi(d.h0 + ih - R, 0, 255 -1);
+                VITIS_LOOP_70_5: for(int iw=0; iw<d.tW + 9 - 1; ++iw){
+                    int gx = clampi(d.w0 + iw - R, 0, 255 -1);
+                    s_in.write(input_ftmap[tc][gy][gx]);
+                }
+            }
+
+
+        VITIS_LOOP_77_6: for(int tn=0; tn<d.tN; ++tn)
+#pragma HLS loop_tripcount min=1 max=8
+ VITIS_LOOP_79_7: for(int tc=0; tc<d.tC; ++tc)
+                VITIS_LOOP_80_8: for(int kh=0; kh<9; ++kh)
+                    VITIS_LOOP_81_9: for(int kw=0; kw<9; ++kw)
+                        s_w.write(conv1_weights[d.n+tn][tc][kh][kw]);
+    }
+}
+
+
+static void compute_stage(hls::stream<TileDesc>& q_desc_in,
+                          hls::stream<param_t>& s_bias,
+                          hls::stream<ftmap_t>& s_in,
+                          hls::stream<param_t>& s_w,
+                          hls::stream<TileDesc>& q_desc_out,
+                          hls::stream<ftmap_t>& s_out)
+{
+#pragma HLS INLINE off
+
+
+#pragma HLS bin
+
+ static ftmap_t in_tile[1][32 + 9 - 1][32 + 9 - 1];
+    static param_t w_tile[8][1][9][9];
+    static param_t bias [8];
+
+#pragma HLS bind_storage variable=in_tile type=ram_2p impl=bram
+#pragma HLS bind_storage variable=w_tile type=ram_2p impl=bram
+#pragma HLS bind_storage variable=bias type=ram_1p impl=bram
+
+ const int tilesH=(255 +32 -1)/32, tilesW=(255 +32 -1)/32, T=tilesH*tilesW, NB=(64 +8 -1)/8;
+
+    VITIS_LOOP_109_1: for(int i=0;i<NB*T;++i){
+#pragma HLS loop_tripcount min=1 max=(((64 +8 -1)/8)*((255 +32 -1)/32)*((255 +32 -1)/32))
+ TileDesc d = q_desc_in.read();
+        q_desc_out.write(d);
+
+
+        VITIS_LOOP_115_2: for(int tn=0; tn<d.tN; ++tn) bias[tn] = s_bias.read();
+
+
+        VITIS_LOOP_118_3: for(int tc=0; tc<d.tC; ++tc)
+            VITIS_LOOP_119_4: for(int ih=0; ih<d.tH + 9 - 1; ++ih)
+                VITIS_LOOP_120_5: for(int iw=0; iw<d.tW + 9 - 1; ++iw)
+                    in_tile[tc][ih][iw] = s_in.read();
+
+
+        VITIS_LOOP_124_6: for(int tn=0; tn<d.tN; ++tn)
+            VITIS_LOOP_125_7: for(int tc=0; tc<d.tC; ++tc)
+                VITIS_LOOP_126_8: for(int kh=0; kh<9; ++kh)
+                    VITIS_LOOP_127_9: for(int kw=0; kw<9; ++kw)
+                        w_tile[tn][tc][kh][kw] = s_w.read();
+
+
+        VITIS_LOOP_131_10: for(int th=0; th<32; ++th){
+#pragma HLS loop_flatten off
+ VITIS_LOOP_133_11: for(int tw=0; tw<32; ++tw){
+#pragma HLS loop_flatten off
+ if(th < d.tH && tw < d.tW){
+
+                    VITIS_LOOP_137_12: for(int tn=0; tn<8; ++tn){
+#pragma HLS PIPELINE II=2
+ if(tn < d.tN){
+                            float acc = bias[tn];
+
+                            VITIS_LOOP_142_13: for(int tc=0; tc<1; ++tc){
+                                if(tc < d.tC){
+                                    VITIS_LOOP_144_14: for(int kh=0; kh<9; ++kh)
+                                        VITIS_LOOP_145_15: for(int kw=0; kw<9; ++kw)
+                                            acc += w_tile[tn][tc][kh][kw] *
+                                                   in_tile[tc][th + kh][tw + kw];
+                                }
+                            }
+                            s_out.write(acc);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+static void store_stage(hls::stream<TileDesc>& q_desc_in,
+                        hls::stream<ftmap_t>& s_out,
+                        ftmap_t output_ftmap[64][255][255])
+{
+#pragma HLS INLINE off
+ const int tilesH=(255 +32 -1)/32, tilesW=(255 +32 -1)/32, T=tilesH*tilesW, NB=(64 +8 -1)/8;
+
+    VITIS_LOOP_167_1: for(int i=0;i<NB*T;++i){
+        TileDesc d = q_desc_in.read();
+
+        VITIS_LOOP_170_2: for(int th=0; th<32; ++th){
+#pragma HLS loop_flatten off
+ VITIS_LOOP_172_3: for(int tw=0; tw<32; ++tw){
+#pragma HLS loop_flatten off
+ if(th<d.tH && tw<d.tW){
+                    VITIS_LOOP_175_4: for(int tn=0; tn<8; ++tn){
+#pragma HLS PIPELINE II=2
+ if(tn<d.tN){
+                            ftmap_t v = s_out.read();
+                            output_ftmap[d.n+tn][d.h0+th][d.w0+tw] = v;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 
@@ -206,109 +497,27 @@ void conv1(ftmap_t input_ftmap[1][255][255],
            param_t conv1_biases[64],
            ftmap_t output_ftmap[64][255][255])
 {
- int R = 9 / 2;
+#pragma HLS INLINE off
+#pragma HLS stable variable=input_ftmap
+#pragma HLS stable variable=conv1_weights
+#pragma HLS stable variable=conv1_biases
 
- static ftmap_t in_tile[1][32 + 9 - 1][32 + 9 - 1];
- static param_t w_tile[8][1][9][9];
- static ftmap_t out_tile[8][32][32];
+#pragma HLS DATAFLOW
+ hls::stream<TileDesc> q0, q1, q2;
+    hls::stream<param_t> s_bias;
+    hls::stream<ftmap_t> s_in;
+    hls::stream<param_t> s_w;
+    hls::stream<ftmap_t> s_out;
 
-
-
- outputFeatureTile:
-    for (int n = 0; n < 64; n += 8) {
-        int tN = (n + 8 <= 64) ? 8 : (64 - n);
-        outputHeightTile:
-        for (int h = 0; h < 255; h += 32) {
-            int tH = (h + 32 <= 255) ? 32 : (255 - h);
-            outputWidthTile:
-            for (int w = 0; w < 255; w += 32) {
-                int tW = (w + 32 <= 255) ? 32 : (255 - w);
-
-                initializeWithBias:
-    for (int tn = 0; tn < 8; ++tn) {
-      VITIS_LOOP_41_1: for (int th = 0; th < 32; ++th) {
-        VITIS_LOOP_42_2: for (int tw = 0; tw < 32; ++tw) {
-          if (tn < tN && th < tH && tw < tW)
-            out_tile[tn][th][tw] = conv1_biases[n+tn];
-        }
-      }
-    }
-
-
-                tileAccumulation:
-                for (int c = 0; c < 1; c += 1) {
-                    int tC = (c + 1 <= 1) ? 1 : (1 - c);
-
-
-                    loadInputTile:
-     for (int tc = 0; tc < 1; ++tc) {
-       VITIS_LOOP_57_3: for (int ih = 0; ih < 32 + 9 - 1; ++ih) {
-         VITIS_LOOP_58_4: for (int iw = 0; iw < 32 + 9 - 1; ++iw) {
-           if (ih < tH + 9 - 1 && iw < tW + 9 - 1) {
-             int gy = clampi(h + ih - R, 0, 255 - 1);
-             int gx = clampi(w + iw - R, 0, 255 - 1);
-             in_tile[tc][ih][iw] = input_ftmap[c + tc][gy][gx];
-           }
-         }
-       }
-     }
-
-
-                    loadWeightTile:
-     for (int tn = 0; tn < 8; ++tn) {
-       VITIS_LOOP_71_5: for (int tc = 0; tc < 1; ++tc) {
-         if (tn < tN && tc < tC)
-           VITIS_LOOP_73_6: for (int kh = 0; kh < 9; ++kh)
-             VITIS_LOOP_74_7: for (int kw = 0; kw < 9; ++kw)
-               w_tile[tn][tc][kh][kw] = conv1_weights[n+tn][c+tc][kh][kw];
-       }
-     }
-
-
-
-
-
-
-
-#pragma HLS ARRAY_PARTITION variable=w_tile complete dim=4
-
-
-
-
- tileCalculation:
-     for (int th = 0; th < 32; ++th) {
-      debug1:
-       for (int tw = 0; tw < 32; ++tw) {
-         if (th < tH && tw < tW) {
-          debug2:
-           for (int tn = 0; tn < 8; ++tn) {
-#pragma HLS UNROLL factor=2
-#pragma HLS PIPELINE II=9
- if (tn < tN) {
-               float acc = out_tile[tn][th][tw];
-               debug3:
-               for (int kh = 0; kh < 9; ++kh) {
-                 VITIS_LOOP_103_8: for (int kw = 0; kw < 9; ++kw) {
-#pragma HLS UNROLL factor=9
- acc += w_tile[tn][0][kh][kw] * in_tile[0][th + kh][tw + kw];
-                 }
-               }
-
-               out_tile[tn][th][tw] = acc;
-             }
-           }
-         }
-       }
-     }
-
-                tileWritewBack:
-    for (int tn = 0; tn < 8; ++tn)
-      VITIS_LOOP_118_9: for (int th = 0; th < 32; ++th)
-        VITIS_LOOP_119_10: for (int tw = 0; tw < 32; ++tw)
-          if (tn < tN && th < tH && tw < tW)
-            output_ftmap[n+tn][h+th][w+tw] = out_tile[tn][th][tw];
-                        }
-                    }
-                }
-            }
-        }
+#pragma HLS STREAM variable=q0 depth=2
+#pragma HLS STREAM variable=q1 depth=2
+#pragma HLS STREAM variable=q2 depth=2
+#pragma HLS STREAM variable=s_bias depth=4
+#pragma HLS STREAM variable=s_in depth=64
+#pragma HLS STREAM variable=s_w depth=64
+#pragma HLS STREAM variable=s_out depth=256
+ gen_tiles_stream_all(q0);
+    load_stage(q0, 9/2, input_ftmap, conv1_weights, conv1_biases, q1, s_bias, s_in, s_w);
+    compute_stage(q1, s_bias, s_in, s_w, q2, s_out);
+    store_stage(q2, s_out, output_ftmap);
+}

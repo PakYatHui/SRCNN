@@ -1,18 +1,99 @@
 <xilinx:hls_fe_msgs>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv1.cpp:85:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="conv1" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=w_tile complete dim=4" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    <msg msg_groups="PRAGMA_INVALID" msg_id="207-5576" msg_severity="WARNING" msg_loc="src/conv1.cpp:97:9" msg_body="unknown HLS pragma ignored">
+        <args ClangWarningOption="invalid-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv1.cpp:28:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="gen_tiles_stream_all" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv1.cpp:54:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="load_stage" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv1.cpp:58:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="load_stage" ARG_PragmaIsValid="1" ARG_PragmaOptions="min=1 max=(((64 +8 -1)/8)*((255 +32 -1)/32)*((255 +32 -1)/32))" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv1.cpp:64:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="load_stage" ARG_PragmaIsValid="1" ARG_PragmaOptions="min=1 max=8" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv1.cpp:67:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="load_stage" ARG_PragmaIsValid="1" ARG_PragmaOptions="min=1 max=1" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv1.cpp:78:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="load_stage" ARG_PragmaIsValid="1" ARG_PragmaOptions="min=1 max=8" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv1.cpp:94:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="compute_stage" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv1.cpp:97:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="conv1" ARG_PragmaIsValid="1" ARG_PragmaOptions="factor=2" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+        <args ARG_PragmaFunction="compute_stage" ARG_PragmaIsValid="0" ARG_PragmaType="bin" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv1.cpp:98:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="conv1" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=9" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv1.cpp:103:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="compute_stage" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=in_tile type=ram_2p impl=bram" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv1.cpp:104:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="conv1" ARG_PragmaIsValid="1" ARG_PragmaOptions="factor=9" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+        <args ARG_PragmaFunction="compute_stage" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=w_tile type=ram_2p impl=bram" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv2.cpp:9:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="conv2" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv1.cpp:105:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="compute_stage" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=bias type=ram_1p impl=bram" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv1.cpp:110:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="compute_stage" ARG_PragmaIsValid="1" ARG_PragmaOptions="min=1 max=(((64 +8 -1)/8)*((255 +32 -1)/32)*((255 +32 -1)/32))" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv1.cpp:132:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="compute_stage" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="loop_flatten" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv1.cpp:134:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="compute_stage" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="loop_flatten" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv1.cpp:138:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="compute_stage" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=2" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv1.cpp:164:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="store_stage" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv1.cpp:171:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="store_stage" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="loop_flatten" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv1.cpp:173:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="store_stage" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="loop_flatten" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv1.cpp:176:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="store_stage" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=2" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv1.cpp:194:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv1" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv1.cpp:195:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv1" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=input_ftmap" ARG_PragmaType="stable" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv1.cpp:196:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv1" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=conv1_weights" ARG_PragmaType="stable" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv1.cpp:197:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv1" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=conv1_biases" ARG_PragmaType="stable" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv1.cpp:199:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv1" ARG_PragmaIsValid="1" ARG_PragmaType="dataflow" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv1.cpp:206:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv1" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=q0 depth=2" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv1.cpp:207:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv1" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=q1 depth=2" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv1.cpp:208:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv1" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=q2 depth=2" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv1.cpp:209:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv1" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=s_bias depth=4" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv1.cpp:210:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv1" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=s_in depth=64" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv1.cpp:211:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv1" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=s_w depth=64" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv1.cpp:212:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv1" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=s_out depth=256" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/conv3.cpp:9:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="conv3" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
@@ -26,26 +107,65 @@
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/srcnn.cpp:12:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="srcnn" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="src/conv1.cpp:102:16" msg_body="Loop 'debug3' is marked as complete unroll implied by the pipeline pragma">
-        <args LoopName="debug3"/>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="src/conv1.cpp:142:48" msg_body="Loop 'VITIS_LOOP_142_13' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_142_13"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="src/conv1.cpp:103:36" msg_body="Loop 'VITIS_LOOP_103_8' is marked as complete unroll implied by the pipeline pragma">
-        <args LoopName="VITIS_LOOP_103_8"/>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="src/conv1.cpp:144:56" msg_body="Loop 'VITIS_LOOP_144_14' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_144_14"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-188" msg_severity="INFO" msg_loc="src/conv1.cpp:20:0" msg_body="Unrolling loop 'debug2' (src/conv1.cpp:96:12) in function 'conv1' partially with a factor of 2">
-        <args Factor="2" LoopLoc="src/conv1.cpp:96:12" LoopName="debug2"/>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="src/conv1.cpp:145:60" msg_body="Loop 'VITIS_LOOP_145_15' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_145_15"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="src/conv1.cpp:20:0" msg_body="Unrolling loop 'debug3' (src/conv1.cpp:102:16) in function 'conv1' completely with a factor of 9">
-        <args Factor="9" LoopLoc="src/conv1.cpp:102:16" LoopName="debug3"/>
+    <msg msg_groups="PRAGMA_LOOP_TRIPCOUNT" msg_id="214-398" msg_severity="WARNING" msg_loc="src/conv1.cpp:53:0" msg_body="Updating loop lower bound from 1 to 512 for loop 'VITIS_LOOP_57_1' (src/conv1.cpp:57:22) in function 'load_stage'.">
+        <args LoopLoc="src/conv1.cpp:57:22" LoopName="VITIS_LOOP_57_1" NewBound="512" OldBound="1"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="src/conv1.cpp:20:0" msg_body="Unrolling loop 'VITIS_LOOP_103_8' (src/conv1.cpp:103:36) in function 'conv1' completely with a factor of 9">
-        <args Factor="9" LoopLoc="src/conv1.cpp:103:36" LoopName="VITIS_LOOP_103_8"/>
+    <msg msg_groups="PRAGMA_LOOP_TRIPCOUNT" msg_id="214-398" msg_severity="WARNING" msg_loc="src/conv1.cpp:53:0" msg_body="Updating loop upper bound from 8 to 512 for loop 'VITIS_LOOP_57_1' (src/conv1.cpp:57:22) in function 'load_stage'.">
+        <args LoopLoc="src/conv1.cpp:57:22" LoopName="VITIS_LOOP_57_1" NewBound="512" OldBound="8"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="src/conv1.cpp:20:0" msg_body="Inlining function 'clampi(int, int, int)' into 'conv1(float (*) [255][255], float (*) [1][9][9], float*, float (*) [255][255])'">
-        <args Callee="clampi(int, int, int)" Callee-DebugLoc="File src/conv1.cpp Line 9 Column 0" Caller="conv1(float (*) [255][255], float (*) [1][9][9], float*, float (*) [255][255])" Caller-DebugLoc="File src/conv1.cpp Line 20 Column 0"/>
+    <msg msg_groups="PRAGMA_LOOP_TRIPCOUNT" msg_id="214-398" msg_severity="WARNING" msg_loc="src/conv1.cpp:93:0" msg_body="Updating loop lower bound from 1 to 512 for loop 'VITIS_LOOP_109_1' (src/conv1.cpp:109:23) in function 'compute_stage'.">
+        <args LoopLoc="src/conv1.cpp:109:23" LoopName="VITIS_LOOP_109_1" NewBound="512" OldBound="1"/>
     </msg>
-    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="src/conv1.cpp:24:0" msg_body="Applying array_partition to '_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile': Complete partitioning on dimension 4.">
-        <args Dim="4" Mode="Complete" UOName="_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile"/>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="src/conv1.cpp:93:0" msg_body="Unrolling loop 'VITIS_LOOP_142_13' (src/conv1.cpp:142:48) in function 'compute_stage' completely with a factor of 1">
+        <args Factor="1" LoopLoc="src/conv1.cpp:142:48" LoopName="VITIS_LOOP_142_13"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="src/conv1.cpp:93:0" msg_body="Unrolling loop 'VITIS_LOOP_144_14' (src/conv1.cpp:144:56) in function 'compute_stage' completely with a factor of 9">
+        <args Factor="9" LoopLoc="src/conv1.cpp:144:56" LoopName="VITIS_LOOP_144_14"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="src/conv1.cpp:93:0" msg_body="Unrolling loop 'VITIS_LOOP_145_15' (src/conv1.cpp:145:60) in function 'compute_stage' completely with a factor of 9">
+        <args Factor="9" LoopLoc="src/conv1.cpp:145:60" LoopName="VITIS_LOOP_145_15"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="src/conv1.cpp:53:0" msg_body="Inlining function 'clampi(int, int, int)' into 'load_stage(hls::stream&lt;TileDesc, 0&gt;&amp;, int, float (*) [255][255], float (*) [1][9][9], float*, hls::stream&lt;TileDesc, 0&gt;&amp;, hls::stream&lt;float, 0&gt;&amp;, hls::stream&lt;float, 0&gt;&amp;, hls::stream&lt;float, 0&gt;&amp;)'">
+        <args Callee="clampi(int, int, int)" Callee-DebugLoc="File src/conv1.cpp Line 24 Column 0" Caller="load_stage(hls::stream&lt;TileDesc, 0&gt;&amp;, int, float (*) [255][255], float (*) [1][9][9], float*, hls::stream&lt;TileDesc, 0&gt;&amp;, hls::stream&lt;float, 0&gt;&amp;, hls::stream&lt;float, 0&gt;&amp;, hls::stream&lt;float, 0&gt;&amp;)" Caller-DebugLoc="File src/conv1.cpp Line 53 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="src/srcnn.cpp:11:0" msg_body="Inlining function 'conv2(float (*) [255][255], float (*) [64][1][1], float*, float (*) [255][255])' into 'srcnn(float (*) [255][255], float (*) [1][9][9], float*, float (*) [64][1][1], float*, float (*) [32][5][5], float*, float (*) [255][255])'">
+        <args Callee="conv2(float (*) [255][255], float (*) [64][1][1], float*, float (*) [255][255])" Callee-DebugLoc="File src/conv2.cpp Line 8 Column 0" Caller="srcnn(float (*) [255][255], float (*) [1][9][9], float*, float (*) [64][1][1], float*, float (*) [32][5][5], float*, float (*) [255][255])" Caller-DebugLoc="File src/srcnn.cpp Line 11 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="src/conv1.cpp:200:24" msg_body="Aggregating fifo (hls::stream) variable 'q0' with compact=bit mode in 224-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="224" HwTyName="fifo (hls::stream)" Name="q0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="src/conv1.cpp:200:28" msg_body="Aggregating fifo (hls::stream) variable 'q1' with compact=bit mode in 224-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="224" HwTyName="fifo (hls::stream)" Name="q1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="src/conv1.cpp:200:32" msg_body="Aggregating fifo (hls::stream) variable 'q2' with compact=bit mode in 224-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="224" HwTyName="fifo (hls::stream)" Name="q2"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="src/conv1.cpp:138:9" msg_body="Inferring pragma 'array_partition type=complete dim=3' for array 'compute_stage(hls::stream&lt;TileDesc, 0&gt;&amp;, hls::stream&lt;float, 0&gt;&amp;, hls::stream&lt;float, 0&gt;&amp;, hls::stream&lt;float, 0&gt;&amp;, hls::stream&lt;TileDesc, 0&gt;&amp;, hls::stream&lt;float, 0&gt;&amp;)::w_tile' due to pipeline pragma">
+        <args Dim="3" Mode="complete" Name="compute_stage(hls::stream&lt;TileDesc, 0&gt;&amp;, hls::stream&lt;float, 0&gt;&amp;, hls::stream&lt;float, 0&gt;&amp;, hls::stream&lt;float, 0&gt;&amp;, hls::stream&lt;TileDesc, 0&gt;&amp;, hls::stream&lt;float, 0&gt;&amp;)::w_tile" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="src/conv1.cpp:138:9" msg_body="Inferring pragma 'array_partition type=complete dim=4' for array 'compute_stage(hls::stream&lt;TileDesc, 0&gt;&amp;, hls::stream&lt;float, 0&gt;&amp;, hls::stream&lt;float, 0&gt;&amp;, hls::stream&lt;float, 0&gt;&amp;, hls::stream&lt;TileDesc, 0&gt;&amp;, hls::stream&lt;float, 0&gt;&amp;)::w_tile' due to pipeline pragma">
+        <args Dim="4" Mode="complete" Name="compute_stage(hls::stream&lt;TileDesc, 0&gt;&amp;, hls::stream&lt;float, 0&gt;&amp;, hls::stream&lt;float, 0&gt;&amp;, hls::stream&lt;float, 0&gt;&amp;, hls::stream&lt;TileDesc, 0&gt;&amp;, hls::stream&lt;float, 0&gt;&amp;)::w_tile" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="src/conv1.cpp:138:9" msg_body="Inferring pragma 'array_partition type=cyclic factor=9 dim=3' for array 'compute_stage(hls::stream&lt;TileDesc, 0&gt;&amp;, hls::stream&lt;float, 0&gt;&amp;, hls::stream&lt;float, 0&gt;&amp;, hls::stream&lt;float, 0&gt;&amp;, hls::stream&lt;TileDesc, 0&gt;&amp;, hls::stream&lt;float, 0&gt;&amp;)::in_tile' due to pipeline pragma">
+        <args Dim="3" Factor="9" Mode="cyclic" Name="compute_stage(hls::stream&lt;TileDesc, 0&gt;&amp;, hls::stream&lt;float, 0&gt;&amp;, hls::stream&lt;float, 0&gt;&amp;, hls::stream&lt;float, 0&gt;&amp;, hls::stream&lt;TileDesc, 0&gt;&amp;, hls::stream&lt;float, 0&gt;&amp;)::in_tile" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="src/conv1.cpp:138:9" msg_body="Inferring pragma 'array_partition type=cyclic factor=5 dim=2' for array 'compute_stage(hls::stream&lt;TileDesc, 0&gt;&amp;, hls::stream&lt;float, 0&gt;&amp;, hls::stream&lt;float, 0&gt;&amp;, hls::stream&lt;float, 0&gt;&amp;, hls::stream&lt;TileDesc, 0&gt;&amp;, hls::stream&lt;float, 0&gt;&amp;)::in_tile' due to pipeline pragma">
+        <args Dim="2" Factor="5" Mode="cyclic" Name="compute_stage(hls::stream&lt;TileDesc, 0&gt;&amp;, hls::stream&lt;float, 0&gt;&amp;, hls::stream&lt;float, 0&gt;&amp;, hls::stream&lt;float, 0&gt;&amp;, hls::stream&lt;TileDesc, 0&gt;&amp;, hls::stream&lt;float, 0&gt;&amp;)::in_tile" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="src/conv1.cpp:99:0" msg_body="Applying array_partition to '_ZZL13compute_stageRN3hls6streamI8TileDescLi0EEERNS0_IfLi0EEES5_S5_S3_S5_E7in_tile': Cyclic partitioning with factor 5 on dimension 2. Cyclic partitioning with factor 9 on dimension 3.">
+        <args Dim="islist 2 3" Factor="islist 5 9" Mode="islist Cyclic Cyclic" UOName="_ZZL13compute_stageRN3hls6streamI8TileDescLi0EEERNS0_IfLi0EEES5_S5_S3_S5_E7in_tile"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="src/conv1.cpp:100:0" msg_body="Applying array_partition to '_ZZL13compute_stageRN3hls6streamI8TileDescLi0EEERNS0_IfLi0EEES5_S5_S3_S5_E6w_tile': Complete partitioning on dimension 3. Complete partitioning on dimension 4.">
+        <args Dim="islist 3 4" Mode="islist Complete Complete" UOName="_ZZL13compute_stageRN3hls6streamI8TileDescLi0EEERNS0_IfLi0EEES5_S5_S3_S5_E6w_tile"/>
     </msg>
 </xilinx:hls_fe_msgs>
 

@@ -1,21 +1,89 @@
 {
   "0": {
-    "basicblocks": 23,
-    "calls": "2 3 1",
+    "basicblocks": 35,
+    "calls": "1 6",
     "file": "srcnn.cpp",
     "fileloc": 3,
-    "instructions": 84,
+    "instructions": 265,
     "loads": {
-      "G": 2,
-      "T": 1
+      "G": 3,
+      "T": 3
     },
     "name": "srcnn",
     "stores": {
-      "G": 2
+      "G": 3
     },
-    "total_instructions": 1291
+    "total_instructions": 9624
   },
   "1": {
+    "basicblocks": 1,
+    "calls": "3 5 2 4",
+    "file": "conv1.cpp",
+    "fileloc": 189,
+    "instructions": 42,
+    "name": "conv1",
+    "total_instructions": 9288
+  },
+  "2": {
+    "basicblocks": 231,
+    "calls": "",
+    "file": "conv1.cpp",
+    "fileloc": 87,
+    "instructions": 8915,
+    "loads": {
+      "G": 3727,
+      "L": 4
+    },
+    "name": "compute_stage",
+    "stores": {
+      "G": 127,
+      "L": 2
+    },
+    "total_instructions": 8915
+  },
+  "3": {
+    "basicblocks": 10,
+    "calls": "",
+    "file": "conv1.cpp",
+    "fileloc": 27,
+    "instructions": 77,
+    "name": "gen_tiles_stream_all",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 77
+  },
+  "4": {
+    "basicblocks": 17,
+    "calls": "",
+    "file": "conv1.cpp",
+    "fileloc": 160,
+    "instructions": 101,
+    "loads": {
+      "L": 2
+    },
+    "name": "store_stage",
+    "stores": {
+      "G": 1
+    },
+    "total_instructions": 101
+  },
+  "5": {
+    "basicblocks": 28,
+    "calls": "",
+    "file": "conv1.cpp",
+    "fileloc": 45,
+    "instructions": 153,
+    "loads": {
+      "L": 4
+    },
+    "name": "load_stage",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 153
+  },
+  "6": {
     "basicblocks": 16,
     "calls": "",
     "file": "conv3.cpp",
@@ -30,37 +98,5 @@
       "L": 1
     },
     "total_instructions": 71
-  },
-  "2": {
-    "basicblocks": 72,
-    "calls": "",
-    "file": "conv1.cpp",
-    "fileloc": 16,
-    "instructions": 1087,
-    "loads": {
-      "G": 246,
-      "L": 3
-    },
-    "name": "conv1",
-    "stores": {
-      "G": 14
-    },
-    "total_instructions": 1087
-  },
-  "3": {
-    "basicblocks": 13,
-    "calls": "",
-    "file": "conv2.cpp",
-    "fileloc": 4,
-    "instructions": 49,
-    "loads": {
-      "G": 1,
-      "L": 2
-    },
-    "name": "conv2",
-    "stores": {
-      "G": 1
-    },
-    "total_instructions": 49
   }
 }

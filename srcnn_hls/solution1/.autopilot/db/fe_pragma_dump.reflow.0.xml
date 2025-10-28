@@ -1,9 +1,41 @@
 <pragmas>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="hls::stream<float, 0>::stream()" off="0" region="0" recursive="0"/>
+<pragma file="src/conv1.cpp" line="28" pragmaType="inline" parentfunction="gen_tiles_stream_all" off="1" region="0" recursive="0"/>
+<pragma file="src/conv1.cpp" line="54" pragmaType="inline" parentfunction="load_stage" off="1" region="0" recursive="0"/>
+<pragma file="src/conv1.cpp" line="64" pragmaType="loop_tripcount" parentfunction="load_stage" min="1" max="8" avg="4"/>
+<pragma file="src/conv1.cpp" line="67" pragmaType="loop_tripcount" parentfunction="load_stage" min="1" max="1" avg="1"/>
+<pragma file="src/conv1.cpp" line="78" pragmaType="loop_tripcount" parentfunction="load_stage" min="1" max="8" avg="4"/>
+<pragma file="src/conv1.cpp" line="94" pragmaType="inline" parentfunction="compute_stage" off="1" region="0" recursive="0"/>
+<pragma file="src/conv1.cpp" line="110" pragmaType="loop_tripcount" parentfunction="compute_stage" min="1" max="512" avg="256"/>
+<pragma file="src/conv1.cpp" line="132" pragmaType="loop_flatten" parentfunction="compute_stage" off="1"/>
+<pragma file="src/conv1.cpp" line="134" pragmaType="loop_flatten" parentfunction="compute_stage" off="1"/>
+<pragma file="src/conv1.cpp" line="138" pragmaType="pipeline" parentfunction="compute_stage" off="0" ii="2" rewind="0" style=""/>
+<pragma file="src/conv1.cpp" line="103" pragmaType="bind_storage" parentfunction="compute_stage" op="666" impl="22" latency="-1" variable="_ZZL13compute_stageRN3hls6streamI8TileDescLi0EEERNS0_IfLi0EEES5_S5_S3_S5_E7in_tile"/>
+<pragma file="src/conv1.cpp" line="104" pragmaType="bind_storage" parentfunction="compute_stage" op="666" impl="22" latency="-1" variable="_ZZL13compute_stageRN3hls6streamI8TileDescLi0EEERNS0_IfLi0EEES5_S5_S3_S5_E6w_tile"/>
+<pragma file="src/conv1.cpp" line="105" pragmaType="bind_storage" parentfunction="compute_stage" op="666" impl="18" latency="-1" variable="_ZZL13compute_stageRN3hls6streamI8TileDescLi0EEERNS0_IfLi0EEES5_S5_S3_S5_E4bias"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="hls::stream<TileDesc, 0>::stream()" off="0" region="0" recursive="0"/>
+<pragma file="src/conv1.cpp" line="164" pragmaType="inline" parentfunction="store_stage" off="1" region="0" recursive="0"/>
+<pragma file="src/conv1.cpp" line="171" pragmaType="loop_flatten" parentfunction="store_stage" off="1"/>
+<pragma file="src/conv1.cpp" line="173" pragmaType="loop_flatten" parentfunction="store_stage" off="1"/>
+<pragma file="src/conv1.cpp" line="176" pragmaType="pipeline" parentfunction="store_stage" off="0" ii="2" rewind="0" style=""/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="src/conv1.cpp" line="194" pragmaType="inline" parentfunction="conv1" off="1" region="0" recursive="0"/>
+<pragma file="src/conv1.cpp" line="199" pragmaType="dataflow" parentfunction="conv1" disable_start_propagation="0"/>
+<pragma file="src/conv1.cpp" line="195" pragmaType="stable" parentfunction="conv1" variable="input_ftmap"/>
+<pragma file="src/conv1.cpp" line="196" pragmaType="stable" parentfunction="conv1" variable="conv1_weights"/>
+<pragma file="src/conv1.cpp" line="197" pragmaType="stable" parentfunction="conv1" variable="conv1_biases"/>
+<pragma file="src/conv1.cpp" line="206" pragmaType="stream" parentfunction="conv1" depth="2" type="fifo" variable="q0"/>
+<pragma file="src/conv1.cpp" line="207" pragmaType="stream" parentfunction="conv1" depth="2" type="fifo" variable="q1"/>
+<pragma file="src/conv1.cpp" line="208" pragmaType="stream" parentfunction="conv1" depth="2" type="fifo" variable="q2"/>
+<pragma file="src/conv1.cpp" line="209" pragmaType="stream" parentfunction="conv1" depth="4" type="fifo" variable="s_bias"/>
+<pragma file="src/conv1.cpp" line="210" pragmaType="stream" parentfunction="conv1" depth="64" type="fifo" variable="s_in"/>
+<pragma file="src/conv1.cpp" line="211" pragmaType="stream" parentfunction="conv1" depth="64" type="fifo" variable="s_w"/>
+<pragma file="src/conv1.cpp" line="212" pragmaType="stream" parentfunction="conv1" depth="256" type="fifo" variable="s_out"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
 <pragma file="src/conv3.cpp" line="9" pragmaType="pipeline" parentfunction="conv3" off="1" ii="0" style=""/>
 <pragma file="src/srcnn.cpp" line="12" pragmaType="pipeline" parentfunction="srcnn" off="1" ii="0" style=""/>
-<pragma file="src/conv1.cpp" line="97" pragmaType="unroll" parentfunction="conv1" factor="2" skip_exit_check="0"/>
-<pragma file="src/conv1.cpp" line="98" pragmaType="pipeline" parentfunction="conv1" off="0" ii="9" rewind="0" style=""/>
-<pragma file="src/conv1.cpp" line="104" pragmaType="unroll" parentfunction="conv1" factor="9" skip_exit_check="0"/>
-<pragma file="src/conv1.cpp" line="85" pragmaType="array_partition" parentfunction="conv1" dim="4" factor="0" mode="complete" dynamic="0" variable="_ZZ5conv1PA255_A255_fPA1_A9_A9_fPfS1_E6w_tile"/>
-<pragma file="src/conv2.cpp" line="9" pragmaType="pipeline" parentfunction="conv2" off="1" ii="0" style=""/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
 </pragmas>

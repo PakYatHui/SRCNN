@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv1'" level="0">
-<item name = "Date">Sat Oct 18 21:53:31 2025
+<item name = "Date">Wed Oct 29 00:02:26 2025
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -24,34 +24,21 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">16968849, 226159761, 0.170 sec, 2.262 sec, 16968849, 226159761, no</column>
+<column name="">?, ?, ?, ?, ?, ?, dataflow</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_conv1_Pipeline_debug2_fu_1203">conv1_Pipeline_debug2, 358, 358, 3.580 us, 3.580 us, 358, 358, no</column>
+<column name="grp_gen_tiles_stream_all_fu_346">gen_tiles_stream_all, 657, 657, 6.570 us, 6.570 us, 657, 657, no</column>
+<column name="grp_load_stage_fu_351">load_stage, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_compute_stage_fu_366">compute_stage, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_store_stage_fu_630">store_stage, 1082369, 10519553, 10.824 ms, 0.105 sec, 1082369, 10519553, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- outputFeatureTile">16968848, 226159760, 2121106 ~ 28269970, -, -, 8, no</column>
-<column name=" + outputHeightTile">2121104, 28269968, 265138 ~ 3533746, -, -, 8, no</column>
-<column name="  ++ outputWidthTile">265136, 3533744, 33142 ~ 441718, -, -, 8, no</column>
-<column name="   +++ initializeWithBias">8728, 8728, 1091, -, -, 8, no</column>
-<column name="    ++++ VITIS_LOOP_41_1">1088, 1088, 34, -, -, 32, no</column>
-<column name="     +++++ VITIS_LOOP_42_2">32, 32, 1, -, -, 32, no</column>
-<column name="   +++ VITIS_LOOP_57_3">3280, 3280, 82, -, -, 40, no</column>
-<column name="    ++++ VITIS_LOOP_58_4">80, 80, 2, -, -, 40, no</column>
-<column name="   +++ loadWeightTile">2104, 2104, 263, -, -, 8, no</column>
-<column name="    ++++ VITIS_LOOP_73_6">261, 261, 29, -, -, 9, no</column>
-<column name="     +++++ VITIS_LOOP_74_7">27, 27, 3, -, -, 9, no</column>
-<column name="   +++ tileCalculation">2112, 410688, 66 ~ 12834, -, -, 32, no</column>
-<column name="    ++++ debug1">64, 12832, 2 ~ 401, -, -, 32, no</column>
-<column name="   +++ tileWritewBack">16912, 16912, 2114, -, -, 8, no</column>
-<column name="    ++++ VITIS_LOOP_118_9">2112, 2112, 66, -, -, 32, no</column>
-<column name="     +++++ VITIS_LOOP_119_10">64, 64, 2, -, -, 32, no</column>
 </table>
 </item>
 </section>

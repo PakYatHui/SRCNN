@@ -194,13 +194,23 @@ void conv2(ftmap_t in_ftmap[64][255][255],
         param_t b[32],
         ftmap_t out_ftmap[32][255][255])
 {
-#pragma HLS PIPELINE off
- VITIS_LOOP_10_1: for (int oc = 0; oc < 32; oc++) {
-         VITIS_LOOP_11_2: for (int y = 0; y < 255; y++) {
-             VITIS_LOOP_12_3: for (int x = 0; x < 255; x++) {
-                 float acc = b[oc];
 
-                 VITIS_LOOP_15_4: for (int ic = 0; ic < 64; ic++) {
+
+
+
+
+
+
+ debug1:
+ for (int oc = 0; oc < 32; oc++) {
+  debug2:
+         for (int y = 0; y < 255; y++) {
+          debug3:
+             for (int x = 0; x < 255; x++) {
+
+                 float acc = b[oc];
+                 debug4:
+                 for (int ic = 0; ic < 64; ic++) {
 
                      acc += in_ftmap[ic][y][x] * w[oc][ic][0][0];
                  }
