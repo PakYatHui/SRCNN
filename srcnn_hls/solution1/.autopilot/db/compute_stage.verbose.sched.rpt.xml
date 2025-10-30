@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'compute_stage'" level="0">
-<item name = "Date">Wed Oct 29 00:02:24 2025
+<item name = "Date">Thu Oct 30 11:32:19 2025
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -35,17 +35,17 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- VITIS_LOOP_109_1">?, ?, ?, -, -, 512, no</column>
-<column name=" + VITIS_LOOP_115_2">?, ?, 1, -, -, ?, no</column>
-<column name=" + VITIS_LOOP_118_3">?, ?, ?, -, -, ?, no</column>
-<column name="  ++ VITIS_LOOP_119_4">?, ?, ?, -, -, ?, no</column>
-<column name="   +++ VITIS_LOOP_120_5">?, ?, 2, -, -, ?, no</column>
-<column name=" + VITIS_LOOP_124_6">?, ?, ?, -, -, ?, no</column>
-<column name="  ++ VITIS_LOOP_125_7">?, ?, 101, -, -, ?, no</column>
-<column name="   +++ VITIS_LOOP_126_8">99, 99, 11, -, -, 9, no</column>
-<column name="    ++++ VITIS_LOOP_127_9">9, 9, 1, -, -, 9, no</column>
-<column name=" + VITIS_LOOP_131_10">2112, 357440, 66 ~ 11170, -, -, 32, no</column>
-<column name="  ++ VITIS_LOOP_133_11">64, 11168, 2 ~ 349, -, -, 32, no</column>
+<column name="- VITIS_LOOP_104_1">?, ?, ?, -, -, 512, no</column>
+<column name=" + VITIS_LOOP_110_2">?, ?, 1, -, -, ?, no</column>
+<column name=" + VITIS_LOOP_113_3">?, ?, ?, -, -, ?, no</column>
+<column name="  ++ VITIS_LOOP_114_4">?, ?, ?, -, -, ?, no</column>
+<column name="   +++ VITIS_LOOP_115_5">?, ?, 2, -, -, ?, no</column>
+<column name=" + VITIS_LOOP_119_6">?, ?, ?, -, -, ?, no</column>
+<column name="  ++ VITIS_LOOP_120_7">?, ?, 101, -, -, ?, no</column>
+<column name="   +++ VITIS_LOOP_121_8">99, 99, 11, -, -, 9, no</column>
+<column name="    ++++ VITIS_LOOP_122_9">9, 9, 1, -, -, 9, no</column>
+<column name=" + VITIS_LOOP_126_10">2112, 357440, 66 ~ 11170, -, -, 32, no</column>
+<column name="  ++ VITIS_LOOP_128_11">64, 11168, 2 ~ 349, -, -, 32, no</column>
 </table>
 </item>
 </section>

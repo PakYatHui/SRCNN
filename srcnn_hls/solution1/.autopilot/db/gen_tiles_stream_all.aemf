@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1761656549685">
-  <ports id="1" name="q0" type="PortType" coreName="FIFO_SRL" coreId="100" bitwidth="224" direction="DirOut" iftype="IfTypeRom">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1761784349658">
+  <ports id="1" name="q0" type="PortType" coreName="FIFO_SRL" coreId="540947232" bitwidth="224" direction="DirOut" iftype="IfTypeRom">
     <dataInputObjs>write</dataInputObjs>
   </ports>
   <edges id="66" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.1"/>
@@ -128,7 +128,7 @@
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="br_ln30" lineNumber="30" fileName="src/conv1.cpp" fileDirectory="../." coreId="2" contextFuncName="gen_tiles_stream_all" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="br_ln30" lineNumber="30" fileName="src/conv1.cpp" fileDirectory="../." coreId="1959468424" contextFuncName="gen_tiles_stream_all" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="src/conv1.cpp" linenumber="30" fileDirectory="C:\Xilinx\golden" functionName="gen_tiles_stream_all"/>
       <dataInputObjs>icmp</dataInputObjs>
       <controlInputObjs>for.body.split</controlInputObjs>
@@ -144,23 +144,23 @@
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>for.body5</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="trunc_ln31" lineNumber="31" fileName="src/conv1.cpp" fileDirectory="../." rtlName="trunc_ln31_fu_124_p1" coreId="2" contextFuncName="gen_tiles_stream_all" bitwidth="3" opcode="trunc" nodeLabel="1.0" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="trunc_ln31" lineNumber="31" fileName="src/conv1.cpp" fileDirectory="../." rtlName="trunc_ln31_fu_124_p1" coreId="1946555128" contextFuncName="gen_tiles_stream_all" bitwidth="3" opcode="trunc" nodeLabel="1.0" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="src/conv1.cpp" linenumber="31" fileDirectory="C:\Xilinx\golden" functionName="gen_tiles_stream_all"/>
       <dataInputObjs>load</dataInputObjs>
       <dataOutputObjs>bitconcatenate</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="15" name="n" lineNumber="31" originalName="n" fileName="src/conv1.cpp" fileDirectory="../." rtlName="n_fu_128_p3" coreId="2" contextFuncName="gen_tiles_stream_all" bitwidth="6" opcode="bitconcatenate" nodeLabel="1.0" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="15" name="n" lineNumber="31" originalName="n" fileName="src/conv1.cpp" fileDirectory="../." rtlName="n_fu_128_p3" coreId="1946562424" contextFuncName="gen_tiles_stream_all" bitwidth="6" opcode="bitconcatenate" nodeLabel="1.0" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="src/conv1.cpp" linenumber="31" fileDirectory="C:\Xilinx\golden" functionName="gen_tiles_stream_all"/>
       <dataInputObjs>trunc</dataInputObjs>
       <dataOutputObjs>zext</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="zext_ln31" lineNumber="31" fileName="src/conv1.cpp" fileDirectory="../." rtlName="zext_ln31_fu_136_p1" coreId="2" contextFuncName="gen_tiles_stream_all" bitwidth="32" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="zext_ln31" lineNumber="31" fileName="src/conv1.cpp" fileDirectory="../." rtlName="zext_ln31_fu_136_p1" coreId="1946556024" contextFuncName="gen_tiles_stream_all" bitwidth="32" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="src/conv1.cpp" linenumber="31" fileDirectory="C:\Xilinx\golden" functionName="gen_tiles_stream_all"/>
       <dataInputObjs>bitconcatenate</dataInputObjs>
       <dataOutputObjs>bitconcatenate</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="shl_ln31" lineNumber="31" fileName="src/conv1.cpp" fileDirectory="../." rtlName="shl_ln31_fu_140_p2" coreId="2" contextFuncName="gen_tiles_stream_all" bitwidth="4" opcode="shl" nodeLabel="1.0" m_display="0" m_topoIndex="11" m_clusterGroupNumber="1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="shl_ln31" lineNumber="31" fileName="src/conv1.cpp" fileDirectory="../." rtlName="shl_ln31_fu_140_p2" coreId="1946543864" contextFuncName="gen_tiles_stream_all" bitwidth="4" opcode="shl" nodeLabel="1.0" m_display="0" m_topoIndex="11" m_clusterGroupNumber="1">
       <inlineStackInfo fileName="src/conv1.cpp" linenumber="31" fileDirectory="C:\Xilinx\golden" functionName="gen_tiles_stream_all"/>
       <dataInputObjs>load</dataInputObjs>
       <dataOutputObjs>sub</dataOutputObjs>
@@ -185,7 +185,7 @@
       <dataOutputObjs>bitconcatenate</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="br_ln33" lineNumber="33" fileName="src/conv1.cpp" fileDirectory="../." coreId="3728172568" contextFuncName="gen_tiles_stream_all" opcode="br" nodeLabel="1.0" m_display="0" m_delay="0.42" m_topoIndex="15" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="br_ln33" lineNumber="33" fileName="src/conv1.cpp" fileDirectory="../." coreId="1956664392" contextFuncName="gen_tiles_stream_all" opcode="br" nodeLabel="1.0" m_display="0" m_delay="0.42" m_topoIndex="15" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="src/conv1.cpp" linenumber="33" fileDirectory="C:\Xilinx\golden" functionName="gen_tiles_stream_all"/>
       <controlInputObjs>for.body5</controlInputObjs>
     </node_objs>
@@ -202,7 +202,7 @@
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>for.body5.split</controlOutputObjs>
     <controlOutputObjs>for.inc33</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="h0_2" originalName="h0" coreId="3728188824" bitwidth="9" opcode="phi" nodeLabel="2.0" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="h0_2" originalName="h0" coreId="0" bitwidth="9" opcode="phi" nodeLabel="2.0" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
       <dataInputObjs>add</dataInputObjs>
       <dataOutputObjs>icmp</dataOutputObjs>
       <dataOutputObjs>add</dataOutputObjs>
@@ -218,7 +218,7 @@
       <dataOutputObjs>br</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="25" name="br_ln33" lineNumber="33" fileName="src/conv1.cpp" fileDirectory="../." coreId="3753381256" contextFuncName="gen_tiles_stream_all" opcode="br" nodeLabel="2.0" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="25" name="br_ln33" lineNumber="33" fileName="src/conv1.cpp" fileDirectory="../." coreId="1941012616" contextFuncName="gen_tiles_stream_all" opcode="br" nodeLabel="2.0" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="src/conv1.cpp" linenumber="33" fileDirectory="C:\Xilinx\golden" functionName="gen_tiles_stream_all"/>
       <dataInputObjs>icmp</dataInputObjs>
       <controlInputObjs>for.inc33</controlInputObjs>
@@ -240,13 +240,13 @@
       <dataOutputObjs>bitselect</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="30" name="tmp" lineNumber="34" fileName="src/conv1.cpp" fileDirectory="../." rtlName="tmp_fu_178_p3" coreId="3699450120" contextFuncName="gen_tiles_stream_all" bitwidth="1" opcode="bitselect" nodeLabel="2.0" m_display="0" m_topoIndex="21" m_clusterGroupNumber="2">
+    <node_objs xsi:type="cdfg:CdfgNode" id="30" name="tmp" lineNumber="34" fileName="src/conv1.cpp" fileDirectory="../." rtlName="tmp_fu_178_p3" coreId="1946545784" contextFuncName="gen_tiles_stream_all" bitwidth="1" opcode="bitselect" nodeLabel="2.0" m_display="0" m_topoIndex="21" m_clusterGroupNumber="2">
       <inlineStackInfo fileName="src/conv1.cpp" linenumber="34" fileDirectory="C:\Xilinx\golden" functionName="gen_tiles_stream_all"/>
       <dataInputObjs>add</dataInputObjs>
       <dataOutputObjs>select</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="31" name="trunc_ln33" lineNumber="33" fileName="src/conv1.cpp" fileDirectory="../." rtlName="trunc_ln33_fu_186_p1" coreId="3728168600" contextFuncName="gen_tiles_stream_all" bitwidth="8" opcode="trunc" nodeLabel="2.0" m_display="0" m_topoIndex="22" m_clusterGroupNumber="2">
+    <node_objs xsi:type="cdfg:CdfgNode" id="31" name="trunc_ln33" lineNumber="33" fileName="src/conv1.cpp" fileDirectory="../." rtlName="trunc_ln33_fu_186_p1" coreId="1946506104" contextFuncName="gen_tiles_stream_all" bitwidth="8" opcode="trunc" nodeLabel="2.0" m_display="0" m_topoIndex="22" m_clusterGroupNumber="2">
       <inlineStackInfo fileName="src/conv1.cpp" linenumber="33" fileDirectory="C:\Xilinx\golden" functionName="gen_tiles_stream_all"/>
       <dataInputObjs>phi</dataInputObjs>
       <dataOutputObjs>xor</dataOutputObjs>
@@ -264,7 +264,7 @@
       <dataOutputObjs>bitconcatenate</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="34" name="br_ln35" lineNumber="35" fileName="src/conv1.cpp" fileDirectory="../." coreId="3699454216" contextFuncName="gen_tiles_stream_all" opcode="br" nodeLabel="2.0" m_display="0" m_delay="0.42" m_topoIndex="25" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="34" name="br_ln35" lineNumber="35" fileName="src/conv1.cpp" fileDirectory="../." coreId="4294967295" contextFuncName="gen_tiles_stream_all" opcode="br" nodeLabel="2.0" m_display="0" m_delay="0.42" m_topoIndex="25" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="src/conv1.cpp" linenumber="35" fileDirectory="C:\Xilinx\golden" functionName="gen_tiles_stream_all"/>
       <controlInputObjs>for.body15</controlInputObjs>
     </node_objs>
@@ -281,7 +281,7 @@
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>for.body15.split</controlOutputObjs>
     <controlOutputObjs>for.inc30</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="36" name="w0_2" originalName="w0" coreId="3728200344" bitwidth="9" opcode="phi" nodeLabel="3.0" m_display="0" m_topoIndex="28" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="36" name="w0_2" originalName="w0" coreId="1946557432" bitwidth="9" opcode="phi" nodeLabel="3.0" m_display="0" m_topoIndex="28" m_clusterGroupNumber="-1">
       <dataInputObjs>add</dataInputObjs>
       <dataOutputObjs>icmp</dataOutputObjs>
       <dataOutputObjs>add</dataOutputObjs>
@@ -296,7 +296,7 @@
       <dataOutputObjs>br</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="38" name="br_ln35" lineNumber="35" fileName="src/conv1.cpp" fileDirectory="../." coreId="3753222024" contextFuncName="gen_tiles_stream_all" opcode="br" nodeLabel="3.0" m_display="0" m_topoIndex="30" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="38" name="br_ln35" lineNumber="35" fileName="src/conv1.cpp" fileDirectory="../." coreId="1941012104" contextFuncName="gen_tiles_stream_all" opcode="br" nodeLabel="3.0" m_display="0" m_topoIndex="30" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="src/conv1.cpp" linenumber="35" fileDirectory="C:\Xilinx\golden" functionName="gen_tiles_stream_all"/>
       <dataInputObjs>icmp</dataInputObjs>
       <controlInputObjs>for.inc30</controlInputObjs>
@@ -318,13 +318,13 @@
       <dataOutputObjs>bitselect</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="43" name="tmp_5" lineNumber="36" fileName="src/conv1.cpp" fileDirectory="../." rtlName="tmp_5_fu_220_p3" coreId="3692019448" contextFuncName="gen_tiles_stream_all" bitwidth="1" opcode="bitselect" nodeLabel="3.0" m_display="0" m_topoIndex="32" m_clusterGroupNumber="3">
+    <node_objs xsi:type="cdfg:CdfgNode" id="43" name="tmp_4" lineNumber="36" fileName="src/conv1.cpp" fileDirectory="../." rtlName="tmp_4_fu_220_p3" coreId="846030189" contextFuncName="gen_tiles_stream_all" bitwidth="1" opcode="bitselect" nodeLabel="3.0" m_display="0" m_topoIndex="32" m_clusterGroupNumber="3">
       <inlineStackInfo fileName="src/conv1.cpp" linenumber="36" fileDirectory="C:\Xilinx\golden" functionName="gen_tiles_stream_all"/>
       <dataInputObjs>add</dataInputObjs>
       <dataOutputObjs>select</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="44" name="trunc_ln35" lineNumber="35" fileName="src/conv1.cpp" fileDirectory="../." rtlName="trunc_ln35_fu_228_p1" coreId="3728351640" contextFuncName="gen_tiles_stream_all" bitwidth="8" opcode="trunc" nodeLabel="3.0" m_display="0" m_topoIndex="33" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="44" name="trunc_ln35" lineNumber="35" fileName="src/conv1.cpp" fileDirectory="../." rtlName="trunc_ln35_fu_228_p1" coreId="4294967295" contextFuncName="gen_tiles_stream_all" bitwidth="8" opcode="trunc" nodeLabel="3.0" m_display="0" m_topoIndex="33" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="src/conv1.cpp" linenumber="35" fileDirectory="C:\Xilinx\golden" functionName="gen_tiles_stream_all"/>
       <dataInputObjs>phi</dataInputObjs>
       <dataOutputObjs>xor</dataOutputObjs>
@@ -343,19 +343,19 @@
       <dataOutputObjs>bitconcatenate</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="47" name="tmp_s" lineNumber="38" fileName="src/conv1.cpp" fileDirectory="../." rtlName="tmp_s_fu_246_p4" coreId="3728225432" contextFuncName="gen_tiles_stream_all" bitwidth="7" opcode="partselect" nodeLabel="3.0" m_display="0" m_topoIndex="36" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="47" name="tmp_s" lineNumber="38" fileName="src/conv1.cpp" fileDirectory="../." rtlName="tmp_s_fu_246_p4" coreId="1946551288" contextFuncName="gen_tiles_stream_all" bitwidth="7" opcode="partselect" nodeLabel="3.0" m_display="0" m_topoIndex="36" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="src/conv1.cpp" linenumber="38" fileDirectory="C:\Xilinx\golden" functionName="gen_tiles_stream_all"/>
       <dataInputObjs>phi</dataInputObjs>
       <dataOutputObjs>bitconcatenate</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="48" name="tmp_6" lineNumber="38" fileName="src/conv1.cpp" fileDirectory="../." rtlName="tmp_6_fu_256_p3" coreId="3700128672" contextFuncName="gen_tiles_stream_all" bitwidth="28" opcode="bitconcatenate" nodeLabel="3.0" m_display="0" m_topoIndex="37" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="48" name="tmp_5" lineNumber="38" fileName="src/conv1.cpp" fileDirectory="../." rtlName="tmp_5_fu_256_p3" coreId="1946594552" contextFuncName="gen_tiles_stream_all" bitwidth="28" opcode="bitconcatenate" nodeLabel="3.0" m_display="0" m_topoIndex="37" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="src/conv1.cpp" linenumber="38" fileDirectory="C:\Xilinx\golden" functionName="gen_tiles_stream_all"/>
       <dataInputObjs>select</dataInputObjs>
       <dataOutputObjs>zext</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="49" name="zext_ln38" lineNumber="38" fileName="src/conv1.cpp" fileDirectory="../." rtlName="zext_ln38_fu_263_p1" coreId="3699427336" contextFuncName="gen_tiles_stream_all" bitwidth="56" opcode="zext" nodeLabel="3.0" m_display="0" m_topoIndex="38" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="49" name="zext_ln38" lineNumber="38" fileName="src/conv1.cpp" fileDirectory="../." rtlName="zext_ln38_fu_263_p1" coreId="4294967295" contextFuncName="gen_tiles_stream_all" bitwidth="56" opcode="zext" nodeLabel="3.0" m_display="0" m_topoIndex="38" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="src/conv1.cpp" linenumber="38" fileDirectory="C:\Xilinx\golden" functionName="gen_tiles_stream_all"/>
       <dataInputObjs>bitconcatenate</dataInputObjs>
       <dataOutputObjs>bitconcatenate</dataOutputObjs>
@@ -381,7 +381,7 @@
       <dataInputObjs>zext</dataInputObjs>
       <dataOutputObjs>q0</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="53" name="br_ln35" lineNumber="35" fileName="src/conv1.cpp" fileDirectory="../." coreId="3728239896" contextFuncName="gen_tiles_stream_all" opcode="br" nodeLabel="3.0" m_display="0" m_topoIndex="42" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="53" name="br_ln35" lineNumber="35" fileName="src/conv1.cpp" fileDirectory="../." coreId="3080250" contextFuncName="gen_tiles_stream_all" opcode="br" nodeLabel="3.0" m_display="0" m_topoIndex="42" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="src/conv1.cpp" linenumber="35" fileDirectory="C:\Xilinx\golden" functionName="gen_tiles_stream_all"/>
       <controlInputObjs>for.body15</controlInputObjs>
     </node_objs>
@@ -396,7 +396,7 @@
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>for.body5</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="55" name="br_ln33" lineNumber="33" fileName="src/conv1.cpp" fileDirectory="../." coreId="3728213144" contextFuncName="gen_tiles_stream_all" opcode="br" nodeLabel="3.0" m_display="0" m_topoIndex="43" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="55" name="br_ln33" lineNumber="33" fileName="src/conv1.cpp" fileDirectory="../." coreId="0" contextFuncName="gen_tiles_stream_all" opcode="br" nodeLabel="3.0" m_display="0" m_topoIndex="43" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="src/conv1.cpp" linenumber="33" fileDirectory="C:\Xilinx\golden" functionName="gen_tiles_stream_all"/>
       <controlInputObjs>for.body5</controlInputObjs>
     </node_objs>
@@ -408,12 +408,12 @@
     <controlInputObjs>for.body5</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>for.body</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="57" name="nb_write_ln30" lineNumber="30" fileName="src/conv1.cpp" fileDirectory="../." coreId="3700130272" contextFuncName="gen_tiles_stream_all" opcode="store" nodeLabel="2.0" m_display="0" m_delay="0.42" m_topoIndex="26" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="57" name="nb_write_ln30" lineNumber="30" fileName="src/conv1.cpp" fileDirectory="../." coreId="0" contextFuncName="gen_tiles_stream_all" opcode="store" nodeLabel="2.0" m_display="0" m_delay="0.42" m_topoIndex="26" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="src/conv1.cpp" linenumber="30" fileDirectory="C:\Xilinx\golden" functionName="gen_tiles_stream_all"/>
       <dataInputObjs>add</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="58" name="br_ln30" lineNumber="30" fileName="src/conv1.cpp" fileDirectory="../." coreId="3700141152" contextFuncName="gen_tiles_stream_all" opcode="br" nodeLabel="2.0" m_display="0" m_topoIndex="27" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="58" name="br_ln30" lineNumber="30" fileName="src/conv1.cpp" fileDirectory="../." coreId="0" contextFuncName="gen_tiles_stream_all" opcode="br" nodeLabel="2.0" m_display="0" m_topoIndex="27" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="src/conv1.cpp" linenumber="30" fileDirectory="C:\Xilinx\golden" functionName="gen_tiles_stream_all"/>
       <controlInputObjs>for.body</controlInputObjs>
     </node_objs>
@@ -424,7 +424,7 @@
   <blocks id="61" name="for.end34" type="BlockType">
     <controlInputObjs>for.body</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="60" name="_ln42" lineNumber="42" fileName="src/conv1.cpp" fileDirectory="../." coreId="3753371912" contextFuncName="gen_tiles_stream_all" opcode="ret" nodeLabel="1.0" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="60" name="_ln42" lineNumber="42" fileName="src/conv1.cpp" fileDirectory="../." coreId="0" contextFuncName="gen_tiles_stream_all" opcode="ret" nodeLabel="1.0" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="src/conv1.cpp" linenumber="42" fileDirectory="C:\Xilinx\golden" functionName="gen_tiles_stream_all"/>
     </node_objs>
     <fileValidLineNumbers fileName="src/conv1.cpp">
@@ -486,6 +486,9 @@
   <expressionNodes realName="shl_ln31_fu_140">
     <nodeIds>17</nodeIds>
   </expressionNodes>
+  <expressionNodes realName="tmp_5_fu_256">
+    <nodeIds>48</nodeIds>
+  </expressionNodes>
   <expressionNodes realName="trunc_ln35_fu_228">
     <nodeIds>44</nodeIds>
   </expressionNodes>
@@ -537,11 +540,8 @@
   <expressionNodes realName="zext_ln38_1_fu_289">
     <nodeIds>51</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="tmp_5_fu_220">
+  <expressionNodes realName="tmp_4_fu_220">
     <nodeIds>43</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="tmp_6_fu_256">
-    <nodeIds>48</nodeIds>
   </expressionNodes>
   <expressionNodes realName="sub_ln32_fu_152">
     <nodeIds>19</nodeIds>

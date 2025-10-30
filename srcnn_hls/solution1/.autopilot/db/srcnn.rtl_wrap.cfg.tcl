@@ -5,7 +5,7 @@ set rawDecl ""
 set globalVariable ""
 set PortList ""
 set PortName "input_ftmap"
-set BitWidth "32"
+set BitWidth "64"
 set ArrayOpt ""
 set Const "0"
 set Volatile "1"
@@ -17,7 +17,7 @@ set DataType "void"
 set Port [list $PortName $Interface $DataType $Pointer $Dims $Const    $Volatile $ArrayOpt]
 lappend PortList $Port
 set PortName "conv1_weights"
-set BitWidth "32"
+set BitWidth "64"
 set ArrayOpt ""
 set Const "0"
 set Volatile "1"
@@ -29,7 +29,7 @@ set DataType "void"
 set Port [list $PortName $Interface $DataType $Pointer $Dims $Const    $Volatile $ArrayOpt]
 lappend PortList $Port
 set PortName "conv1_biases"
-set BitWidth "32"
+set BitWidth "64"
 set ArrayOpt ""
 set Const "0"
 set Volatile "1"
@@ -41,7 +41,7 @@ set DataType "void"
 set Port [list $PortName $Interface $DataType $Pointer $Dims $Const    $Volatile $ArrayOpt]
 lappend PortList $Port
 set PortName "conv2_weights"
-set BitWidth "32"
+set BitWidth "64"
 set ArrayOpt ""
 set Const "0"
 set Volatile "1"
@@ -53,7 +53,7 @@ set DataType "void"
 set Port [list $PortName $Interface $DataType $Pointer $Dims $Const    $Volatile $ArrayOpt]
 lappend PortList $Port
 set PortName "conv2_biases"
-set BitWidth "32"
+set BitWidth "64"
 set ArrayOpt ""
 set Const "0"
 set Volatile "1"
@@ -65,7 +65,7 @@ set DataType "void"
 set Port [list $PortName $Interface $DataType $Pointer $Dims $Const    $Volatile $ArrayOpt]
 lappend PortList $Port
 set PortName "conv3_weights"
-set BitWidth "32"
+set BitWidth "64"
 set ArrayOpt ""
 set Const "0"
 set Volatile "1"
@@ -77,7 +77,7 @@ set DataType "void"
 set Port [list $PortName $Interface $DataType $Pointer $Dims $Const    $Volatile $ArrayOpt]
 lappend PortList $Port
 set PortName "conv3_biases"
-set BitWidth "32"
+set BitWidth "64"
 set ArrayOpt ""
 set Const "0"
 set Volatile "1"
@@ -89,7 +89,7 @@ set DataType "void"
 set Port [list $PortName $Interface $DataType $Pointer $Dims $Const    $Volatile $ArrayOpt]
 lappend PortList $Port
 set PortName "output_ftmap"
-set BitWidth "32"
+set BitWidth "64"
 set ArrayOpt ""
 set Const "0"
 set Volatile "1"

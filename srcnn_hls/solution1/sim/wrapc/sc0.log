@@ -1,0 +1,13 @@
+   Build using "C:/Xilinx/Vitis_HLS/2023.1/tps/win64/msys64/mingw64/bin/g++"
+   Compiling util.cpp_pre.cpp.tb.cpp
+   Compiling conv2.cpp_pre.cpp.tb.cpp
+   Compiling srcnn.cpp_pre.cpp.tb.cpp
+   Compiling apatb_srcnn.cpp
+   Compiling conv1.cpp_pre.cpp.tb.cpp
+   Compiling tb_set14.cpp_pre.cpp.tb.cpp
+   Compiling csim.cpp_pre.cpp.tb.cpp
+   Compiling tb_srcnn.cpp_pre.cpp.tb.cpp
+   Compiling conv3.cpp_pre.cpp.tb.cpp
+   Compiling tb_conv1.cpp_pre.cpp.tb.cpp
+   Compiling apatb_srcnn_ir.ll
+   Generating cosim.tv.exe

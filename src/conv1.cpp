@@ -90,15 +90,14 @@ static void compute_stage(hls::stream<TileDesc>& q_desc_in,
 #pragma HLS INLINE off
 //#pragma HLS bind_op op=mul impl=dsp
 //#pragma HLS bind_op op=add impl=dsp
-#pragma HLS bin
     // BRAM-backed local tiles (timing friendly)
     static ftmap_t in_tile[TC][TH + F1 - 1][TW + F1 - 1];
     static param_t w_tile[TN][TC][F1][F1];
     static param_t bias  [TN];
 
-#pragma HLS bind_storage variable=in_tile type=ram_2p impl=bram
-#pragma HLS bind_storage variable=w_tile  type=ram_2p impl=bram
-#pragma HLS bind_storage variable=bias    type=ram_1p impl=bram
+//#pragma HLS bind_storage variable=in_tile type=ram_2p impl=bram
+//#pragma HLS bind_storage variable=w_tile  type=ram_2p impl=bram
+//#pragma HLS bind_storage variable=bias    type=ram_1p impl=bram
 
     const int tilesH=(H+TH-1)/TH, tilesW=(W+TW-1)/TW, T=tilesH*tilesW, NB=(N1+TN-1)/TN;
 

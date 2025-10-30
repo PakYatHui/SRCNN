@@ -2,57 +2,57 @@
 MainSourceFile:  'C:/Xilinx/golden/srcnn_hls/solution1/.autopilot/db/srcnn.pp.0.cpp'
 Diagnostics:     
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_18_1:  '
-    FileOffset:      18
+    Message:         'Added loop label VITIS_LOOP_44_1:  '
+    FileOffset:      44
     FilePath:        'C:\Xilinx\golden\src\srcnn.cpp'
     Replacements:    
       - FilePath:        'C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp'
-        Offset:          11390
+        Offset:          12852
         Length:          0
-        ReplacementText: 'VITIS_LOOP_18_1: '
+        ReplacementText: 'VITIS_LOOP_44_1: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_19_2:  '
-    FileOffset:      19
+    Message:         'Added loop label VITIS_LOOP_45_2:  '
+    FileOffset:      45
     FilePath:        'C:\Xilinx\golden\src\srcnn.cpp'
     Replacements:    
       - FilePath:        'C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp'
-        Offset:          11430
+        Offset:          12892
         Length:          0
-        ReplacementText: 'VITIS_LOOP_19_2: '
+        ReplacementText: 'VITIS_LOOP_45_2: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_20_3:  '
-    FileOffset:      20
+    Message:         'Added loop label VITIS_LOOP_46_3:  '
+    FileOffset:      46
     FilePath:        'C:\Xilinx\golden\src\srcnn.cpp'
     Replacements:    
       - FilePath:        'C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp'
-        Offset:          11475
+        Offset:          12937
         Length:          0
-        ReplacementText: 'VITIS_LOOP_20_3: '
+        ReplacementText: 'VITIS_LOOP_46_3: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_30_4:  '
-    FileOffset:      30
+    Message:         'Added loop label VITIS_LOOP_56_4:  '
+    FileOffset:      56
     FilePath:        'C:\Xilinx\golden\src\srcnn.cpp'
     Replacements:    
       - FilePath:        'C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp'
-        Offset:          11711
+        Offset:          13173
         Length:          0
-        ReplacementText: 'VITIS_LOOP_30_4: '
+        ReplacementText: 'VITIS_LOOP_56_4: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_31_5:  '
-    FileOffset:      31
+    Message:         'Added loop label VITIS_LOOP_57_5:  '
+    FileOffset:      57
     FilePath:        'C:\Xilinx\golden\src\srcnn.cpp'
     Replacements:    
       - FilePath:        'C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp'
-        Offset:          11751
+        Offset:          13213
         Length:          0
-        ReplacementText: 'VITIS_LOOP_31_5: '
+        ReplacementText: 'VITIS_LOOP_57_5: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_32_6:  '
-    FileOffset:      32
+    Message:         'Added loop label VITIS_LOOP_58_6:  '
+    FileOffset:      58
     FilePath:        'C:\Xilinx\golden\src\srcnn.cpp'
     Replacements:    
       - FilePath:        'C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\srcnn.pp.0.cpp'
-        Offset:          11796
+        Offset:          13258
         Length:          0
-        ReplacementText: 'VITIS_LOOP_32_6: '
+        ReplacementText: 'VITIS_LOOP_58_6: '
 ...

@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv1'" level="0">
-<item name = "Date">Wed Oct 29 00:02:26 2025
+<item name = "Date">Thu Oct 30 11:32:23 2025
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 7.016 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 7.300 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -31,10 +31,11 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_gen_tiles_stream_all_fu_346">gen_tiles_stream_all, 657, 657, 6.570 us, 6.570 us, 657, 657, no</column>
-<column name="grp_load_stage_fu_351">load_stage, ?, ?, ?, ?, ?, ?, no</column>
-<column name="grp_compute_stage_fu_366">compute_stage, ?, ?, ?, ?, ?, ?, no</column>
-<column name="grp_store_stage_fu_630">store_stage, 1082369, 10519553, 10.824 ms, 0.105 sec, 1082369, 10519553, no</column>
+<column name="grp_gen_tiles_stream_all_fu_408">gen_tiles_stream_all, 657, 657, 6.570 us, 6.570 us, 657, 657, no</column>
+<column name="call_ln0_entry_proc_fu_413">entry_proc, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
+<column name="grp_load_stage_fu_426">load_stage, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_compute_stage_fu_442">compute_stage, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_store_stage_fu_706">store_stage, 1082369, 10519553, 10.824 ms, 0.105 sec, 1082369, 10519553, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">

@@ -5,11 +5,6 @@
                 <option name="name" value="srcnn"/>
             </pragma>
         </directive>
-        <directive functionName="srcnn" label="" functionLabel="">
-            <pragma name="TOP">
-                <option name="name" value="srcnn"/>
-            </pragma>
-        </directive>
     </sourceFile>
 </AutoPilot:ProjectResources>
 

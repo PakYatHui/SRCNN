@@ -93,19 +93,19 @@ set RtlHierarchyInfo {[
 					{"Name" : "q2_blk_n", "Type" : "RtlSignal"}]},
 			{"Name" : "s_out", "Type" : "Fifo", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0", "DependentChanDepth" : "256", "DependentChanType" : "0",
 				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "grp_store_stage_Pipeline_VITIS_LOOP_175_4_fu_108", "Port" : "s_out", "Inst_start_state" : "4", "Inst_end_state" : "5"}]},
+					{"ID" : "1", "SubInstance" : "grp_store_stage_Pipeline_VITIS_LOOP_170_4_fu_108", "Port" : "s_out", "Inst_start_state" : "4", "Inst_end_state" : "5"}]},
 			{"Name" : "feat1", "Type" : "Memory", "Direction" : "O",
 				"SubConnect" : [
-					{"ID" : "1", "SubInstance" : "grp_store_stage_Pipeline_VITIS_LOOP_175_4_fu_108", "Port" : "feat1", "Inst_start_state" : "4", "Inst_end_state" : "5"}]}],
+					{"ID" : "1", "SubInstance" : "grp_store_stage_Pipeline_VITIS_LOOP_170_4_fu_108", "Port" : "feat1", "Inst_start_state" : "4", "Inst_end_state" : "5"}]}],
 		"Loop" : [
-			{"Name" : "VITIS_LOOP_172_3", "PipelineType" : "no",
+			{"Name" : "VITIS_LOOP_167_3", "PipelineType" : "no",
 				"LoopDec" : {"FSMBitwidth" : "5", "FirstState" : "ap_ST_fsm_state4", "LastState" : ["ap_ST_fsm_state5"], "QuitState" : ["ap_ST_fsm_state4"], "PreState" : ["ap_ST_fsm_state3"], "PostState" : ["ap_ST_fsm_state3"], "OneDepthLoop" : "0", "OneStateBlock": ""}},
-			{"Name" : "VITIS_LOOP_170_2", "PipelineType" : "no",
+			{"Name" : "VITIS_LOOP_165_2", "PipelineType" : "no",
 				"LoopDec" : {"FSMBitwidth" : "5", "FirstState" : "ap_ST_fsm_state3", "LastState" : ["ap_ST_fsm_state4"], "QuitState" : ["ap_ST_fsm_state3"], "PreState" : ["ap_ST_fsm_state2"], "PostState" : ["ap_ST_fsm_state2"], "OneDepthLoop" : "0", "OneStateBlock": ""}},
-			{"Name" : "VITIS_LOOP_167_1", "PipelineType" : "no",
+			{"Name" : "VITIS_LOOP_162_1", "PipelineType" : "no",
 				"LoopDec" : {"FSMBitwidth" : "5", "FirstState" : "ap_ST_fsm_state2", "LastState" : ["ap_ST_fsm_state3"], "QuitState" : ["ap_ST_fsm_state2"], "PreState" : ["ap_ST_fsm_state1"], "PostState" : ["ap_ST_fsm_state1"], "OneDepthLoop" : "0", "OneStateBlock": ""}}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_store_stage_Pipeline_VITIS_LOOP_175_4_fu_108", "Parent" : "0", "Child" : ["2"],
-		"CDFG" : "store_stage_Pipeline_VITIS_LOOP_175_4",
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_store_stage_Pipeline_VITIS_LOOP_170_4_fu_108", "Parent" : "0", "Child" : ["2"],
+		"CDFG" : "store_stage_Pipeline_VITIS_LOOP_170_4",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
@@ -124,13 +124,13 @@ set RtlHierarchyInfo {[
 				"BlockSignal" : [
 					{"Name" : "s_out_blk_n", "Type" : "RtlSignal"}]},
 			{"Name" : "trunc_ln", "Type" : "None", "Direction" : "I"},
-			{"Name" : "zext_ln172", "Type" : "None", "Direction" : "I"},
-			{"Name" : "zext_ln175", "Type" : "None", "Direction" : "I"},
+			{"Name" : "zext_ln167", "Type" : "None", "Direction" : "I"},
+			{"Name" : "zext_ln170", "Type" : "None", "Direction" : "I"},
 			{"Name" : "feat1", "Type" : "Memory", "Direction" : "O"}],
 		"Loop" : [
-			{"Name" : "VITIS_LOOP_175_4", "PipelineType" : "UPC",
+			{"Name" : "VITIS_LOOP_170_4", "PipelineType" : "UPC",
 				"LoopDec" : {"FSMBitwidth" : "2", "FirstState" : "ap_ST_fsm_state1", "FirstStateIter" : "", "FirstStateBlock" : "ap_ST_fsm_state1_blk", "LastState" : "ap_ST_fsm_state2", "LastStateIter" : "", "LastStateBlock" : "ap_ST_fsm_state2_blk", "QuitState" : "ap_ST_fsm_state2", "QuitStateIter" : "", "QuitStateBlock" : "ap_ST_fsm_state2_blk", "OneDepthLoop" : "1", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "2", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_store_stage_Pipeline_VITIS_LOOP_175_4_fu_108.flow_control_loop_pipe_sequential_init_U", "Parent" : "1"}]}
+	{"ID" : "2", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_store_stage_Pipeline_VITIS_LOOP_170_4_fu_108.flow_control_loop_pipe_sequential_init_U", "Parent" : "1"}]}
 
 
 set ArgLastReadFirstWriteLatency {
@@ -138,12 +138,12 @@ set ArgLastReadFirstWriteLatency {
 		q2 {Type I LastRead 1 FirstWrite -1}
 		s_out {Type I LastRead 1 FirstWrite -1}
 		feat1 {Type O LastRead -1 FirstWrite 1}}
-	store_stage_Pipeline_VITIS_LOOP_175_4 {
+	store_stage_Pipeline_VITIS_LOOP_170_4 {
 		d_tN {Type I LastRead 0 FirstWrite -1}
 		s_out {Type I LastRead 1 FirstWrite -1}
 		trunc_ln {Type I LastRead 0 FirstWrite -1}
-		zext_ln172 {Type I LastRead 0 FirstWrite -1}
-		zext_ln175 {Type I LastRead 0 FirstWrite -1}
+		zext_ln167 {Type I LastRead 0 FirstWrite -1}
+		zext_ln170 {Type I LastRead 0 FirstWrite -1}
 		feat1 {Type O LastRead -1 FirstWrite 1}}}
 
 set hasDtUnsupportedChannel 0

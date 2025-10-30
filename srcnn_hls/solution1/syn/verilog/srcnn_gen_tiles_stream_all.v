@@ -10,13 +10,10 @@ module srcnn_gen_tiles_stream_all (
         ap_clk,
         ap_rst,
         ap_start,
-        start_full_n,
         ap_done,
         ap_continue,
         ap_idle,
         ap_ready,
-        start_out,
-        start_write,
         q0_din,
         q0_num_data_valid,
         q0_fifo_cap,
@@ -32,13 +29,10 @@ parameter    ap_ST_fsm_state4 = 4'd8;
 input   ap_clk;
 input   ap_rst;
 input   ap_start;
-input   start_full_n;
 output   ap_done;
 input   ap_continue;
 output   ap_idle;
 output   ap_ready;
-output   start_out;
-output   start_write;
 output  [223:0] q0_din;
 input  [1:0] q0_num_data_valid;
 input  [1:0] q0_fifo_cap;
@@ -47,15 +41,12 @@ output   q0_write;
 
 reg ap_done;
 reg ap_idle;
-reg start_write;
+reg ap_ready;
 reg q0_write;
 
-reg    real_start;
-reg    start_once_reg;
 reg    ap_done_reg;
 (* fsm_encoding = "none" *) reg   [3:0] ap_CS_fsm;
 wire    ap_CS_fsm_state1;
-reg    internal_ap_ready;
 reg    q0_blk_n;
 wire    ap_CS_fsm_state4;
 wire   [0:0] icmp_ln35_fu_208_p2;
@@ -88,9 +79,9 @@ wire   [7:0] trunc_ln33_fu_186_p1;
 wire   [0:0] tmp_fu_178_p3;
 wire   [7:0] xor_ln34_fu_190_p2;
 wire   [7:0] trunc_ln35_fu_228_p1;
-wire   [0:0] tmp_5_fu_220_p3;
+wire   [0:0] tmp_4_fu_220_p3;
 wire   [7:0] xor_ln36_fu_232_p2;
-wire   [27:0] tmp_6_fu_256_p3;
+wire   [27:0] tmp_5_fu_256_p3;
 wire   [7:0] tW_fu_238_p3;
 wire   [55:0] zext_ln38_fu_263_p1;
 wire   [6:0] tmp_s_fu_246_p4;
@@ -104,7 +95,6 @@ wire    ap_ce_reg;
 
 // power-on initialization
 initial begin
-#0 start_once_reg = 1'b0;
 #0 ap_done_reg = 1'b0;
 #0 ap_CS_fsm = 4'd1;
 end
@@ -130,18 +120,6 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (ap_rst == 1'b1) begin
-        start_once_reg <= 1'b0;
-    end else begin
-        if (((internal_ap_ready == 1'b0) & (real_start == 1'b1))) begin
-            start_once_reg <= 1'b1;
-        end else if ((internal_ap_ready == 1'b1)) begin
-            start_once_reg <= 1'b0;
-        end
-    end
-end
-
-always @ (posedge ap_clk) begin
     if ((~((icmp_ln35_fu_208_p2 == 1'd1) & (q0_full_n == 1'b0)) & (icmp_ln35_fu_208_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state4))) begin
         h0_2_reg_81 <= h0_reg_322;
     end else if (((icmp_ln30_fu_112_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state2))) begin
@@ -150,7 +128,7 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if ((~((ap_done_reg == 1'b1) | (real_start == 1'b0)) & (1'b1 == ap_CS_fsm_state1))) begin
+    if ((~((ap_start == 1'b0) | (ap_done_reg == 1'b1)) & (1'b1 == ap_CS_fsm_state1))) begin
         nb_fu_70 <= 4'd0;
     end else if (((icmp_ln33_fu_166_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state3))) begin
         nb_fu_70 <= nb_2_reg_304;
@@ -186,7 +164,7 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (*) begin
-    if (((ap_done_reg == 1'b1) | (real_start == 1'b0))) begin
+    if (((ap_start == 1'b0) | (ap_done_reg == 1'b1))) begin
         ap_ST_fsm_state1_blk = 1'b1;
     end else begin
         ap_ST_fsm_state1_blk = 1'b0;
@@ -214,7 +192,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state1) & (real_start == 1'b0))) begin
+    if (((ap_start == 1'b0) & (1'b1 == ap_CS_fsm_state1))) begin
         ap_idle = 1'b1;
     end else begin
         ap_idle = 1'b0;
@@ -223,9 +201,9 @@ end
 
 always @ (*) begin
     if (((icmp_ln30_fu_112_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state2))) begin
-        internal_ap_ready = 1'b1;
+        ap_ready = 1'b1;
     end else begin
-        internal_ap_ready = 1'b0;
+        ap_ready = 1'b0;
     end
 end
 
@@ -246,25 +224,9 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((start_once_reg == 1'b0) & (start_full_n == 1'b0))) begin
-        real_start = 1'b0;
-    end else begin
-        real_start = ap_start;
-    end
-end
-
-always @ (*) begin
-    if (((start_once_reg == 1'b0) & (real_start == 1'b1))) begin
-        start_write = 1'b1;
-    end else begin
-        start_write = 1'b0;
-    end
-end
-
-always @ (*) begin
     case (ap_CS_fsm)
         ap_ST_fsm_state1 : begin
-            if ((~((ap_done_reg == 1'b1) | (real_start == 1'b0)) & (1'b1 == ap_CS_fsm_state1))) begin
+            if ((~((ap_start == 1'b0) | (ap_done_reg == 1'b1)) & (1'b1 == ap_CS_fsm_state1))) begin
                 ap_NS_fsm = ap_ST_fsm_state2;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state1;
@@ -308,14 +270,12 @@ assign ap_CS_fsm_state3 = ap_CS_fsm[32'd2];
 assign ap_CS_fsm_state4 = ap_CS_fsm[32'd3];
 
 always @ (*) begin
-    ap_block_state1 = ((ap_done_reg == 1'b1) | (real_start == 1'b0));
+    ap_block_state1 = ((ap_start == 1'b0) | (ap_done_reg == 1'b1));
 end
 
 always @ (*) begin
     ap_block_state4 = ((icmp_ln35_fu_208_p2 == 1'd1) & (q0_full_n == 1'b0));
 end
-
-assign ap_ready = internal_ap_ready;
 
 assign h0_fu_172_p2 = (h0_2_reg_81 + 9'd32);
 
@@ -335,19 +295,17 @@ assign q0_din = zext_ln38_1_cast_fu_267_p11;
 
 assign shl_ln31_fu_140_p2 = nb_fu_70 << 4'd3;
 
-assign start_out = real_start;
-
 assign sub_ln32_fu_152_p2 = (4'd0 - shl_ln31_fu_140_p2);
 
 assign tH_fu_196_p3 = ((tmp_fu_178_p3[0:0] == 1'b1) ? xor_ln34_fu_190_p2 : 8'd32);
 
 assign tN_fu_158_p3 = ((icmp_ln32_fu_146_p2[0:0] == 1'b1) ? 4'd8 : sub_ln32_fu_152_p2);
 
-assign tW_fu_238_p3 = ((tmp_5_fu_220_p3[0:0] == 1'b1) ? xor_ln36_fu_232_p2 : 8'd32);
+assign tW_fu_238_p3 = ((tmp_4_fu_220_p3[0:0] == 1'b1) ? xor_ln36_fu_232_p2 : 8'd32);
 
-assign tmp_5_fu_220_p3 = w0_fu_214_p2[32'd8];
+assign tmp_4_fu_220_p3 = w0_fu_214_p2[32'd8];
 
-assign tmp_6_fu_256_p3 = {{tN_reg_314}, {24'd0}};
+assign tmp_5_fu_256_p3 = {{tN_reg_314}, {24'd0}};
 
 assign tmp_fu_178_p3 = h0_fu_172_p2[32'd8];
 
@@ -369,7 +327,7 @@ assign zext_ln31_fu_136_p1 = n_fu_128_p3;
 
 assign zext_ln38_1_cast_fu_267_p11 = {{{{{{{{{{{{{{{{{{25'd16777216}, {tW_fu_238_p3}}}, {24'd0}}}, {tH_reg_327}}}, {zext_ln38_fu_263_p1}}}, {trunc_ln35_fu_228_p1}}}, {24'd0}}}, {tmp_s_fu_246_p4}}}, {1'd0}}}, {zext_ln31_reg_309}};
 
-assign zext_ln38_fu_263_p1 = tmp_6_fu_256_p3;
+assign zext_ln38_fu_263_p1 = tmp_5_fu_256_p3;
 
 always @ (posedge ap_clk) begin
     zext_ln31_reg_309[2:0] <= 3'b000;

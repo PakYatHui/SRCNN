@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'store_stage'" level="0">
-<item name = "Date">Wed Oct 29 00:02:26 2025
+<item name = "Date">Thu Oct 30 11:32:22 2025
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -35,9 +35,9 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- VITIS_LOOP_167_1">1082368, 10519552, 2114 ~ 20546, -, -, 512, no</column>
-<column name=" + VITIS_LOOP_170_2">2112, 20544, 66 ~ 642, -, -, 32, no</column>
-<column name="  ++ VITIS_LOOP_172_3">64, 640, 2 ~ 20, -, -, 32, no</column>
+<column name="- VITIS_LOOP_162_1">1082368, 10519552, 2114 ~ 20546, -, -, 512, no</column>
+<column name=" + VITIS_LOOP_165_2">2112, 20544, 66 ~ 642, -, -, 32, no</column>
+<column name="  ++ VITIS_LOOP_167_3">64, 640, 2 ~ 20, -, -, 32, no</column>
 </table>
 </item>
 </section>

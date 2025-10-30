@@ -9,6 +9,32 @@ void srcnn(ftmap_t input_ftmap[N0][H][W],
            param_t conv3_biases[N3],
            ftmap_t output_ftmap[N3][H][W])
 {
+
+	// === 放在 srcnn(...) 函数体最开头（任何代码之前） ===
+
+// 3 个 AXI4 主口：输入、所有权重与偏置、输出
+#pragma HLS INTERFACE m_axi port=input_ftmap   offset=slave bundle=gmem_in  depth=(N0*H*W)     num_read_outstanding=16 max_read_burst_length=256
+#pragma HLS INTERFACE m_axi port=conv1_weights offset=slave bundle=gmem_wgt depth=(N1*N0*F1*F1) num_read_outstanding=32 max_read_burst_length=256
+#pragma HLS INTERFACE m_axi port=conv1_biases  offset=slave bundle=gmem_wgt depth=(N1)
+#pragma HLS INTERFACE m_axi port=conv2_weights offset=slave bundle=gmem_wgt depth=(N2*N1*F2*F2)
+#pragma HLS INTERFACE m_axi port=conv2_biases  offset=slave bundle=gmem_wgt depth=(N2)
+#pragma HLS INTERFACE m_axi port=conv3_weights offset=slave bundle=gmem_wgt depth=(N3*N2*F3*F3)
+#pragma HLS INTERFACE m_axi port=conv3_biases  offset=slave bundle=gmem_wgt depth=(N3)
+#pragma HLS INTERFACE m_axi port=output_ftmap  offset=slave bundle=gmem_out depth=(N3*H*W)     num_write_outstanding=8  max_write_burst_length=256
+
+// 控制寄存器（AXI-Lite）
+#pragma HLS INTERFACE s_axilite port=input_ftmap    bundle=control
+#pragma HLS INTERFACE s_axilite port=conv1_weights  bundle=control
+#pragma HLS INTERFACE s_axilite port=conv1_biases   bundle=control
+#pragma HLS INTERFACE s_axilite port=conv2_weights  bundle=control
+#pragma HLS INTERFACE s_axilite port=conv2_biases   bundle=control
+#pragma HLS INTERFACE s_axilite port=conv3_weights  bundle=control
+#pragma HLS INTERFACE s_axilite port=conv3_biases   bundle=control
+#pragma HLS INTERFACE s_axilite port=output_ftmap   bundle=control
+#pragma HLS INTERFACE s_axilite port=return         bundle=control
+
+
+
 #pragma HLS PIPELINE off
 	static ftmap_t feat1[N1][H][W]; // after conv1
 	    static ftmap_t feat2[N2][H][W]; // after conv2 (before ReLU)

@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'gen_tiles_stream_all'" level="0">
-<item name = "Date">Wed Oct 29 00:02:29 2025
+<item name = "Date">Thu Oct 30 11:32:29 2025
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -54,8 +54,8 @@
 <column name="FIFO">-, -, -, -, -</column>
 <column name="Instance">-, -, -, -, -</column>
 <column name="Memory">-, -, -, -, -</column>
-<column name="Multiplexer">-, -, -, 80, -</column>
-<column name="Register">-, -, 53, -, -</column>
+<column name="Multiplexer">-, -, -, 71, -</column>
+<column name="Register">-, -, 52, -, -</column>
 <specialColumn name="Available">288, 1248, 234240, 117120, 64</specialColumn>
 <specialColumn name="Utilization (%)">0, 0, ~0, ~0, 0</specialColumn>
 </table>
@@ -104,7 +104,6 @@
 <column name="h0_2_reg_81">9, 2, 9, 18</column>
 <column name="nb_fu_70">9, 2, 4, 8</column>
 <column name="q0_blk_n">9, 2, 1, 2</column>
-<column name="real_start">9, 2, 1, 2</column>
 <column name="w0_2_reg_93">9, 2, 9, 18</column>
 </table>
 </item>
@@ -116,7 +115,6 @@
 <column name="h0_reg_322">9, 0, 9, 0</column>
 <column name="nb_2_reg_304">4, 0, 4, 0</column>
 <column name="nb_fu_70">4, 0, 4, 0</column>
-<column name="start_once_reg">1, 0, 1, 0</column>
 <column name="tH_reg_327">8, 0, 8, 0</column>
 <column name="tN_reg_314">1, 0, 4, 3</column>
 <column name="w0_2_reg_93">9, 0, 9, 0</column>
@@ -133,13 +131,10 @@
 <column name="ap_clk">in, 1, ap_ctrl_hs, gen_tiles_stream_all, return value</column>
 <column name="ap_rst">in, 1, ap_ctrl_hs, gen_tiles_stream_all, return value</column>
 <column name="ap_start">in, 1, ap_ctrl_hs, gen_tiles_stream_all, return value</column>
-<column name="start_full_n">in, 1, ap_ctrl_hs, gen_tiles_stream_all, return value</column>
 <column name="ap_done">out, 1, ap_ctrl_hs, gen_tiles_stream_all, return value</column>
 <column name="ap_continue">in, 1, ap_ctrl_hs, gen_tiles_stream_all, return value</column>
 <column name="ap_idle">out, 1, ap_ctrl_hs, gen_tiles_stream_all, return value</column>
 <column name="ap_ready">out, 1, ap_ctrl_hs, gen_tiles_stream_all, return value</column>
-<column name="start_out">out, 1, ap_ctrl_hs, gen_tiles_stream_all, return value</column>
-<column name="start_write">out, 1, ap_ctrl_hs, gen_tiles_stream_all, return value</column>
 <column name="q0_din">out, 224, ap_fifo, q0, pointer</column>
 <column name="q0_num_data_valid">in, 2, ap_fifo, q0, pointer</column>
 <column name="q0_fifo_cap">in, 2, ap_fifo, q0, pointer</column>

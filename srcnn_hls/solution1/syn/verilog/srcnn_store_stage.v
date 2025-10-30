@@ -69,54 +69,54 @@ reg    ap_done_reg;
 wire    ap_CS_fsm_state1;
 reg    q2_blk_n;
 wire    ap_CS_fsm_state2;
-wire   [0:0] icmp_ln167_fu_128_p2;
+wire   [0:0] icmp_ln162_fu_128_p2;
 wire   [9:0] i_2_fu_134_p2;
 reg   [9:0] i_2_reg_274;
 reg    ap_block_state2;
 reg   [31:0] d_tW_reg_279;
 reg   [31:0] d_tN_reg_284;
 reg   [31:0] d_tH_reg_289;
-wire   [5:0] trunc_ln170_fu_170_p1;
-reg   [5:0] trunc_ln170_reg_294;
-reg   [21:0] trunc_ln170_1_reg_299;
-reg   [13:0] trunc_ln170_2_reg_304;
-wire   [5:0] add_ln170_fu_208_p2;
-reg   [5:0] add_ln170_reg_312;
+wire   [5:0] trunc_ln165_fu_170_p1;
+reg   [5:0] trunc_ln165_reg_294;
+reg   [21:0] trunc_ln165_1_reg_299;
+reg   [13:0] trunc_ln165_2_reg_304;
+wire   [5:0] add_ln165_fu_208_p2;
+reg   [5:0] add_ln165_reg_312;
 wire    ap_CS_fsm_state3;
 wire   [0:0] cmp9_fu_214_p2;
 reg   [0:0] cmp9_reg_317;
-wire   [0:0] icmp_ln170_fu_202_p2;
+wire   [0:0] icmp_ln165_fu_202_p2;
 wire   [13:0] empty_fu_219_p2;
 reg   [13:0] empty_reg_322;
-wire   [5:0] add_ln172_fu_242_p2;
-reg   [5:0] add_ln172_reg_330;
+wire   [5:0] add_ln167_fu_242_p2;
+reg   [5:0] add_ln167_reg_330;
 wire    ap_CS_fsm_state4;
-wire   [0:0] and_ln174_fu_253_p2;
-reg   [0:0] and_ln174_reg_335;
-wire   [0:0] icmp_ln172_fu_236_p2;
-wire   [21:0] empty_258_fu_258_p2;
-reg   [21:0] empty_258_reg_339;
-wire    grp_store_stage_Pipeline_VITIS_LOOP_175_4_fu_108_ap_start;
-wire    grp_store_stage_Pipeline_VITIS_LOOP_175_4_fu_108_ap_done;
-wire    grp_store_stage_Pipeline_VITIS_LOOP_175_4_fu_108_ap_idle;
-wire    grp_store_stage_Pipeline_VITIS_LOOP_175_4_fu_108_ap_ready;
-wire    grp_store_stage_Pipeline_VITIS_LOOP_175_4_fu_108_s_out_read;
-wire   [21:0] grp_store_stage_Pipeline_VITIS_LOOP_175_4_fu_108_feat1_address0;
-wire    grp_store_stage_Pipeline_VITIS_LOOP_175_4_fu_108_feat1_ce0;
-wire    grp_store_stage_Pipeline_VITIS_LOOP_175_4_fu_108_feat1_we0;
-wire   [31:0] grp_store_stage_Pipeline_VITIS_LOOP_175_4_fu_108_feat1_d0;
+wire   [0:0] and_ln169_fu_253_p2;
+reg   [0:0] and_ln169_reg_335;
+wire   [0:0] icmp_ln167_fu_236_p2;
+wire   [21:0] empty_276_fu_258_p2;
+reg   [21:0] empty_276_reg_339;
+wire    grp_store_stage_Pipeline_VITIS_LOOP_170_4_fu_108_ap_start;
+wire    grp_store_stage_Pipeline_VITIS_LOOP_170_4_fu_108_ap_done;
+wire    grp_store_stage_Pipeline_VITIS_LOOP_170_4_fu_108_ap_idle;
+wire    grp_store_stage_Pipeline_VITIS_LOOP_170_4_fu_108_ap_ready;
+wire    grp_store_stage_Pipeline_VITIS_LOOP_170_4_fu_108_s_out_read;
+wire   [21:0] grp_store_stage_Pipeline_VITIS_LOOP_170_4_fu_108_feat1_address0;
+wire    grp_store_stage_Pipeline_VITIS_LOOP_170_4_fu_108_feat1_ce0;
+wire    grp_store_stage_Pipeline_VITIS_LOOP_170_4_fu_108_feat1_we0;
+wire   [31:0] grp_store_stage_Pipeline_VITIS_LOOP_170_4_fu_108_feat1_d0;
 reg   [5:0] th_reg_86;
 reg   [5:0] tw_reg_97;
 wire    ap_CS_fsm_state5;
 reg    ap_block_state5_on_subcall_done;
-reg    grp_store_stage_Pipeline_VITIS_LOOP_175_4_fu_108_ap_start_reg;
+reg    grp_store_stage_Pipeline_VITIS_LOOP_170_4_fu_108_ap_start_reg;
 reg   [9:0] i_fu_76;
 reg    ap_block_state1;
-wire   [31:0] zext_ln170_1_fu_198_p1;
-wire   [13:0] zext_ln170_fu_194_p1;
-wire   [31:0] zext_ln172_1_fu_232_p1;
-wire   [0:0] icmp_ln174_fu_248_p2;
-wire   [21:0] zext_ln172_fu_228_p1;
+wire   [31:0] zext_ln165_1_fu_198_p1;
+wire   [13:0] zext_ln165_fu_194_p1;
+wire   [31:0] zext_ln167_1_fu_232_p1;
+wire   [0:0] icmp_ln169_fu_248_p2;
+wire   [21:0] zext_ln167_fu_228_p1;
 reg   [4:0] ap_NS_fsm;
 reg    ap_ST_fsm_state1_blk;
 reg    ap_ST_fsm_state2_blk;
@@ -129,29 +129,29 @@ wire    ap_ce_reg;
 initial begin
 #0 ap_done_reg = 1'b0;
 #0 ap_CS_fsm = 5'd1;
-#0 grp_store_stage_Pipeline_VITIS_LOOP_175_4_fu_108_ap_start_reg = 1'b0;
+#0 grp_store_stage_Pipeline_VITIS_LOOP_170_4_fu_108_ap_start_reg = 1'b0;
 end
 
-srcnn_store_stage_Pipeline_VITIS_LOOP_175_4 grp_store_stage_Pipeline_VITIS_LOOP_175_4_fu_108(
+srcnn_store_stage_Pipeline_VITIS_LOOP_170_4 grp_store_stage_Pipeline_VITIS_LOOP_170_4_fu_108(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst),
-    .ap_start(grp_store_stage_Pipeline_VITIS_LOOP_175_4_fu_108_ap_start),
-    .ap_done(grp_store_stage_Pipeline_VITIS_LOOP_175_4_fu_108_ap_done),
-    .ap_idle(grp_store_stage_Pipeline_VITIS_LOOP_175_4_fu_108_ap_idle),
-    .ap_ready(grp_store_stage_Pipeline_VITIS_LOOP_175_4_fu_108_ap_ready),
+    .ap_start(grp_store_stage_Pipeline_VITIS_LOOP_170_4_fu_108_ap_start),
+    .ap_done(grp_store_stage_Pipeline_VITIS_LOOP_170_4_fu_108_ap_done),
+    .ap_idle(grp_store_stage_Pipeline_VITIS_LOOP_170_4_fu_108_ap_idle),
+    .ap_ready(grp_store_stage_Pipeline_VITIS_LOOP_170_4_fu_108_ap_ready),
     .s_out_dout(s_out_dout),
     .s_out_num_data_valid(9'd0),
     .s_out_fifo_cap(9'd0),
     .s_out_empty_n(s_out_empty_n),
-    .s_out_read(grp_store_stage_Pipeline_VITIS_LOOP_175_4_fu_108_s_out_read),
+    .s_out_read(grp_store_stage_Pipeline_VITIS_LOOP_170_4_fu_108_s_out_read),
     .d_tN(d_tN_reg_284),
-    .trunc_ln(trunc_ln170_reg_294),
-    .zext_ln172(empty_reg_322),
-    .zext_ln175(empty_258_reg_339),
-    .feat1_address0(grp_store_stage_Pipeline_VITIS_LOOP_175_4_fu_108_feat1_address0),
-    .feat1_ce0(grp_store_stage_Pipeline_VITIS_LOOP_175_4_fu_108_feat1_ce0),
-    .feat1_we0(grp_store_stage_Pipeline_VITIS_LOOP_175_4_fu_108_feat1_we0),
-    .feat1_d0(grp_store_stage_Pipeline_VITIS_LOOP_175_4_fu_108_feat1_d0)
+    .trunc_ln(trunc_ln165_reg_294),
+    .zext_ln167(empty_reg_322),
+    .zext_ln170(empty_276_reg_339),
+    .feat1_address0(grp_store_stage_Pipeline_VITIS_LOOP_170_4_fu_108_feat1_address0),
+    .feat1_ce0(grp_store_stage_Pipeline_VITIS_LOOP_170_4_fu_108_feat1_ce0),
+    .feat1_we0(grp_store_stage_Pipeline_VITIS_LOOP_170_4_fu_108_feat1_we0),
+    .feat1_d0(grp_store_stage_Pipeline_VITIS_LOOP_170_4_fu_108_feat1_d0)
 );
 
 always @ (posedge ap_clk) begin
@@ -168,7 +168,7 @@ always @ (posedge ap_clk) begin
     end else begin
         if ((ap_continue == 1'b1)) begin
             ap_done_reg <= 1'b0;
-        end else if ((~((icmp_ln167_fu_128_p2 == 1'd0) & (q2_empty_n == 1'b0)) & (icmp_ln167_fu_128_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state2))) begin
+        end else if ((~((icmp_ln162_fu_128_p2 == 1'd0) & (q2_empty_n == 1'b0)) & (icmp_ln162_fu_128_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state2))) begin
             ap_done_reg <= 1'b1;
         end
     end
@@ -176,12 +176,12 @@ end
 
 always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
-        grp_store_stage_Pipeline_VITIS_LOOP_175_4_fu_108_ap_start_reg <= 1'b0;
+        grp_store_stage_Pipeline_VITIS_LOOP_170_4_fu_108_ap_start_reg <= 1'b0;
     end else begin
-        if (((icmp_ln172_fu_236_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state4) & (1'd1 == and_ln174_fu_253_p2))) begin
-            grp_store_stage_Pipeline_VITIS_LOOP_175_4_fu_108_ap_start_reg <= 1'b1;
-        end else if ((grp_store_stage_Pipeline_VITIS_LOOP_175_4_fu_108_ap_ready == 1'b1)) begin
-            grp_store_stage_Pipeline_VITIS_LOOP_175_4_fu_108_ap_start_reg <= 1'b0;
+        if (((icmp_ln167_fu_236_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state4) & (1'd1 == and_ln169_fu_253_p2))) begin
+            grp_store_stage_Pipeline_VITIS_LOOP_170_4_fu_108_ap_start_reg <= 1'b1;
+        end else if ((grp_store_stage_Pipeline_VITIS_LOOP_170_4_fu_108_ap_ready == 1'b1)) begin
+            grp_store_stage_Pipeline_VITIS_LOOP_170_4_fu_108_ap_start_reg <= 1'b0;
         end
     end
 end
@@ -189,71 +189,71 @@ end
 always @ (posedge ap_clk) begin
     if ((~((ap_done_reg == 1'b1) | (ap_start == 1'b0)) & (1'b1 == ap_CS_fsm_state1))) begin
         i_fu_76 <= 10'd0;
-    end else if (((icmp_ln170_fu_202_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state3))) begin
+    end else if (((icmp_ln165_fu_202_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state3))) begin
         i_fu_76 <= i_2_reg_274;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if ((~((icmp_ln167_fu_128_p2 == 1'd0) & (q2_empty_n == 1'b0)) & (icmp_ln167_fu_128_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state2))) begin
+    if ((~((icmp_ln162_fu_128_p2 == 1'd0) & (q2_empty_n == 1'b0)) & (icmp_ln162_fu_128_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state2))) begin
         th_reg_86 <= 6'd0;
-    end else if (((icmp_ln172_fu_236_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
-        th_reg_86 <= add_ln170_reg_312;
+    end else if (((icmp_ln167_fu_236_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+        th_reg_86 <= add_ln165_reg_312;
     end
 end
 
 always @ (posedge ap_clk) begin
     if (((1'b1 == ap_CS_fsm_state5) & (1'b0 == ap_block_state5_on_subcall_done))) begin
-        tw_reg_97 <= add_ln172_reg_330;
-    end else if (((icmp_ln170_fu_202_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state3))) begin
+        tw_reg_97 <= add_ln167_reg_330;
+    end else if (((icmp_ln165_fu_202_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state3))) begin
         tw_reg_97 <= 6'd0;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state3)) begin
-        add_ln170_reg_312 <= add_ln170_fu_208_p2;
+        add_ln165_reg_312 <= add_ln165_fu_208_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state4)) begin
-        add_ln172_reg_330 <= add_ln172_fu_242_p2;
+        add_ln167_reg_330 <= add_ln167_fu_242_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((icmp_ln172_fu_236_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state4))) begin
-        and_ln174_reg_335 <= and_ln174_fu_253_p2;
+    if (((icmp_ln167_fu_236_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state4))) begin
+        and_ln169_reg_335 <= and_ln169_fu_253_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((icmp_ln170_fu_202_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state3))) begin
+    if (((icmp_ln165_fu_202_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state3))) begin
         cmp9_reg_317 <= cmp9_fu_214_p2;
         empty_reg_322 <= empty_fu_219_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if ((~((icmp_ln167_fu_128_p2 == 1'd0) & (q2_empty_n == 1'b0)) & (icmp_ln167_fu_128_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state2))) begin
+    if ((~((icmp_ln162_fu_128_p2 == 1'd0) & (q2_empty_n == 1'b0)) & (icmp_ln162_fu_128_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state2))) begin
         d_tH_reg_289 <= {{q2_dout[159:128]}};
         d_tN_reg_284 <= {{q2_dout[127:96]}};
         d_tW_reg_279 <= {{q2_dout[191:160]}};
-        trunc_ln170_1_reg_299 <= {{q2_dout[85:64]}};
-        trunc_ln170_2_reg_304 <= {{q2_dout[45:32]}};
-        trunc_ln170_reg_294 <= trunc_ln170_fu_170_p1;
+        trunc_ln165_1_reg_299 <= {{q2_dout[85:64]}};
+        trunc_ln165_2_reg_304 <= {{q2_dout[45:32]}};
+        trunc_ln165_reg_294 <= trunc_ln165_fu_170_p1;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((icmp_ln172_fu_236_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state4) & (1'd1 == and_ln174_fu_253_p2))) begin
-        empty_258_reg_339 <= empty_258_fu_258_p2;
+    if (((icmp_ln167_fu_236_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state4) & (1'd1 == and_ln169_fu_253_p2))) begin
+        empty_276_reg_339 <= empty_276_fu_258_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if ((~((icmp_ln167_fu_128_p2 == 1'd0) & (q2_empty_n == 1'b0)) & (1'b1 == ap_CS_fsm_state2))) begin
+    if ((~((icmp_ln162_fu_128_p2 == 1'd0) & (q2_empty_n == 1'b0)) & (1'b1 == ap_CS_fsm_state2))) begin
         i_2_reg_274 <= i_2_fu_134_p2;
     end
 end
@@ -267,7 +267,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((icmp_ln167_fu_128_p2 == 1'd0) & (q2_empty_n == 1'b0))) begin
+    if (((icmp_ln162_fu_128_p2 == 1'd0) & (q2_empty_n == 1'b0))) begin
         ap_ST_fsm_state2_blk = 1'b1;
     end else begin
         ap_ST_fsm_state2_blk = 1'b0;
@@ -287,7 +287,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((~((icmp_ln167_fu_128_p2 == 1'd0) & (q2_empty_n == 1'b0)) & (icmp_ln167_fu_128_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state2))) begin
+    if ((~((icmp_ln162_fu_128_p2 == 1'd0) & (q2_empty_n == 1'b0)) & (icmp_ln162_fu_128_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state2))) begin
         ap_done = 1'b1;
     end else begin
         ap_done = ap_done_reg;
@@ -303,7 +303,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((~((icmp_ln167_fu_128_p2 == 1'd0) & (q2_empty_n == 1'b0)) & (icmp_ln167_fu_128_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state2))) begin
+    if ((~((icmp_ln162_fu_128_p2 == 1'd0) & (q2_empty_n == 1'b0)) & (icmp_ln162_fu_128_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state2))) begin
         ap_ready = 1'b1;
     end else begin
         ap_ready = 1'b0;
@@ -311,7 +311,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((icmp_ln167_fu_128_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state2))) begin
+    if (((icmp_ln162_fu_128_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state2))) begin
         q2_blk_n = q2_empty_n;
     end else begin
         q2_blk_n = 1'b1;
@@ -319,7 +319,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((~((icmp_ln167_fu_128_p2 == 1'd0) & (q2_empty_n == 1'b0)) & (icmp_ln167_fu_128_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state2))) begin
+    if ((~((icmp_ln162_fu_128_p2 == 1'd0) & (q2_empty_n == 1'b0)) & (icmp_ln162_fu_128_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state2))) begin
         q2_read = 1'b1;
     end else begin
         q2_read = 1'b0;
@@ -327,8 +327,8 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state5) & (1'd1 == and_ln174_reg_335))) begin
-        s_out_read = grp_store_stage_Pipeline_VITIS_LOOP_175_4_fu_108_s_out_read;
+    if (((1'b1 == ap_CS_fsm_state5) & (1'd1 == and_ln169_reg_335))) begin
+        s_out_read = grp_store_stage_Pipeline_VITIS_LOOP_170_4_fu_108_s_out_read;
     end else begin
         s_out_read = 1'b0;
     end
@@ -344,23 +344,23 @@ always @ (*) begin
             end
         end
         ap_ST_fsm_state2 : begin
-            if ((~((icmp_ln167_fu_128_p2 == 1'd0) & (q2_empty_n == 1'b0)) & (icmp_ln167_fu_128_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state2))) begin
+            if ((~((icmp_ln162_fu_128_p2 == 1'd0) & (q2_empty_n == 1'b0)) & (icmp_ln162_fu_128_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state2))) begin
                 ap_NS_fsm = ap_ST_fsm_state1;
-            end else if ((~((icmp_ln167_fu_128_p2 == 1'd0) & (q2_empty_n == 1'b0)) & (icmp_ln167_fu_128_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state2))) begin
+            end else if ((~((icmp_ln162_fu_128_p2 == 1'd0) & (q2_empty_n == 1'b0)) & (icmp_ln162_fu_128_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state2))) begin
                 ap_NS_fsm = ap_ST_fsm_state3;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state2;
             end
         end
         ap_ST_fsm_state3 : begin
-            if (((icmp_ln170_fu_202_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state3))) begin
+            if (((icmp_ln165_fu_202_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state3))) begin
                 ap_NS_fsm = ap_ST_fsm_state2;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state4;
             end
         end
         ap_ST_fsm_state4 : begin
-            if (((icmp_ln172_fu_236_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+            if (((icmp_ln167_fu_236_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
                 ap_NS_fsm = ap_ST_fsm_state3;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state5;
@@ -379,11 +379,11 @@ always @ (*) begin
     endcase
 end
 
-assign add_ln170_fu_208_p2 = (th_reg_86 + 6'd1);
+assign add_ln165_fu_208_p2 = (th_reg_86 + 6'd1);
 
-assign add_ln172_fu_242_p2 = (tw_reg_97 + 6'd1);
+assign add_ln167_fu_242_p2 = (tw_reg_97 + 6'd1);
 
-assign and_ln174_fu_253_p2 = (icmp_ln174_fu_248_p2 & cmp9_reg_317);
+assign and_ln169_fu_253_p2 = (icmp_ln169_fu_248_p2 & cmp9_reg_317);
 
 assign ap_CS_fsm_state1 = ap_CS_fsm[32'd0];
 
@@ -400,47 +400,47 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    ap_block_state2 = ((icmp_ln167_fu_128_p2 == 1'd0) & (q2_empty_n == 1'b0));
+    ap_block_state2 = ((icmp_ln162_fu_128_p2 == 1'd0) & (q2_empty_n == 1'b0));
 end
 
 always @ (*) begin
-    ap_block_state5_on_subcall_done = ((grp_store_stage_Pipeline_VITIS_LOOP_175_4_fu_108_ap_done == 1'b0) & (1'd1 == and_ln174_reg_335));
+    ap_block_state5_on_subcall_done = ((grp_store_stage_Pipeline_VITIS_LOOP_170_4_fu_108_ap_done == 1'b0) & (1'd1 == and_ln169_reg_335));
 end
 
-assign cmp9_fu_214_p2 = (($signed(zext_ln170_1_fu_198_p1) < $signed(d_tH_reg_289)) ? 1'b1 : 1'b0);
+assign cmp9_fu_214_p2 = (($signed(zext_ln165_1_fu_198_p1) < $signed(d_tH_reg_289)) ? 1'b1 : 1'b0);
 
-assign empty_258_fu_258_p2 = (trunc_ln170_1_reg_299 + zext_ln172_fu_228_p1);
+assign empty_276_fu_258_p2 = (trunc_ln165_1_reg_299 + zext_ln167_fu_228_p1);
 
-assign empty_fu_219_p2 = (trunc_ln170_2_reg_304 + zext_ln170_fu_194_p1);
+assign empty_fu_219_p2 = (trunc_ln165_2_reg_304 + zext_ln165_fu_194_p1);
 
-assign feat1_address0 = grp_store_stage_Pipeline_VITIS_LOOP_175_4_fu_108_feat1_address0;
+assign feat1_address0 = grp_store_stage_Pipeline_VITIS_LOOP_170_4_fu_108_feat1_address0;
 
-assign feat1_ce0 = grp_store_stage_Pipeline_VITIS_LOOP_175_4_fu_108_feat1_ce0;
+assign feat1_ce0 = grp_store_stage_Pipeline_VITIS_LOOP_170_4_fu_108_feat1_ce0;
 
-assign feat1_d0 = grp_store_stage_Pipeline_VITIS_LOOP_175_4_fu_108_feat1_d0;
+assign feat1_d0 = grp_store_stage_Pipeline_VITIS_LOOP_170_4_fu_108_feat1_d0;
 
-assign feat1_we0 = grp_store_stage_Pipeline_VITIS_LOOP_175_4_fu_108_feat1_we0;
+assign feat1_we0 = grp_store_stage_Pipeline_VITIS_LOOP_170_4_fu_108_feat1_we0;
 
-assign grp_store_stage_Pipeline_VITIS_LOOP_175_4_fu_108_ap_start = grp_store_stage_Pipeline_VITIS_LOOP_175_4_fu_108_ap_start_reg;
+assign grp_store_stage_Pipeline_VITIS_LOOP_170_4_fu_108_ap_start = grp_store_stage_Pipeline_VITIS_LOOP_170_4_fu_108_ap_start_reg;
 
 assign i_2_fu_134_p2 = (i_fu_76 + 10'd1);
 
-assign icmp_ln167_fu_128_p2 = ((i_fu_76 == 10'd512) ? 1'b1 : 1'b0);
+assign icmp_ln162_fu_128_p2 = ((i_fu_76 == 10'd512) ? 1'b1 : 1'b0);
 
-assign icmp_ln170_fu_202_p2 = ((th_reg_86 == 6'd32) ? 1'b1 : 1'b0);
+assign icmp_ln165_fu_202_p2 = ((th_reg_86 == 6'd32) ? 1'b1 : 1'b0);
 
-assign icmp_ln172_fu_236_p2 = ((tw_reg_97 == 6'd32) ? 1'b1 : 1'b0);
+assign icmp_ln167_fu_236_p2 = ((tw_reg_97 == 6'd32) ? 1'b1 : 1'b0);
 
-assign icmp_ln174_fu_248_p2 = (($signed(zext_ln172_1_fu_232_p1) < $signed(d_tW_reg_279)) ? 1'b1 : 1'b0);
+assign icmp_ln169_fu_248_p2 = (($signed(zext_ln167_1_fu_232_p1) < $signed(d_tW_reg_279)) ? 1'b1 : 1'b0);
 
-assign trunc_ln170_fu_170_p1 = q2_dout[5:0];
+assign trunc_ln165_fu_170_p1 = q2_dout[5:0];
 
-assign zext_ln170_1_fu_198_p1 = th_reg_86;
+assign zext_ln165_1_fu_198_p1 = th_reg_86;
 
-assign zext_ln170_fu_194_p1 = th_reg_86;
+assign zext_ln165_fu_194_p1 = th_reg_86;
 
-assign zext_ln172_1_fu_232_p1 = tw_reg_97;
+assign zext_ln167_1_fu_232_p1 = tw_reg_97;
 
-assign zext_ln172_fu_228_p1 = tw_reg_97;
+assign zext_ln167_fu_228_p1 = tw_reg_97;
 
 endmodule //srcnn_store_stage

@@ -361,30 +361,26 @@ static void load_stage(hls::stream<TileDesc>& qin, int R,
  const int tilesH=(255 +32 -1)/32, tilesW=(255 +32 -1)/32, T=tilesH*tilesW, NB=(64 +8 -1)/8;
 
     VITIS_LOOP_57_1: for(int i=0;i<NB*T;++i){
-#pragma HLS loop_tripcount min=1 max=(((64 +8 -1)/8)*((255 +32 -1)/32)*((255 +32 -1)/32))
- TileDesc d = qin.read();
+        TileDesc d = qin.read();
         q_to_compute.write(d);
 
 
-        VITIS_LOOP_63_2: for(int tn=0; tn<d.tN; ++tn) s_bias.write(conv1_biases[d.n+tn]);
-#pragma HLS loop_tripcount min=1 max=8
+        VITIS_LOOP_62_2: for(int tn=0; tn<d.tN; ++tn) s_bias.write(conv1_biases[d.n+tn]);
 
- VITIS_LOOP_66_3: for(int tc=0; tc<d.tC; ++tc)
-#pragma HLS loop_tripcount min=1 max=1
- VITIS_LOOP_68_4: for(int ih=0; ih<d.tH + 9 - 1; ++ih){
+        VITIS_LOOP_64_3: for(int tc=0; tc<d.tC; ++tc)
+            VITIS_LOOP_65_4: for(int ih=0; ih<d.tH + 9 - 1; ++ih){
                 int gy = clampi(d.h0 + ih - R, 0, 255 -1);
-                VITIS_LOOP_70_5: for(int iw=0; iw<d.tW + 9 - 1; ++iw){
+                VITIS_LOOP_67_5: for(int iw=0; iw<d.tW + 9 - 1; ++iw){
                     int gx = clampi(d.w0 + iw - R, 0, 255 -1);
                     s_in.write(input_ftmap[tc][gy][gx]);
                 }
             }
 
 
-        VITIS_LOOP_77_6: for(int tn=0; tn<d.tN; ++tn)
-#pragma HLS loop_tripcount min=1 max=8
- VITIS_LOOP_79_7: for(int tc=0; tc<d.tC; ++tc)
-                VITIS_LOOP_80_8: for(int kh=0; kh<9; ++kh)
-                    VITIS_LOOP_81_9: for(int kw=0; kw<9; ++kw)
+        VITIS_LOOP_74_6: for(int tn=0; tn<d.tN; ++tn)
+            VITIS_LOOP_75_7: for(int tc=0; tc<d.tC; ++tc)
+                VITIS_LOOP_76_8: for(int kh=0; kh<9; ++kh)
+                    VITIS_LOOP_77_9: for(int kw=0; kw<9; ++kw)
                         s_w.write(conv1_weights[d.n+tn][tc][kh][kw]);
     }
 }
@@ -400,55 +396,54 @@ static void compute_stage(hls::stream<TileDesc>& q_desc_in,
 #pragma HLS INLINE off
 
 
-#pragma HLS bin
 
  static ftmap_t in_tile[1][32 + 9 - 1][32 + 9 - 1];
     static param_t w_tile[8][1][9][9];
     static param_t bias [8];
 
-#pragma HLS bind_storage variable=in_tile type=ram_2p impl=bram
-#pragma HLS bind_storage variable=w_tile type=ram_2p impl=bram
-#pragma HLS bind_storage variable=bias type=ram_1p impl=bram
 
- const int tilesH=(255 +32 -1)/32, tilesW=(255 +32 -1)/32, T=tilesH*tilesW, NB=(64 +8 -1)/8;
 
-    VITIS_LOOP_109_1: for(int i=0;i<NB*T;++i){
+
+
+    const int tilesH=(255 +32 -1)/32, tilesW=(255 +32 -1)/32, T=tilesH*tilesW, NB=(64 +8 -1)/8;
+
+    VITIS_LOOP_104_1: for(int i=0;i<NB*T;++i){
 #pragma HLS loop_tripcount min=1 max=(((64 +8 -1)/8)*((255 +32 -1)/32)*((255 +32 -1)/32))
  TileDesc d = q_desc_in.read();
         q_desc_out.write(d);
 
 
-        VITIS_LOOP_115_2: for(int tn=0; tn<d.tN; ++tn) bias[tn] = s_bias.read();
+        VITIS_LOOP_110_2: for(int tn=0; tn<d.tN; ++tn) bias[tn] = s_bias.read();
 
 
-        VITIS_LOOP_118_3: for(int tc=0; tc<d.tC; ++tc)
-            VITIS_LOOP_119_4: for(int ih=0; ih<d.tH + 9 - 1; ++ih)
-                VITIS_LOOP_120_5: for(int iw=0; iw<d.tW + 9 - 1; ++iw)
+        VITIS_LOOP_113_3: for(int tc=0; tc<d.tC; ++tc)
+            VITIS_LOOP_114_4: for(int ih=0; ih<d.tH + 9 - 1; ++ih)
+                VITIS_LOOP_115_5: for(int iw=0; iw<d.tW + 9 - 1; ++iw)
                     in_tile[tc][ih][iw] = s_in.read();
 
 
-        VITIS_LOOP_124_6: for(int tn=0; tn<d.tN; ++tn)
-            VITIS_LOOP_125_7: for(int tc=0; tc<d.tC; ++tc)
-                VITIS_LOOP_126_8: for(int kh=0; kh<9; ++kh)
-                    VITIS_LOOP_127_9: for(int kw=0; kw<9; ++kw)
+        VITIS_LOOP_119_6: for(int tn=0; tn<d.tN; ++tn)
+            VITIS_LOOP_120_7: for(int tc=0; tc<d.tC; ++tc)
+                VITIS_LOOP_121_8: for(int kh=0; kh<9; ++kh)
+                    VITIS_LOOP_122_9: for(int kw=0; kw<9; ++kw)
                         w_tile[tn][tc][kh][kw] = s_w.read();
 
 
-        VITIS_LOOP_131_10: for(int th=0; th<32; ++th){
+        VITIS_LOOP_126_10: for(int th=0; th<32; ++th){
 #pragma HLS loop_flatten off
- VITIS_LOOP_133_11: for(int tw=0; tw<32; ++tw){
+ VITIS_LOOP_128_11: for(int tw=0; tw<32; ++tw){
 #pragma HLS loop_flatten off
  if(th < d.tH && tw < d.tW){
 
-                    VITIS_LOOP_137_12: for(int tn=0; tn<8; ++tn){
+                    VITIS_LOOP_132_12: for(int tn=0; tn<8; ++tn){
 #pragma HLS PIPELINE II=2
  if(tn < d.tN){
                             float acc = bias[tn];
 
-                            VITIS_LOOP_142_13: for(int tc=0; tc<1; ++tc){
+                            VITIS_LOOP_137_13: for(int tc=0; tc<1; ++tc){
                                 if(tc < d.tC){
-                                    VITIS_LOOP_144_14: for(int kh=0; kh<9; ++kh)
-                                        VITIS_LOOP_145_15: for(int kw=0; kw<9; ++kw)
+                                    VITIS_LOOP_139_14: for(int kh=0; kh<9; ++kh)
+                                        VITIS_LOOP_140_15: for(int kw=0; kw<9; ++kw)
                                             acc += w_tile[tn][tc][kh][kw] *
                                                    in_tile[tc][th + kh][tw + kw];
                                 }
@@ -470,15 +465,15 @@ static void store_stage(hls::stream<TileDesc>& q_desc_in,
 #pragma HLS INLINE off
  const int tilesH=(255 +32 -1)/32, tilesW=(255 +32 -1)/32, T=tilesH*tilesW, NB=(64 +8 -1)/8;
 
-    VITIS_LOOP_167_1: for(int i=0;i<NB*T;++i){
+    VITIS_LOOP_162_1: for(int i=0;i<NB*T;++i){
         TileDesc d = q_desc_in.read();
 
-        VITIS_LOOP_170_2: for(int th=0; th<32; ++th){
+        VITIS_LOOP_165_2: for(int th=0; th<32; ++th){
 #pragma HLS loop_flatten off
- VITIS_LOOP_172_3: for(int tw=0; tw<32; ++tw){
+ VITIS_LOOP_167_3: for(int tw=0; tw<32; ++tw){
 #pragma HLS loop_flatten off
  if(th<d.tH && tw<d.tW){
-                    VITIS_LOOP_175_4: for(int tn=0; tn<8; ++tn){
+                    VITIS_LOOP_170_4: for(int tn=0; tn<8; ++tn){
 #pragma HLS PIPELINE II=2
  if(tn<d.tN){
                             ftmap_t v = s_out.read();

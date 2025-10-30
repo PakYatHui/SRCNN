@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1761656580992">
-  <ports id="1" name="q2" type="PortType" coreName="FIFO_SRL" coreId="1953391988" bitwidth="224" iftype="IfTypeRom">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1761784405157">
+  <ports id="1" name="q2" type="PortType" coreName="FIFO_SRL" coreId="1852142702" bitwidth="224" iftype="IfTypeRom">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="2" name="s_out" type="PortType" coreId="1953391988" bitwidth="32" iftype="IfTypeRom">
+  <ports id="2" name="s_out" type="PortType" coreId="4294967295" bitwidth="32" iftype="IfTypeRom">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="3" name="feat1" type="PortType" coreName="RAM" coreId="1563963953" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="4161600">
+  <ports id="3" name="feat1" type="PortType" coreName="RAM" coreId="544825708" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="4161600">
     <dataInputObjs>call</dataInputObjs>
   </ports>
   <edges id="70" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.1"/>
@@ -91,68 +91,68 @@
   <edges id="264" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.10/@node_objs.0"/>
   <edges id="265" edge_type="VirtEdge" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.10/@node_objs.0"/>
   <blocks id="9" name="entry" type="BlockType">
-    <controlOutputObjs>VITIS_LOOP_170_2</controlOutputObjs>
+    <controlOutputObjs>VITIS_LOOP_165_2</controlOutputObjs>
     <node_objs xsi:type="cdfg:CdfgNode" id="4" name="i" originalName="i" coreId="0" bitwidth="10" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="i_write_ln167" lineNumber="167" fileName="src/conv1.cpp" fileDirectory="../." coreId="0" contextFuncName="store_stage" opcode="store" m_display="0" m_delay="0.42" m_topoIndex="2" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="src/conv1.cpp" linenumber="167" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="i_write_ln162" lineNumber="162" fileName="src/conv1.cpp" fileDirectory="../." coreId="0" contextFuncName="store_stage" opcode="store" m_display="0" m_delay="0.42" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/conv1.cpp" linenumber="162" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
       <dataInputObjs>alloca</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="br_ln167" lineNumber="167" fileName="src/conv1.cpp" fileDirectory="../." coreId="0" contextFuncName="store_stage" opcode="br" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="src/conv1.cpp" linenumber="167" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
-      <controlInputObjs>VITIS_LOOP_170_2</controlInputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="br_ln162" lineNumber="162" fileName="src/conv1.cpp" fileDirectory="../." coreId="0" contextFuncName="store_stage" opcode="br" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/conv1.cpp" linenumber="162" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
+      <controlInputObjs>VITIS_LOOP_165_2</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="src/conv1.cpp">
-      <validLinenumbers>167</validLinenumbers>
+      <validLinenumbers>162</validLinenumbers>
     </fileValidLineNumbers>
   </blocks>
-  <blocks id="14" name="VITIS_LOOP_170_2" type="BlockType">
+  <blocks id="14" name="VITIS_LOOP_165_2" type="BlockType">
     <controlInputObjs>entry</controlInputObjs>
     <controlInputObjs>for.inc30</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>for.end32</controlOutputObjs>
-    <controlOutputObjs>VITIS_LOOP_170_2.split</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="i_1" lineNumber="167" originalName="i" fileName="src/conv1.cpp" fileDirectory="../." coreId="0" contextFuncName="store_stage" bitwidth="10" opcode="load" nodeLabel="1.0" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="src/conv1.cpp" linenumber="167" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
+    <controlOutputObjs>VITIS_LOOP_165_2.split</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="i_1" lineNumber="162" originalName="i" fileName="src/conv1.cpp" fileDirectory="../." coreId="0" contextFuncName="store_stage" bitwidth="10" opcode="load" nodeLabel="1.0" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/conv1.cpp" linenumber="162" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>icmp</dataOutputObjs>
       <dataOutputObjs>add</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="11" name="icmp_ln167" lineNumber="167" fileName="src/conv1.cpp" fileDirectory="../." rtlName="icmp_ln167_fu_128_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="store_stage" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="0.78" m_topoIndex="5" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="src/conv1.cpp" linenumber="167" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="11" name="icmp_ln162" lineNumber="162" fileName="src/conv1.cpp" fileDirectory="../." rtlName="icmp_ln162_fu_128_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="store_stage" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="0.78" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/conv1.cpp" linenumber="162" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
       <dataInputObjs>load</dataInputObjs>
       <dataOutputObjs>br</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="12" name="i_2" lineNumber="167" originalName="i" fileName="src/conv1.cpp" fileDirectory="../." rtlName="i_2_fu_134_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="store_stage" bitwidth="10" opcode="add" nodeLabel="1.0" m_display="0" m_delay="0.78" m_topoIndex="6" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="src/conv1.cpp" linenumber="167" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="12" name="i_2" lineNumber="162" originalName="i" fileName="src/conv1.cpp" fileDirectory="../." rtlName="i_2_fu_134_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="store_stage" bitwidth="10" opcode="add" nodeLabel="1.0" m_display="0" m_delay="0.78" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/conv1.cpp" linenumber="162" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
       <dataInputObjs>load</dataInputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="br_ln167" lineNumber="167" fileName="src/conv1.cpp" fileDirectory="../." coreId="0" contextFuncName="store_stage" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="src/conv1.cpp" linenumber="167" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="br_ln162" lineNumber="162" fileName="src/conv1.cpp" fileDirectory="../." coreId="0" contextFuncName="store_stage" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/conv1.cpp" linenumber="162" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
       <dataInputObjs>icmp</dataInputObjs>
-      <controlInputObjs>VITIS_LOOP_170_2.split</controlInputObjs>
+      <controlInputObjs>VITIS_LOOP_165_2.split</controlInputObjs>
       <controlInputObjs>for.end32</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="src/conv1.cpp">
-      <validLinenumbers>167</validLinenumbers>
+      <validLinenumbers>162</validLinenumbers>
     </fileValidLineNumbers>
   </blocks>
-  <blocks id="25" name="VITIS_LOOP_170_2.split" type="BlockType">
-    <controlInputObjs>VITIS_LOOP_170_2</controlInputObjs>
+  <blocks id="25" name="VITIS_LOOP_165_2.split" type="BlockType">
+    <controlInputObjs>VITIS_LOOP_165_2</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>phi</controlOutputObjs>
-    <controlOutputObjs>VITIS_LOOP_172_3</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="q2_read" lineNumber="168" fileName="src/conv1.cpp" fileDirectory="../." coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="store_stage" bitwidth="224" opcode="read" nodeLabel="1.0" m_display="0" m_delay="1.83" m_topoIndex="8" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="src/conv1.cpp" linenumber="168" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
+    <controlOutputObjs>VITIS_LOOP_167_3</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="q2_read" lineNumber="163" fileName="src/conv1.cpp" fileDirectory="../." coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="store_stage" bitwidth="224" opcode="read" nodeLabel="1.0" m_display="0" m_delay="1.83" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/conv1.cpp" linenumber="163" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
       <dataInputObjs>q2</dataInputObjs>
       <dataOutputObjs>partselect</dataOutputObjs>
       <dataOutputObjs>partselect</dataOutputObjs>
@@ -161,285 +161,285 @@
       <dataOutputObjs>partselect</dataOutputObjs>
       <dataOutputObjs>partselect</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="d_tW" lineNumber="168" originalName="d.tW" fileName="src/conv1.cpp" fileDirectory="../." rtlName="d_tW_reg_279" coreId="0" contextFuncName="store_stage" bitwidth="32" opcode="partselect" nodeLabel="1.0" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="src/conv1.cpp" linenumber="168" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="d_tW" lineNumber="163" originalName="d.tW" fileName="src/conv1.cpp" fileDirectory="../." rtlName="d_tW_reg_279" coreId="0" contextFuncName="store_stage" bitwidth="32" opcode="partselect" nodeLabel="1.0" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/conv1.cpp" linenumber="163" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>icmp</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="d_tN" lineNumber="168" originalName="d.tN" fileName="src/conv1.cpp" fileDirectory="../." rtlName="d_tN_reg_284" coreId="0" contextFuncName="store_stage" bitwidth="32" opcode="partselect" nodeLabel="1.0" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="src/conv1.cpp" linenumber="168" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="d_tN" lineNumber="163" originalName="d.tN" fileName="src/conv1.cpp" fileDirectory="../." rtlName="d_tN_reg_284" coreId="0" contextFuncName="store_stage" bitwidth="32" opcode="partselect" nodeLabel="1.0" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/conv1.cpp" linenumber="163" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="d_tH" lineNumber="168" originalName="d.tH" fileName="src/conv1.cpp" fileDirectory="../." rtlName="d_tH_reg_289" coreId="0" contextFuncName="store_stage" bitwidth="32" opcode="partselect" nodeLabel="1.0" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="src/conv1.cpp" linenumber="168" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="d_tH" lineNumber="163" originalName="d.tH" fileName="src/conv1.cpp" fileDirectory="../." rtlName="d_tH_reg_289" coreId="0" contextFuncName="store_stage" bitwidth="32" opcode="partselect" nodeLabel="1.0" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/conv1.cpp" linenumber="163" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>icmp</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="trunc_ln170" lineNumber="170" fileName="src/conv1.cpp" fileDirectory="../." rtlName="trunc_ln170_fu_170_p1" coreId="0" contextFuncName="store_stage" bitwidth="6" opcode="trunc" nodeLabel="1.0" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="src/conv1.cpp" linenumber="170" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="trunc_ln165" lineNumber="165" fileName="src/conv1.cpp" fileDirectory="../." rtlName="trunc_ln165_fu_170_p1" coreId="0" contextFuncName="store_stage" bitwidth="6" opcode="trunc" nodeLabel="1.0" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/conv1.cpp" linenumber="165" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="22" name="trunc_ln170_1" lineNumber="170" fileName="src/conv1.cpp" fileDirectory="../." rtlName="trunc_ln170_1_reg_299" coreId="0" contextFuncName="store_stage" bitwidth="22" opcode="partselect" nodeLabel="1.0" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="src/conv1.cpp" linenumber="170" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="22" name="trunc_ln165_1" lineNumber="165" fileName="src/conv1.cpp" fileDirectory="../." rtlName="trunc_ln165_1_reg_299" coreId="0" contextFuncName="store_stage" bitwidth="22" opcode="partselect" nodeLabel="1.0" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/conv1.cpp" linenumber="165" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="trunc_ln170_2" lineNumber="170" fileName="src/conv1.cpp" fileDirectory="../." rtlName="trunc_ln170_2_reg_304" coreId="0" contextFuncName="store_stage" bitwidth="14" opcode="partselect" nodeLabel="1.0" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="src/conv1.cpp" linenumber="170" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="trunc_ln165_2" lineNumber="165" fileName="src/conv1.cpp" fileDirectory="../." rtlName="trunc_ln165_2_reg_304" coreId="0" contextFuncName="store_stage" bitwidth="14" opcode="partselect" nodeLabel="1.0" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/conv1.cpp" linenumber="165" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="24" name="br_ln170" lineNumber="170" fileName="src/conv1.cpp" fileDirectory="../." coreId="0" contextFuncName="store_stage" opcode="br" nodeLabel="1.0" m_display="0" m_delay="0.42" m_topoIndex="15" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="src/conv1.cpp" linenumber="170" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
-      <controlInputObjs>VITIS_LOOP_172_3</controlInputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="24" name="br_ln165" lineNumber="165" fileName="src/conv1.cpp" fileDirectory="../." coreId="0" contextFuncName="store_stage" opcode="br" nodeLabel="1.0" m_display="0" m_delay="0.42" m_topoIndex="15" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/conv1.cpp" linenumber="165" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
+      <controlInputObjs>VITIS_LOOP_167_3</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="src/conv1.cpp">
-      <validLinenumbers>168</validLinenumbers>
-      <validLinenumbers>170</validLinenumbers>
+      <validLinenumbers>163</validLinenumbers>
+      <validLinenumbers>165</validLinenumbers>
     </fileValidLineNumbers>
   </blocks>
-  <blocks id="32" name="VITIS_LOOP_172_3" type="BlockType">
-    <controlInputObjs>VITIS_LOOP_170_2.split</controlInputObjs>
+  <blocks id="32" name="VITIS_LOOP_167_3" type="BlockType">
+    <controlInputObjs>VITIS_LOOP_165_2.split</controlInputObjs>
     <controlInputObjs>for.inc27</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>for.inc30</controlOutputObjs>
-    <controlOutputObjs>VITIS_LOOP_172_3.split</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="26" name="th" lineNumber="170" originalName="th" fileName="src/conv1.cpp" fileDirectory="../." coreId="0" contextFuncName="store_stage" bitwidth="6" opcode="phi" nodeLabel="2.0" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="src/conv1.cpp" linenumber="170" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
+    <controlOutputObjs>VITIS_LOOP_167_3.split</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="26" name="th" lineNumber="165" originalName="th" fileName="src/conv1.cpp" fileDirectory="../." coreId="0" contextFuncName="store_stage" bitwidth="6" opcode="phi" nodeLabel="2.0" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/conv1.cpp" linenumber="165" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
       <dataInputObjs>add</dataInputObjs>
       <dataOutputObjs>zext</dataOutputObjs>
       <dataOutputObjs>zext</dataOutputObjs>
       <dataOutputObjs>icmp</dataOutputObjs>
       <dataOutputObjs>add</dataOutputObjs>
       <controlInputObjs>for.inc27</controlInputObjs>
-      <controlInputObjs>VITIS_LOOP_170_2.split</controlInputObjs>
+      <controlInputObjs>VITIS_LOOP_165_2.split</controlInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="27" name="zext_ln170" lineNumber="170" fileName="src/conv1.cpp" fileDirectory="../." rtlName="zext_ln170_fu_194_p1" coreId="0" contextFuncName="store_stage" bitwidth="14" opcode="zext" nodeLabel="2.0" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="src/conv1.cpp" linenumber="170" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="27" name="zext_ln165" lineNumber="165" fileName="src/conv1.cpp" fileDirectory="../." rtlName="zext_ln165_fu_194_p1" coreId="0" contextFuncName="store_stage" bitwidth="14" opcode="zext" nodeLabel="2.0" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/conv1.cpp" linenumber="165" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
       <dataInputObjs>phi</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="28" name="zext_ln170_1" lineNumber="170" fileName="src/conv1.cpp" fileDirectory="../." rtlName="zext_ln170_1_fu_198_p1" coreId="0" contextFuncName="store_stage" bitwidth="32" opcode="zext" nodeLabel="2.0" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="src/conv1.cpp" linenumber="170" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="28" name="zext_ln165_1" lineNumber="165" fileName="src/conv1.cpp" fileDirectory="../." rtlName="zext_ln165_1_fu_198_p1" coreId="0" contextFuncName="store_stage" bitwidth="32" opcode="zext" nodeLabel="2.0" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/conv1.cpp" linenumber="165" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
       <dataInputObjs>phi</dataInputObjs>
       <dataOutputObjs>icmp</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="29" name="icmp_ln170" lineNumber="170" fileName="src/conv1.cpp" fileDirectory="../." rtlName="icmp_ln170_fu_202_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="store_stage" bitwidth="1" opcode="icmp" nodeLabel="2.0" m_display="0" m_delay="0.78" m_topoIndex="20" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="src/conv1.cpp" linenumber="170" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="29" name="icmp_ln165" lineNumber="165" fileName="src/conv1.cpp" fileDirectory="../." rtlName="icmp_ln165_fu_202_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="store_stage" bitwidth="1" opcode="icmp" nodeLabel="2.0" m_display="0" m_delay="0.78" m_topoIndex="20" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/conv1.cpp" linenumber="165" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
       <dataInputObjs>phi</dataInputObjs>
       <dataOutputObjs>br</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="30" name="add_ln170" lineNumber="170" fileName="src/conv1.cpp" fileDirectory="../." rtlName="add_ln170_fu_208_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="store_stage" bitwidth="6" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.78" m_topoIndex="21" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="src/conv1.cpp" linenumber="170" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="30" name="add_ln165" lineNumber="165" fileName="src/conv1.cpp" fileDirectory="../." rtlName="add_ln165_fu_208_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="store_stage" bitwidth="6" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.78" m_topoIndex="21" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/conv1.cpp" linenumber="165" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
       <dataInputObjs>phi</dataInputObjs>
       <dataOutputObjs>phi</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="31" name="br_ln170" lineNumber="170" fileName="src/conv1.cpp" fileDirectory="../." coreId="0" contextFuncName="store_stage" opcode="br" nodeLabel="2.0" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="src/conv1.cpp" linenumber="170" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="31" name="br_ln165" lineNumber="165" fileName="src/conv1.cpp" fileDirectory="../." coreId="0" contextFuncName="store_stage" opcode="br" nodeLabel="2.0" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/conv1.cpp" linenumber="165" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
       <dataInputObjs>icmp</dataInputObjs>
-      <controlInputObjs>VITIS_LOOP_172_3.split</controlInputObjs>
+      <controlInputObjs>VITIS_LOOP_167_3.split</controlInputObjs>
       <controlInputObjs>for.inc30</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="src/conv1.cpp">
-      <validLinenumbers>170</validLinenumbers>
+      <validLinenumbers>165</validLinenumbers>
     </fileValidLineNumbers>
   </blocks>
-  <blocks id="38" name="VITIS_LOOP_172_3.split" type="BlockType">
-    <controlInputObjs>VITIS_LOOP_172_3</controlInputObjs>
+  <blocks id="38" name="VITIS_LOOP_167_3.split" type="BlockType">
+    <controlInputObjs>VITIS_LOOP_167_3</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>for.body8</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="35" name="cmp9" lineNumber="170" fileName="src/conv1.cpp" fileDirectory="../." rtlName="cmp9_fu_214_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="store_stage" bitwidth="1" opcode="icmp" nodeLabel="2.0" m_display="0" m_delay="1.01" m_topoIndex="23" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="src/conv1.cpp" linenumber="170" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="35" name="cmp9" lineNumber="165" fileName="src/conv1.cpp" fileDirectory="../." rtlName="cmp9_fu_214_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="store_stage" bitwidth="1" opcode="icmp" nodeLabel="2.0" m_display="0" m_delay="1.01" m_topoIndex="23" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/conv1.cpp" linenumber="165" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
       <dataInputObjs>zext</dataInputObjs>
       <dataInputObjs>partselect</dataInputObjs>
       <dataOutputObjs>and</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="36" name="empty" lineNumber="170" fileName="src/conv1.cpp" fileDirectory="../." rtlName="empty_fu_219_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="store_stage" bitwidth="14" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.83" m_topoIndex="24" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="src/conv1.cpp" linenumber="170" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="36" name="empty" lineNumber="165" fileName="src/conv1.cpp" fileDirectory="../." rtlName="empty_fu_219_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="store_stage" bitwidth="14" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.83" m_topoIndex="24" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/conv1.cpp" linenumber="165" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
       <dataInputObjs>partselect</dataInputObjs>
       <dataInputObjs>zext</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="37" name="br_ln172" lineNumber="172" fileName="src/conv1.cpp" fileDirectory="../." coreId="0" contextFuncName="store_stage" opcode="br" nodeLabel="2.0" m_display="0" m_delay="0.42" m_topoIndex="25" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="src/conv1.cpp" linenumber="172" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="37" name="br_ln167" lineNumber="167" fileName="src/conv1.cpp" fileDirectory="../." coreId="0" contextFuncName="store_stage" opcode="br" nodeLabel="2.0" m_display="0" m_delay="0.42" m_topoIndex="25" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/conv1.cpp" linenumber="167" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
       <controlInputObjs>for.body8</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="src/conv1.cpp">
-      <validLinenumbers>170</validLinenumbers>
-      <validLinenumbers>172</validLinenumbers>
+      <validLinenumbers>165</validLinenumbers>
+      <validLinenumbers>167</validLinenumbers>
     </fileValidLineNumbers>
   </blocks>
   <blocks id="45" name="for.body8" type="BlockType">
-    <controlInputObjs>VITIS_LOOP_172_3.split</controlInputObjs>
+    <controlInputObjs>VITIS_LOOP_167_3.split</controlInputObjs>
     <controlInputObjs>for.inc24</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>for.inc27</controlOutputObjs>
     <controlOutputObjs>for.body8.split</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="39" name="tw" lineNumber="172" originalName="tw" fileName="src/conv1.cpp" fileDirectory="../." coreId="0" contextFuncName="store_stage" bitwidth="6" opcode="phi" nodeLabel="3.0" m_display="0" m_topoIndex="28" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="src/conv1.cpp" linenumber="172" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="39" name="tw" lineNumber="167" originalName="tw" fileName="src/conv1.cpp" fileDirectory="../." coreId="0" contextFuncName="store_stage" bitwidth="6" opcode="phi" nodeLabel="3.0" m_display="0" m_topoIndex="28" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/conv1.cpp" linenumber="167" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
       <dataInputObjs>add</dataInputObjs>
       <dataOutputObjs>zext</dataOutputObjs>
       <dataOutputObjs>zext</dataOutputObjs>
       <dataOutputObjs>icmp</dataOutputObjs>
       <dataOutputObjs>add</dataOutputObjs>
-      <controlInputObjs>VITIS_LOOP_172_3.split</controlInputObjs>
+      <controlInputObjs>VITIS_LOOP_167_3.split</controlInputObjs>
       <controlInputObjs>for.inc24</controlInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="40" name="zext_ln172" lineNumber="172" fileName="src/conv1.cpp" fileDirectory="../." rtlName="zext_ln172_fu_228_p1" coreId="0" contextFuncName="store_stage" bitwidth="22" opcode="zext" nodeLabel="3.0" m_display="0" m_topoIndex="29" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="src/conv1.cpp" linenumber="172" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="40" name="zext_ln167" lineNumber="167" fileName="src/conv1.cpp" fileDirectory="../." rtlName="zext_ln167_fu_228_p1" coreId="0" contextFuncName="store_stage" bitwidth="22" opcode="zext" nodeLabel="3.0" m_display="0" m_topoIndex="29" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/conv1.cpp" linenumber="167" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
       <dataInputObjs>phi</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="41" name="zext_ln172_1" lineNumber="172" fileName="src/conv1.cpp" fileDirectory="../." rtlName="zext_ln172_1_fu_232_p1" coreId="0" contextFuncName="store_stage" bitwidth="32" opcode="zext" nodeLabel="3.0" m_display="0" m_topoIndex="30" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="src/conv1.cpp" linenumber="172" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="41" name="zext_ln167_1" lineNumber="167" fileName="src/conv1.cpp" fileDirectory="../." rtlName="zext_ln167_1_fu_232_p1" coreId="0" contextFuncName="store_stage" bitwidth="32" opcode="zext" nodeLabel="3.0" m_display="0" m_topoIndex="30" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/conv1.cpp" linenumber="167" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
       <dataInputObjs>phi</dataInputObjs>
       <dataOutputObjs>icmp</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="42" name="icmp_ln172" lineNumber="172" fileName="src/conv1.cpp" fileDirectory="../." rtlName="icmp_ln172_fu_236_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="store_stage" bitwidth="1" opcode="icmp" nodeLabel="3.0" m_display="0" m_delay="0.78" m_topoIndex="31" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="src/conv1.cpp" linenumber="172" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="42" name="icmp_ln167" lineNumber="167" fileName="src/conv1.cpp" fileDirectory="../." rtlName="icmp_ln167_fu_236_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="store_stage" bitwidth="1" opcode="icmp" nodeLabel="3.0" m_display="0" m_delay="0.78" m_topoIndex="31" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/conv1.cpp" linenumber="167" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
       <dataInputObjs>phi</dataInputObjs>
       <dataOutputObjs>br</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="43" name="add_ln172" lineNumber="172" fileName="src/conv1.cpp" fileDirectory="../." rtlName="add_ln172_fu_242_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="store_stage" bitwidth="6" opcode="add" nodeLabel="3.0" m_display="0" m_delay="0.78" m_topoIndex="32" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="src/conv1.cpp" linenumber="172" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="43" name="add_ln167" lineNumber="167" fileName="src/conv1.cpp" fileDirectory="../." rtlName="add_ln167_fu_242_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="store_stage" bitwidth="6" opcode="add" nodeLabel="3.0" m_display="0" m_delay="0.78" m_topoIndex="32" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/conv1.cpp" linenumber="167" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
       <dataInputObjs>phi</dataInputObjs>
       <dataOutputObjs>phi</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="44" name="br_ln172" lineNumber="172" fileName="src/conv1.cpp" fileDirectory="../." coreId="0" contextFuncName="store_stage" opcode="br" nodeLabel="3.0" m_display="0" m_topoIndex="33" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="src/conv1.cpp" linenumber="172" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="44" name="br_ln167" lineNumber="167" fileName="src/conv1.cpp" fileDirectory="../." coreId="0" contextFuncName="store_stage" opcode="br" nodeLabel="3.0" m_display="0" m_topoIndex="33" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/conv1.cpp" linenumber="167" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
       <dataInputObjs>icmp</dataInputObjs>
       <controlInputObjs>for.body8.split</controlInputObjs>
       <controlInputObjs>for.inc27</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="src/conv1.cpp">
-      <validLinenumbers>172</validLinenumbers>
+      <validLinenumbers>167</validLinenumbers>
     </fileValidLineNumbers>
   </blocks>
   <blocks id="51" name="for.body8.split" type="BlockType">
     <controlInputObjs>for.body8</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
-    <controlOutputObjs>VITIS_LOOP_175_4</controlOutputObjs>
+    <controlOutputObjs>VITIS_LOOP_170_4</controlOutputObjs>
     <controlOutputObjs>for.inc24</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="48" name="icmp_ln174" lineNumber="174" fileName="src/conv1.cpp" fileDirectory="../." rtlName="icmp_ln174_fu_248_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="store_stage" bitwidth="1" opcode="icmp" nodeLabel="3.0" m_display="0" m_delay="1.01" m_topoIndex="34" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="src/conv1.cpp" linenumber="174" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="48" name="icmp_ln169" lineNumber="169" fileName="src/conv1.cpp" fileDirectory="../." rtlName="icmp_ln169_fu_248_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="store_stage" bitwidth="1" opcode="icmp" nodeLabel="3.0" m_display="0" m_delay="1.01" m_topoIndex="34" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/conv1.cpp" linenumber="169" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
       <dataInputObjs>zext</dataInputObjs>
       <dataInputObjs>partselect</dataInputObjs>
       <dataOutputObjs>and</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="49" name="and_ln174" lineNumber="174" fileName="src/conv1.cpp" fileDirectory="../." rtlName="and_ln174_fu_253_p2" coreName="LogicGate" implIndex="auto" control="no" opType="and" coreId="74" contextFuncName="store_stage" bitwidth="1" opcode="and" nodeLabel="3.0" m_display="0" m_delay="0.28" m_topoIndex="35" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="src/conv1.cpp" linenumber="174" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="49" name="and_ln169" lineNumber="169" fileName="src/conv1.cpp" fileDirectory="../." rtlName="and_ln169_fu_253_p2" coreName="LogicGate" implIndex="auto" control="no" opType="and" coreId="74" contextFuncName="store_stage" bitwidth="1" opcode="and" nodeLabel="3.0" m_display="0" m_delay="0.28" m_topoIndex="35" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/conv1.cpp" linenumber="169" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
       <dataInputObjs>icmp</dataInputObjs>
       <dataInputObjs>icmp</dataInputObjs>
       <dataOutputObjs>br</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="50" name="br_ln174" lineNumber="174" fileName="src/conv1.cpp" fileDirectory="../." coreId="0" contextFuncName="store_stage" opcode="br" nodeLabel="3.0" m_display="0" m_topoIndex="36" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="src/conv1.cpp" linenumber="174" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="50" name="br_ln169" lineNumber="169" fileName="src/conv1.cpp" fileDirectory="../." coreId="0" contextFuncName="store_stage" opcode="br" nodeLabel="3.0" m_display="0" m_topoIndex="36" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/conv1.cpp" linenumber="169" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
       <dataInputObjs>and</dataInputObjs>
       <controlInputObjs>for.inc24</controlInputObjs>
-      <controlInputObjs>VITIS_LOOP_175_4</controlInputObjs>
+      <controlInputObjs>VITIS_LOOP_170_4</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="src/conv1.cpp">
-      <validLinenumbers>174</validLinenumbers>
+      <validLinenumbers>169</validLinenumbers>
     </fileValidLineNumbers>
   </blocks>
-  <blocks id="56" name="VITIS_LOOP_175_4" type="BlockType">
+  <blocks id="56" name="VITIS_LOOP_170_4" type="BlockType">
     <controlInputObjs>for.body8.split</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>for.inc24</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="52" name="empty_258" lineNumber="170" fileName="src/conv1.cpp" fileDirectory="../." rtlName="empty_258_fu_258_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="store_stage" bitwidth="22" opcode="add" nodeLabel="3.0" m_display="0" m_delay="0.91" m_topoIndex="37" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="src/conv1.cpp" linenumber="170" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="52" name="empty_276" lineNumber="165" fileName="src/conv1.cpp" fileDirectory="../." rtlName="empty_276_fu_258_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="store_stage" bitwidth="22" opcode="add" nodeLabel="3.0" m_display="0" m_delay="0.91" m_topoIndex="37" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/conv1.cpp" linenumber="165" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
       <dataInputObjs>partselect</dataInputObjs>
       <dataInputObjs>zext</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="53" name="empty_259" coreId="0" bitwidth="32" opcode="wait" nodeLabel="3.0" m_display="0" m_topoIndex="38" m_clusterGroupNumber="-1"/>
-    <node_objs xsi:type="cdfg:CdfgNode" id="54" name="_ln168" lineNumber="168" fileName="src/conv1.cpp" fileDirectory="../." rtlName="grp_store_stage_Pipeline_VITIS_LOOP_175_4_fu_108" coreId="0" contextFuncName="store_stage" opcode="call" nodeLabel="3.0" nodeLatency="1" m_display="0" m_delay="3.15" m_topoIndex="39" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="src/conv1.cpp" linenumber="168" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="53" name="empty_277" coreId="0" bitwidth="32" opcode="wait" nodeLabel="3.0" m_display="0" m_topoIndex="38" m_clusterGroupNumber="-1"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="54" name="_ln163" lineNumber="163" fileName="src/conv1.cpp" fileDirectory="../." rtlName="grp_store_stage_Pipeline_VITIS_LOOP_170_4_fu_108" coreId="0" contextFuncName="store_stage" opcode="call" nodeLabel="3.0" nodeLatency="1" m_display="0" m_delay="3.15" m_topoIndex="39" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/conv1.cpp" linenumber="163" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
       <dataInputObjs>partselect</dataInputObjs>
       <dataInputObjs>s_out</dataInputObjs>
       <dataInputObjs>trunc</dataInputObjs>
       <dataInputObjs>add</dataInputObjs>
       <dataInputObjs>add</dataInputObjs>
       <dataOutputObjs>feat1</dataOutputObjs>
-      <constName>store_stage_Pipeline_VITIS_LOOP_175_4</constName>
+      <constName>store_stage_Pipeline_VITIS_LOOP_170_4</constName>
     </node_objs>
     <node_objs xsi:type="cdfg:CdfgNode" id="55" name="br_ln0" coreId="0" opcode="br" nodeLabel="4.0" m_display="0" m_topoIndex="41" m_clusterGroupNumber="-1">
       <controlInputObjs>for.inc24</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="src/conv1.cpp">
-      <validLinenumbers>170</validLinenumbers>
-      <validLinenumbers>168</validLinenumbers>
+      <validLinenumbers>165</validLinenumbers>
+      <validLinenumbers>163</validLinenumbers>
     </fileValidLineNumbers>
   </blocks>
   <blocks id="58" name="for.inc24" type="BlockType">
     <controlInputObjs>for.body8.split</controlInputObjs>
-    <controlInputObjs>VITIS_LOOP_175_4</controlInputObjs>
+    <controlInputObjs>VITIS_LOOP_170_4</controlInputObjs>
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>for.body8</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="57" name="br_ln172" lineNumber="172" fileName="src/conv1.cpp" fileDirectory="../." coreId="0" contextFuncName="store_stage" opcode="br" nodeLabel="4.0" m_display="0" m_topoIndex="42" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="src/conv1.cpp" linenumber="172" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="57" name="br_ln167" lineNumber="167" fileName="src/conv1.cpp" fileDirectory="../." coreId="0" contextFuncName="store_stage" opcode="br" nodeLabel="4.0" m_display="0" m_topoIndex="42" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/conv1.cpp" linenumber="167" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
       <controlInputObjs>for.body8</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="src/conv1.cpp">
-      <validLinenumbers>172</validLinenumbers>
+      <validLinenumbers>167</validLinenumbers>
     </fileValidLineNumbers>
   </blocks>
   <blocks id="60" name="for.inc27" type="BlockType">
     <controlInputObjs>for.body8</controlInputObjs>
     <controlOutputObjs>phi</controlOutputObjs>
     <controlOutputObjs>br</controlOutputObjs>
-    <controlOutputObjs>VITIS_LOOP_172_3</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="59" name="br_ln170" lineNumber="170" fileName="src/conv1.cpp" fileDirectory="../." coreId="0" contextFuncName="store_stage" opcode="br" nodeLabel="3.0" m_display="0" m_topoIndex="40" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="src/conv1.cpp" linenumber="170" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
-      <controlInputObjs>VITIS_LOOP_172_3</controlInputObjs>
+    <controlOutputObjs>VITIS_LOOP_167_3</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="59" name="br_ln165" lineNumber="165" fileName="src/conv1.cpp" fileDirectory="../." coreId="0" contextFuncName="store_stage" opcode="br" nodeLabel="3.0" m_display="0" m_topoIndex="40" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/conv1.cpp" linenumber="165" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
+      <controlInputObjs>VITIS_LOOP_167_3</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="src/conv1.cpp">
-      <validLinenumbers>170</validLinenumbers>
+      <validLinenumbers>165</validLinenumbers>
     </fileValidLineNumbers>
   </blocks>
   <blocks id="63" name="for.inc30" type="BlockType">
-    <controlInputObjs>VITIS_LOOP_172_3</controlInputObjs>
+    <controlInputObjs>VITIS_LOOP_167_3</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
-    <controlOutputObjs>VITIS_LOOP_170_2</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="61" name="i_write_ln167" lineNumber="167" fileName="src/conv1.cpp" fileDirectory="../." coreId="0" contextFuncName="store_stage" opcode="store" nodeLabel="2.0" m_display="0" m_delay="0.42" m_topoIndex="26" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="src/conv1.cpp" linenumber="167" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
+    <controlOutputObjs>VITIS_LOOP_165_2</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="61" name="i_write_ln162" lineNumber="162" fileName="src/conv1.cpp" fileDirectory="../." coreId="0" contextFuncName="store_stage" opcode="store" nodeLabel="2.0" m_display="0" m_delay="0.42" m_topoIndex="26" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/conv1.cpp" linenumber="162" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
       <dataInputObjs>add</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="62" name="br_ln167" lineNumber="167" fileName="src/conv1.cpp" fileDirectory="../." coreId="0" contextFuncName="store_stage" opcode="br" nodeLabel="2.0" m_display="0" m_topoIndex="27" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="src/conv1.cpp" linenumber="167" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
-      <controlInputObjs>VITIS_LOOP_170_2</controlInputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="62" name="br_ln162" lineNumber="162" fileName="src/conv1.cpp" fileDirectory="../." coreId="0" contextFuncName="store_stage" opcode="br" nodeLabel="2.0" m_display="0" m_topoIndex="27" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/conv1.cpp" linenumber="162" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
+      <controlInputObjs>VITIS_LOOP_165_2</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="src/conv1.cpp">
-      <validLinenumbers>167</validLinenumbers>
+      <validLinenumbers>162</validLinenumbers>
     </fileValidLineNumbers>
   </blocks>
   <blocks id="65" name="for.end32" type="BlockType">
-    <controlInputObjs>VITIS_LOOP_170_2</controlInputObjs>
+    <controlInputObjs>VITIS_LOOP_165_2</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="64" name="_ln186" lineNumber="186" fileName="src/conv1.cpp" fileDirectory="../." coreId="0" contextFuncName="store_stage" opcode="ret" nodeLabel="1.0" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="src/conv1.cpp" linenumber="186" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="64" name="_ln181" lineNumber="181" fileName="src/conv1.cpp" fileDirectory="../." coreId="0" contextFuncName="store_stage" opcode="ret" nodeLabel="1.0" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="src/conv1.cpp" linenumber="181" fileDirectory="C:\Xilinx\golden" functionName="store_stage"/>
     </node_objs>
     <fileValidLineNumbers fileName="src/conv1.cpp">
-      <validLinenumbers>186</validLinenumbers>
+      <validLinenumbers>181</validLinenumbers>
     </fileValidLineNumbers>
   </blocks>
   <ScheduleInfo time="0"/>
@@ -453,19 +453,25 @@
   <regnodes realName="tw_reg_97">
     <nodeIds>39</nodeIds>
   </regnodes>
-  <regnodes realName="empty_258_reg_339">
-    <nodeIds>52</nodeIds>
+  <regnodes realName="and_ln169_reg_335">
+    <nodeIds>49</nodeIds>
   </regnodes>
   <regnodes realName="d_tH_reg_289">
     <nodeIds>20</nodeIds>
   </regnodes>
-  <regnodes realName="and_ln174_reg_335">
-    <nodeIds>49</nodeIds>
+  <regnodes realName="trunc_ln165_reg_294">
+    <nodeIds>21</nodeIds>
   </regnodes>
-  <regnodes realName="trunc_ln170_1_reg_299">
+  <regnodes realName="add_ln167_reg_330">
+    <nodeIds>43</nodeIds>
+  </regnodes>
+  <regnodes realName="empty_276_reg_339">
+    <nodeIds>52</nodeIds>
+  </regnodes>
+  <regnodes realName="trunc_ln165_1_reg_299">
     <nodeIds>22</nodeIds>
   </regnodes>
-  <regnodes realName="trunc_ln170_2_reg_304">
+  <regnodes realName="trunc_ln165_2_reg_304">
     <nodeIds>23</nodeIds>
   </regnodes>
   <regnodes realName="d_tN_reg_284">
@@ -474,7 +480,7 @@
   <regnodes realName="i_2_reg_274">
     <nodeIds>12</nodeIds>
   </regnodes>
-  <regnodes realName="add_ln170_reg_312">
+  <regnodes realName="add_ln165_reg_312">
     <nodeIds>30</nodeIds>
   </regnodes>
   <regnodes realName="i_reg_264">
@@ -486,77 +492,71 @@
   <regnodes realName="d_tW_reg_279">
     <nodeIds>18</nodeIds>
   </regnodes>
-  <regnodes realName="add_ln172_reg_330">
-    <nodeIds>43</nodeIds>
-  </regnodes>
   <regnodes realName="empty_reg_322">
     <nodeIds>36</nodeIds>
   </regnodes>
-  <regnodes realName="trunc_ln170_reg_294">
-    <nodeIds>21</nodeIds>
-  </regnodes>
-  <expressionNodes realName="icmp_ln167_fu_128">
-    <nodeIds>11</nodeIds>
+  <expressionNodes realName="add_ln167_fu_242">
+    <nodeIds>43</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="trunc_ln170_2_fu_184">
-    <nodeIds>23</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="icmp_ln174_fu_248">
-    <nodeIds>48</nodeIds>
+  <expressionNodes realName="icmp_ln165_fu_202">
+    <nodeIds>29</nodeIds>
   </expressionNodes>
   <expressionNodes realName="d_tH_fu_160">
     <nodeIds>20</nodeIds>
   </expressionNodes>
+  <expressionNodes realName="zext_ln165_fu_194">
+    <nodeIds>27</nodeIds>
+  </expressionNodes>
   <expressionNodes realName="d_tW_fu_140">
     <nodeIds>18</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="zext_ln172_1_fu_232">
-    <nodeIds>41</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="trunc_ln170_1_fu_174">
-    <nodeIds>22</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="trunc_ln170_fu_170">
-    <nodeIds>21</nodeIds>
+  <expressionNodes realName="zext_ln167_fu_228">
+    <nodeIds>40</nodeIds>
   </expressionNodes>
   <expressionNodes realName="i_fu_76">
     <nodeIds>4</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="icmp_ln170_fu_202">
-    <nodeIds>29</nodeIds>
+  <expressionNodes realName="zext_ln165_1_fu_198">
+    <nodeIds>28</nodeIds>
   </expressionNodes>
   <expressionNodes realName="d_tN_fu_150">
     <nodeIds>19</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="icmp_ln172_fu_236">
+  <expressionNodes realName="icmp_ln162_fu_128">
+    <nodeIds>11</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln167_fu_236">
     <nodeIds>42</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="zext_ln170_fu_194">
-    <nodeIds>27</nodeIds>
+  <expressionNodes realName="icmp_ln169_fu_248">
+    <nodeIds>48</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="zext_ln172_fu_228">
-    <nodeIds>40</nodeIds>
+  <expressionNodes realName="trunc_ln165_1_fu_174">
+    <nodeIds>22</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="empty_258_fu_258">
-    <nodeIds>52</nodeIds>
+  <expressionNodes realName="trunc_ln165_2_fu_184">
+    <nodeIds>23</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln165_fu_208">
+    <nodeIds>30</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="and_ln169_fu_253">
+    <nodeIds>49</nodeIds>
   </expressionNodes>
   <expressionNodes realName="cmp9_fu_214">
     <nodeIds>35</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="add_ln170_fu_208">
-    <nodeIds>30</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="add_ln172_fu_242">
-    <nodeIds>43</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="zext_ln170_1_fu_198">
-    <nodeIds>28</nodeIds>
+  <expressionNodes realName="zext_ln167_1_fu_232">
+    <nodeIds>41</nodeIds>
   </expressionNodes>
   <expressionNodes realName="tw_phi_fu_101">
     <nodeIds>39</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="and_ln174_fu_253">
-    <nodeIds>49</nodeIds>
+  <expressionNodes realName="trunc_ln165_fu_170">
+    <nodeIds>21</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="empty_276_fu_258">
+    <nodeIds>52</nodeIds>
   </expressionNodes>
   <expressionNodes realName="empty_fu_219">
     <nodeIds>36</nodeIds>
@@ -567,17 +567,17 @@
   <expressionNodes realName="th_phi_fu_90">
     <nodeIds>26</nodeIds>
   </expressionNodes>
-  <moduleNodes realName="grp_store_stage_Pipeline_VITIS_LOOP_175_4_fu_108">
+  <moduleNodes realName="grp_store_stage_Pipeline_VITIS_LOOP_170_4_fu_108">
     <nodeIds>54</nodeIds>
   </moduleNodes>
-  <ioNodes realName="store_ln167_store_fu_224">
-    <nodeIds>61</nodeIds>
-  </ioNodes>
   <ioNodes realName="i_1_load_fu_125">
     <nodeIds>10</nodeIds>
   </ioNodes>
-  <ioNodes realName="store_ln167_store_fu_120">
+  <ioNodes realName="store_ln162_store_fu_120">
     <nodeIds>7</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln162_store_fu_224">
+    <nodeIds>61</nodeIds>
   </ioNodes>
   <ioNodes realName="q2_read_read_fu_80">
     <nodeIds>17</nodeIds>
@@ -687,7 +687,7 @@
       <basicBlocks>9</basicBlocks>
       <mDfPipe/>
     </cfgRegions>
-    <cfgRegions mId="3" mTag="VITIS_LOOP_167_1" mII="-1" mDepth="-1" mMinTripCount="512" mMaxTripCount="512" mMinLatency="1082368" mMaxLatency="10519552" mType="1">
+    <cfgRegions mId="3" mTag="VITIS_LOOP_162_1" mII="-1" mDepth="-1" mMinTripCount="512" mMaxTripCount="512" mMinLatency="1082368" mMaxLatency="10519552" mType="1">
       <subRegions>4</subRegions>
       <subRegions>5</subRegions>
       <subRegions>9</subRegions>
@@ -698,7 +698,7 @@
       <basicBlocks>25</basicBlocks>
       <mDfPipe/>
     </cfgRegions>
-    <cfgRegions mId="5" mTag="VITIS_LOOP_170_2" mII="-1" mDepth="-1" mMinTripCount="32" mMaxTripCount="32" mMinLatency="2112" mMaxLatency="20544" mType="1">
+    <cfgRegions mId="5" mTag="VITIS_LOOP_165_2" mII="-1" mDepth="-1" mMinTripCount="32" mMaxTripCount="32" mMinLatency="2112" mMaxLatency="20544" mType="1">
       <subRegions>6</subRegions>
       <subRegions>7</subRegions>
       <subRegions>8</subRegions>
@@ -709,7 +709,7 @@
       <basicBlocks>38</basicBlocks>
       <mDfPipe/>
     </cfgRegions>
-    <cfgRegions mId="7" mTag="VITIS_LOOP_172_3" mII="-1" mDepth="-1" mMinTripCount="32" mMaxTripCount="32" mMinLatency="64" mMaxLatency="640" mType="1">
+    <cfgRegions mId="7" mTag="VITIS_LOOP_167_3" mII="-1" mDepth="-1" mMinTripCount="32" mMaxTripCount="32" mMinLatency="64" mMaxLatency="640" mType="1">
       <basicBlocks>45</basicBlocks>
       <basicBlocks>51</basicBlocks>
       <basicBlocks>56</basicBlocks>
