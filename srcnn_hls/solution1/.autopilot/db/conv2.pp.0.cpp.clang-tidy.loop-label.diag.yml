@@ -7,7 +7,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\golden\src\conv2.cpp'
     Replacements:    
       - FilePath:        'C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv2.pp.0.cpp'
-        Offset:          10738
+        Offset:          11212
         Length:          0
         ReplacementText: 'VITIS_LOOP_22_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -16,7 +16,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\golden\src\conv2.cpp'
     Replacements:    
       - FilePath:        'C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv2.pp.0.cpp'
-        Offset:          10775
+        Offset:          11249
         Length:          0
         ReplacementText: 'VITIS_LOOP_23_2: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -25,7 +25,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\golden\src\conv2.cpp'
     Replacements:    
       - FilePath:        'C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv2.pp.0.cpp'
-        Offset:          10815
+        Offset:          11289
         Length:          0
         ReplacementText: 'VITIS_LOOP_24_3: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -34,7 +34,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\golden\src\conv2.cpp'
     Replacements:    
       - FilePath:        'C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv2.pp.0.cpp'
-        Offset:          11120
+        Offset:          11594
         Length:          0
         ReplacementText: 'VITIS_LOOP_36_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -43,7 +43,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\golden\src\conv2.cpp'
     Replacements:    
       - FilePath:        'C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv2.pp.0.cpp'
-        Offset:          11157
+        Offset:          11631
         Length:          0
         ReplacementText: 'VITIS_LOOP_37_2: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -52,7 +52,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\golden\src\conv2.cpp'
     Replacements:    
       - FilePath:        'C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv2.pp.0.cpp'
-        Offset:          11462
+        Offset:          11936
         Length:          0
         ReplacementText: 'VITIS_LOOP_50_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -61,7 +61,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\golden\src\conv2.cpp'
     Replacements:    
       - FilePath:        'C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv2.pp.0.cpp'
-        Offset:          11500
+        Offset:          11974
         Length:          0
         ReplacementText: 'VITIS_LOOP_51_2: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -70,7 +70,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\golden\src\conv2.cpp'
     Replacements:    
       - FilePath:        'C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv2.pp.0.cpp'
-        Offset:          11574
+        Offset:          12048
         Length:          0
         ReplacementText: 'VITIS_LOOP_53_3: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -79,7 +79,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\golden\src\conv2.cpp'
     Replacements:    
       - FilePath:        'C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv2.pp.0.cpp'
-        Offset:          11711
+        Offset:          12185
         Length:          0
         ReplacementText: 'VITIS_LOOP_57_4: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -88,7 +88,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\golden\src\conv2.cpp'
     Replacements:    
       - FilePath:        'C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv2.pp.0.cpp'
-        Offset:          12065
+        Offset:          12539
         Length:          0
         ReplacementText: 'VITIS_LOOP_70_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -97,7 +97,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\golden\src\conv2.cpp'
     Replacements:    
       - FilePath:        'C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv2.pp.0.cpp'
-        Offset:          12102
+        Offset:          12576
         Length:          0
         ReplacementText: 'VITIS_LOOP_71_2: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -106,7 +106,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\golden\src\conv2.cpp'
     Replacements:    
       - FilePath:        'C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv2.pp.0.cpp'
-        Offset:          12142
+        Offset:          12616
         Length:          0
         ReplacementText: 'VITIS_LOOP_72_3: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -115,7 +115,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\golden\src\conv2.cpp'
     Replacements:    
       - FilePath:        'C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv2.pp.0.cpp'
-        Offset:          12620
+        Offset:          13094
         Length:          0
         ReplacementText: 'VITIS_LOOP_90_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -124,7 +124,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\golden\src\conv2.cpp'
     Replacements:    
       - FilePath:        'C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv2.pp.0.cpp'
-        Offset:          12721
+        Offset:          13195
         Length:          0
         ReplacementText: 'VITIS_LOOP_93_2: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -133,7 +133,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\golden\src\conv2.cpp'
     Replacements:    
       - FilePath:        'C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv2.pp.0.cpp'
-        Offset:          12835
+        Offset:          13309
         Length:          0
         ReplacementText: 'VITIS_LOOP_95_3: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -142,7 +142,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\golden\src\conv2.cpp'
     Replacements:    
       - FilePath:        'C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv2.pp.0.cpp'
-        Offset:          12959
+        Offset:          13433
         Length:          0
         ReplacementText: 'VITIS_LOOP_99_4: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -151,7 +151,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\golden\src\conv2.cpp'
     Replacements:    
       - FilePath:        'C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv2.pp.0.cpp'
-        Offset:          13008
+        Offset:          13482
         Length:          0
         ReplacementText: 'VITIS_LOOP_100_5: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -160,7 +160,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\golden\src\conv2.cpp'
     Replacements:    
       - FilePath:        'C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv2.pp.0.cpp'
-        Offset:          13060
+        Offset:          13534
         Length:          0
         ReplacementText: 'VITIS_LOOP_101_6: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -169,7 +169,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\golden\src\conv2.cpp'
     Replacements:    
       - FilePath:        'C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv2.pp.0.cpp'
-        Offset:          13224
+        Offset:          13698
         Length:          0
         ReplacementText: 'VITIS_LOOP_106_7: '
 ...

@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'compute_tile_c1_Pipeline_VITIS_LOOP_71_3'" level="0">
-<item name = "Date">Thu Oct 30 21:22:38 2025
+<item name = "Date">Fri Oct 31 01:55:04 2025
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -62,7 +62,6 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="fadd_32ns_32ns_32_4_full_dsp_1_U120">fadd_32ns_32ns_32_4_full_dsp_1, 0, 2, 227, 214, 0</column>
 <column name="fadd_32ns_32ns_32_4_full_dsp_1_U121">fadd_32ns_32ns_32_4_full_dsp_1, 0, 2, 227, 214, 0</column>
 <column name="fadd_32ns_32ns_32_4_full_dsp_1_U122">fadd_32ns_32ns_32_4_full_dsp_1, 0, 2, 227, 214, 0</column>
 <column name="fadd_32ns_32ns_32_4_full_dsp_1_U123">fadd_32ns_32ns_32_4_full_dsp_1, 0, 2, 227, 214, 0</column>
@@ -118,7 +117,7 @@
 <column name="fadd_32ns_32ns_32_4_full_dsp_1_U173">fadd_32ns_32ns_32_4_full_dsp_1, 0, 2, 227, 214, 0</column>
 <column name="fadd_32ns_32ns_32_4_full_dsp_1_U174">fadd_32ns_32ns_32_4_full_dsp_1, 0, 2, 227, 214, 0</column>
 <column name="fadd_32ns_32ns_32_4_full_dsp_1_U175">fadd_32ns_32ns_32_4_full_dsp_1, 0, 2, 227, 214, 0</column>
-<column name="fmul_32ns_32ns_32_3_max_dsp_1_U201">fmul_32ns_32ns_32_3_max_dsp_1, 0, 3, 128, 135, 0</column>
+<column name="fadd_32ns_32ns_32_4_full_dsp_1_U176">fadd_32ns_32ns_32_4_full_dsp_1, 0, 2, 227, 214, 0</column>
 <column name="fmul_32ns_32ns_32_3_max_dsp_1_U202">fmul_32ns_32ns_32_3_max_dsp_1, 0, 3, 128, 135, 0</column>
 <column name="fmul_32ns_32ns_32_3_max_dsp_1_U203">fmul_32ns_32ns_32_3_max_dsp_1, 0, 3, 128, 135, 0</column>
 <column name="fmul_32ns_32ns_32_3_max_dsp_1_U204">fmul_32ns_32ns_32_3_max_dsp_1, 0, 3, 128, 135, 0</column>
@@ -174,6 +173,7 @@
 <column name="fmul_32ns_32ns_32_3_max_dsp_1_U254">fmul_32ns_32ns_32_3_max_dsp_1, 0, 3, 128, 135, 0</column>
 <column name="fmul_32ns_32ns_32_3_max_dsp_1_U255">fmul_32ns_32ns_32_3_max_dsp_1, 0, 3, 128, 135, 0</column>
 <column name="fmul_32ns_32ns_32_3_max_dsp_1_U256">fmul_32ns_32ns_32_3_max_dsp_1, 0, 3, 128, 135, 0</column>
+<column name="fmul_32ns_32ns_32_3_max_dsp_1_U257">fmul_32ns_32ns_32_3_max_dsp_1, 0, 3, 128, 135, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -200,7 +200,7 @@
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
 <column name="ap_done_int">9, 2, 1, 2</column>
 <column name="ap_enable_reg_pp0_iter4">9, 2, 1, 2</column>
-<column name="ap_sig_allocacmp_tn_3">9, 2, 4, 8</column>
+<column name="ap_sig_allocacmp_tn_5">9, 2, 4, 8</column>
 <column name="tn_fu_366">9, 2, 4, 8</column>
 </table>
 </item>

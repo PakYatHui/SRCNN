@@ -8,9 +8,10 @@
     <synthesis askAgain="true"/>
     <config>
         <config_cosim enable_dataflow_profiling="1" tool="xsim"/>
+        <config_export format="ip_catalog" output="C:/Xilinx/golden/srcnn_hls" rtl="verilog"/>
     </config>
     <UIConfigurations>
-        <UIAutosynConf hideTrivialOp="true" isBasedOnBoard="false" isSolutionDirty="false" isStopAskAgain="false" showDetailDesignViewer="false">
+        <UIAutosynConf hideTrivialOp="true" isBasedOnBoard="false" isSolutionDirty="true" isStopAskAgain="false" showDetailDesignViewer="false">
             <Platform>xilinx/zynquplus/zynquplus</Platform>
             <customLibs/>
         </UIAutosynConf>
@@ -40,7 +41,7 @@
             </RTLs>
         </UIAutoSimConf>
     </UIConfigurations>
-    <ExportDesign askAgain="true" evaluate="false" flow="false" flowChoice="syn" formatName="ip_catalog" rtl="verilog" rtlButton="false" rtlCombo="verilog">
+    <ExportDesign askAgain="true" evaluate="false" flow="false" flowChoice="syn" formatName="ip_catalog" output="C:/Xilinx/golden/srcnn_hls" rtl="verilog" rtlButton="true" rtlCombo="verilog">
         <Format formatName="ip_catalog"/>
         <Format formatName="sysgen"/>
         <Format formatName="sysgen_ise"/>
@@ -48,8 +49,8 @@
         <Format formatName="pcore" use_netlist="none"/>
         <Format formatName="xo"/>
     </ExportDesign>
-    <Simulation argv="">
-        <SimFlow askAgain="true" clangSanitizer="false" compile="false" compileChoice="gcc" disableDeadlockDetect="false" dumpTrace="none" enableDataflowProfiling="true" enableFifoSizing="false" name="cosim" optimizeCompile="false" random_stall="false" reduce_diskspace="false" setup="false" toolName="xsim" waveDebug="false" ldflags="" mflags="" compiledLibrary="">
+    <Simulation>
+        <SimFlow askAgain="true" clangSanitizer="false" compile="false" compileChoice="gcc" disableDeadlockDetect="false" dumpTrace="none" enableDataflowProfiling="true" enableFifoSizing="false" name="cosim" optimizeCompile="false" random_stall="false" reduce_diskspace="false" setup="false" toolName="XSim" waveDebug="false">
             <Rtl active="false" name="systemc"/>
             <Rtl active="true" name="verilog"/>
             <Rtl active="false" name="vhdl"/>
@@ -69,7 +70,7 @@
         <library value="xilinx/zynquplus/zynquplus" name="DefaultPlatform"/>
     </libraryList>
     <clockList>
-        <clock name="default" default="false" period="10"/>
+        <clock default="false" name="default" period="10"/>
     </clockList>
 </solution>
 

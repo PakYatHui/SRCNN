@@ -1,7 +1,7 @@
 [
   {
     "functionLabel": "",
-    "functionName": "srcnn",
+    "functionName": "srcnn_top",
     "id": 0,
     "ifcond": "",
     "insert_position": "",
@@ -11,34 +11,13 @@
       "option": [
         {
           "name": "name",
-          "value": "srcnn"
-        }
-      ]
-    },
-    "slx": false,
-    "sourceFile": "C:/Xilinx/golden/srcnn_hls/solution1/directives.tcl",
-    "sourceLine": 7,
-    "success": true
-  },
-  {
-    "functionLabel": "",
-    "functionName": "srcnn",
-    "id": 1,
-    "ifcond": "",
-    "insert_position": "",
-    "label": "",
-    "pragma": {
-      "name": "TOP",
-      "option": [
-        {
-          "name": "name",
-          "value": "srcnn"
+          "value": "srcnn_top"
         }
       ]
     },
     "slx": false,
     "sourceFile": "C:/Xilinx/golden/srcnn_hls/solution1/csynth.tcl",
-    "sourceLine": 28,
+    "sourceLine": 30,
     "success": true
   }
 ]

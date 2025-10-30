@@ -1,0 +1,48 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'srcnn_top'" level="0">
+<item name = "Date">Fri Oct 31 01:55:00 2025
+</item>
+<item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
+<item name = "Project">srcnn_hls</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xck26-sfvc784-2LV-c</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.300 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">89950472, 1042922760, 0.900 sec, 10.429 sec, 89950473, 1042922761, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_conv1_fu_444">conv1, 9490433, 239420417, 94.904 ms, 2.394 sec, 9490433, 239420417, no</column>
+<column name="grp_conv2_fu_628">conv2, 56220161, 374987265, 0.562 sec, 3.750 sec, 56220161, 374987265, no</column>
+<column name="grp_conv3_fu_646">conv3, 24239873, 428515073, 0.242 sec, 4.285 sec, 24239873, 428515073, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

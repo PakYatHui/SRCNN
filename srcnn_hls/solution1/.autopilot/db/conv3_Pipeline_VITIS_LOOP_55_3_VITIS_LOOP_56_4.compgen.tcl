@@ -11,26 +11,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 711 \
-    name conv3_weights \
-    reset_level 1 \
-    sync_rst true \
-    dir I \
-    corename conv3_weights \
-    op interface \
-    ports { conv3_weights_address0 { O 10 vector } conv3_weights_ce0 { O 1 bit } conv3_weights_q0 { I 32 vector } } \
-} "
-} else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'conv3_weights'"
-}
-}
-
-
-# XIL_BRAM:
-if {${::AESL::PGuard_autoexp_gen}} {
-if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
-eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 712 \
+    id 730 \
     name p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E6w_tile_0_0_0 \
     reset_level 1 \
     sync_rst true \
@@ -49,7 +30,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 713 \
+    id 731 \
     name p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E6w_tile_0_1_0 \
     reset_level 1 \
     sync_rst true \
@@ -68,7 +49,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 714 \
+    id 732 \
     name p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E6w_tile_0_2_0 \
     reset_level 1 \
     sync_rst true \
@@ -87,7 +68,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 715 \
+    id 733 \
     name p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E6w_tile_0_3_0 \
     reset_level 1 \
     sync_rst true \
@@ -106,7 +87,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 716 \
+    id 734 \
     name p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E6w_tile_0_4_0 \
     reset_level 1 \
     sync_rst true \
@@ -125,7 +106,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 717 \
+    id 735 \
     name p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E6w_tile_1_0_0 \
     reset_level 1 \
     sync_rst true \
@@ -144,7 +125,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 718 \
+    id 736 \
     name p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E6w_tile_1_1_0 \
     reset_level 1 \
     sync_rst true \
@@ -163,7 +144,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 719 \
+    id 737 \
     name p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E6w_tile_1_2_0 \
     reset_level 1 \
     sync_rst true \
@@ -182,7 +163,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 720 \
+    id 738 \
     name p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E6w_tile_1_3_0 \
     reset_level 1 \
     sync_rst true \
@@ -201,7 +182,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 721 \
+    id 739 \
     name p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E6w_tile_1_4_0 \
     reset_level 1 \
     sync_rst true \
@@ -220,7 +201,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 722 \
+    id 740 \
     name p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E6w_tile_2_0_0 \
     reset_level 1 \
     sync_rst true \
@@ -239,7 +220,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 723 \
+    id 741 \
     name p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E6w_tile_2_1_0 \
     reset_level 1 \
     sync_rst true \
@@ -258,7 +239,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 724 \
+    id 742 \
     name p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E6w_tile_2_2_0 \
     reset_level 1 \
     sync_rst true \
@@ -277,7 +258,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 725 \
+    id 743 \
     name p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E6w_tile_2_3_0 \
     reset_level 1 \
     sync_rst true \
@@ -296,7 +277,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 726 \
+    id 744 \
     name p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E6w_tile_2_4_0 \
     reset_level 1 \
     sync_rst true \
@@ -315,7 +296,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 727 \
+    id 745 \
     name p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E6w_tile_3_0_0 \
     reset_level 1 \
     sync_rst true \
@@ -334,7 +315,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 728 \
+    id 746 \
     name p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E6w_tile_3_1_0 \
     reset_level 1 \
     sync_rst true \
@@ -353,7 +334,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 729 \
+    id 747 \
     name p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E6w_tile_3_2_0 \
     reset_level 1 \
     sync_rst true \
@@ -372,7 +353,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 730 \
+    id 748 \
     name p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E6w_tile_3_3_0 \
     reset_level 1 \
     sync_rst true \
@@ -391,7 +372,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 731 \
+    id 749 \
     name p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E6w_tile_3_4_0 \
     reset_level 1 \
     sync_rst true \
@@ -410,7 +391,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 732 \
+    id 750 \
     name p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E6w_tile_4_0_0 \
     reset_level 1 \
     sync_rst true \
@@ -429,7 +410,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 733 \
+    id 751 \
     name p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E6w_tile_4_1_0 \
     reset_level 1 \
     sync_rst true \
@@ -448,7 +429,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 734 \
+    id 752 \
     name p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E6w_tile_4_2_0 \
     reset_level 1 \
     sync_rst true \
@@ -467,7 +448,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 735 \
+    id 753 \
     name p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E6w_tile_4_3_0 \
     reset_level 1 \
     sync_rst true \
@@ -486,7 +467,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 736 \
+    id 754 \
     name p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E6w_tile_4_4_0 \
     reset_level 1 \
     sync_rst true \
@@ -504,30 +485,45 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 709 \
-    name zext_ln52 \
+    id 727 \
+    name zext_ln52_1 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_zext_ln52 \
+    corename dc_zext_ln52_1 \
     op interface \
-    ports { zext_ln52 { I 1 vector } } \
+    ports { zext_ln52_1 { I 1 vector } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 710 \
-    name add_ln58 \
+    id 728 \
+    name w3 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_add_ln58 \
+    corename dc_w3 \
     op interface \
-    ports { add_ln58 { I 9 vector } } \
+    ports { m_axi_w3_AWVALID { O 1 bit } m_axi_w3_AWREADY { I 1 bit } m_axi_w3_AWADDR { O 64 vector } m_axi_w3_AWID { O 1 vector } m_axi_w3_AWLEN { O 32 vector } m_axi_w3_AWSIZE { O 3 vector } m_axi_w3_AWBURST { O 2 vector } m_axi_w3_AWLOCK { O 2 vector } m_axi_w3_AWCACHE { O 4 vector } m_axi_w3_AWPROT { O 3 vector } m_axi_w3_AWQOS { O 4 vector } m_axi_w3_AWREGION { O 4 vector } m_axi_w3_AWUSER { O 1 vector } m_axi_w3_WVALID { O 1 bit } m_axi_w3_WREADY { I 1 bit } m_axi_w3_WDATA { O 32 vector } m_axi_w3_WSTRB { O 4 vector } m_axi_w3_WLAST { O 1 bit } m_axi_w3_WID { O 1 vector } m_axi_w3_WUSER { O 1 vector } m_axi_w3_ARVALID { O 1 bit } m_axi_w3_ARREADY { I 1 bit } m_axi_w3_ARADDR { O 64 vector } m_axi_w3_ARID { O 1 vector } m_axi_w3_ARLEN { O 32 vector } m_axi_w3_ARSIZE { O 3 vector } m_axi_w3_ARBURST { O 2 vector } m_axi_w3_ARLOCK { O 2 vector } m_axi_w3_ARCACHE { O 4 vector } m_axi_w3_ARPROT { O 3 vector } m_axi_w3_ARQOS { O 4 vector } m_axi_w3_ARREGION { O 4 vector } m_axi_w3_ARUSER { O 1 vector } m_axi_w3_RVALID { I 1 bit } m_axi_w3_RREADY { O 1 bit } m_axi_w3_RDATA { I 32 vector } m_axi_w3_RLAST { I 1 bit } m_axi_w3_RID { I 1 vector } m_axi_w3_RFIFONUM { I 9 vector } m_axi_w3_RUSER { I 1 vector } m_axi_w3_RRESP { I 2 vector } m_axi_w3_BVALID { I 1 bit } m_axi_w3_BREADY { O 1 bit } m_axi_w3_BRESP { I 2 vector } m_axi_w3_BID { I 1 vector } m_axi_w3_BUSER { I 1 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 729 \
+    name sext_ln55 \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_sext_ln55 \
+    op interface \
+    ports { sext_ln55 { I 62 vector } } \
 } "
 }
 
@@ -596,14 +592,14 @@ if {${::AESL::PGuard_autoexp_gen}} {
 
 
 # flow_control definition:
-set InstName srcnn_flow_control_loop_pipe_sequential_init_U
-set CompName srcnn_flow_control_loop_pipe_sequential_init
+set InstName srcnn_top_flow_control_loop_pipe_sequential_init_U
+set CompName srcnn_top_flow_control_loop_pipe_sequential_init
 set name flow_control_loop_pipe_sequential_init
 if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
 if {[info proc ::AESL_LIB_VIRTEX::xil_gen_UPC_flow_control] == "::AESL_LIB_VIRTEX::xil_gen_UPC_flow_control"} {
 eval "::AESL_LIB_VIRTEX::xil_gen_UPC_flow_control { \
     name ${name} \
-    prefix srcnn_ \
+    prefix srcnn_top_ \
 }"
 } else {
 puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_UPC_flow_control, check your platform lib"

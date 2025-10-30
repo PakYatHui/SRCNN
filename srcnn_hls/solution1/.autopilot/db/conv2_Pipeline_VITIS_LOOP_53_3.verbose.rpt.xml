@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'conv2_Pipeline_VITIS_LOOP_53_3'" level="0">
-<item name = "Date">Thu Oct 30 21:22:45 2025
+<item name = "Date">Fri Oct 31 01:55:11 2025
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">srcnn_hls</item>
@@ -89,7 +89,7 @@
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
 <column name="ap_done_int">9, 2, 1, 2</column>
 <column name="ap_enable_reg_pp0_iter1">9, 2, 1, 2</column>
-<column name="ap_sig_allocacmp_tn_1">9, 2, 4, 8</column>
+<column name="ap_sig_allocacmp_tn_2">9, 2, 4, 8</column>
 <column name="tn_fu_44">9, 2, 4, 8</column>
 </table>
 </item>
@@ -140,16 +140,16 @@
 <column name="ap_done">out, 1, ap_ctrl_hs, conv2_Pipeline_VITIS_LOOP_53_3, return value</column>
 <column name="ap_idle">out, 1, ap_ctrl_hs, conv2_Pipeline_VITIS_LOOP_53_3, return value</column>
 <column name="ap_ready">out, 1, ap_ctrl_hs, conv2_Pipeline_VITIS_LOOP_53_3, return value</column>
-<column name="grp_fu_934_p_din0">out, 32, ap_ctrl_hs, conv2_Pipeline_VITIS_LOOP_53_3, return value</column>
-<column name="grp_fu_934_p_din1">out, 32, ap_ctrl_hs, conv2_Pipeline_VITIS_LOOP_53_3, return value</column>
-<column name="grp_fu_934_p_dout0">in, 32, ap_ctrl_hs, conv2_Pipeline_VITIS_LOOP_53_3, return value</column>
-<column name="grp_fu_934_p_ce">out, 1, ap_ctrl_hs, conv2_Pipeline_VITIS_LOOP_53_3, return value</column>
-<column name="grp_fu_938_p_din0">out, 32, ap_ctrl_hs, conv2_Pipeline_VITIS_LOOP_53_3, return value</column>
-<column name="grp_fu_938_p_din1">out, 32, ap_ctrl_hs, conv2_Pipeline_VITIS_LOOP_53_3, return value</column>
-<column name="grp_fu_938_p_opcode">out, 2, ap_ctrl_hs, conv2_Pipeline_VITIS_LOOP_53_3, return value</column>
-<column name="grp_fu_938_p_dout0">in, 32, ap_ctrl_hs, conv2_Pipeline_VITIS_LOOP_53_3, return value</column>
-<column name="grp_fu_938_p_ce">out, 1, ap_ctrl_hs, conv2_Pipeline_VITIS_LOOP_53_3, return value</column>
-<column name="zext_ln50_1">in, 6, ap_none, zext_ln50_1, scalar</column>
+<column name="grp_fu_1145_p_din0">out, 32, ap_ctrl_hs, conv2_Pipeline_VITIS_LOOP_53_3, return value</column>
+<column name="grp_fu_1145_p_din1">out, 32, ap_ctrl_hs, conv2_Pipeline_VITIS_LOOP_53_3, return value</column>
+<column name="grp_fu_1145_p_dout0">in, 32, ap_ctrl_hs, conv2_Pipeline_VITIS_LOOP_53_3, return value</column>
+<column name="grp_fu_1145_p_ce">out, 1, ap_ctrl_hs, conv2_Pipeline_VITIS_LOOP_53_3, return value</column>
+<column name="grp_fu_1149_p_din0">out, 32, ap_ctrl_hs, conv2_Pipeline_VITIS_LOOP_53_3, return value</column>
+<column name="grp_fu_1149_p_din1">out, 32, ap_ctrl_hs, conv2_Pipeline_VITIS_LOOP_53_3, return value</column>
+<column name="grp_fu_1149_p_opcode">out, 2, ap_ctrl_hs, conv2_Pipeline_VITIS_LOOP_53_3, return value</column>
+<column name="grp_fu_1149_p_dout0">in, 32, ap_ctrl_hs, conv2_Pipeline_VITIS_LOOP_53_3, return value</column>
+<column name="grp_fu_1149_p_ce">out, 1, ap_ctrl_hs, conv2_Pipeline_VITIS_LOOP_53_3, return value</column>
+<column name="zext_ln50_2">in, 6, ap_none, zext_ln50_2, scalar</column>
 <column name="zext_ln51">in, 6, ap_none, zext_ln51, scalar</column>
 <column name="in_tile_0_load">in, 32, ap_none, in_tile_0_load, scalar</column>
 <column name="out_tile_1_address0">out, 13, ap_memory, out_tile_1, array</column>

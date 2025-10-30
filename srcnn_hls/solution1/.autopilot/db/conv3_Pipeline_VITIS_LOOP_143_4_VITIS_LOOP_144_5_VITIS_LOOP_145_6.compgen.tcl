@@ -11,7 +11,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 669 \
+    id 686 \
     name out_tile \
     reset_level 1 \
     sync_rst true \
@@ -29,7 +29,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 666 \
+    id 683 \
     name zext_ln103_3 \
     type other \
     dir I \
@@ -44,7 +44,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 667 \
+    id 684 \
     name select_ln103_3 \
     type other \
     dir I \
@@ -59,7 +59,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 668 \
+    id 685 \
     name zext_ln105 \
     type other \
     dir I \
@@ -136,14 +136,14 @@ if {${::AESL::PGuard_autoexp_gen}} {
 
 
 # flow_control definition:
-set InstName srcnn_flow_control_loop_pipe_sequential_init_U
-set CompName srcnn_flow_control_loop_pipe_sequential_init
+set InstName srcnn_top_flow_control_loop_pipe_sequential_init_U
+set CompName srcnn_top_flow_control_loop_pipe_sequential_init
 set name flow_control_loop_pipe_sequential_init
 if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
 if {[info proc ::AESL_LIB_VIRTEX::xil_gen_UPC_flow_control] == "::AESL_LIB_VIRTEX::xil_gen_UPC_flow_control"} {
 eval "::AESL_LIB_VIRTEX::xil_gen_UPC_flow_control { \
     name ${name} \
-    prefix srcnn_ \
+    prefix srcnn_top_ \
 }"
 } else {
 puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_UPC_flow_control, check your platform lib"

@@ -82,7 +82,7 @@ static void compute_tile_c1(
           }
 }
 
-// 导出：一次性加 bias，写回整图（不做 ReLU）
+// 导出：Bias + ReLU 融合写回整图（中间不落本地整幅缓冲）
 static void store_out_tile_c1(
     ftmap_t out_tile[TN][TH][TW],
     ftmap_t output_ftmap[N1][H][W],
@@ -96,12 +96,14 @@ static void store_out_tile_c1(
         for (int tw = 0; tw < TW; ++tw) {
 #pragma HLS PIPELINE II=1
           if (tn < tN && th < tH && tw < tW) {
-            output_ftmap[n0 + tn][y0 + th][x0 + tw] = out_tile[tn][th][tw] + b[n0 + tn];
+            ftmap_t v = out_tile[tn][th][tw] + b[n0 + tn];
+            if (v < (ftmap_t)0) v = (ftmap_t)0; // ReLU 就在循环里
+            output_ftmap[n0 + tn][y0 + th][x0 + tw] = v;
           }
         }
 }
 
-// implements conv1 layer of SRCNN
+// implements conv1 layer of SRCNN（tile 化 + 导出时融合 ReLU）
 void conv1(ftmap_t input_ftmap[N0][H][W],
            param_t  w[N1][N0][F1][F1],
            param_t  b[N1],
@@ -138,7 +140,7 @@ void conv1(ftmap_t input_ftmap[N0][H][W],
                     compute_tile_c1(out_tile, in_tile, w_tile, tN, tC, tW, tH);
                 }
 
-                // 导出：加 bias（不做 ReLU）
+                // 导出：Bias + ReLU → 直接写回 output_ftmap（顶层映射到 m_axi）
                 store_out_tile_c1(out_tile, output_ftmap, x0, y0, n0, tN, tW, tH, b);
             }
         }

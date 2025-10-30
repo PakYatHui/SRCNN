@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'conv2_Pipeline_VITIS_LOOP_53_3'
 ================================================================
-* Date:           Thu Oct 30 21:22:45 2025
+* Date:           Fri Oct 31 01:55:11 2025
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -100,7 +100,7 @@
     +-------------------------+----+-----------+-----+-----------+
     |ap_done_int              |   9|          2|    1|          2|
     |ap_enable_reg_pp0_iter1  |   9|          2|    1|          2|
-    |ap_sig_allocacmp_tn_1    |   9|          2|    4|          8|
+    |ap_sig_allocacmp_tn_2    |   9|          2|    4|          8|
     |tn_fu_44                 |   9|          2|    4|          8|
     +-------------------------+----+-----------+-----+-----------+
     |Total                    |  36|          8|   10|         20|
@@ -150,36 +150,36 @@
 == Interface
 ================================================================
 * Summary: 
-+---------------------+-----+-----+------------+--------------------------------+--------------+
-|      RTL Ports      | Dir | Bits|  Protocol  |          Source Object         |    C Type    |
-+---------------------+-----+-----+------------+--------------------------------+--------------+
-|ap_clk               |   in|    1|  ap_ctrl_hs|  conv2_Pipeline_VITIS_LOOP_53_3|  return value|
-|ap_rst               |   in|    1|  ap_ctrl_hs|  conv2_Pipeline_VITIS_LOOP_53_3|  return value|
-|ap_start             |   in|    1|  ap_ctrl_hs|  conv2_Pipeline_VITIS_LOOP_53_3|  return value|
-|ap_done              |  out|    1|  ap_ctrl_hs|  conv2_Pipeline_VITIS_LOOP_53_3|  return value|
-|ap_idle              |  out|    1|  ap_ctrl_hs|  conv2_Pipeline_VITIS_LOOP_53_3|  return value|
-|ap_ready             |  out|    1|  ap_ctrl_hs|  conv2_Pipeline_VITIS_LOOP_53_3|  return value|
-|grp_fu_934_p_din0    |  out|   32|  ap_ctrl_hs|  conv2_Pipeline_VITIS_LOOP_53_3|  return value|
-|grp_fu_934_p_din1    |  out|   32|  ap_ctrl_hs|  conv2_Pipeline_VITIS_LOOP_53_3|  return value|
-|grp_fu_934_p_dout0   |   in|   32|  ap_ctrl_hs|  conv2_Pipeline_VITIS_LOOP_53_3|  return value|
-|grp_fu_934_p_ce      |  out|    1|  ap_ctrl_hs|  conv2_Pipeline_VITIS_LOOP_53_3|  return value|
-|grp_fu_938_p_din0    |  out|   32|  ap_ctrl_hs|  conv2_Pipeline_VITIS_LOOP_53_3|  return value|
-|grp_fu_938_p_din1    |  out|   32|  ap_ctrl_hs|  conv2_Pipeline_VITIS_LOOP_53_3|  return value|
-|grp_fu_938_p_opcode  |  out|    2|  ap_ctrl_hs|  conv2_Pipeline_VITIS_LOOP_53_3|  return value|
-|grp_fu_938_p_dout0   |   in|   32|  ap_ctrl_hs|  conv2_Pipeline_VITIS_LOOP_53_3|  return value|
-|grp_fu_938_p_ce      |  out|    1|  ap_ctrl_hs|  conv2_Pipeline_VITIS_LOOP_53_3|  return value|
-|zext_ln50_1          |   in|    6|     ap_none|                     zext_ln50_1|        scalar|
-|zext_ln51            |   in|    6|     ap_none|                       zext_ln51|        scalar|
-|in_tile_0_load       |   in|   32|     ap_none|                  in_tile_0_load|        scalar|
-|out_tile_1_address0  |  out|   13|   ap_memory|                      out_tile_1|         array|
-|out_tile_1_ce0       |  out|    1|   ap_memory|                      out_tile_1|         array|
-|out_tile_1_we0       |  out|    1|   ap_memory|                      out_tile_1|         array|
-|out_tile_1_d0        |  out|   32|   ap_memory|                      out_tile_1|         array|
-|out_tile_1_address1  |  out|   13|   ap_memory|                      out_tile_1|         array|
-|out_tile_1_ce1       |  out|    1|   ap_memory|                      out_tile_1|         array|
-|out_tile_1_q1        |   in|   32|   ap_memory|                      out_tile_1|         array|
-|w_tile_0_address0    |  out|    3|   ap_memory|                        w_tile_0|         array|
-|w_tile_0_ce0         |  out|    1|   ap_memory|                        w_tile_0|         array|
-|w_tile_0_q0          |   in|   32|   ap_memory|                        w_tile_0|         array|
-+---------------------+-----+-----+------------+--------------------------------+--------------+
++----------------------+-----+-----+------------+--------------------------------+--------------+
+|       RTL Ports      | Dir | Bits|  Protocol  |          Source Object         |    C Type    |
++----------------------+-----+-----+------------+--------------------------------+--------------+
+|ap_clk                |   in|    1|  ap_ctrl_hs|  conv2_Pipeline_VITIS_LOOP_53_3|  return value|
+|ap_rst                |   in|    1|  ap_ctrl_hs|  conv2_Pipeline_VITIS_LOOP_53_3|  return value|
+|ap_start              |   in|    1|  ap_ctrl_hs|  conv2_Pipeline_VITIS_LOOP_53_3|  return value|
+|ap_done               |  out|    1|  ap_ctrl_hs|  conv2_Pipeline_VITIS_LOOP_53_3|  return value|
+|ap_idle               |  out|    1|  ap_ctrl_hs|  conv2_Pipeline_VITIS_LOOP_53_3|  return value|
+|ap_ready              |  out|    1|  ap_ctrl_hs|  conv2_Pipeline_VITIS_LOOP_53_3|  return value|
+|grp_fu_1145_p_din0    |  out|   32|  ap_ctrl_hs|  conv2_Pipeline_VITIS_LOOP_53_3|  return value|
+|grp_fu_1145_p_din1    |  out|   32|  ap_ctrl_hs|  conv2_Pipeline_VITIS_LOOP_53_3|  return value|
+|grp_fu_1145_p_dout0   |   in|   32|  ap_ctrl_hs|  conv2_Pipeline_VITIS_LOOP_53_3|  return value|
+|grp_fu_1145_p_ce      |  out|    1|  ap_ctrl_hs|  conv2_Pipeline_VITIS_LOOP_53_3|  return value|
+|grp_fu_1149_p_din0    |  out|   32|  ap_ctrl_hs|  conv2_Pipeline_VITIS_LOOP_53_3|  return value|
+|grp_fu_1149_p_din1    |  out|   32|  ap_ctrl_hs|  conv2_Pipeline_VITIS_LOOP_53_3|  return value|
+|grp_fu_1149_p_opcode  |  out|    2|  ap_ctrl_hs|  conv2_Pipeline_VITIS_LOOP_53_3|  return value|
+|grp_fu_1149_p_dout0   |   in|   32|  ap_ctrl_hs|  conv2_Pipeline_VITIS_LOOP_53_3|  return value|
+|grp_fu_1149_p_ce      |  out|    1|  ap_ctrl_hs|  conv2_Pipeline_VITIS_LOOP_53_3|  return value|
+|zext_ln50_2           |   in|    6|     ap_none|                     zext_ln50_2|        scalar|
+|zext_ln51             |   in|    6|     ap_none|                       zext_ln51|        scalar|
+|in_tile_0_load        |   in|   32|     ap_none|                  in_tile_0_load|        scalar|
+|out_tile_1_address0   |  out|   13|   ap_memory|                      out_tile_1|         array|
+|out_tile_1_ce0        |  out|    1|   ap_memory|                      out_tile_1|         array|
+|out_tile_1_we0        |  out|    1|   ap_memory|                      out_tile_1|         array|
+|out_tile_1_d0         |  out|   32|   ap_memory|                      out_tile_1|         array|
+|out_tile_1_address1   |  out|   13|   ap_memory|                      out_tile_1|         array|
+|out_tile_1_ce1        |  out|    1|   ap_memory|                      out_tile_1|         array|
+|out_tile_1_q1         |   in|   32|   ap_memory|                      out_tile_1|         array|
+|w_tile_0_address0     |  out|    3|   ap_memory|                        w_tile_0|         array|
+|w_tile_0_ce0          |  out|    1|   ap_memory|                        w_tile_0|         array|
+|w_tile_0_q0           |   in|   32|   ap_memory|                        w_tile_0|         array|
++----------------------+-----+-----+------------+--------------------------------+--------------+
 

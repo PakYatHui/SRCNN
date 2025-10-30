@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'conv3_Pipeline_VITIS_LOOP_143_4_VITIS_LOOP_144_5_VITIS_LOOP_145_6'
 ================================================================
-* Date:           Thu Oct 30 21:22:47 2025
+* Date:           Fri Oct 31 01:55:13 2025
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        srcnn_hls
@@ -99,7 +99,7 @@
     |icmp_ln144_fu_185_p2      |      icmp|   0|  0|  19|          12|          11|
     |icmp_ln145_fu_258_p2      |      icmp|   0|  0|  14|           6|           7|
     |icmp_ln147_fu_352_p2      |      icmp|   0|  0|  15|           8|           8|
-    |notlhs18_fu_225_p2        |      icmp|   0|  0|  12|           4|           1|
+    |notlhs1419_fu_225_p2      |      icmp|   0|  0|  12|           4|           1|
     |notlhs1_mid1_fu_219_p2    |      icmp|   0|  0|  12|           4|           1|
     |notrhs2_fu_156_p2         |      icmp|   0|  0|  15|           8|           8|
     |notrhs2_mid112_fu_239_p2  |      icmp|   0|  0|  15|           8|           1|

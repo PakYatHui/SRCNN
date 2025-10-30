@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1761819765379">
-  <ports id="1" name="zext_ln50_1" type="PortType" coreId="544433525" bitwidth="6">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1761836111335">
+  <ports id="1" name="zext_ln50_2" type="PortType" coreId="1852142702" bitwidth="6">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="2" name="zext_ln51" type="PortType" coreId="1852142702" bitwidth="6">
+  <ports id="2" name="zext_ln51" type="PortType" coreId="1701995892" bitwidth="6">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="3" name="in_tile_0_load" type="PortType" coreId="544437362" bitwidth="32">
+  <ports id="3" name="in_tile_0_load" type="PortType" coreId="1852142702" bitwidth="32">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="4" name="out_tile_1" type="PortType" coreName="RAM" coreId="1852142702" bitwidth="32" direction="DirInOut" iftype="IfTypeRegister" arraysize="8192">
+  <ports id="4" name="out_tile_1" type="PortType" coreName="RAM" coreId="2853815344" bitwidth="32" direction="DirInOut" iftype="IfTypeRegister" arraysize="8192">
     <dataInputObjs>getelementptr</dataInputObjs>
     <dataOutputObjs>getelementptr</dataOutputObjs>
   </ports>
-  <ports id="5" name="w_tile_0" type="PortType" coreName="RAM" coreId="4294967295" bitwidth="32" iftype="IfTypeRegister" arraysize="8">
+  <ports id="5" name="w_tile_0" type="PortType" coreName="RAM" coreId="1717920800" bitwidth="32" iftype="IfTypeRegister" arraysize="8">
     <dataOutputObjs>getelementptr</dataOutputObjs>
   </ports>
   <edges id="46" source_obj="//@ports.2" sink_obj="//@blocks.0/@node_objs.1"/>
@@ -64,25 +64,25 @@
   <edges id="-84" source_obj="//@regions.0/@basic_blocks.1/@node_objs.7" sink_obj="//@ports.3"/>
   <blocks id="14" name="newFuncRoot" type="BlockType">
     <controlOutputObjs>for.inc40.i</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="6" name="tn" originalName="tn" coreId="4294967295" bitwidth="4" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="6" name="tn" originalName="tn" coreId="100" bitwidth="4" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="in_tile_0_load_read" coreId="0" bitwidth="32" opcode="read" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="in_tile_0_load_read" coreId="100" bitwidth="32" opcode="read" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
       <dataInputObjs>in_tile_0_load</dataInputObjs>
       <dataOutputObjs>fmul</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="zext_ln51_read" coreId="71" bitwidth="6" opcode="read" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="zext_ln51_read" coreId="100" bitwidth="6" opcode="read" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
       <dataInputObjs>zext_ln51</dataInputObjs>
       <dataOutputObjs>zext</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="zext_ln50_1_read" coreId="4294967294" bitwidth="6" opcode="read" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
-      <dataInputObjs>zext_ln50_1</dataInputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="zext_ln50_2_read" coreId="4294967295" bitwidth="6" opcode="read" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <dataInputObjs>zext_ln50_2</dataInputObjs>
       <dataOutputObjs>zext</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="zext_ln51_cast" rtlName="zext_ln51_cast_fu_104_p1" coreId="2001737584" bitwidth="13" opcode="zext" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="zext_ln51_cast" rtlName="zext_ln51_cast_fu_104_p1" coreId="100" bitwidth="13" opcode="zext" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
     </node_objs>
@@ -92,11 +92,11 @@
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>add</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="12" name="tn_write_ln0" coreId="4294967295" opcode="store" m_display="0" m_delay="0.42" m_topoIndex="7" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="12" name="tn_write_ln0" coreId="0" opcode="store" m_display="0" m_delay="0.42" m_topoIndex="7" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="br_ln0" coreId="4294967294" opcode="br" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="br_ln0" coreId="0" opcode="br" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
       <controlInputObjs>for.inc40.i</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="src/conv2.cpp">
@@ -117,7 +117,7 @@
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>for.inc44.i.loopexit.exitStub</controlOutputObjs>
       <controlOutputObjs>for.inc40.i.split</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="15" name="tn_1" lineNumber="53" originalName="tn" fileName="src/conv2.cpp" fileDirectory="../." coreId="0" contextFuncName="compute_tile_c2" bitwidth="4" opcode="load" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="15" name="tn_2" lineNumber="53" originalName="tn" fileName="src/conv2.cpp" fileDirectory="../." coreId="0" contextFuncName="compute_tile_c2" bitwidth="4" opcode="load" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="src/conv2.cpp" linenumber="53" fileDirectory="C:\Xilinx\golden" functionName="compute_tile_c2"/>
         <inlineStackInfo fileName="src/conv2.cpp" linenumber="111" fileDirectory="C:\Xilinx\golden" functionName="conv2"/>
         <dataInputObjs>alloca</dataInputObjs>
@@ -156,19 +156,19 @@
       <controlInputObjs>for.inc40.i</controlInputObjs>
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>for.inc40.i</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="20" name="zext_ln53" lineNumber="53" fileName="src/conv2.cpp" fileDirectory="../." rtlName="zext_ln53_fu_132_p1" coreId="100" contextFuncName="compute_tile_c2" bitwidth="64" opcode="zext" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="20" name="zext_ln53" lineNumber="53" fileName="src/conv2.cpp" fileDirectory="../." rtlName="zext_ln53_fu_132_p1" coreId="0" contextFuncName="compute_tile_c2" bitwidth="64" opcode="zext" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="src/conv2.cpp" linenumber="53" fileDirectory="C:\Xilinx\golden" functionName="compute_tile_c2"/>
         <inlineStackInfo fileName="src/conv2.cpp" linenumber="111" fileDirectory="C:\Xilinx\golden" functionName="conv2"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="21" name="trunc_ln56" lineNumber="56" fileName="src/conv2.cpp" fileDirectory="../." rtlName="trunc_ln56_fu_137_p1" coreId="0" contextFuncName="compute_tile_c2" bitwidth="3" opcode="trunc" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="21" name="trunc_ln56" lineNumber="56" fileName="src/conv2.cpp" fileDirectory="../." rtlName="trunc_ln56_fu_137_p1" coreId="1969516397" contextFuncName="compute_tile_c2" bitwidth="3" opcode="trunc" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="src/conv2.cpp" linenumber="56" fileDirectory="C:\Xilinx\golden" functionName="compute_tile_c2"/>
         <inlineStackInfo fileName="src/conv2.cpp" linenumber="111" fileDirectory="C:\Xilinx\golden" functionName="conv2"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>bitconcatenate</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="22" name="tmp_33_cast" lineNumber="56" fileName="src/conv2.cpp" fileDirectory="../." rtlName="tmp_33_cast_fu_146_p3" coreId="100" contextFuncName="compute_tile_c2" bitwidth="8" opcode="bitconcatenate" nodeLabel="3.0" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="22" name="tmp_23_cast" lineNumber="56" fileName="src/conv2.cpp" fileDirectory="../." rtlName="tmp_23_cast_fu_146_p3" coreId="0" contextFuncName="compute_tile_c2" bitwidth="8" opcode="bitconcatenate" nodeLabel="3.0" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="src/conv2.cpp" linenumber="56" fileDirectory="C:\Xilinx\golden" functionName="compute_tile_c2"/>
         <inlineStackInfo fileName="src/conv2.cpp" linenumber="111" fileDirectory="C:\Xilinx\golden" functionName="conv2"/>
         <dataInputObjs>trunc</dataInputObjs>
@@ -182,7 +182,7 @@
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>bitconcatenate</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="24" name="tmp_s" lineNumber="56" fileName="src/conv2.cpp" fileDirectory="../." rtlName="tmp_s_fu_158_p3" coreId="0" contextFuncName="compute_tile_c2" bitwidth="13" opcode="bitconcatenate" nodeLabel="3.0" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="24" name="tmp_s" lineNumber="56" fileName="src/conv2.cpp" fileDirectory="../." rtlName="tmp_s_fu_158_p3" coreId="4294967294" contextFuncName="compute_tile_c2" bitwidth="13" opcode="bitconcatenate" nodeLabel="3.0" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="src/conv2.cpp" linenumber="56" fileDirectory="C:\Xilinx\golden" functionName="compute_tile_c2"/>
         <inlineStackInfo fileName="src/conv2.cpp" linenumber="111" fileDirectory="C:\Xilinx\golden" functionName="conv2"/>
         <dataInputObjs>add</dataInputObjs>
@@ -202,7 +202,7 @@
         <dataInputObjs>add</dataInputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="27" name="out_tile_1_addr" lineNumber="56" fileName="src/conv2.cpp" fileDirectory="../." coreId="0" contextFuncName="compute_tile_c2" bitwidth="13" opcode="getelementptr" nodeLabel="3.0" m_display="0" m_topoIndex="24" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="27" name="out_tile_1_addr" lineNumber="56" fileName="src/conv2.cpp" fileDirectory="../." coreId="207" contextFuncName="compute_tile_c2" bitwidth="13" opcode="getelementptr" nodeLabel="3.0" m_display="0" m_topoIndex="24" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="src/conv2.cpp" linenumber="56" fileDirectory="C:\Xilinx\golden" functionName="compute_tile_c2"/>
         <inlineStackInfo fileName="src/conv2.cpp" linenumber="111" fileDirectory="C:\Xilinx\golden" functionName="conv2"/>
         <dataInputObjs>out_tile_1</dataInputObjs>
@@ -218,7 +218,7 @@
         <dataInputObjs>getelementptr</dataInputObjs>
         <dataOutputObjs>fadd</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="32" name="w_tile_0_addr" lineNumber="58" fileName="src/conv2.cpp" fileDirectory="../." coreId="0" contextFuncName="compute_tile_c2" bitwidth="3" opcode="getelementptr" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="32" name="w_tile_0_addr" lineNumber="58" fileName="src/conv2.cpp" fileDirectory="../." coreId="4294967294" contextFuncName="compute_tile_c2" bitwidth="3" opcode="getelementptr" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="src/conv2.cpp" linenumber="58" fileDirectory="C:\Xilinx\golden" functionName="compute_tile_c2"/>
         <inlineStackInfo fileName="src/conv2.cpp" linenumber="111" fileDirectory="C:\Xilinx\golden" functionName="conv2"/>
         <dataInputObjs>w_tile_0</dataInputObjs>
@@ -321,6 +321,9 @@
   <expressionNodes realName="out_tile_1_addr_gep_fu_79">
     <nodeIds>27</nodeIds>
   </expressionNodes>
+  <expressionNodes realName="tmp_23_cast_fu_146">
+    <nodeIds>22</nodeIds>
+  </expressionNodes>
   <expressionNodes realName="zext_ln53_fu_132">
     <nodeIds>20</nodeIds>
   </expressionNodes>
@@ -335,9 +338,6 @@
   </expressionNodes>
   <expressionNodes realName="add_ln56_1_fu_166">
     <nodeIds>25</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="tmp_33_cast_fu_146">
-    <nodeIds>22</nodeIds>
   </expressionNodes>
   <expressionNodes realName="add_ln56_fu_153">
     <nodeIds>23</nodeIds>
@@ -375,14 +375,14 @@
   <ioNodes realName="store_ln0_store_fu_112">
     <nodeIds>12</nodeIds>
   </ioNodes>
-  <ioNodes realName="zext_ln50_1_read_read_fu_60">
-    <nodeIds>9</nodeIds>
-  </ioNodes>
-  <ioNodes realName="tn_1_load_fu_117">
+  <ioNodes realName="tn_2_load_fu_117">
     <nodeIds>15</nodeIds>
   </ioNodes>
   <ioNodes realName="store_ln53_store_fu_141">
     <nodeIds>37</nodeIds>
+  </ioNodes>
+  <ioNodes realName="zext_ln50_2_read_read_fu_60">
+    <nodeIds>9</nodeIds>
   </ioNodes>
   <memoryPorts dataString="out_tile_1">
     <nodeIds>36</nodeIds>
@@ -413,7 +413,7 @@
       <nodeIds>33</nodeIds>
     </contents>
   </ioPorts>
-  <ioPorts name="zext_ln50_1">
+  <ioPorts name="zext_ln50_2">
     <contents name="read">
       <nodeIds>9</nodeIds>
     </contents>

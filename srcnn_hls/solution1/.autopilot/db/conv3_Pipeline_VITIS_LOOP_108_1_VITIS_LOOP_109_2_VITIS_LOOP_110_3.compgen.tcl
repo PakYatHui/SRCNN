@@ -1,5 +1,11 @@
 # This script segment is generated automatically by AutoPilot
 
+set name srcnn_top_mul_4ns_19ns_22_1_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mul} IMPL {auto} LATENCY 0 ALLOW_PRAGMA 1
+}
+
+
 # clear list
 if {${::AESL::PGuard_autoexp_gen}} {
     cg_default_interface_gen_dc_begin
@@ -11,26 +17,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1718 \
-    name output_ftmap \
-    reset_level 1 \
-    sync_rst true \
-    dir O \
-    corename output_ftmap \
-    op interface \
-    ports { output_ftmap_address0 { O 16 vector } output_ftmap_ce0 { O 1 bit } output_ftmap_we0 { O 1 bit } output_ftmap_d0 { O 32 vector } } \
-} "
-} else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'output_ftmap'"
-}
-}
-
-
-# XIL_BRAM:
-if {${::AESL::PGuard_autoexp_gen}} {
-if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
-eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 1719 \
+    id 1741 \
     name out_tile \
     reset_level 1 \
     sync_rst true \
@@ -48,7 +35,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1712 \
+    id 1732 \
     name select_ln103_1 \
     type other \
     dir I \
@@ -63,7 +50,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1713 \
+    id 1733 \
     name zext_ln103_3 \
     type other \
     dir I \
@@ -78,7 +65,22 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1714 \
+    id 1734 \
+    name b \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_b \
+    op interface \
+    ports { b { I 64 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 1735 \
     name select_ln103_3 \
     type other \
     dir I \
@@ -93,7 +95,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1715 \
+    id 1736 \
     name zext_ln105 \
     type other \
     dir I \
@@ -108,22 +110,22 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1716 \
-    name bitcast_ln113 \
+    id 1737 \
+    name w3 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_bitcast_ln113 \
+    corename dc_w3 \
     op interface \
-    ports { bitcast_ln113 { I 32 vector } } \
+    ports { m_axi_w3_AWVALID { O 1 bit } m_axi_w3_AWREADY { I 1 bit } m_axi_w3_AWADDR { O 64 vector } m_axi_w3_AWID { O 1 vector } m_axi_w3_AWLEN { O 32 vector } m_axi_w3_AWSIZE { O 3 vector } m_axi_w3_AWBURST { O 2 vector } m_axi_w3_AWLOCK { O 2 vector } m_axi_w3_AWCACHE { O 4 vector } m_axi_w3_AWPROT { O 3 vector } m_axi_w3_AWQOS { O 4 vector } m_axi_w3_AWREGION { O 4 vector } m_axi_w3_AWUSER { O 1 vector } m_axi_w3_WVALID { O 1 bit } m_axi_w3_WREADY { I 1 bit } m_axi_w3_WDATA { O 32 vector } m_axi_w3_WSTRB { O 4 vector } m_axi_w3_WLAST { O 1 bit } m_axi_w3_WID { O 1 vector } m_axi_w3_WUSER { O 1 vector } m_axi_w3_ARVALID { O 1 bit } m_axi_w3_ARREADY { I 1 bit } m_axi_w3_ARADDR { O 64 vector } m_axi_w3_ARID { O 1 vector } m_axi_w3_ARLEN { O 32 vector } m_axi_w3_ARSIZE { O 3 vector } m_axi_w3_ARBURST { O 2 vector } m_axi_w3_ARLOCK { O 2 vector } m_axi_w3_ARCACHE { O 4 vector } m_axi_w3_ARPROT { O 3 vector } m_axi_w3_ARQOS { O 4 vector } m_axi_w3_ARREGION { O 4 vector } m_axi_w3_ARUSER { O 1 vector } m_axi_w3_RVALID { I 1 bit } m_axi_w3_RREADY { O 1 bit } m_axi_w3_RDATA { I 32 vector } m_axi_w3_RLAST { I 1 bit } m_axi_w3_RID { I 1 vector } m_axi_w3_RFIFONUM { I 9 vector } m_axi_w3_RUSER { I 1 vector } m_axi_w3_RRESP { I 2 vector } m_axi_w3_BVALID { I 1 bit } m_axi_w3_BREADY { O 1 bit } m_axi_w3_BRESP { I 2 vector } m_axi_w3_BID { I 1 vector } m_axi_w3_BUSER { I 1 vector } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 1717 \
+    id 1738 \
     name select_ln103 \
     type other \
     dir I \
@@ -131,7 +133,37 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_select_ln103 \
     op interface \
-    ports { select_ln103 { I 9 vector } } \
+    ports { select_ln103 { I 8 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 1739 \
+    name out_ftmap \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_out_ftmap \
+    op interface \
+    ports { out_ftmap { I 64 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 1740 \
+    name out_r \
+    type other \
+    dir O \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_out_r \
+    op interface \
+    ports { m_axi_out_r_AWVALID { O 1 bit } m_axi_out_r_AWREADY { I 1 bit } m_axi_out_r_AWADDR { O 64 vector } m_axi_out_r_AWID { O 1 vector } m_axi_out_r_AWLEN { O 32 vector } m_axi_out_r_AWSIZE { O 3 vector } m_axi_out_r_AWBURST { O 2 vector } m_axi_out_r_AWLOCK { O 2 vector } m_axi_out_r_AWCACHE { O 4 vector } m_axi_out_r_AWPROT { O 3 vector } m_axi_out_r_AWQOS { O 4 vector } m_axi_out_r_AWREGION { O 4 vector } m_axi_out_r_AWUSER { O 1 vector } m_axi_out_r_WVALID { O 1 bit } m_axi_out_r_WREADY { I 1 bit } m_axi_out_r_WDATA { O 32 vector } m_axi_out_r_WSTRB { O 4 vector } m_axi_out_r_WLAST { O 1 bit } m_axi_out_r_WID { O 1 vector } m_axi_out_r_WUSER { O 1 vector } m_axi_out_r_ARVALID { O 1 bit } m_axi_out_r_ARREADY { I 1 bit } m_axi_out_r_ARADDR { O 64 vector } m_axi_out_r_ARID { O 1 vector } m_axi_out_r_ARLEN { O 32 vector } m_axi_out_r_ARSIZE { O 3 vector } m_axi_out_r_ARBURST { O 2 vector } m_axi_out_r_ARLOCK { O 2 vector } m_axi_out_r_ARCACHE { O 4 vector } m_axi_out_r_ARPROT { O 3 vector } m_axi_out_r_ARQOS { O 4 vector } m_axi_out_r_ARREGION { O 4 vector } m_axi_out_r_ARUSER { O 1 vector } m_axi_out_r_RVALID { I 1 bit } m_axi_out_r_RREADY { O 1 bit } m_axi_out_r_RDATA { I 32 vector } m_axi_out_r_RLAST { I 1 bit } m_axi_out_r_RID { I 1 vector } m_axi_out_r_RFIFONUM { I 9 vector } m_axi_out_r_RUSER { I 1 vector } m_axi_out_r_RRESP { I 2 vector } m_axi_out_r_BVALID { I 1 bit } m_axi_out_r_BREADY { O 1 bit } m_axi_out_r_BRESP { I 2 vector } m_axi_out_r_BID { I 1 vector } m_axi_out_r_BUSER { I 1 vector } } \
 } "
 }
 
@@ -200,14 +232,14 @@ if {${::AESL::PGuard_autoexp_gen}} {
 
 
 # flow_control definition:
-set InstName srcnn_flow_control_loop_pipe_sequential_init_U
-set CompName srcnn_flow_control_loop_pipe_sequential_init
+set InstName srcnn_top_flow_control_loop_pipe_sequential_init_U
+set CompName srcnn_top_flow_control_loop_pipe_sequential_init
 set name flow_control_loop_pipe_sequential_init
 if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
 if {[info proc ::AESL_LIB_VIRTEX::xil_gen_UPC_flow_control] == "::AESL_LIB_VIRTEX::xil_gen_UPC_flow_control"} {
 eval "::AESL_LIB_VIRTEX::xil_gen_UPC_flow_control { \
     name ${name} \
-    prefix srcnn_ \
+    prefix srcnn_top_ \
 }"
 } else {
 puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_UPC_flow_control, check your platform lib"

@@ -1,17 +1,17 @@
 # This script segment is generated automatically by AutoPilot
 
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler srcnn_conv2_out_tile_1_RAM_AUTO_1R1W BINDTYPE {storage} TYPE {ram} IMPL {auto} LATENCY 2 ALLOW_PRAGMA 1
+	::AP::rtl_comp_handler srcnn_top_conv2_out_tile_1_RAM_AUTO_1R1W BINDTYPE {storage} TYPE {ram} IMPL {auto} LATENCY 2 ALLOW_PRAGMA 1
 }
 
 
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler srcnn_conv2_in_tile_0_RAM_AUTO_1R1W BINDTYPE {storage} TYPE {ram} IMPL {auto} LATENCY 2 ALLOW_PRAGMA 1
+	::AP::rtl_comp_handler srcnn_top_conv2_in_tile_0_RAM_AUTO_1R1W BINDTYPE {storage} TYPE {ram} IMPL {auto} LATENCY 2 ALLOW_PRAGMA 1
 }
 
 
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler srcnn_conv2_w_tile_0_RAM_AUTO_1R1W BINDTYPE {storage} TYPE {ram} IMPL {auto} LATENCY 2 ALLOW_PRAGMA 1
+	::AP::rtl_comp_handler srcnn_top_conv2_w_tile_0_RAM_AUTO_1R1W BINDTYPE {storage} TYPE {ram} IMPL {auto} LATENCY 2 ALLOW_PRAGMA 1
 }
 
 
@@ -22,81 +22,95 @@ if {${::AESL::PGuard_autoexp_gen}} {
     AESL_LIB_XILADAPTER::native_axis_begin
 }
 
-# XIL_BRAM:
+# Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
-if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
-eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 660 \
-    name conv2_weights \
+eval "cg_default_interface_gen_dc { \
+    id 677 \
+    name feat \
+    type other \
+    dir IO \
     reset_level 1 \
     sync_rst true \
+    corename dc_feat \
+    op interface \
+    ports { m_axi_feat_AWVALID { O 1 bit } m_axi_feat_AWREADY { I 1 bit } m_axi_feat_AWADDR { O 64 vector } m_axi_feat_AWID { O 1 vector } m_axi_feat_AWLEN { O 32 vector } m_axi_feat_AWSIZE { O 3 vector } m_axi_feat_AWBURST { O 2 vector } m_axi_feat_AWLOCK { O 2 vector } m_axi_feat_AWCACHE { O 4 vector } m_axi_feat_AWPROT { O 3 vector } m_axi_feat_AWQOS { O 4 vector } m_axi_feat_AWREGION { O 4 vector } m_axi_feat_AWUSER { O 1 vector } m_axi_feat_WVALID { O 1 bit } m_axi_feat_WREADY { I 1 bit } m_axi_feat_WDATA { O 32 vector } m_axi_feat_WSTRB { O 4 vector } m_axi_feat_WLAST { O 1 bit } m_axi_feat_WID { O 1 vector } m_axi_feat_WUSER { O 1 vector } m_axi_feat_ARVALID { O 1 bit } m_axi_feat_ARREADY { I 1 bit } m_axi_feat_ARADDR { O 64 vector } m_axi_feat_ARID { O 1 vector } m_axi_feat_ARLEN { O 32 vector } m_axi_feat_ARSIZE { O 3 vector } m_axi_feat_ARBURST { O 2 vector } m_axi_feat_ARLOCK { O 2 vector } m_axi_feat_ARCACHE { O 4 vector } m_axi_feat_ARPROT { O 3 vector } m_axi_feat_ARQOS { O 4 vector } m_axi_feat_ARREGION { O 4 vector } m_axi_feat_ARUSER { O 1 vector } m_axi_feat_RVALID { I 1 bit } m_axi_feat_RREADY { O 1 bit } m_axi_feat_RDATA { I 32 vector } m_axi_feat_RLAST { I 1 bit } m_axi_feat_RID { I 1 vector } m_axi_feat_RFIFONUM { I 9 vector } m_axi_feat_RUSER { I 1 vector } m_axi_feat_RRESP { I 2 vector } m_axi_feat_BVALID { I 1 bit } m_axi_feat_BREADY { O 1 bit } m_axi_feat_BRESP { I 2 vector } m_axi_feat_BID { I 1 vector } m_axi_feat_BUSER { I 1 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 678 \
+    name in_ftmap \
+    type other \
     dir I \
-    corename conv2_weights \
-    op interface \
-    ports { conv2_weights_address0 { O 11 vector } conv2_weights_ce0 { O 1 bit } conv2_weights_q0 { I 32 vector } } \
-} "
-} else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'conv2_weights'"
-}
-}
-
-
-# XIL_BRAM:
-if {${::AESL::PGuard_autoexp_gen}} {
-if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
-eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 661 \
-    name conv2_biases \
     reset_level 1 \
     sync_rst true \
+    corename dc_in_ftmap \
+    op interface \
+    ports { in_ftmap { I 64 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 679 \
+    name w2 \
+    type other \
     dir I \
-    corename conv2_biases \
-    op interface \
-    ports { conv2_biases_address0 { O 5 vector } conv2_biases_ce0 { O 1 bit } conv2_biases_q0 { I 32 vector } } \
-} "
-} else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'conv2_biases'"
-}
-}
-
-
-# XIL_BRAM:
-if {${::AESL::PGuard_autoexp_gen}} {
-if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
-eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 662 \
-    name feat2 \
     reset_level 1 \
     sync_rst true \
-    dir O \
-    corename feat2 \
+    corename dc_w2 \
     op interface \
-    ports { feat2_address0 { O 21 vector } feat2_ce0 { O 1 bit } feat2_we0 { O 1 bit } feat2_d0 { O 32 vector } } \
+    ports { m_axi_w2_AWVALID { O 1 bit } m_axi_w2_AWREADY { I 1 bit } m_axi_w2_AWADDR { O 64 vector } m_axi_w2_AWID { O 1 vector } m_axi_w2_AWLEN { O 32 vector } m_axi_w2_AWSIZE { O 3 vector } m_axi_w2_AWBURST { O 2 vector } m_axi_w2_AWLOCK { O 2 vector } m_axi_w2_AWCACHE { O 4 vector } m_axi_w2_AWPROT { O 3 vector } m_axi_w2_AWQOS { O 4 vector } m_axi_w2_AWREGION { O 4 vector } m_axi_w2_AWUSER { O 1 vector } m_axi_w2_WVALID { O 1 bit } m_axi_w2_WREADY { I 1 bit } m_axi_w2_WDATA { O 32 vector } m_axi_w2_WSTRB { O 4 vector } m_axi_w2_WLAST { O 1 bit } m_axi_w2_WID { O 1 vector } m_axi_w2_WUSER { O 1 vector } m_axi_w2_ARVALID { O 1 bit } m_axi_w2_ARREADY { I 1 bit } m_axi_w2_ARADDR { O 64 vector } m_axi_w2_ARID { O 1 vector } m_axi_w2_ARLEN { O 32 vector } m_axi_w2_ARSIZE { O 3 vector } m_axi_w2_ARBURST { O 2 vector } m_axi_w2_ARLOCK { O 2 vector } m_axi_w2_ARCACHE { O 4 vector } m_axi_w2_ARPROT { O 3 vector } m_axi_w2_ARQOS { O 4 vector } m_axi_w2_ARREGION { O 4 vector } m_axi_w2_ARUSER { O 1 vector } m_axi_w2_RVALID { I 1 bit } m_axi_w2_RREADY { O 1 bit } m_axi_w2_RDATA { I 32 vector } m_axi_w2_RLAST { I 1 bit } m_axi_w2_RID { I 1 vector } m_axi_w2_RFIFONUM { I 9 vector } m_axi_w2_RUSER { I 1 vector } m_axi_w2_RRESP { I 2 vector } m_axi_w2_BVALID { I 1 bit } m_axi_w2_BREADY { O 1 bit } m_axi_w2_BRESP { I 2 vector } m_axi_w2_BID { I 1 vector } m_axi_w2_BUSER { I 1 vector } } \
 } "
-} else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'feat2'"
-}
 }
 
-
-# XIL_BRAM:
+# Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
-if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
-eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 663 \
-    name feat1 \
-    reset_level 1 \
-    sync_rst true \
+eval "cg_default_interface_gen_dc { \
+    id 680 \
+    name w \
+    type other \
     dir I \
-    corename feat1 \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_w \
     op interface \
-    ports { feat1_address0 { O 22 vector } feat1_ce0 { O 1 bit } feat1_q0 { I 32 vector } } \
+    ports { w { I 64 vector } } \
 } "
-} else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'feat1'"
-}
 }
 
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 681 \
+    name b \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_b \
+    op interface \
+    ports { b { I 64 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 682 \
+    name out_ftmap \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_out_ftmap \
+    op interface \
+    ports { out_ftmap { I 64 vector } } \
+} "
+}
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {

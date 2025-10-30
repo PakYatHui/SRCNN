@@ -15,7 +15,7 @@ set DLRegItemOffset 0
 set C_modelName {conv2_Pipeline_VITIS_LOOP_53_3}
 set C_modelType { void 0 }
 set C_modelArgList {
-	{ zext_ln50_1 int 6 regular  }
+	{ zext_ln50_2 int 6 regular  }
 	{ zext_ln51 int 6 regular  }
 	{ in_tile_0_load float 32 regular  }
 	{ out_tile_1 float 32 regular {array 8192 { 0 1 } 1 1 } {global 2}  }
@@ -23,7 +23,7 @@ set C_modelArgList {
 }
 set hasAXIMCache 0
 set C_modelArgMapList {[ 
-	{ "Name" : "zext_ln50_1", "interface" : "wire", "bitwidth" : 6, "direction" : "READONLY"} , 
+	{ "Name" : "zext_ln50_2", "interface" : "wire", "bitwidth" : 6, "direction" : "READONLY"} , 
  	{ "Name" : "zext_ln51", "interface" : "wire", "bitwidth" : 6, "direction" : "READONLY"} , 
  	{ "Name" : "in_tile_0_load", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY"} , 
  	{ "Name" : "out_tile_1", "interface" : "memory", "bitwidth" : 32, "direction" : "READWRITE", "extern" : 0} , 
@@ -37,7 +37,7 @@ set portList {
 	{ ap_done sc_out sc_logic 1 predone -1 } 
 	{ ap_idle sc_out sc_logic 1 done -1 } 
 	{ ap_ready sc_out sc_logic 1 ready -1 } 
-	{ zext_ln50_1 sc_in sc_lv 6 signal 0 } 
+	{ zext_ln50_2 sc_in sc_lv 6 signal 0 } 
 	{ zext_ln51 sc_in sc_lv 6 signal 1 } 
 	{ in_tile_0_load sc_in sc_lv 32 signal 2 } 
 	{ out_tile_1_address0 sc_out sc_lv 13 signal 3 } 
@@ -50,15 +50,15 @@ set portList {
 	{ w_tile_0_address0 sc_out sc_lv 3 signal 4 } 
 	{ w_tile_0_ce0 sc_out sc_logic 1 signal 4 } 
 	{ w_tile_0_q0 sc_in sc_lv 32 signal 4 } 
-	{ grp_fu_934_p_din0 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_934_p_din1 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_934_p_dout0 sc_in sc_lv 32 signal -1 } 
-	{ grp_fu_934_p_ce sc_out sc_logic 1 signal -1 } 
-	{ grp_fu_938_p_din0 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_938_p_din1 sc_out sc_lv 32 signal -1 } 
-	{ grp_fu_938_p_opcode sc_out sc_lv 2 signal -1 } 
-	{ grp_fu_938_p_dout0 sc_in sc_lv 32 signal -1 } 
-	{ grp_fu_938_p_ce sc_out sc_logic 1 signal -1 } 
+	{ grp_fu_1145_p_din0 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_1145_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_1145_p_dout0 sc_in sc_lv 32 signal -1 } 
+	{ grp_fu_1145_p_ce sc_out sc_logic 1 signal -1 } 
+	{ grp_fu_1149_p_din0 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_1149_p_din1 sc_out sc_lv 32 signal -1 } 
+	{ grp_fu_1149_p_opcode sc_out sc_lv 2 signal -1 } 
+	{ grp_fu_1149_p_dout0 sc_in sc_lv 32 signal -1 } 
+	{ grp_fu_1149_p_ce sc_out sc_logic 1 signal -1 } 
 }
 set NewPortList {[ 
 	{ "name": "ap_clk", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "clock", "bundle":{"name": "ap_clk", "role": "default" }} , 
@@ -67,7 +67,7 @@ set NewPortList {[
  	{ "name": "ap_done", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "predone", "bundle":{"name": "ap_done", "role": "default" }} , 
  	{ "name": "ap_idle", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "done", "bundle":{"name": "ap_idle", "role": "default" }} , 
  	{ "name": "ap_ready", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "ready", "bundle":{"name": "ap_ready", "role": "default" }} , 
- 	{ "name": "zext_ln50_1", "direction": "in", "datatype": "sc_lv", "bitwidth":6, "type": "signal", "bundle":{"name": "zext_ln50_1", "role": "default" }} , 
+ 	{ "name": "zext_ln50_2", "direction": "in", "datatype": "sc_lv", "bitwidth":6, "type": "signal", "bundle":{"name": "zext_ln50_2", "role": "default" }} , 
  	{ "name": "zext_ln51", "direction": "in", "datatype": "sc_lv", "bitwidth":6, "type": "signal", "bundle":{"name": "zext_ln51", "role": "default" }} , 
  	{ "name": "in_tile_0_load", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "in_tile_0_load", "role": "default" }} , 
  	{ "name": "out_tile_1_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":13, "type": "signal", "bundle":{"name": "out_tile_1", "role": "address0" }} , 
@@ -80,15 +80,15 @@ set NewPortList {[
  	{ "name": "w_tile_0_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":3, "type": "signal", "bundle":{"name": "w_tile_0", "role": "address0" }} , 
  	{ "name": "w_tile_0_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "w_tile_0", "role": "ce0" }} , 
  	{ "name": "w_tile_0_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "w_tile_0", "role": "q0" }} , 
- 	{ "name": "grp_fu_934_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_934_p_din0", "role": "default" }} , 
- 	{ "name": "grp_fu_934_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_934_p_din1", "role": "default" }} , 
- 	{ "name": "grp_fu_934_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_934_p_dout0", "role": "default" }} , 
- 	{ "name": "grp_fu_934_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_934_p_ce", "role": "default" }} , 
- 	{ "name": "grp_fu_938_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_938_p_din0", "role": "default" }} , 
- 	{ "name": "grp_fu_938_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_938_p_din1", "role": "default" }} , 
- 	{ "name": "grp_fu_938_p_opcode", "direction": "out", "datatype": "sc_lv", "bitwidth":2, "type": "signal", "bundle":{"name": "grp_fu_938_p_opcode", "role": "default" }} , 
- 	{ "name": "grp_fu_938_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_938_p_dout0", "role": "default" }} , 
- 	{ "name": "grp_fu_938_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_938_p_ce", "role": "default" }}  ]}
+ 	{ "name": "grp_fu_1145_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1145_p_din0", "role": "default" }} , 
+ 	{ "name": "grp_fu_1145_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1145_p_din1", "role": "default" }} , 
+ 	{ "name": "grp_fu_1145_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1145_p_dout0", "role": "default" }} , 
+ 	{ "name": "grp_fu_1145_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_1145_p_ce", "role": "default" }} , 
+ 	{ "name": "grp_fu_1149_p_din0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1149_p_din0", "role": "default" }} , 
+ 	{ "name": "grp_fu_1149_p_din1", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1149_p_din1", "role": "default" }} , 
+ 	{ "name": "grp_fu_1149_p_opcode", "direction": "out", "datatype": "sc_lv", "bitwidth":2, "type": "signal", "bundle":{"name": "grp_fu_1149_p_opcode", "role": "default" }} , 
+ 	{ "name": "grp_fu_1149_p_dout0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "grp_fu_1149_p_dout0", "role": "default" }} , 
+ 	{ "name": "grp_fu_1149_p_ce", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "grp_fu_1149_p_ce", "role": "default" }}  ]}
 
 set RtlHierarchyInfo {[
 	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1"],
@@ -106,7 +106,7 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"IsBlackBox" : "0",
 		"Port" : [
-			{"Name" : "zext_ln50_1", "Type" : "None", "Direction" : "I"},
+			{"Name" : "zext_ln50_2", "Type" : "None", "Direction" : "I"},
 			{"Name" : "zext_ln51", "Type" : "None", "Direction" : "I"},
 			{"Name" : "in_tile_0_load", "Type" : "None", "Direction" : "I"},
 			{"Name" : "out_tile_1", "Type" : "Memory", "Direction" : "IO"},
@@ -119,7 +119,7 @@ set RtlHierarchyInfo {[
 
 set ArgLastReadFirstWriteLatency {
 	conv2_Pipeline_VITIS_LOOP_53_3 {
-		zext_ln50_1 {Type I LastRead 0 FirstWrite -1}
+		zext_ln50_2 {Type I LastRead 0 FirstWrite -1}
 		zext_ln51 {Type I LastRead 0 FirstWrite -1}
 		in_tile_0_load {Type I LastRead 0 FirstWrite -1}
 		out_tile_1 {Type IO LastRead 3 FirstWrite 9}
@@ -137,7 +137,7 @@ set PipelineEnableSignalInfo {[
 ]}
 
 set Spec2ImplPortList { 
-	zext_ln50_1 { ap_none {  { zext_ln50_1 in_data 0 6 } } }
+	zext_ln50_2 { ap_none {  { zext_ln50_2 in_data 0 6 } } }
 	zext_ln51 { ap_none {  { zext_ln51 in_data 0 6 } } }
 	in_tile_0_load { ap_none {  { in_tile_0_load in_data 0 32 } } }
 	out_tile_1 { ap_memory {  { out_tile_1_address0 mem_address 1 13 }  { out_tile_1_ce0 mem_ce 1 1 }  { out_tile_1_we0 mem_we 1 1 }  { out_tile_1_d0 mem_din 1 32 }  { out_tile_1_address1 MemPortADDR2 1 13 }  { out_tile_1_ce1 MemPortCE2 1 1 }  { out_tile_1_q1 MemPortDOUT2 0 32 } } }

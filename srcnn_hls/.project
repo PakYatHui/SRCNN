@@ -67,6 +67,11 @@
 			<location>C:/Xilinx/golden/src/srcnn.h</location>
 		</link>
 		<link>
+			<name>source/srcnn_top.cpp</name>
+			<type>1</type>
+			<location>C:/Xilinx/golden/src/srcnn_top.cpp</location>
+		</link>
+		<link>
 			<name>testbench/csim.cpp</name>
 			<type>1</type>
 			<location>C:/Xilinx/golden/test/csim.cpp</location>

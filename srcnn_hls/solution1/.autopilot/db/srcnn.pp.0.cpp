@@ -162,7 +162,19 @@ typedef float ftmap_t;
 typedef float param_t;
 
 
-__attribute__((sdx_kernel("srcnn", 0))) void srcnn(ftmap_t input_ftmap[1][255][255],
+
+void srcnn_top(ftmap_t input_ftmap[1][255][255],
+               param_t conv1_weights[64][1][9][9],
+               param_t conv1_biases[64],
+               ftmap_t conv1_out[64][255][255],
+               param_t conv2_weights[32][64][1][1],
+               param_t conv2_biases[32],
+               ftmap_t conv2_out[32][255][255],
+               param_t conv3_weights[1][32][5][5],
+               param_t conv3_biases[1],
+               ftmap_t output_ftmap[1][255][255]);
+
+void srcnn(ftmap_t input_ftmap[1][255][255],
            param_t conv1_weights[64][1][9][9],
            param_t conv1_biases[64],
            param_t conv2_weights[32][64][1][1],
@@ -188,45 +200,52 @@ void conv3(ftmap_t in_ftmap[32][255][255],
            ftmap_t out_ftmap[1][255][255]);
 # 2 "src/srcnn.cpp" 2
 
-__attribute__((sdx_kernel("srcnn", 0))) void srcnn(ftmap_t input_ftmap[1][255][255],
+
+void srcnn(ftmap_t input_ftmap[1][255][255],
            param_t conv1_weights[64][1][9][9],
            param_t conv1_biases[64],
+           ftmap_t conv1_out[64][255][255],
            param_t conv2_weights[32][64][1][1],
            param_t conv2_biases[32],
+           ftmap_t conv2_out[32][255][255],
            param_t conv3_weights[1][32][5][5],
            param_t conv3_biases[1],
            ftmap_t output_ftmap[1][255][255])
 {
-#line 28 "C:/Xilinx/golden/srcnn_hls/solution1/csynth.tcl"
-#pragma HLSDIRECTIVE TOP name=srcnn
-# 11 "src/srcnn.cpp"
 
-#line 7 "C:/Xilinx/golden/srcnn_hls/solution1/directives.tcl"
-#pragma HLSDIRECTIVE TOP name=srcnn
-# 11 "src/srcnn.cpp"
+#pragma HLS INTERFACE m_axi port=input_ftmap offset=slave bundle=in depth=(1*255*255)
+#pragma HLS INTERFACE m_axi port=conv1_out offset=slave bundle=feat depth=(64*255*255)
+#pragma HLS INTERFACE m_axi port=conv2_out offset=slave bundle=feat depth=(32*255*255)
+#pragma HLS INTERFACE m_axi port=output_ftmap offset=slave bundle=out depth=(1*255*255)
+
+#pragma HLS INTERFACE m_axi port=conv1_weights offset=slave bundle=w1 depth=(64*1*9*9)
+#pragma HLS INTERFACE m_axi port=conv1_biases offset=slave bundle=w1 depth=(64)
+#pragma HLS INTERFACE m_axi port=conv2_weights offset=slave bundle=w2 depth=(32*64*1*1)
+#pragma HLS INTERFACE m_axi port=conv2_biases offset=slave bundle=w2 depth=(32)
+#pragma HLS INTERFACE m_axi port=conv3_weights offset=slave bundle=w3 depth=(1*32*5*5)
+#pragma HLS INTERFACE m_axi port=conv3_biases offset=slave bundle=w3 depth=(1)
+
+
+#pragma HLS INTERFACE s_axilite port=return bundle=control
+#pragma HLS INTERFACE s_axilite port=input_ftmap bundle=control
+#pragma HLS INTERFACE s_axilite port=conv1_weights bundle=control
+#pragma HLS INTERFACE s_axilite port=conv1_biases bundle=control
+#pragma HLS INTERFACE s_axilite port=conv1_out bundle=control
+#pragma HLS INTERFACE s_axilite port=conv2_weights bundle=control
+#pragma HLS INTERFACE s_axilite port=conv2_biases bundle=control
+#pragma HLS INTERFACE s_axilite port=conv2_out bundle=control
+#pragma HLS INTERFACE s_axilite port=conv3_weights bundle=control
+#pragma HLS INTERFACE s_axilite port=conv3_biases bundle=control
+#pragma HLS INTERFACE s_axilite port=output_ftmap bundle=control
 
 #pragma HLS PIPELINE off
- static ftmap_t feat1[64][255][255];
-    static ftmap_t feat2[32][255][255];
 
 
-    conv1(input_ftmap, conv1_weights, conv1_biases, feat1);
-    VITIS_LOOP_18_1: for (int c = 0; c < 64; ++c)
-      VITIS_LOOP_19_2: for (int y = 0; y < 255; ++y)
-        VITIS_LOOP_20_3: for (int x = 0; x < 255; ++x) {
-#pragma HLS PIPELINE II=1
- if (feat1[c][y][x] < 0.0f) feat1[c][y][x] = 0.0f;
-        }
+ conv1(input_ftmap, conv1_weights, conv1_biases, conv1_out);
 
 
-    conv2(feat1, conv2_weights, conv2_biases, feat2);
-    VITIS_LOOP_27_4: for (int c = 0; c < 32; ++c)
-      VITIS_LOOP_28_5: for (int y = 0; y < 255; ++y)
-        VITIS_LOOP_29_6: for (int x = 0; x < 255; ++x) {
-#pragma HLS PIPELINE II=1
- if (feat2[c][y][x] < 0.0f) feat2[c][y][x] = 0.0f;
-        }
+    conv2(conv1_out, conv2_weights, conv2_biases, conv2_out);
 
 
-    conv3(feat2, conv3_weights, conv3_biases, output_ftmap);
+    conv3(conv2_out, conv3_weights, conv3_biases, output_ftmap);
 }

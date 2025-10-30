@@ -163,6 +163,18 @@ typedef float ftmap_t;
 typedef float param_t;
 
 
+
+void srcnn_top(ftmap_t input_ftmap[1][255][255],
+               param_t conv1_weights[64][1][9][9],
+               param_t conv1_biases[64],
+               ftmap_t conv1_out[64][255][255],
+               param_t conv2_weights[32][64][1][1],
+               param_t conv2_biases[32],
+               ftmap_t conv2_out[32][255][255],
+               param_t conv3_weights[1][32][5][5],
+               param_t conv3_biases[1],
+               ftmap_t output_ftmap[1][255][255]);
+
 void srcnn(ftmap_t input_ftmap[1][255][255],
            param_t conv1_weights[64][1][9][9],
            param_t conv1_biases[64],
@@ -271,7 +283,9 @@ static void store_out_tile_c1(
         VITIS_LOOP_96_3: for (int tw = 0; tw < 32; ++tw) {
 #pragma HLS PIPELINE II=1
  if (tn < tN && th < tH && tw < tW) {
-            output_ftmap[n0 + tn][y0 + th][x0 + tw] = out_tile[tn][th][tw] + b[n0 + tn];
+            ftmap_t v = out_tile[tn][th][tw] + b[n0 + tn];
+            if (v < (ftmap_t)0) v = (ftmap_t)0;
+            output_ftmap[n0 + tn][y0 + th][x0 + tw] = v;
           }
         }
 }
@@ -287,25 +301,25 @@ void conv1(ftmap_t input_ftmap[1][255][255],
     static ftmap_t out_tile[8][32][32];
 
 
-    VITIS_LOOP_115_1: for (int n0 = 0; n0 < 64; n0 += 8) {
+    VITIS_LOOP_117_1: for (int n0 = 0; n0 < 64; n0 += 8) {
         const int tN = (n0 + 8 <= 64) ? 8 : (64 - n0);
 
 
-        VITIS_LOOP_119_2: for (int y0 = 0; y0 < 255; y0 += 32) {
+        VITIS_LOOP_121_2: for (int y0 = 0; y0 < 255; y0 += 32) {
             const int tH = (y0 + 32 <= 255) ? 32 : (255 - y0);
-            VITIS_LOOP_121_3: for (int x0 = 0; x0 < 255; x0 += 32) {
+            VITIS_LOOP_123_3: for (int x0 = 0; x0 < 255; x0 += 32) {
                 const int tW = (x0 + 32 <= 255) ? 32 : (255 - x0);
 
 
-                VITIS_LOOP_125_4: for (int tn = 0; tn < 8; ++tn)
-                  VITIS_LOOP_126_5: for (int th = 0; th < 32; ++th)
-                    VITIS_LOOP_127_6: for (int tw = 0; tw < 32; ++tw) {
+                VITIS_LOOP_127_4: for (int tn = 0; tn < 8; ++tn)
+                  VITIS_LOOP_128_5: for (int th = 0; th < 32; ++th)
+                    VITIS_LOOP_129_6: for (int tw = 0; tw < 32; ++tw) {
 #pragma HLS PIPELINE II=1
  if (tn < tN && th < tH && tw < tW) out_tile[tn][th][tw] = 0.0f;
                     }
 
 
-                VITIS_LOOP_133_7: for (int c0 = 0; c0 < 1; c0 += 1) {
+                VITIS_LOOP_135_7: for (int c0 = 0; c0 < 1; c0 += 1) {
                     const int tC = (c0 + 1 <= 1) ? 1 : (1 - c0);
 
                     load_in_tile_c1(in_tile, input_ftmap, x0, y0, tW, tH, c0, tC);

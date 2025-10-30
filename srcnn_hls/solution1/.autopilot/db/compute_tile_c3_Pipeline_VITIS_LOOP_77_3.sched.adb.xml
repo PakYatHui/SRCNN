@@ -10069,10 +10069,10 @@ newFuncRoot:627 %p_ZZ5conv3PA255_A255_fPA32_A5_A5_fPfS1_E7in_tile_0_0_0_load_rea
 
 <Node id="1284" bw="6" op_0_bw="6" op_1_bw="6">
 <![CDATA[
-newFuncRoot:628 %zext_ln75_2_read = read i6 @_ssdm_op_Read.ap_auto.i6, i6 %zext_ln75_2
+newFuncRoot:628 %zext_ln75_read = read i6 @_ssdm_op_Read.ap_auto.i6, i6 %zext_ln75
 
 ]]></Node>
-<StgValue><ssdm name="zext_ln75_2_read"/></StgValue>
+<StgValue><ssdm name="zext_ln75_read"/></StgValue>
 </operation>
 
 <operation id="738" st_id="1" stage="1" lat="1">
@@ -10099,10 +10099,10 @@ newFuncRoot:629 %zext_ln74_4_read = read i6 @_ssdm_op_Read.ap_auto.i6, i6 %zext_
 
 <Node id="1286" bw="13" op_0_bw="6">
 <![CDATA[
-newFuncRoot:630 %zext_ln75_2_cast = zext i6 %zext_ln75_2_read
+newFuncRoot:630 %zext_ln75_cast = zext i6 %zext_ln75_read
 
 ]]></Node>
-<StgValue><ssdm name="zext_ln75_2_cast"/></StgValue>
+<StgValue><ssdm name="zext_ln75_cast"/></StgValue>
 </operation>
 
 <operation id="740" st_id="1" stage="1" lat="1">
@@ -10159,10 +10159,10 @@ newFuncRoot:633 %br_ln0 = br void %for.body10
 
 <Node id="1291" bw="4" op_0_bw="4" op_1_bw="0">
 <![CDATA[
-for.body10:0 %tn_2 = load i4 %tn
+for.body10:0 %tn_4 = load i4 %tn
 
 ]]></Node>
-<StgValue><ssdm name="tn_2"/></StgValue>
+<StgValue><ssdm name="tn_4"/></StgValue>
 </operation>
 
 <operation id="744" st_id="1" stage="1" lat="1">
@@ -10174,7 +10174,7 @@ for.body10:0 %tn_2 = load i4 %tn
 
 <Node id="1292" bw="1" op_0_bw="4" op_1_bw="4">
 <![CDATA[
-for.body10:1 %icmp_ln77 = icmp_eq  i4 %tn_2, i4 8
+for.body10:1 %icmp_ln77 = icmp_eq  i4 %tn_4, i4 8
 
 ]]></Node>
 <StgValue><ssdm name="icmp_ln77"/></StgValue>
@@ -10189,7 +10189,7 @@ for.body10:1 %icmp_ln77 = icmp_eq  i4 %tn_2, i4 8
 
 <Node id="1293" bw="4" op_0_bw="4" op_1_bw="4">
 <![CDATA[
-for.body10:2 %add_ln77 = add i4 %tn_2, i4 1
+for.body10:2 %add_ln77 = add i4 %tn_4, i4 1
 
 ]]></Node>
 <StgValue><ssdm name="add_ln77"/></StgValue>
@@ -10220,7 +10220,7 @@ for.body10:3 %br_ln77 = br i1 %icmp_ln77, void %for.body10.split, void %for.inc6
 
 <Node id="1296" bw="64" op_0_bw="4">
 <![CDATA[
-for.body10.split:0 %zext_ln77 = zext i4 %tn_2
+for.body10.split:0 %zext_ln77 = zext i4 %tn_4
 
 ]]></Node>
 <StgValue><ssdm name="zext_ln77"/></StgValue>
@@ -10236,7 +10236,7 @@ for.body10.split:0 %zext_ln77 = zext i4 %tn_2
 
 <Node id="1297" bw="3" op_0_bw="4">
 <![CDATA[
-for.body10.split:1 %trunc_ln80 = trunc i4 %tn_2
+for.body10.split:1 %trunc_ln80 = trunc i4 %tn_4
 
 ]]></Node>
 <StgValue><ssdm name="trunc_ln80"/></StgValue>
@@ -10252,7 +10252,7 @@ for.body10.split:1 %trunc_ln80 = trunc i4 %tn_2
 
 <Node id="1307" bw="1" op_0_bw="4" op_1_bw="4">
 <![CDATA[
-for.body10.split:11 %icmp_ln79 = icmp_eq  i4 %tn_2, i4 0
+for.body10.split:11 %icmp_ln79 = icmp_eq  i4 %tn_4, i4 0
 
 ]]></Node>
 <StgValue><ssdm name="icmp_ln79"/></StgValue>
@@ -10531,7 +10531,7 @@ for.body10.split:4 %tmp_149 = bitconcatenate i13 @_ssdm_op_BitConcatenate.i13.i8
 
 <Node id="1301" bw="13" op_0_bw="13" op_1_bw="13">
 <![CDATA[
-for.body10.split:5 %add_ln80_1 = add i13 %tmp_149, i13 %zext_ln75_2_cast
+for.body10.split:5 %add_ln80_1 = add i13 %tmp_149, i13 %zext_ln75_cast
 
 ]]></Node>
 <StgValue><ssdm name="add_ln80_1"/></StgValue>
@@ -10576,7 +10576,7 @@ for.body10.split:7 %out_tile_addr = getelementptr i32 %out_tile, i64 0, i64 %zex
 
 <Node id="1304" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="0">
 <![CDATA[
-for.body10.split:8 %specpipeline_ln78 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_19
+for.body10.split:8 %specpipeline_ln78 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_40
 
 ]]></Node>
 <StgValue><ssdm name="specpipeline_ln78"/></StgValue>
@@ -10606,7 +10606,7 @@ for.body10.split:9 %speclooptripcount_ln77 = speclooptripcount void @_ssdm_op_Sp
 
 <Node id="1306" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-for.body10.split:10 %specloopname_ln77 = specloopname void @_ssdm_op_SpecLoopName, void @empty_24
+for.body10.split:10 %specloopname_ln77 = specloopname void @_ssdm_op_SpecLoopName, void @empty_18
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln77"/></StgValue>
