@@ -1,155 +1,115 @@
-C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:336:5: warning: Added loop label VITIS_LOOP_30_1:   [xilinx-label-all-loops]
-    for(int nb=0; nb<NB; ++nb){
+C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:206:5: warning: Added loop label VITIS_LOOP_31_1:   [xilinx-label-all-loops]
+    for (int tc = 0; tc < 1; ++tc)
     ^~~
-    VITIS_LOOP_30_1: 
-C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:336:5: note: FIX-IT applied suggested code changes
-C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:339:9: warning: Added loop label VITIS_LOOP_33_2:   [xilinx-label-all-loops]
-        for(int h0=0; h0<255; h0+=32){
+    VITIS_LOOP_31_1: 
+C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:206:5: note: FIX-IT applied suggested code changes
+C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:207:7: warning: Added loop label VITIS_LOOP_32_2:   [xilinx-label-all-loops]
+      for (int ih = 0; ih < tH + (9 - 1); ++ih)
+      ^~~
+      VITIS_LOOP_32_2: 
+C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:207:7: note: FIX-IT applied suggested code changes
+C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:208:9: warning: Added loop label VITIS_LOOP_33_3:   [xilinx-label-all-loops]
+        for (int iw = 0; iw < tW + (9 - 1); ++iw) {
         ^~~
-        VITIS_LOOP_33_2: 
-C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:339:9: note: FIX-IT applied suggested code changes
-C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:341:13: warning: Added loop label VITIS_LOOP_35_3:   [xilinx-label-all-loops]
-            for(int w0=0; w0<255; w0+=32){
-            ^~~
-            VITIS_LOOP_35_3: 
-C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:341:13: note: FIX-IT applied suggested code changes
-C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:363:5: warning: Added loop label VITIS_LOOP_57_1:   [xilinx-label-all-loops]
-    for(int i=0;i<NB*T;++i){
+        VITIS_LOOP_33_3: 
+C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:208:9: note: FIX-IT applied suggested code changes
+C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:225:5: warning: Added loop label VITIS_LOOP_50_1:   [xilinx-label-all-loops]
+    for (int tn = 0; tn < 8; ++tn)
     ^~~
-    VITIS_LOOP_57_1: 
-C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:363:5: note: FIX-IT applied suggested code changes
-C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:368:9: warning: Added loop label VITIS_LOOP_62_2:   [xilinx-label-all-loops]
-        for(int tn=0; tn<d.tN; ++tn) s_bias.write(conv1_biases[d.n+tn]);
-        ^~~
-        VITIS_LOOP_62_2: 
-C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:368:9: note: FIX-IT applied suggested code changes
-C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:370:9: warning: Added loop label VITIS_LOOP_64_3:   [xilinx-label-all-loops]
-        for(int tc=0; tc<d.tC; ++tc)
-        ^~~
-        VITIS_LOOP_64_3: 
-C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:370:9: note: FIX-IT applied suggested code changes
-C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:371:13: warning: Added loop label VITIS_LOOP_65_4:   [xilinx-label-all-loops]
-            for(int ih=0; ih<d.tH + 9 - 1; ++ih){
+    VITIS_LOOP_50_1: 
+C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:225:5: note: FIX-IT applied suggested code changes
+C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:226:7: warning: Added loop label VITIS_LOOP_51_2:   [xilinx-label-all-loops]
+      for (int tc = 0; tc < 1; ++tc)
+      ^~~
+      VITIS_LOOP_51_2: 
+C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:226:7: note: FIX-IT applied suggested code changes
+C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:228:11: warning: Added loop label VITIS_LOOP_53_3:   [xilinx-label-all-loops]
+          for (int kh = 0; kh < 9; ++kh)
+          ^~~
+          VITIS_LOOP_53_3: 
+C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:228:11: note: FIX-IT applied suggested code changes
+C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:229:13: warning: Added loop label VITIS_LOOP_54_4:   [xilinx-label-all-loops]
+            for (int kw = 0; kw < 9; ++kw) {
             ^~~
-            VITIS_LOOP_65_4: 
-C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:371:13: note: FIX-IT applied suggested code changes
-C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:373:17: warning: Added loop label VITIS_LOOP_67_5:   [xilinx-label-all-loops]
-                for(int iw=0; iw<d.tW + 9 - 1; ++iw){
-                ^~~
-                VITIS_LOOP_67_5: 
-C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:373:17: note: FIX-IT applied suggested code changes
-C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:380:9: warning: Added loop label VITIS_LOOP_74_6:   [xilinx-label-all-loops]
-        for(int tn=0; tn<d.tN; ++tn)
-        ^~~
-        VITIS_LOOP_74_6: 
-C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:380:9: note: FIX-IT applied suggested code changes
-C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:381:13: warning: Added loop label VITIS_LOOP_75_7:   [xilinx-label-all-loops]
-            for(int tc=0; tc<d.tC; ++tc)
-            ^~~
-            VITIS_LOOP_75_7: 
-C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:381:13: note: FIX-IT applied suggested code changes
-C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:382:17: warning: Added loop label VITIS_LOOP_76_8:   [xilinx-label-all-loops]
-                for(int kh=0; kh<9; ++kh)
-                ^~~
-                VITIS_LOOP_76_8: 
-C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:382:17: note: FIX-IT applied suggested code changes
-C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:383:21: warning: Added loop label VITIS_LOOP_77_9:   [xilinx-label-all-loops]
-                    for(int kw=0; kw<9; ++kw)
-                    ^~~
-                    VITIS_LOOP_77_9: 
-C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:383:21: note: FIX-IT applied suggested code changes
-C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:410:5: warning: Added loop label VITIS_LOOP_104_1:   [xilinx-label-all-loops]
-    for(int i=0;i<NB*T;++i){
+            VITIS_LOOP_54_4: 
+C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:229:13: note: FIX-IT applied suggested code changes
+C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:243:5: warning: Added loop label VITIS_LOOP_68_1:   [xilinx-label-all-loops]
+    for (int th = 0; th < 32; ++th)
     ^~~
-    VITIS_LOOP_104_1: 
-C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:410:5: note: FIX-IT applied suggested code changes
-C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:416:9: warning: Added loop label VITIS_LOOP_110_2:   [xilinx-label-all-loops]
-        for(int tn=0; tn<d.tN; ++tn) bias[tn] = s_bias.read();
-        ^~~
-        VITIS_LOOP_110_2: 
-C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:416:9: note: FIX-IT applied suggested code changes
-C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:419:9: warning: Added loop label VITIS_LOOP_113_3:   [xilinx-label-all-loops]
-        for(int tc=0; tc<d.tC; ++tc)
-        ^~~
-        VITIS_LOOP_113_3: 
-C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:419:9: note: FIX-IT applied suggested code changes
-C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:420:13: warning: Added loop label VITIS_LOOP_114_4:   [xilinx-label-all-loops]
-            for(int ih=0; ih<d.tH + 9 - 1; ++ih)
-            ^~~
-            VITIS_LOOP_114_4: 
-C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:420:13: note: FIX-IT applied suggested code changes
-C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:421:17: warning: Added loop label VITIS_LOOP_115_5:   [xilinx-label-all-loops]
-                for(int iw=0; iw<d.tW + 9 - 1; ++iw)
-                ^~~
-                VITIS_LOOP_115_5: 
-C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:421:17: note: FIX-IT applied suggested code changes
-C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:425:9: warning: Added loop label VITIS_LOOP_119_6:   [xilinx-label-all-loops]
-        for(int tn=0; tn<d.tN; ++tn)
-        ^~~
-        VITIS_LOOP_119_6: 
-C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:425:9: note: FIX-IT applied suggested code changes
-C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:426:13: warning: Added loop label VITIS_LOOP_120_7:   [xilinx-label-all-loops]
-            for(int tc=0; tc<d.tC; ++tc)
-            ^~~
-            VITIS_LOOP_120_7: 
-C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:426:13: note: FIX-IT applied suggested code changes
-C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:427:17: warning: Added loop label VITIS_LOOP_121_8:   [xilinx-label-all-loops]
-                for(int kh=0; kh<9; ++kh)
-                ^~~
-                VITIS_LOOP_121_8: 
-C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:427:17: note: FIX-IT applied suggested code changes
-C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:428:21: warning: Added loop label VITIS_LOOP_122_9:   [xilinx-label-all-loops]
-                    for(int kw=0; kw<9; ++kw)
+    VITIS_LOOP_68_1: 
+C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:243:5: note: FIX-IT applied suggested code changes
+C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:244:7: warning: Added loop label VITIS_LOOP_69_2:   [xilinx-label-all-loops]
+      for (int tw = 0; tw < 32; ++tw)
+      ^~~
+      VITIS_LOOP_69_2: 
+C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:244:7: note: FIX-IT applied suggested code changes
+C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:246:11: warning: Added loop label VITIS_LOOP_71_3:   [xilinx-label-all-loops]
+          for (int tn = 0; tn < 8; ++tn) {
+          ^~~
+          VITIS_LOOP_71_3: 
+C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:246:11: note: FIX-IT applied suggested code changes
+C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:250:15: warning: Added loop label VITIS_LOOP_75_4:   [xilinx-label-all-loops]
+              for (int tc = 0; tc < 1; ++tc)
+              ^~~
+              VITIS_LOOP_75_4: 
+C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:250:15: note: FIX-IT applied suggested code changes
+C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:252:19: warning: Added loop label VITIS_LOOP_77_5:   [xilinx-label-all-loops]
+                  for (int kh = 0; kh < 9; ++kh)
+                  ^~~
+                  VITIS_LOOP_77_5: 
+C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:252:19: note: FIX-IT applied suggested code changes
+C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:253:21: warning: Added loop label VITIS_LOOP_78_6:   [xilinx-label-all-loops]
+                    for (int kw = 0; kw < 9; ++kw)
                     ^~~
-                    VITIS_LOOP_122_9: 
-C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:428:21: note: FIX-IT applied suggested code changes
-C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:432:9: warning: Added loop label VITIS_LOOP_126_10:   [xilinx-label-all-loops]
-        for(int th=0; th<32; ++th){
-        ^~~
-        VITIS_LOOP_126_10: 
-C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:432:9: note: FIX-IT applied suggested code changes
-C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:434:2: warning: Added loop label VITIS_LOOP_128_11:   [xilinx-label-all-loops]
- for(int tw=0; tw<32; ++tw){
- ^~~
- VITIS_LOOP_128_11: 
-C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:434:2: note: FIX-IT applied suggested code changes
-C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:438:21: warning: Added loop label VITIS_LOOP_132_12:   [xilinx-label-all-loops]
-                    for(int tn=0; tn<8; ++tn){
-                    ^~~
-                    VITIS_LOOP_132_12: 
-C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:438:21: note: FIX-IT applied suggested code changes
-C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:443:29: warning: Added loop label VITIS_LOOP_137_13:   [xilinx-label-all-loops]
-                            for(int tc=0; tc<1; ++tc){
-                            ^~~
-                            VITIS_LOOP_137_13: 
-C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:443:29: note: FIX-IT applied suggested code changes
-C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:445:37: warning: Added loop label VITIS_LOOP_139_14:   [xilinx-label-all-loops]
-                                    for(int kh=0; kh<9; ++kh)
-                                    ^~~
-                                    VITIS_LOOP_139_14: 
-C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:445:37: note: FIX-IT applied suggested code changes
-C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:446:41: warning: Added loop label VITIS_LOOP_140_15:   [xilinx-label-all-loops]
-                                        for(int kw=0; kw<9; ++kw)
-                                        ^~~
-                                        VITIS_LOOP_140_15: 
-C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:446:41: note: FIX-IT applied suggested code changes
-C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:468:5: warning: Added loop label VITIS_LOOP_162_1:   [xilinx-label-all-loops]
-    for(int i=0;i<NB*T;++i){
+                    VITIS_LOOP_78_6: 
+C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:253:21: note: FIX-IT applied suggested code changes
+C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:269:5: warning: Added loop label VITIS_LOOP_94_1:   [xilinx-label-all-loops]
+    for (int tn = 0; tn < 8; ++tn)
     ^~~
-    VITIS_LOOP_162_1: 
-C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:468:5: note: FIX-IT applied suggested code changes
-C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:471:9: warning: Added loop label VITIS_LOOP_165_2:   [xilinx-label-all-loops]
-        for(int th=0; th<32; ++th){
+    VITIS_LOOP_94_1: 
+C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:269:5: note: FIX-IT applied suggested code changes
+C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:270:7: warning: Added loop label VITIS_LOOP_95_2:   [xilinx-label-all-loops]
+      for (int th = 0; th < 32; ++th)
+      ^~~
+      VITIS_LOOP_95_2: 
+C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:270:7: note: FIX-IT applied suggested code changes
+C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:271:9: warning: Added loop label VITIS_LOOP_96_3:   [xilinx-label-all-loops]
+        for (int tw = 0; tw < 32; ++tw) {
         ^~~
-        VITIS_LOOP_165_2: 
-C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:471:9: note: FIX-IT applied suggested code changes
-C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:473:2: warning: Added loop label VITIS_LOOP_167_3:   [xilinx-label-all-loops]
- for(int tw=0; tw<32; ++tw){
- ^~~
- VITIS_LOOP_167_3: 
-C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:473:2: note: FIX-IT applied suggested code changes
-C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:476:21: warning: Added loop label VITIS_LOOP_170_4:   [xilinx-label-all-loops]
-                    for(int tn=0; tn<8; ++tn){
+        VITIS_LOOP_96_3: 
+C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:271:9: note: FIX-IT applied suggested code changes
+C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:290:5: warning: Added loop label VITIS_LOOP_115_1:   [xilinx-label-all-loops]
+    for (int n0 = 0; n0 < 64; n0 += 8) {
+    ^~~
+    VITIS_LOOP_115_1: 
+C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:290:5: note: FIX-IT applied suggested code changes
+C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:294:9: warning: Added loop label VITIS_LOOP_119_2:   [xilinx-label-all-loops]
+        for (int y0 = 0; y0 < 255; y0 += 32) {
+        ^~~
+        VITIS_LOOP_119_2: 
+C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:294:9: note: FIX-IT applied suggested code changes
+C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:296:13: warning: Added loop label VITIS_LOOP_121_3:   [xilinx-label-all-loops]
+            for (int x0 = 0; x0 < 255; x0 += 32) {
+            ^~~
+            VITIS_LOOP_121_3: 
+C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:296:13: note: FIX-IT applied suggested code changes
+C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:300:17: warning: Added loop label VITIS_LOOP_125_4:   [xilinx-label-all-loops]
+                for (int tn = 0; tn < 8; ++tn)
+                ^~~
+                VITIS_LOOP_125_4: 
+C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:300:17: note: FIX-IT applied suggested code changes
+C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:301:19: warning: Added loop label VITIS_LOOP_126_5:   [xilinx-label-all-loops]
+                  for (int th = 0; th < 32; ++th)
+                  ^~~
+                  VITIS_LOOP_126_5: 
+C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:301:19: note: FIX-IT applied suggested code changes
+C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:302:21: warning: Added loop label VITIS_LOOP_127_6:   [xilinx-label-all-loops]
+                    for (int tw = 0; tw < 32; ++tw) {
                     ^~~
-                    VITIS_LOOP_170_4: 
-C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:476:21: note: FIX-IT applied suggested code changes
+                    VITIS_LOOP_127_6: 
+C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:302:21: note: FIX-IT applied suggested code changes
+C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:308:17: warning: Added loop label VITIS_LOOP_133_7:   [xilinx-label-all-loops]
+                for (int c0 = 0; c0 < 1; c0 += 1) {
+                ^~~
+                VITIS_LOOP_133_7: 
+C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv1.pp.0.cpp:308:17: note: FIX-IT applied suggested code changes

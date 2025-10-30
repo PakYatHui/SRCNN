@@ -156,6 +156,7 @@ extern "C" {
 }
 # 2 "<built-in>" 2
 # 1 "src/conv3.cpp" 2
+# 15 "src/conv3.cpp"
 # 1 "src/srcnn.h" 1
 # 19 "src/srcnn.h"
 typedef float ftmap_t;
@@ -186,52 +187,156 @@ void conv3(ftmap_t in_ftmap[32][255][255],
            param_t w[1][32][5][5],
            param_t b[1],
            ftmap_t out_ftmap[1][255][255]);
-# 2 "src/conv3.cpp" 2
+# 16 "src/conv3.cpp" 2
+
+
+static inline int clampi(int v, int lo, int hi) {
+    return (v < lo) ? lo : (v > hi ? hi : v);
+}
+
+
+static void load_in_tile_c3(
+    ftmap_t in_tile[1][32 + (5 - 1)][32 + (5 - 1)],
+    ftmap_t in_ftmap[32][255][255],
+    int x0, int y0,
+    int tW, int tH,
+    int c0, int tC
+){
+    const int R = 5 / 2;
+    VITIS_LOOP_31_1: for (int tc = 0; tc < 1; ++tc) {
+        VITIS_LOOP_32_2: for (int ih = 0; ih < tH + (5 - 1); ++ih) {
+            VITIS_LOOP_33_3: for (int iw = 0; iw < tW + (5 - 1); ++iw) {
+#pragma HLS PIPELINE II=1
+ if (tc < tC) {
+                    const int gy = clampi(y0 + ih - R, 0, 255 - 1);
+                    const int gx = clampi(x0 + iw - R, 0, 255 - 1);
+                    in_tile[tc][ih][iw] = in_ftmap[c0 + tc][gy][gx];
+                }
+            }
+        }
+    }
+}
+
+
+static void load_w_tile_c3(
+    param_t w_tile[8][1][5][5],
+    param_t w[1][32][5][5],
+    int n0, int tN,
+    int c0, int tC
+){
+    VITIS_LOOP_52_1: for (int tn = 0; tn < 8; ++tn) {
+        VITIS_LOOP_53_2: for (int tc = 0; tc < 1; ++tc) {
+            if (tn < tN && tc < tC) {
+                VITIS_LOOP_55_3: for (int kh = 0; kh < 5; ++kh) {
+                    VITIS_LOOP_56_4: for (int kw = 0; kw < 5; ++kw) {
+#pragma HLS PIPELINE II=1
+ w_tile[tn][tc][kh][kw] = w[n0 + tn][c0 + tc][kh][kw];
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+static void compute_tile_c3(
+    ftmap_t out_tile[8][32][32],
+    ftmap_t in_tile[1][32 + (5 - 1)][32 + (5 - 1)],
+    param_t w_tile[8][1][5][5],
+    int tN, int tC,
+    int tW, int tH
+){
+    VITIS_LOOP_74_1: for (int th = 0; th < 32; ++th) {
+        VITIS_LOOP_75_2: for (int tw = 0; tw < 32; ++tw) {
+            if (th < tH && tw < tW) {
+                VITIS_LOOP_77_3: for (int tn = 0; tn < 8; ++tn) {
+#pragma HLS PIPELINE II=1
+ if (tn < tN) {
+                        float acc = out_tile[tn][th][tw];
+                        VITIS_LOOP_81_4: for (int tc = 0; tc < 1; ++tc) {
+                            if (tc < tC) {
+                                VITIS_LOOP_83_5: for (int kh = 0; kh < 5; ++kh) {
+                                    VITIS_LOOP_84_6: for (int kw = 0; kw < 5; ++kw) {
+                                        acc += w_tile[tn][tc][kh][kw] *
+                                               in_tile[tc][th + kh][tw + kw];
+                                    }
+                                }
+                            }
+                        }
+                        out_tile[tn][th][tw] = acc;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+static void store_out_tile_c3(
+    ftmap_t out_tile[8][32][32],
+    ftmap_t out_ftmap[1][255][255],
+    int x0, int y0,
+    int n0, int tN,
+    int tW, int tH,
+    param_t b[1]
+){
+    VITIS_LOOP_108_1: for (int tn = 0; tn < 8; ++tn) {
+        VITIS_LOOP_109_2: for (int th = 0; th < 32; ++th) {
+            VITIS_LOOP_110_3: for (int tw = 0; tw < 32; ++tw) {
+#pragma HLS PIPELINE II=1
+ if (tn < tN && th < tH && tw < tW) {
+                    out_ftmap[n0 + tn][y0 + th][x0 + tw] = out_tile[tn][th][tw] + b[n0 + tn];
+                }
+            }
+        }
+    }
+}
 
 
 void conv3(ftmap_t in_ftmap[32][255][255],
-        param_t w[1][32][5][5],
-        param_t b[1],
-        ftmap_t out_ftmap[1][255][255])
+           param_t w[1][32][5][5],
+           param_t b[1],
+           ftmap_t out_ftmap[1][255][255])
 {
 #pragma HLS PIPELINE off
- int R = 5 / 2;
 
-    VITIS_LOOP_12_1: for (int oc = 0; oc < 1; oc++) {
-        VITIS_LOOP_13_2: for (int y = 0; y < 255; y++) {
-            VITIS_LOOP_14_3: for (int x = 0; x < 255; x++) {
+ static ftmap_t in_tile[1][32 + (5 - 1)][32 + (5 - 1)];
+    static param_t w_tile[8][1][5][5];
+    static ftmap_t out_tile[8][32][32];
 
-                float acc = b[oc];
 
-                VITIS_LOOP_18_4: for (int ic = 0; ic < 32; ic++) {
-                    VITIS_LOOP_19_5: for (int ky = 0; ky < 5; ky++) {
-                        int iy_raw = y + ky - R;
-                        int iy;
-                        if (iy_raw < 0) {
-                            iy = 0;
-                        } else if (iy_raw >= 255) {
-                            iy = 255 - 1;
-                        } else {
-                            iy = iy_raw;
-                        }
+    VITIS_LOOP_133_1: for (int n0 = 0; n0 < 1; n0 += 8) {
+        const int tN = (n0 + 8 <= 1) ? 8 : (1 - n0);
 
-                        VITIS_LOOP_30_6: for (int kx = 0; kx < 5; kx++) {
-                            int ix_raw = x + kx - R;
-                            int ix;
-                            if (ix_raw < 0) {
-                                ix = 0;
-                            } else if (ix_raw >= 255) {
-                                ix = 255 - 1;
-                            } else {
-                                ix = ix_raw;
+
+        VITIS_LOOP_137_2: for (int y0 = 0; y0 < 255; y0 += 32) {
+            const int tH = (y0 + 32 <= 255) ? 32 : (255 - y0);
+            VITIS_LOOP_139_3: for (int x0 = 0; x0 < 255; x0 += 32) {
+                const int tW = (x0 + 32 <= 255) ? 32 : (255 - x0);
+
+
+                VITIS_LOOP_143_4: for (int tn = 0; tn < 8; ++tn) {
+                    VITIS_LOOP_144_5: for (int th = 0; th < 32; ++th) {
+                        VITIS_LOOP_145_6: for (int tw = 0; tw < 32; ++tw) {
+#pragma HLS PIPELINE II=1
+ if (tn < tN && th < tH && tw < tW) {
+                                out_tile[tn][th][tw] = 0.0f;
                             }
-
-                            acc += in_ftmap[ic][iy][ix] * w[oc][ic][ky][kx];
                         }
                     }
                 }
 
-                out_ftmap[oc][y][x] = acc;
+
+                VITIS_LOOP_155_7: for (int c0 = 0; c0 < 32; c0 += 1) {
+                    const int tC = (c0 + 1 <= 32) ? 1 : (32 - c0);
+
+                    load_in_tile_c3(in_tile, in_ftmap, x0, y0, tW, tH, c0, tC);
+                    load_w_tile_c3(w_tile, w, n0, tN, c0, tC);
+                    compute_tile_c3(out_tile, in_tile, w_tile, tN, tC, tW, tH);
+                }
+
+
+                store_out_tile_c3(out_tile, out_ftmap, x0, y0, n0, tN, tW, tH, b);
             }
         }
     }

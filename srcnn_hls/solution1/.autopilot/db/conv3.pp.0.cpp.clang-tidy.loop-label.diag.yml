@@ -2,57 +2,210 @@
 MainSourceFile:  'C:/Xilinx/golden/srcnn_hls/solution1/.autopilot/db/conv3.pp.0.cpp'
 Diagnostics:     
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_12_1:  '
-    FileOffset:      12
+    Message:         'Added loop label VITIS_LOOP_31_1:  '
+    FileOffset:      31
     FilePath:        'C:\Xilinx\golden\src\conv3.cpp'
     Replacements:    
       - FilePath:        'C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv3.pp.0.cpp'
-        Offset:          10743
+        Offset:          10888
         Length:          0
-        ReplacementText: 'VITIS_LOOP_12_1: '
+        ReplacementText: 'VITIS_LOOP_31_1: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_13_2:  '
-    FileOffset:      13
+    Message:         'Added loop label VITIS_LOOP_32_2:  '
+    FileOffset:      32
     FilePath:        'C:\Xilinx\golden\src\conv3.cpp'
     Replacements:    
       - FilePath:        'C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv3.pp.0.cpp'
-        Offset:          10784
+        Offset:          10929
         Length:          0
-        ReplacementText: 'VITIS_LOOP_13_2: '
+        ReplacementText: 'VITIS_LOOP_32_2: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_14_3:  '
-    FileOffset:      14
+    Message:         'Added loop label VITIS_LOOP_33_3:  '
+    FileOffset:      33
     FilePath:        'C:\Xilinx\golden\src\conv3.cpp'
     Replacements:    
       - FilePath:        'C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv3.pp.0.cpp'
-        Offset:          10828
+        Offset:          10985
         Length:          0
-        ReplacementText: 'VITIS_LOOP_14_3: '
+        ReplacementText: 'VITIS_LOOP_33_3: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_18_4:  '
-    FileOffset:      18
+    Message:         'Added loop label VITIS_LOOP_52_1:  '
+    FileOffset:      52
     FilePath:        'C:\Xilinx\golden\src\conv3.cpp'
     Replacements:    
       - FilePath:        'C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv3.pp.0.cpp'
-        Offset:          10913
+        Offset:          11462
         Length:          0
-        ReplacementText: 'VITIS_LOOP_18_4: '
+        ReplacementText: 'VITIS_LOOP_52_1: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_19_5:  '
-    FileOffset:      19
+    Message:         'Added loop label VITIS_LOOP_53_2:  '
+    FileOffset:      53
     FilePath:        'C:\Xilinx\golden\src\conv3.cpp'
     Replacements:    
       - FilePath:        'C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv3.pp.0.cpp'
-        Offset:          10967
+        Offset:          11503
         Length:          0
-        ReplacementText: 'VITIS_LOOP_19_5: '
+        ReplacementText: 'VITIS_LOOP_53_2: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_30_6:  '
-    FileOffset:      30
+    Message:         'Added loop label VITIS_LOOP_55_3:  '
+    FileOffset:      55
     FilePath:        'C:\Xilinx\golden\src\conv3.cpp'
     Replacements:    
       - FilePath:        'C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv3.pp.0.cpp'
-        Offset:          11378
+        Offset:          11590
         Length:          0
-        ReplacementText: 'VITIS_LOOP_30_6: '
+        ReplacementText: 'VITIS_LOOP_55_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_56_4:  '
+    FileOffset:      56
+    FilePath:        'C:\Xilinx\golden\src\conv3.cpp'
+    Replacements:    
+      - FilePath:        'C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv3.pp.0.cpp'
+        Offset:          11643
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_56_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_74_1:  '
+    FileOffset:      74
+    FilePath:        'C:\Xilinx\golden\src\conv3.cpp'
+    Replacements:    
+      - FilePath:        'C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv3.pp.0.cpp'
+        Offset:          12023
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_74_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_75_2:  '
+    FileOffset:      75
+    FilePath:        'C:\Xilinx\golden\src\conv3.cpp'
+    Replacements:    
+      - FilePath:        'C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv3.pp.0.cpp'
+        Offset:          12065
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_75_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_77_3:  '
+    FileOffset:      77
+    FilePath:        'C:\Xilinx\golden\src\conv3.cpp'
+    Replacements:    
+      - FilePath:        'C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv3.pp.0.cpp'
+        Offset:          12153
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_77_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_81_4:  '
+    FileOffset:      81
+    FilePath:        'C:\Xilinx\golden\src\conv3.cpp'
+    Replacements:    
+      - FilePath:        'C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv3.pp.0.cpp'
+        Offset:          12310
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_81_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_83_5:  '
+    FileOffset:      83
+    FilePath:        'C:\Xilinx\golden\src\conv3.cpp'
+    Replacements:    
+      - FilePath:        'C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv3.pp.0.cpp'
+        Offset:          12418
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_83_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_84_6:  '
+    FileOffset:      84
+    FilePath:        'C:\Xilinx\golden\src\conv3.cpp'
+    Replacements:    
+      - FilePath:        'C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv3.pp.0.cpp'
+        Offset:          12487
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_84_6: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_108_1:  '
+    FileOffset:      108
+    FilePath:        'C:\Xilinx\golden\src\conv3.cpp'
+    Replacements:    
+      - FilePath:        'C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv3.pp.0.cpp'
+        Offset:          13108
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_108_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_109_2:  '
+    FileOffset:      109
+    FilePath:        'C:\Xilinx\golden\src\conv3.cpp'
+    Replacements:    
+      - FilePath:        'C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv3.pp.0.cpp'
+        Offset:          13149
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_109_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_110_3:  '
+    FileOffset:      110
+    FilePath:        'C:\Xilinx\golden\src\conv3.cpp'
+    Replacements:    
+      - FilePath:        'C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv3.pp.0.cpp'
+        Offset:          13195
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_110_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_133_1:  '
+    FileOffset:      133
+    FilePath:        'C:\Xilinx\golden\src\conv3.cpp'
+    Replacements:    
+      - FilePath:        'C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv3.pp.0.cpp'
+        Offset:          13754
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_133_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_137_2:  '
+    FileOffset:      137
+    FilePath:        'C:\Xilinx\golden\src\conv3.cpp'
+    Replacements:    
+      - FilePath:        'C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv3.pp.0.cpp'
+        Offset:          13853
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_137_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_139_3:  '
+    FileOffset:      139
+    FilePath:        'C:\Xilinx\golden\src\conv3.cpp'
+    Replacements:    
+      - FilePath:        'C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv3.pp.0.cpp'
+        Offset:          13967
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_139_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_143_4:  '
+    FileOffset:      143
+    FilePath:        'C:\Xilinx\golden\src\conv3.cpp'
+    Replacements:    
+      - FilePath:        'C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv3.pp.0.cpp'
+        Offset:          14091
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_143_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_144_5:  '
+    FileOffset:      144
+    FilePath:        'C:\Xilinx\golden\src\conv3.cpp'
+    Replacements:    
+      - FilePath:        'C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv3.pp.0.cpp'
+        Offset:          14144
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_144_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_145_6:  '
+    FileOffset:      145
+    FilePath:        'C:\Xilinx\golden\src\conv3.cpp'
+    Replacements:    
+      - FilePath:        'C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv3.pp.0.cpp'
+        Offset:          14202
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_145_6: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_155_7:  '
+    FileOffset:      155
+    FilePath:        'C:\Xilinx\golden\src\conv3.cpp'
+    Replacements:    
+      - FilePath:        'C:\Xilinx\golden\srcnn_hls\solution1\.autopilot\db\conv3.pp.0.cpp'
+        Offset:          14475
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_155_7: '
 ...

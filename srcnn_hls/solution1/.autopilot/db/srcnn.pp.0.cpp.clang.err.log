@@ -4,58 +4,13 @@ C:/Xilinx/golden/srcnn_hls/solution1/csynth.tcl:28:9: warning: HLS pragma dump _
 C:/Xilinx/golden/srcnn_hls/solution1/directives.tcl:7:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=srcnn_XLX_SEP_ PragmaOptions=name=srcnn_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLSDIRECTIVE TOP name=srcnn
         ^
-src/srcnn.cpp:16:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=srcnn_XLX_SEP_ PragmaOptions=m_axi port=input_ftmap offset=slave bundle=gmem_in depth=(1*255*255) num_read_outstanding=16 max_read_burst_length=256_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS INTERFACE m_axi port=input_ftmap offset=slave bundle=gmem_in depth=(1*255*255) num_read_outstanding=16 max_read_burst_length=256
-        ^
-src/srcnn.cpp:17:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=srcnn_XLX_SEP_ PragmaOptions=m_axi port=conv1_weights offset=slave bundle=gmem_wgt depth=(64*1*9*9) num_read_outstanding=32 max_read_burst_length=256_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS INTERFACE m_axi port=conv1_weights offset=slave bundle=gmem_wgt depth=(64*1*9*9) num_read_outstanding=32 max_read_burst_length=256
-        ^
-src/srcnn.cpp:18:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=srcnn_XLX_SEP_ PragmaOptions=m_axi port=conv1_biases offset=slave bundle=gmem_wgt depth=(64)_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS INTERFACE m_axi port=conv1_biases offset=slave bundle=gmem_wgt depth=(64)
-        ^
-src/srcnn.cpp:19:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=srcnn_XLX_SEP_ PragmaOptions=m_axi port=conv2_weights offset=slave bundle=gmem_wgt depth=(32*64*1*1)_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS INTERFACE m_axi port=conv2_weights offset=slave bundle=gmem_wgt depth=(32*64*1*1)
-        ^
-src/srcnn.cpp:20:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=srcnn_XLX_SEP_ PragmaOptions=m_axi port=conv2_biases offset=slave bundle=gmem_wgt depth=(32)_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS INTERFACE m_axi port=conv2_biases offset=slave bundle=gmem_wgt depth=(32)
-        ^
-src/srcnn.cpp:21:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=srcnn_XLX_SEP_ PragmaOptions=m_axi port=conv3_weights offset=slave bundle=gmem_wgt depth=(1*32*5*5)_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS INTERFACE m_axi port=conv3_weights offset=slave bundle=gmem_wgt depth=(1*32*5*5)
-        ^
-src/srcnn.cpp:22:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=srcnn_XLX_SEP_ PragmaOptions=m_axi port=conv3_biases offset=slave bundle=gmem_wgt depth=(1)_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS INTERFACE m_axi port=conv3_biases offset=slave bundle=gmem_wgt depth=(1)
-        ^
-src/srcnn.cpp:23:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=srcnn_XLX_SEP_ PragmaOptions=m_axi port=output_ftmap offset=slave bundle=gmem_out depth=(1*255*255) num_write_outstanding=8 max_write_burst_length=256_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS INTERFACE m_axi port=output_ftmap offset=slave bundle=gmem_out depth=(1*255*255) num_write_outstanding=8 max_write_burst_length=256
-        ^
-src/srcnn.cpp:26:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=srcnn_XLX_SEP_ PragmaOptions=s_axilite port=input_ftmap bundle=control_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS INTERFACE s_axilite port=input_ftmap bundle=control
-        ^
-src/srcnn.cpp:27:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=srcnn_XLX_SEP_ PragmaOptions=s_axilite port=conv1_weights bundle=control_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS INTERFACE s_axilite port=conv1_weights bundle=control
-        ^
-src/srcnn.cpp:28:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=srcnn_XLX_SEP_ PragmaOptions=s_axilite port=conv1_biases bundle=control_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS INTERFACE s_axilite port=conv1_biases bundle=control
-        ^
-src/srcnn.cpp:29:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=srcnn_XLX_SEP_ PragmaOptions=s_axilite port=conv2_weights bundle=control_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS INTERFACE s_axilite port=conv2_weights bundle=control
-        ^
-src/srcnn.cpp:30:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=srcnn_XLX_SEP_ PragmaOptions=s_axilite port=conv2_biases bundle=control_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS INTERFACE s_axilite port=conv2_biases bundle=control
-        ^
-src/srcnn.cpp:31:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=srcnn_XLX_SEP_ PragmaOptions=s_axilite port=conv3_weights bundle=control_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS INTERFACE s_axilite port=conv3_weights bundle=control
-        ^
-src/srcnn.cpp:32:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=srcnn_XLX_SEP_ PragmaOptions=s_axilite port=conv3_biases bundle=control_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS INTERFACE s_axilite port=conv3_biases bundle=control
-        ^
-src/srcnn.cpp:33:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=srcnn_XLX_SEP_ PragmaOptions=s_axilite port=output_ftmap bundle=control_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS INTERFACE s_axilite port=output_ftmap bundle=control
-        ^
-src/srcnn.cpp:34:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=srcnn_XLX_SEP_ PragmaOptions=s_axilite port=return bundle=control_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS INTERFACE s_axilite port=return bundle=control
-        ^
-src/srcnn.cpp:38:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=srcnn_XLX_SEP_ PragmaOptions=off_XLX_SEP_ [-Wdump-hls-pragmas]
+src/srcnn.cpp:12:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=srcnn_XLX_SEP_ PragmaOptions=off_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS PIPELINE off
         ^
-20 warnings generated.
+src/srcnn.cpp:21:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=srcnn_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE II=1
+        ^
+src/srcnn.cpp:30:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=srcnn_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE II=1
+        ^
+5 warnings generated.

@@ -1,5 +1,305 @@
 # This script segment is generated automatically by AutoPilot
 
+set name srcnn_fadd_32ns_32ns_32_4_full_dsp_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fadd} IMPL {fulldsp} LATENCY 3 ALLOW_PRAGMA 1
+}
+
+
+set name srcnn_fadd_32ns_32ns_32_4_full_dsp_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fadd} IMPL {fulldsp} LATENCY 3 ALLOW_PRAGMA 1
+}
+
+
+set name srcnn_fadd_32ns_32ns_32_4_full_dsp_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fadd} IMPL {fulldsp} LATENCY 3 ALLOW_PRAGMA 1
+}
+
+
+set name srcnn_fadd_32ns_32ns_32_4_full_dsp_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fadd} IMPL {fulldsp} LATENCY 3 ALLOW_PRAGMA 1
+}
+
+
+set name srcnn_fadd_32ns_32ns_32_4_full_dsp_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fadd} IMPL {fulldsp} LATENCY 3 ALLOW_PRAGMA 1
+}
+
+
+set name srcnn_fadd_32ns_32ns_32_4_full_dsp_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fadd} IMPL {fulldsp} LATENCY 3 ALLOW_PRAGMA 1
+}
+
+
+set name srcnn_fadd_32ns_32ns_32_4_full_dsp_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fadd} IMPL {fulldsp} LATENCY 3 ALLOW_PRAGMA 1
+}
+
+
+set name srcnn_fadd_32ns_32ns_32_4_full_dsp_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fadd} IMPL {fulldsp} LATENCY 3 ALLOW_PRAGMA 1
+}
+
+
+set name srcnn_fadd_32ns_32ns_32_4_full_dsp_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fadd} IMPL {fulldsp} LATENCY 3 ALLOW_PRAGMA 1
+}
+
+
+set name srcnn_fadd_32ns_32ns_32_4_full_dsp_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fadd} IMPL {fulldsp} LATENCY 3 ALLOW_PRAGMA 1
+}
+
+
+set name srcnn_fadd_32ns_32ns_32_4_full_dsp_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fadd} IMPL {fulldsp} LATENCY 3 ALLOW_PRAGMA 1
+}
+
+
+set name srcnn_fadd_32ns_32ns_32_4_full_dsp_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fadd} IMPL {fulldsp} LATENCY 3 ALLOW_PRAGMA 1
+}
+
+
+set name srcnn_fadd_32ns_32ns_32_4_full_dsp_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fadd} IMPL {fulldsp} LATENCY 3 ALLOW_PRAGMA 1
+}
+
+
+set name srcnn_fadd_32ns_32ns_32_4_full_dsp_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fadd} IMPL {fulldsp} LATENCY 3 ALLOW_PRAGMA 1
+}
+
+
+set name srcnn_fadd_32ns_32ns_32_4_full_dsp_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fadd} IMPL {fulldsp} LATENCY 3 ALLOW_PRAGMA 1
+}
+
+
+set name srcnn_fadd_32ns_32ns_32_4_full_dsp_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fadd} IMPL {fulldsp} LATENCY 3 ALLOW_PRAGMA 1
+}
+
+
+set name srcnn_fadd_32ns_32ns_32_4_full_dsp_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fadd} IMPL {fulldsp} LATENCY 3 ALLOW_PRAGMA 1
+}
+
+
+set name srcnn_fadd_32ns_32ns_32_4_full_dsp_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fadd} IMPL {fulldsp} LATENCY 3 ALLOW_PRAGMA 1
+}
+
+
+set name srcnn_fadd_32ns_32ns_32_4_full_dsp_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fadd} IMPL {fulldsp} LATENCY 3 ALLOW_PRAGMA 1
+}
+
+
+set name srcnn_fadd_32ns_32ns_32_4_full_dsp_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fadd} IMPL {fulldsp} LATENCY 3 ALLOW_PRAGMA 1
+}
+
+
+set name srcnn_fadd_32ns_32ns_32_4_full_dsp_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fadd} IMPL {fulldsp} LATENCY 3 ALLOW_PRAGMA 1
+}
+
+
+set name srcnn_fadd_32ns_32ns_32_4_full_dsp_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fadd} IMPL {fulldsp} LATENCY 3 ALLOW_PRAGMA 1
+}
+
+
+set name srcnn_fadd_32ns_32ns_32_4_full_dsp_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fadd} IMPL {fulldsp} LATENCY 3 ALLOW_PRAGMA 1
+}
+
+
+set name srcnn_fadd_32ns_32ns_32_4_full_dsp_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fadd} IMPL {fulldsp} LATENCY 3 ALLOW_PRAGMA 1
+}
+
+
+set name srcnn_fadd_32ns_32ns_32_4_full_dsp_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fadd} IMPL {fulldsp} LATENCY 3 ALLOW_PRAGMA 1
+}
+
+
+set name srcnn_fmul_32ns_32ns_32_3_max_dsp_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fmul} IMPL {maxdsp} LATENCY 2 ALLOW_PRAGMA 1
+}
+
+
+set name srcnn_fmul_32ns_32ns_32_3_max_dsp_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fmul} IMPL {maxdsp} LATENCY 2 ALLOW_PRAGMA 1
+}
+
+
+set name srcnn_fmul_32ns_32ns_32_3_max_dsp_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fmul} IMPL {maxdsp} LATENCY 2 ALLOW_PRAGMA 1
+}
+
+
+set name srcnn_fmul_32ns_32ns_32_3_max_dsp_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fmul} IMPL {maxdsp} LATENCY 2 ALLOW_PRAGMA 1
+}
+
+
+set name srcnn_fmul_32ns_32ns_32_3_max_dsp_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fmul} IMPL {maxdsp} LATENCY 2 ALLOW_PRAGMA 1
+}
+
+
+set name srcnn_fmul_32ns_32ns_32_3_max_dsp_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fmul} IMPL {maxdsp} LATENCY 2 ALLOW_PRAGMA 1
+}
+
+
+set name srcnn_fmul_32ns_32ns_32_3_max_dsp_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fmul} IMPL {maxdsp} LATENCY 2 ALLOW_PRAGMA 1
+}
+
+
+set name srcnn_fmul_32ns_32ns_32_3_max_dsp_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fmul} IMPL {maxdsp} LATENCY 2 ALLOW_PRAGMA 1
+}
+
+
+set name srcnn_fmul_32ns_32ns_32_3_max_dsp_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fmul} IMPL {maxdsp} LATENCY 2 ALLOW_PRAGMA 1
+}
+
+
+set name srcnn_fmul_32ns_32ns_32_3_max_dsp_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fmul} IMPL {maxdsp} LATENCY 2 ALLOW_PRAGMA 1
+}
+
+
+set name srcnn_fmul_32ns_32ns_32_3_max_dsp_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fmul} IMPL {maxdsp} LATENCY 2 ALLOW_PRAGMA 1
+}
+
+
+set name srcnn_fmul_32ns_32ns_32_3_max_dsp_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fmul} IMPL {maxdsp} LATENCY 2 ALLOW_PRAGMA 1
+}
+
+
+set name srcnn_fmul_32ns_32ns_32_3_max_dsp_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fmul} IMPL {maxdsp} LATENCY 2 ALLOW_PRAGMA 1
+}
+
+
+set name srcnn_fmul_32ns_32ns_32_3_max_dsp_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fmul} IMPL {maxdsp} LATENCY 2 ALLOW_PRAGMA 1
+}
+
+
+set name srcnn_fmul_32ns_32ns_32_3_max_dsp_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fmul} IMPL {maxdsp} LATENCY 2 ALLOW_PRAGMA 1
+}
+
+
+set name srcnn_fmul_32ns_32ns_32_3_max_dsp_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fmul} IMPL {maxdsp} LATENCY 2 ALLOW_PRAGMA 1
+}
+
+
+set name srcnn_fmul_32ns_32ns_32_3_max_dsp_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fmul} IMPL {maxdsp} LATENCY 2 ALLOW_PRAGMA 1
+}
+
+
+set name srcnn_fmul_32ns_32ns_32_3_max_dsp_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fmul} IMPL {maxdsp} LATENCY 2 ALLOW_PRAGMA 1
+}
+
+
+set name srcnn_fmul_32ns_32ns_32_3_max_dsp_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fmul} IMPL {maxdsp} LATENCY 2 ALLOW_PRAGMA 1
+}
+
+
+set name srcnn_fmul_32ns_32ns_32_3_max_dsp_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fmul} IMPL {maxdsp} LATENCY 2 ALLOW_PRAGMA 1
+}
+
+
+set name srcnn_fmul_32ns_32ns_32_3_max_dsp_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fmul} IMPL {maxdsp} LATENCY 2 ALLOW_PRAGMA 1
+}
+
+
+set name srcnn_fmul_32ns_32ns_32_3_max_dsp_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fmul} IMPL {maxdsp} LATENCY 2 ALLOW_PRAGMA 1
+}
+
+
+set name srcnn_fmul_32ns_32ns_32_3_max_dsp_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fmul} IMPL {maxdsp} LATENCY 2 ALLOW_PRAGMA 1
+}
+
+
+set name srcnn_fmul_32ns_32ns_32_3_max_dsp_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fmul} IMPL {maxdsp} LATENCY 2 ALLOW_PRAGMA 1
+}
+
+
+set name srcnn_fmul_32ns_32ns_32_3_max_dsp_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fmul} IMPL {maxdsp} LATENCY 2 ALLOW_PRAGMA 1
+}
+
+
 set name srcnn_fcmp_32ns_32ns_1_2_no_dsp_1
 if {${::AESL::PGuard_rtl_comp_handler}} {
 	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {fcmp} IMPL {auto} LATENCY 1 ALLOW_PRAGMA 1
@@ -16,21 +316,6 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 }
 
 
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler srcnn_gmem_in_m_axi BINDTYPE {interface} TYPE {adapter} IMPL {m_axi}
-}
-
-
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler srcnn_gmem_wgt_m_axi BINDTYPE {interface} TYPE {adapter} IMPL {m_axi}
-}
-
-
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler srcnn_gmem_out_m_axi BINDTYPE {interface} TYPE {adapter} IMPL {m_axi}
-}
-
-
 # clear list
 if {${::AESL::PGuard_autoexp_gen}} {
     cg_default_interface_gen_dc_begin
@@ -39,103 +324,166 @@ if {${::AESL::PGuard_autoexp_gen}} {
 }
 
 set axilite_register_dict [dict create]
-set port_control {
-input_ftmap { 
-	dir I
-	width 64
-	depth 1
-	mode ap_none
-	offset 16
-	offset_end 27
-}
-conv1_weights { 
-	dir I
-	width 64
-	depth 1
-	mode ap_none
-	offset 28
-	offset_end 39
-}
-conv1_biases { 
-	dir I
-	width 64
-	depth 1
-	mode ap_none
-	offset 40
-	offset_end 51
-}
-conv2_weights { 
-	dir I
-	width 64
-	depth 1
-	mode ap_none
-	offset 52
-	offset_end 63
-}
-conv2_biases { 
-	dir I
-	width 64
-	depth 1
-	mode ap_none
-	offset 64
-	offset_end 75
-}
-conv3_weights { 
-	dir I
-	width 64
-	depth 1
-	mode ap_none
-	offset 76
-	offset_end 87
-}
-conv3_biases { 
-	dir I
-	width 64
-	depth 1
-	mode ap_none
-	offset 88
-	offset_end 99
-}
-output_ftmap { 
-	dir I
-	width 64
-	depth 1
-	mode ap_none
-	offset 100
-	offset_end 111
-}
-ap_start { }
-ap_done { }
-ap_ready { }
-ap_idle { }
-interrupt {
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 1882 \
+    name input_ftmap \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename input_ftmap \
+    op interface \
+    ports { input_ftmap_address0 { O 16 vector } input_ftmap_ce0 { O 1 bit } input_ftmap_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'input_ftmap'"
 }
 }
-dict set axilite_register_dict control $port_control
 
 
-# Native S_AXILite:
-if {${::AESL::PGuard_simmodel_gen}} {
-	if {[info proc ::AESL_LIB_XILADAPTER::s_axilite_gen] == "::AESL_LIB_XILADAPTER::s_axilite_gen"} {
-		eval "::AESL_LIB_XILADAPTER::s_axilite_gen { \
-			id 874 \
-			corename srcnn_control_axilite \
-			name srcnn_control_s_axi \
-			ports {$port_control} \
-			op interface \
-			interrupt_clear_mode TOW \
-			interrupt_trigger_type default \
-			is_flushable 0 \
-			is_datawidth64 0 \
-			is_addrwidth64 1 \
-		} "
-	} else {
-		puts "@W \[IMPL-110\] Cannot find AXI Lite interface model in the library. Ignored generation of AXI Lite  interface for 'control'"
-	}
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 1883 \
+    name conv1_weights \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename conv1_weights \
+    op interface \
+    ports { conv1_weights_address0 { O 13 vector } conv1_weights_ce0 { O 1 bit } conv1_weights_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'conv1_weights'"
+}
 }
 
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler srcnn_control_s_axi BINDTYPE interface TYPE interface_s_axilite
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 1884 \
+    name conv1_biases \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename conv1_biases \
+    op interface \
+    ports { conv1_biases_address0 { O 6 vector } conv1_biases_ce0 { O 1 bit } conv1_biases_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'conv1_biases'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 1885 \
+    name conv2_weights \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename conv2_weights \
+    op interface \
+    ports { conv2_weights_address0 { O 11 vector } conv2_weights_ce0 { O 1 bit } conv2_weights_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'conv2_weights'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 1886 \
+    name conv2_biases \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename conv2_biases \
+    op interface \
+    ports { conv2_biases_address0 { O 5 vector } conv2_biases_ce0 { O 1 bit } conv2_biases_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'conv2_biases'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 1887 \
+    name conv3_weights \
+    reset_level 1 \
+    sync_rst true \
+    dir I \
+    corename conv3_weights \
+    op interface \
+    ports { conv3_weights_address0 { O 10 vector } conv3_weights_ce0 { O 1 bit } conv3_weights_q0 { I 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'conv3_weights'"
+}
+}
+
+
+# XIL_BRAM:
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
+eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+    id 1889 \
+    name output_ftmap \
+    reset_level 1 \
+    sync_rst true \
+    dir O \
+    corename output_ftmap \
+    op interface \
+    ports { output_ftmap_address0 { O 16 vector } output_ftmap_ce0 { O 1 bit } output_ftmap_we0 { O 1 bit } output_ftmap_d0 { O 32 vector } } \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'output_ftmap'"
+}
+}
+
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 1888 \
+    name conv3_biases \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_conv3_biases \
+    op interface \
+    ports { conv3_biases { I 32 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id -1 \
+    name ap_ctrl \
+    type ap_ctrl \
+    reset_level 1 \
+    sync_rst true \
+    corename ap_ctrl \
+    op interface \
+    ports { ap_start { I 1 bit } ap_ready { O 1 bit } ap_done { O 1 bit } ap_idle { O 1 bit } } \
+} "
 }
 
 
@@ -145,9 +493,9 @@ set DataWd 1
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc cg_default_interface_gen_clock] == "cg_default_interface_gen_clock"} {
 eval "cg_default_interface_gen_clock { \
-    id -1 \
+    id -2 \
     name ${PortName} \
-    reset_level 0 \
+    reset_level 1 \
     sync_rst true \
     corename apif_ap_clk \
     data_wd ${DataWd} \
@@ -160,16 +508,16 @@ puts "@W \[IMPL-113\] Cannot find bus interface model in the library. Ignored ge
 
 
 # Adapter definition:
-set PortName ap_rst_n
+set PortName ap_rst
 set DataWd 1 
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc cg_default_interface_gen_reset] == "cg_default_interface_gen_reset"} {
 eval "cg_default_interface_gen_reset { \
-    id -2 \
+    id -3 \
     name ${PortName} \
-    reset_level 0 \
+    reset_level 1 \
     sync_rst true \
-    corename apif_ap_rst_n \
+    corename apif_ap_rst \
     data_wd ${DataWd} \
     op interface \
 }"

@@ -41,75 +41,11 @@
       <key>filename</key>
       <string>src/srcnn.cpp</string>
       <key>line</key>
-      <integer>16</integer>
+      <integer>12</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=srcnn_XLX_SEP_ PragmaOptions=m_axi port=input_ftmap offset=slave bundle=gmem_in depth=(1*255*255) num_read_outstanding=16 max_read_burst_length=256_XLX_SEP_</string>
-      <key>ID</key>
-      <integer>5471</integer>
-      <key>WarningOption</key>
-      <string>dump-hls-pragmas</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
-      <string>src/srcnn.cpp</string>
-      <key>line</key>
-      <integer>17</integer>
-      <key>column</key>
-      <integer>9</integer>
-      <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=srcnn_XLX_SEP_ PragmaOptions=m_axi port=conv1_weights offset=slave bundle=gmem_wgt depth=(64*1*9*9) num_read_outstanding=32 max_read_burst_length=256_XLX_SEP_</string>
-      <key>ID</key>
-      <integer>5471</integer>
-      <key>WarningOption</key>
-      <string>dump-hls-pragmas</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
-      <string>src/srcnn.cpp</string>
-      <key>line</key>
-      <integer>18</integer>
-      <key>column</key>
-      <integer>9</integer>
-      <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=srcnn_XLX_SEP_ PragmaOptions=m_axi port=conv1_biases offset=slave bundle=gmem_wgt depth=(64)_XLX_SEP_</string>
-      <key>ID</key>
-      <integer>5471</integer>
-      <key>WarningOption</key>
-      <string>dump-hls-pragmas</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
-      <string>src/srcnn.cpp</string>
-      <key>line</key>
-      <integer>19</integer>
-      <key>column</key>
-      <integer>9</integer>
-      <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=srcnn_XLX_SEP_ PragmaOptions=m_axi port=conv2_weights offset=slave bundle=gmem_wgt depth=(32*64*1*1)_XLX_SEP_</string>
-      <key>ID</key>
-      <integer>5471</integer>
-      <key>WarningOption</key>
-      <string>dump-hls-pragmas</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
-      <string>src/srcnn.cpp</string>
-      <key>line</key>
-      <integer>20</integer>
-      <key>column</key>
-      <integer>9</integer>
-      <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=srcnn_XLX_SEP_ PragmaOptions=m_axi port=conv2_biases offset=slave bundle=gmem_wgt depth=(32)_XLX_SEP_</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=srcnn_XLX_SEP_ PragmaOptions=off_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>
@@ -125,103 +61,7 @@
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=srcnn_XLX_SEP_ PragmaOptions=m_axi port=conv3_weights offset=slave bundle=gmem_wgt depth=(1*32*5*5)_XLX_SEP_</string>
-      <key>ID</key>
-      <integer>5471</integer>
-      <key>WarningOption</key>
-      <string>dump-hls-pragmas</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
-      <string>src/srcnn.cpp</string>
-      <key>line</key>
-      <integer>22</integer>
-      <key>column</key>
-      <integer>9</integer>
-      <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=srcnn_XLX_SEP_ PragmaOptions=m_axi port=conv3_biases offset=slave bundle=gmem_wgt depth=(1)_XLX_SEP_</string>
-      <key>ID</key>
-      <integer>5471</integer>
-      <key>WarningOption</key>
-      <string>dump-hls-pragmas</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
-      <string>src/srcnn.cpp</string>
-      <key>line</key>
-      <integer>23</integer>
-      <key>column</key>
-      <integer>9</integer>
-      <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=srcnn_XLX_SEP_ PragmaOptions=m_axi port=output_ftmap offset=slave bundle=gmem_out depth=(1*255*255) num_write_outstanding=8 max_write_burst_length=256_XLX_SEP_</string>
-      <key>ID</key>
-      <integer>5471</integer>
-      <key>WarningOption</key>
-      <string>dump-hls-pragmas</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
-      <string>src/srcnn.cpp</string>
-      <key>line</key>
-      <integer>26</integer>
-      <key>column</key>
-      <integer>9</integer>
-      <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=srcnn_XLX_SEP_ PragmaOptions=s_axilite port=input_ftmap bundle=control_XLX_SEP_</string>
-      <key>ID</key>
-      <integer>5471</integer>
-      <key>WarningOption</key>
-      <string>dump-hls-pragmas</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
-      <string>src/srcnn.cpp</string>
-      <key>line</key>
-      <integer>27</integer>
-      <key>column</key>
-      <integer>9</integer>
-      <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=srcnn_XLX_SEP_ PragmaOptions=s_axilite port=conv1_weights bundle=control_XLX_SEP_</string>
-      <key>ID</key>
-      <integer>5471</integer>
-      <key>WarningOption</key>
-      <string>dump-hls-pragmas</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
-      <string>src/srcnn.cpp</string>
-      <key>line</key>
-      <integer>28</integer>
-      <key>column</key>
-      <integer>9</integer>
-      <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=srcnn_XLX_SEP_ PragmaOptions=s_axilite port=conv1_biases bundle=control_XLX_SEP_</string>
-      <key>ID</key>
-      <integer>5471</integer>
-      <key>WarningOption</key>
-      <string>dump-hls-pragmas</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
-      <string>src/srcnn.cpp</string>
-      <key>line</key>
-      <integer>29</integer>
-      <key>column</key>
-      <integer>9</integer>
-      <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=srcnn_XLX_SEP_ PragmaOptions=s_axilite port=conv2_weights bundle=control_XLX_SEP_</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=srcnn_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>
@@ -237,87 +77,7 @@
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=srcnn_XLX_SEP_ PragmaOptions=s_axilite port=conv2_biases bundle=control_XLX_SEP_</string>
-      <key>ID</key>
-      <integer>5471</integer>
-      <key>WarningOption</key>
-      <string>dump-hls-pragmas</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
-      <string>src/srcnn.cpp</string>
-      <key>line</key>
-      <integer>31</integer>
-      <key>column</key>
-      <integer>9</integer>
-      <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=srcnn_XLX_SEP_ PragmaOptions=s_axilite port=conv3_weights bundle=control_XLX_SEP_</string>
-      <key>ID</key>
-      <integer>5471</integer>
-      <key>WarningOption</key>
-      <string>dump-hls-pragmas</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
-      <string>src/srcnn.cpp</string>
-      <key>line</key>
-      <integer>32</integer>
-      <key>column</key>
-      <integer>9</integer>
-      <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=srcnn_XLX_SEP_ PragmaOptions=s_axilite port=conv3_biases bundle=control_XLX_SEP_</string>
-      <key>ID</key>
-      <integer>5471</integer>
-      <key>WarningOption</key>
-      <string>dump-hls-pragmas</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
-      <string>src/srcnn.cpp</string>
-      <key>line</key>
-      <integer>33</integer>
-      <key>column</key>
-      <integer>9</integer>
-      <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=srcnn_XLX_SEP_ PragmaOptions=s_axilite port=output_ftmap bundle=control_XLX_SEP_</string>
-      <key>ID</key>
-      <integer>5471</integer>
-      <key>WarningOption</key>
-      <string>dump-hls-pragmas</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
-      <string>src/srcnn.cpp</string>
-      <key>line</key>
-      <integer>34</integer>
-      <key>column</key>
-      <integer>9</integer>
-      <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=srcnn_XLX_SEP_ PragmaOptions=s_axilite port=return bundle=control_XLX_SEP_</string>
-      <key>ID</key>
-      <integer>5471</integer>
-      <key>WarningOption</key>
-      <string>dump-hls-pragmas</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
-      <string>src/srcnn.cpp</string>
-      <key>line</key>
-      <integer>38</integer>
-      <key>column</key>
-      <integer>9</integer>
-      <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=srcnn_XLX_SEP_ PragmaOptions=off_XLX_SEP_</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=srcnn_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>

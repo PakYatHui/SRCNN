@@ -1,0 +1,48 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'compute_tile_c1'" level="0">
+<item name = "Date">Thu Oct 30 21:22:06 2025
+</item>
+<item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
+<item name = "Project">srcnn_hls</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xck26-sfvc784-2LV-c</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.016 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">2113, 390209, 21.130 us, 3.902 ms, 2113, 390209, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_compute_tile_c1_Pipeline_VITIS_LOOP_71_3_fu_884">compute_tile_c1_Pipeline_VITIS_LOOP_71_3, 338, 338, 3.380 us, 3.380 us, 338, 338, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- VITIS_LOOP_68_1">2112, 390208, 66 ~ 12194, -, -, 32, no</column>
+<column name=" + VITIS_LOOP_69_2">64, 12192, 2 ~ 381, -, -, 32, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

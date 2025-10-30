@@ -205,60 +205,28 @@ __attribute__((sdx_kernel("srcnn", 0))) void srcnn(ftmap_t input_ftmap[1][255][2
 #pragma HLSDIRECTIVE TOP name=srcnn
 # 11 "src/srcnn.cpp"
 
-
-
-
-
-#pragma HLS INTERFACE m_axi port=input_ftmap offset=slave bundle=gmem_in depth=(1*255*255) num_read_outstanding=16 max_read_burst_length=256
-#pragma HLS INTERFACE m_axi port=conv1_weights offset=slave bundle=gmem_wgt depth=(64*1*9*9) num_read_outstanding=32 max_read_burst_length=256
-#pragma HLS INTERFACE m_axi port=conv1_biases offset=slave bundle=gmem_wgt depth=(64)
-#pragma HLS INTERFACE m_axi port=conv2_weights offset=slave bundle=gmem_wgt depth=(32*64*1*1)
-#pragma HLS INTERFACE m_axi port=conv2_biases offset=slave bundle=gmem_wgt depth=(32)
-#pragma HLS INTERFACE m_axi port=conv3_weights offset=slave bundle=gmem_wgt depth=(1*32*5*5)
-#pragma HLS INTERFACE m_axi port=conv3_biases offset=slave bundle=gmem_wgt depth=(1)
-#pragma HLS INTERFACE m_axi port=output_ftmap offset=slave bundle=gmem_out depth=(1*255*255) num_write_outstanding=8 max_write_burst_length=256
-
-
-#pragma HLS INTERFACE s_axilite port=input_ftmap bundle=control
-#pragma HLS INTERFACE s_axilite port=conv1_weights bundle=control
-#pragma HLS INTERFACE s_axilite port=conv1_biases bundle=control
-#pragma HLS INTERFACE s_axilite port=conv2_weights bundle=control
-#pragma HLS INTERFACE s_axilite port=conv2_biases bundle=control
-#pragma HLS INTERFACE s_axilite port=conv3_weights bundle=control
-#pragma HLS INTERFACE s_axilite port=conv3_biases bundle=control
-#pragma HLS INTERFACE s_axilite port=output_ftmap bundle=control
-#pragma HLS INTERFACE s_axilite port=return bundle=control
-
-
-
 #pragma HLS PIPELINE off
  static ftmap_t feat1[64][255][255];
-     static ftmap_t feat2[32][255][255];
+    static ftmap_t feat2[32][255][255];
 
 
-     conv1(input_ftmap, conv1_weights, conv1_biases, feat1);
-     VITIS_LOOP_44_1: for (int c = 0; c < 64; c++) {
-         VITIS_LOOP_45_2: for (int y = 0; y < 255; y++) {
-             VITIS_LOOP_46_3: for (int x = 0; x < 255; x++) {
-                 if (feat1[c][y][x] < 0.0f) {
-                     feat1[c][y][x] = 0.0f;
-                 }
-             }
-         }
-     }
+    conv1(input_ftmap, conv1_weights, conv1_biases, feat1);
+    VITIS_LOOP_18_1: for (int c = 0; c < 64; ++c)
+      VITIS_LOOP_19_2: for (int y = 0; y < 255; ++y)
+        VITIS_LOOP_20_3: for (int x = 0; x < 255; ++x) {
+#pragma HLS PIPELINE II=1
+ if (feat1[c][y][x] < 0.0f) feat1[c][y][x] = 0.0f;
+        }
 
 
-     conv2(feat1, conv2_weights, conv2_biases, feat2);
-     VITIS_LOOP_56_4: for (int c = 0; c < 32; c++) {
-         VITIS_LOOP_57_5: for (int y = 0; y < 255; y++) {
-             VITIS_LOOP_58_6: for (int x = 0; x < 255; x++) {
-                 if (feat2[c][y][x] < 0.0f) {
-                     feat2[c][y][x] = 0.0f;
-                 }
-             }
-         }
-     }
+    conv2(feat1, conv2_weights, conv2_biases, feat2);
+    VITIS_LOOP_27_4: for (int c = 0; c < 32; ++c)
+      VITIS_LOOP_28_5: for (int y = 0; y < 255; ++y)
+        VITIS_LOOP_29_6: for (int x = 0; x < 255; ++x) {
+#pragma HLS PIPELINE II=1
+ if (feat2[c][y][x] < 0.0f) feat2[c][y][x] = 0.0f;
+        }
 
 
-     conv3(feat2, conv3_weights, conv3_biases, output_ftmap);
+    conv3(feat2, conv3_weights, conv3_biases, output_ftmap);
 }

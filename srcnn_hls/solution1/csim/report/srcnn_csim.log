@@ -1,11 +1,15 @@
 INFO: [SIM 2] *************** CSIM start ***************
 INFO: [SIM 4] CSIM will launch GCC as the compiler.
-make: 'csim.exe' is up to date.
+   Compiling ../../../../src/conv1.cpp in debug mode
+   Compiling ../../../../src/conv2.cpp in debug mode
+   Compiling ../../../../src/conv3.cpp in debug mode
+   Compiling ../../../../src/srcnn.cpp in debug mode
+   Generating csim.exe
 ***** CONV1 Golden Reference *****
   - Butterfly MSE: 0.00341846
 
 ***** SRCNN Golden Reference *****
-  - Butterfly MSE: 3.1661e-014
+  - Butterfly MSE: 3.03688e-014
 
 ***** SRCNN - Set14 Test *****
 Image Name     PSNR GT vs HR (dB)  PSNR GT vs HR MATLAB (dB)  PSNR GT vs LR (dB)  MSE GT vs HR   MSE GT vs HR MATLAB        
@@ -20,8 +24,7 @@ lenna          30.8276             30.8413                    29.1689           
 man            27.1089             27.1209                    26.0613             0.00193997     0.00193996                 
 monarch        27.9674             27.9822                    24.5799             0.00159024     0.00159023                 
 pepper         33.4585             33.4745                    32.0454             0.00044792     0.000447919                
-ppt3           29.3386             29.4367                    26.6842             0.0011378      0.0011378                  
-zebra          27.4292             27.6649                    24.7423             0.00171135     0.00171134                 
-INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 4194304
+ppt3           29.3387             29.4367                    26.6842             0.0011378      0.0011378                  
+zebra          27.4291             27.6649                    24.7423             0.00171135     0.00171134                 
 INFO: [SIM 1] CSim done with 0 errors.
 INFO: [SIM 3] *************** CSIM finish ***************

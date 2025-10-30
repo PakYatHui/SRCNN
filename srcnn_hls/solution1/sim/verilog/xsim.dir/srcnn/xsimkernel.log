@@ -1,4 +1,0 @@
-Running: xsim.dir/srcnn/xsimk.exe -simmode gui -wdb srcnn.wdb -simrunnum 0 -socket 62282
-Design successfully loaded
-Design Loading Memory Usage: 79588 KB (Peak: 79588 KB)
-Design Loading CPU Usage: 264 ms

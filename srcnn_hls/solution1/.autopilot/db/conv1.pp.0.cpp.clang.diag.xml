@@ -9,11 +9,11 @@
       <key>filename</key>
       <string>src/conv1.cpp</string>
       <key>line</key>
-      <integer>28</integer>
+      <integer>34</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=gen_tiles_stream_all_XLX_SEP_ PragmaOptions=off_XLX_SEP_</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=load_in_tile_c1_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>
@@ -25,11 +25,11 @@
       <key>filename</key>
       <string>src/conv1.cpp</string>
       <key>line</key>
-      <integer>54</integer>
+      <integer>55</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=load_stage_XLX_SEP_ PragmaOptions=off_XLX_SEP_</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=load_w_tile_c1_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>
@@ -41,11 +41,11 @@
       <key>filename</key>
       <string>src/conv1.cpp</string>
       <key>line</key>
-      <integer>90</integer>
+      <integer>72</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=compute_stage_XLX_SEP_ PragmaOptions=off_XLX_SEP_</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=compute_tile_c1_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>
@@ -57,11 +57,11 @@
       <key>filename</key>
       <string>src/conv1.cpp</string>
       <key>line</key>
-      <integer>105</integer>
+      <integer>97</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=loop_tripcount_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=compute_stage_XLX_SEP_ PragmaOptions=min=1 max=(((64 +8 -1)/8)*((255 +32 -1)/32)*((255 +32 -1)/32))_XLX_SEP_</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=store_out_tile_c1_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>
@@ -73,299 +73,11 @@
       <key>filename</key>
       <string>src/conv1.cpp</string>
       <key>line</key>
-      <integer>127</integer>
+      <integer>128</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=loop_flatten_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=compute_stage_XLX_SEP_ PragmaOptions=off_XLX_SEP_</string>
-      <key>ID</key>
-      <integer>5471</integer>
-      <key>WarningOption</key>
-      <string>dump-hls-pragmas</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
-      <string>src/conv1.cpp</string>
-      <key>line</key>
-      <integer>129</integer>
-      <key>column</key>
-      <integer>9</integer>
-      <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=loop_flatten_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=compute_stage_XLX_SEP_ PragmaOptions=off_XLX_SEP_</string>
-      <key>ID</key>
-      <integer>5471</integer>
-      <key>WarningOption</key>
-      <string>dump-hls-pragmas</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
-      <string>src/conv1.cpp</string>
-      <key>line</key>
-      <integer>133</integer>
-      <key>column</key>
-      <integer>9</integer>
-      <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=compute_stage_XLX_SEP_ PragmaOptions=II=2_XLX_SEP_</string>
-      <key>ID</key>
-      <integer>5471</integer>
-      <key>WarningOption</key>
-      <string>dump-hls-pragmas</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
-      <string>src/conv1.cpp</string>
-      <key>line</key>
-      <integer>159</integer>
-      <key>column</key>
-      <integer>9</integer>
-      <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=store_stage_XLX_SEP_ PragmaOptions=off_XLX_SEP_</string>
-      <key>ID</key>
-      <integer>5471</integer>
-      <key>WarningOption</key>
-      <string>dump-hls-pragmas</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
-      <string>src/conv1.cpp</string>
-      <key>line</key>
-      <integer>166</integer>
-      <key>column</key>
-      <integer>9</integer>
-      <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=loop_flatten_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=store_stage_XLX_SEP_ PragmaOptions=off_XLX_SEP_</string>
-      <key>ID</key>
-      <integer>5471</integer>
-      <key>WarningOption</key>
-      <string>dump-hls-pragmas</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
-      <string>src/conv1.cpp</string>
-      <key>line</key>
-      <integer>168</integer>
-      <key>column</key>
-      <integer>9</integer>
-      <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=loop_flatten_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=store_stage_XLX_SEP_ PragmaOptions=off_XLX_SEP_</string>
-      <key>ID</key>
-      <integer>5471</integer>
-      <key>WarningOption</key>
-      <string>dump-hls-pragmas</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
-      <string>src/conv1.cpp</string>
-      <key>line</key>
-      <integer>171</integer>
-      <key>column</key>
-      <integer>9</integer>
-      <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=store_stage_XLX_SEP_ PragmaOptions=II=2_XLX_SEP_</string>
-      <key>ID</key>
-      <integer>5471</integer>
-      <key>WarningOption</key>
-      <string>dump-hls-pragmas</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
-      <string>src/conv1.cpp</string>
-      <key>line</key>
-      <integer>189</integer>
-      <key>column</key>
-      <integer>9</integer>
-      <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv1_XLX_SEP_ PragmaOptions=off_XLX_SEP_</string>
-      <key>ID</key>
-      <integer>5471</integer>
-      <key>WarningOption</key>
-      <string>dump-hls-pragmas</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
-      <string>src/conv1.cpp</string>
-      <key>line</key>
-      <integer>190</integer>
-      <key>column</key>
-      <integer>9</integer>
-      <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stable_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv1_XLX_SEP_ PragmaOptions=variable=input_ftmap_XLX_SEP_</string>
-      <key>ID</key>
-      <integer>5471</integer>
-      <key>WarningOption</key>
-      <string>dump-hls-pragmas</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
-      <string>src/conv1.cpp</string>
-      <key>line</key>
-      <integer>191</integer>
-      <key>column</key>
-      <integer>9</integer>
-      <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stable_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv1_XLX_SEP_ PragmaOptions=variable=conv1_weights_XLX_SEP_</string>
-      <key>ID</key>
-      <integer>5471</integer>
-      <key>WarningOption</key>
-      <string>dump-hls-pragmas</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
-      <string>src/conv1.cpp</string>
-      <key>line</key>
-      <integer>192</integer>
-      <key>column</key>
-      <integer>9</integer>
-      <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stable_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv1_XLX_SEP_ PragmaOptions=variable=conv1_biases_XLX_SEP_</string>
-      <key>ID</key>
-      <integer>5471</integer>
-      <key>WarningOption</key>
-      <string>dump-hls-pragmas</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
-      <string>src/conv1.cpp</string>
-      <key>line</key>
-      <integer>194</integer>
-      <key>column</key>
-      <integer>9</integer>
-      <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=dataflow_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv1_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
-      <key>ID</key>
-      <integer>5471</integer>
-      <key>WarningOption</key>
-      <string>dump-hls-pragmas</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
-      <string>src/conv1.cpp</string>
-      <key>line</key>
-      <integer>201</integer>
-      <key>column</key>
-      <integer>9</integer>
-      <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv1_XLX_SEP_ PragmaOptions=variable=q0 depth=2_XLX_SEP_</string>
-      <key>ID</key>
-      <integer>5471</integer>
-      <key>WarningOption</key>
-      <string>dump-hls-pragmas</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
-      <string>src/conv1.cpp</string>
-      <key>line</key>
-      <integer>202</integer>
-      <key>column</key>
-      <integer>9</integer>
-      <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv1_XLX_SEP_ PragmaOptions=variable=q1 depth=2_XLX_SEP_</string>
-      <key>ID</key>
-      <integer>5471</integer>
-      <key>WarningOption</key>
-      <string>dump-hls-pragmas</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
-      <string>src/conv1.cpp</string>
-      <key>line</key>
-      <integer>203</integer>
-      <key>column</key>
-      <integer>9</integer>
-      <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv1_XLX_SEP_ PragmaOptions=variable=q2 depth=2_XLX_SEP_</string>
-      <key>ID</key>
-      <integer>5471</integer>
-      <key>WarningOption</key>
-      <string>dump-hls-pragmas</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
-      <string>src/conv1.cpp</string>
-      <key>line</key>
-      <integer>204</integer>
-      <key>column</key>
-      <integer>9</integer>
-      <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv1_XLX_SEP_ PragmaOptions=variable=s_bias depth=4_XLX_SEP_</string>
-      <key>ID</key>
-      <integer>5471</integer>
-      <key>WarningOption</key>
-      <string>dump-hls-pragmas</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
-      <string>src/conv1.cpp</string>
-      <key>line</key>
-      <integer>205</integer>
-      <key>column</key>
-      <integer>9</integer>
-      <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv1_XLX_SEP_ PragmaOptions=variable=s_in depth=64_XLX_SEP_</string>
-      <key>ID</key>
-      <integer>5471</integer>
-      <key>WarningOption</key>
-      <string>dump-hls-pragmas</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
-      <string>src/conv1.cpp</string>
-      <key>line</key>
-      <integer>206</integer>
-      <key>column</key>
-      <integer>9</integer>
-      <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv1_XLX_SEP_ PragmaOptions=variable=s_w depth=64_XLX_SEP_</string>
-      <key>ID</key>
-      <integer>5471</integer>
-      <key>WarningOption</key>
-      <string>dump-hls-pragmas</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
-      <string>src/conv1.cpp</string>
-      <key>line</key>
-      <integer>207</integer>
-      <key>column</key>
-      <integer>9</integer>
-      <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv1_XLX_SEP_ PragmaOptions=variable=s_out depth=256_XLX_SEP_</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv1_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>
